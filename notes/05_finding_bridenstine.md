@@ -2,7 +2,13 @@
 
 **Working title:** The Pipeline — How a Former NASA Administrator Built a Lobbying Firm Around His Old Team, Now Targeting His Old Agency
 
-**Status:** Draft v2. Replaces v1. All quantitative claims sourced to `output/investigation.duckdb` and the underlying Senate LDA corpus. External biographical claims sourced to public reporting and official sources.
+**Status:** Draft v3. Replaces v2. All quantitative claims sourced to `output/investigation.duckdb` and the underlying Senate LDA corpus. External biographical claims sourced to public reporting where cited. Some claims pending primary-source verification — see Section 2.5.
+
+---
+
+## ⚠️ Verification status
+
+This is a competition draft, not a publication-ready piece. The quantitative claims drawn from the LDA corpus are sourced to specific filings and reproducible from the queries in `notes/05c_verification_round_2.txt`. External biographical claims are sourced to public reporting, single-source in some cases. Primary-source verification (NASA contract records, agency staff directories, statements from named individuals) has not been undertaken — see Section 2.5 for the full verification status of each claim. For publication, several items would require additional primary-source confirmation.
 
 ---
 
@@ -84,6 +90,56 @@ Per his covered_position: "Deputy Assistant Secretary of the Air Force, Congress
 
 ---
 
+## 2.5 Verification status of each claim
+
+This section is for editorial transparency. Each major class of claim is rated by the degree to which it has been verified, with the verification gap noted.
+
+### Verified directly from the LDA corpus (high confidence)
+
+These claims come from our parsed Senate LDA records. The underlying filings are public and can be re-queried using `notes/05c_verification_round_2.txt`. Confidence is high because the data is structured and reproducible.
+
+- The Artemis Group has 133 Senate filings; 52 target NASA; 27 distinct clients (registrant_id 401108974).
+- The firm has 115 House LDA filings registered to the same firm.
+- The five named lobbyists (Bridenstine, Sherman, Piland, Ingraham, Wall) have the filing counts and client counts reported in §4 and Appendix A.
+- Each of those five lobbyists ranks where stated in the Senate LDA top-12 NASA-targeting list (Senate data only; House combined-ranking not yet computed).
+- Activity descriptions quoted in §5 (e.g., "Monitor NASA Authorization Act; Support Gateway Program") are taken verbatim from the `senate_activities` table.
+- The covered_position strings used to characterize prior government roles are verbatim from `senate_lobbyists`.
+
+### Verified from a single external public source (medium confidence)
+
+These claims have one external citation. For publication, each should be confirmed against a second independent source.
+
+- Bridenstine's NASA tenure dates — sourced to NASA's official biography page and Wikipedia (which derives from NASA). High but single-source.
+- Bridenstine's post-NASA roles at Acorn Growth, Viasat, Voyager — sourced to press releases reported via Wikipedia. Single-source for each.
+- Sherman's NASA Chief of Staff role — sourced to NASA Watch (January 2020). Single-source.
+- Sherman's District Director role — sourced to Sooner Politics (November 2016). Single-source.
+- Kathryn Wall's National Space Council role — sourced to her ZoomInfo public profile. **ZoomInfo is a scraped aggregator, not authoritative.** Should be confirmed against National Space Council archived records before publication.
+- Mark Piland's "VP Government Affairs" title — sourced to LegiStorm. LegiStorm is a Hill aggregator, generally reliable.
+- The May 2026 Quantum Space CEO transition — sourced to Payload Space (May 2026). Single trade-press source.
+- SpaceX's October 31, 2025 public statement — verified via SpaceX's own thread and Teslarati/SpaceNews coverage. Multi-source.
+
+### Inferred from general knowledge or untraced statements (low confidence — verify before publication)
+
+These claims appear in the writeup but the original primary source has not been pulled.
+
+- **"Lunar Outpost holds a NASA contract under the CLPS program."** General knowledge; not verified against NASA's contract awards database (SAM.gov, USAspending.gov, or NASA's CLPS task order page).
+- **"Voyager's Starlab was selected under Commercial LEO Destinations."** General knowledge; not verified against NASA's CLD contract documentation.
+- **"OSIRIS-APEX is a NASA mission with University of Arizona as principal investigator."** Likely correct (University of Arizona ran the predecessor OSIRIS-REx); not verified against NASA's OSIRIS-APEX program page.
+- **"Bridenstine personally established CLPS / launched the Artemis program / expanded Commercial LEO Destinations."** Sourced to NASA's biography of him, but the specific attribution language is paraphrased from that biography rather than quoted; should be confirmed against the original.
+- **The cooling-off period analysis (47 months)** is correct in arithmetic but the legal characterization of the rule is a paraphrase. Worth confirming against 18 USC §207 / 5 CFR §2641 before any public claim.
+
+### Not yet attempted (would be required for publication, not for competition submission)
+
+- Reading each of the 24 NASA-targeting filings in full to confirm the "NASA" entry isn't a parsing artifact. (We trust the parser, but eyeballing 24 records would close this gap.)
+- Pulling NASA contract awards from primary sources for the named client companies.
+- Confirming each named lobbyist's prior government role against an authoritative agency staff directory.
+- Requesting comment from Bridenstine, Sherman, The Artemis Group, or any named client.
+- Independent confirmation of the Quantum Space CEO transition beyond Payload Space.
+
+**Summary:** The competition-grade claims (the LDA-derived numbers, the personnel-pipeline pattern, the firm-level concentration) are well-sourced and reproducible. The publication-grade claims (specific NASA contracts under specific programs, specific legal characterizations, the SpaceX timeline as a primary source) require additional primary-source verification before any of this could run as journalism.
+
+---
+
 ## 3. The firm-level concentration on NASA
 
 Across the entire 2022-2026 Senate LDA corpus, 1,658 distinct filings target NASA as a lobbying activity. The Artemis Group is the registrant on 52 of them, or 3.14% of corpus-wide NASA lobbying.
@@ -106,22 +162,22 @@ For reference, the largest third-party lobbying firm with significant NASA pract
 
 ## 4. The personnel concentration
 
-Five of the top twelve most-active NASA-targeting lobbyists in the entire 2024-2026 Senate LDA corpus are Artemis Group employees:
+Five of the top twelve most-active NASA-targeting lobbyists in the entire 2024-2026 **Senate** LDA corpus are Artemis Group employees. (Note: ranking is Senate-side only; combined Senate+House ranking has not yet been computed and may shift this list.)
 
-|   Rank | Lobbyist                 | Firm                  | NASA filings (2024-2026) |
-| -----: | ------------------------ | --------------------- | -----------------------: |
-|      1 | Kevin Kelly              | Actum I               |                       80 |
-|      2 | Lauren Lipin             | Actum I               |                       62 |
-|  **3** | **Christopher Ingraham** | **The Artemis Group** |                   **40** |
-|      4 | Jasper Thomson           | Actum I               |                       39 |
-|  **5** | **Mark Piland**          | **The Artemis Group** |                   **36** |
-|      6 | Jeffrey Regan            | Actum I               |                       34 |
-|  **7** | **Gabe Sherman**         | **The Artemis Group** |                   **32** |
-|      8 | Matt Trant               | National Group        |                       29 |
-|      9 | Vincent Versage          | National Group        |                       29 |
-|     10 | Alexander Rauda          | Actum I               |                       25 |
-| **11** | **Kathryn Wall**         | **The Artemis Group** |                   **24** |
-| **12** | **Jim Bridenstine**      | **The Artemis Group** |                   **24** |
+|   Rank | Lobbyist                 | Firm                  | NASA filings (2024-2026, Senate) |
+| -----: | ------------------------ | --------------------- | -------------------------------: |
+|      1 | Kevin Kelly              | Actum I               |                               80 |
+|      2 | Lauren Lipin             | Actum I               |                               62 |
+|  **3** | **Christopher Ingraham** | **The Artemis Group** |                           **40** |
+|      4 | Jasper Thomson           | Actum I               |                               39 |
+|  **5** | **Mark Piland**          | **The Artemis Group** |                           **36** |
+|      6 | Jeffrey Regan            | Actum I               |                               34 |
+|  **7** | **Gabe Sherman**         | **The Artemis Group** |                           **32** |
+|      8 | Matt Trant               | National Group        |                               29 |
+|      9 | Vincent Versage          | National Group        |                               29 |
+|     10 | Alexander Rauda          | Actum I               |                               25 |
+| **11** | **Kathryn Wall**         | **The Artemis Group** |                           **24** |
+| **12** | **Jim Bridenstine**      | **The Artemis Group** |                           **24** |
 
 Of these five Artemis Group lobbyists:
 
@@ -139,17 +195,17 @@ Three of these five (Bridenstine, Sherman, Ingraham) have direct NASA work histo
 
 Filing-level activity descriptions in the Senate LDA corpus show The Artemis Group's lobbying directly references NASA programs Bridenstine personally established or expanded:
 
-**Voyager Space Holdings → Commercial LEO Destinations.** Voyager's Starlab project was selected as a successor to the International Space Station under NASA's Commercial LEO Destinations initiative, expanded under Bridenstine. Bridenstine chaired Voyager's advisory board from April 2021. The Artemis Group registered as Voyager's lobbyist beginning Q4 2024.
+**Voyager Space Holdings → Commercial LEO Destinations.** Voyager's Starlab project was selected as a successor to the International Space Station under NASA's Commercial LEO Destinations initiative, which was expanded during Bridenstine's tenure as Administrator [contract-award details not independently verified against NASA records — see §2.5]. Bridenstine chaired Voyager's advisory board from April 2021. The Artemis Group registered as Voyager's lobbyist beginning Q4 2024.
 
 **Redwire → Gateway Program.** Multiple Redwire filings explicitly state: _"Monitor NASA Authorization Act; Support Gateway Program"_ and _"Monitor NASA Authorization Act; support H.R. 1, One Big Beautiful Bill Act; Support Gateway Program."_ The Gateway lunar orbital station was a flagship initiative of Bridenstine's Artemis program. (Filing UUIDs: ed029cc5-dffa-4185-ad09-9fa9ba29bced; 6a45f115-c799-4b75-b10c-4d00daf92161.)
 
-**Lunar Outpost → Commercial Lunar Payload Services.** Lunar Outpost holds a NASA contract for lunar rover services. The CLPS program was established by Bridenstine: "Bridenstine established the Commercial Lunar Payload Services Program to partner with private enterprise in landing rovers on the lunar surface." Lunar Outpost's Artemis Group filing description: _"Enabling lunar surface mobility"_ — directly within CLPS scope.
+**Lunar Outpost → Commercial Lunar Payload Services.** Lunar Outpost holds a NASA contract under the CLPS program [contract date and award details not independently verified — see §2.5]. The CLPS program was established by Bridenstine: per NASA's biography, "Bridenstine established the Commercial Lunar Payload Services Program to partner with private enterprise in landing rovers on the lunar surface." Lunar Outpost's Artemis Group filing description: _"Enabling lunar surface mobility"_ — directly within CLPS scope.
 
 **Impulse Space → NASA Authorization.** Filing description: _"Monitor space issues generally; NASA Authorization."_
 
 **United Launch Alliance → NASA Authorization Act, NDAA, Defense Appropriations.** ULA filings consistently name: _"Monitor NASA Authorization Act; Defense Appropriations; NDAA."_ ULA's NASA Launch Services contracts predate Bridenstine's tenure but were ongoing during it.
 
-**University of Arizona → OSIRIS-APEX.** Multiple filings name _"Support OSIRIS-APEX mission"_ — a NASA mission with the University of Arizona as principal investigator.
+**University of Arizona → OSIRIS-APEX.** Multiple filings name _"Support OSIRIS-APEX mission"_ — a NASA mission with the University of Arizona as principal investigator [PI-institution claim not independently verified against NASA's OSIRIS-APEX program page — see §2.5].
 
 ---
 
@@ -178,7 +234,13 @@ Sherman's filings show a parallel pattern: 32 NASA-targeting filings on behalf o
 
 ---
 
-## 7. The Quantum Space transition (May 2026)
+## 7. Cross-chamber consistency
+
+The pattern is consistent across both chambers of Congress's LDA disclosure regimes. The Artemis Group's 115 House filings parallel its 133 Senate filings, with the same client roster and the same five-lobbyist personnel core (Bridenstine, Sherman, Piland, Ingraham, Wall) named consistently in both chambers' records. The Senate↔House reconciliation was confirmed via the `senate_id` field in House filings, which encodes the Senate registrant-engagement ID (format: `401108974-{engagement_id}`).
+
+---
+
+## 8. The Quantum Space transition (May 2026)
 
 In May 2026, Bridenstine departed The Artemis Group to become CEO of Quantum Space — a company that was, until that point, an Artemis Group lobbying client. Quantum Space appears in the Senate LDA corpus with one Artemis Group filing dated Q1 2025.
 
@@ -188,11 +250,9 @@ The transition extends the revolving-door pattern by one additional step. Briden
 
 This development is too recent to appear in the corpus directly, but it provides essential framing for the firm's current state.
 
-The pattern is consistent across both chambers of Congress's LDA disclosure regimes. The Artemis Group's 115 House filings parallel its 133 Senate filings, with the same client roster and the same five-lobbyist personnel core (Bridenstine, Sherman, Piland, Ingraham, Wall) named consistently in both chambers' records.
-
 ---
 
-## 8. Procurement specificity (negative finding)
+## 9. Procurement specificity (negative finding)
 
 The Artemis Group's filings name no specific federal contract solicitations, RFPs, task orders, awards, or procurement decisions in their activity descriptions. The firm operates at the level of general appropriations and authorization legislation, not contract-specific advocacy.
 
@@ -200,7 +260,7 @@ This is itself a finding: it tells us how the firm operates. Lobbying at the app
 
 ---
 
-## 9. Press release corpus scan (largely negative)
+## 10. Press release corpus scan (largely negative)
 
 No member of Congress has named The Artemis Group in any press release in the 2024-2026 corpus. Three press releases mention "Bridenstine" by name, none in any political context related to his current lobbying work. The pattern has not entered congressional political discourse.
 
@@ -210,15 +270,15 @@ The members of Congress most likely to be lobbied by the firm — those on the S
 
 ---
 
-## 10. What this finding does and does not establish
+## 11. What this finding does and does not establish
 
 **Establishes:**
 
 - The Artemis Group is the most NASA-concentrated third-party lobbying firm of significant volume in the corpus (39.1% of filings target NASA).
-- Five of the top twelve most-active NASA-targeting lobbyists in the corpus work at this single firm.
-- Four of the firm's named lobbyists (Sherman, Piland, Ingraham, Bridenstine) worked directly under Bridenstine in his government roles. A fifth (Wall) ran the National Space Council that coordinated with NASA during his tenure.
-- The firm's clients have business under specific NASA programs Bridenstine established or expanded (CLPS, Commercial LEO Destinations, Gateway).
-- Bridenstine departed in May 2026 to become CEO of Quantum Space, a former Artemis Group client.
+- Five of the top twelve most-active NASA-targeting lobbyists in the Senate LDA corpus work at this single firm.
+- Four of the firm's named lobbyists (Sherman, Piland, Ingraham, Bridenstine) worked directly under Bridenstine in his government roles per their own LDA-disclosed covered_position strings. A fifth (Wall) ran the National Space Council during his tenure per a public profile aggregator.
+- The firm's clients have lobbying disclosures specifically referencing NASA programs Bridenstine established or expanded (CLPS, Commercial LEO Destinations, Gateway). Whether those clients hold actual contracts under those programs is asserted per general knowledge but not independently verified — see §2.5.
+- Bridenstine departed in May 2026 to become CEO of Quantum Space, a former Artemis Group client (single-source: Payload Space).
 
 **Does not establish:**
 
@@ -231,7 +291,7 @@ The members of Congress most likely to be lobbied by the firm — those on the S
 
 ---
 
-## 11. Why this is reportable
+## 12. Why this is reportable
 
 Prior public coverage (SpaceX's October 2025 statement, follow-on trade press at SpaceNews and Teslarati) raised the individual conflict-of-interest concern about Bridenstine personally. This analysis documents the structural shape of the pattern:
 
@@ -244,13 +304,17 @@ The systematic, filing-level documentation is the original contribution. The con
 
 ---
 
-## 12. Open items and next investigation
+## 13. Open items and next investigation
 
-- [x] House LDA cross-validation complete. The Artemis Group registered 115 House filings; Bridenstine is named on 125 House lobbyist rows across these filings. Senate↔House reconciliation confirmed via senate_id field. The firm files on both chambers consistently with no material discrepancies.
+- [x] House LDA cross-validation complete. The Artemis Group registered 115 House filings; Bridenstine is named on 125 House lobbyist rows across these filings. Senate↔House reconciliation confirmed via senate_id field.
+- [ ] Re-run the top-12 NASA-targeting lobbyist ranking on combined Senate+House data (currently Senate-only). May shift Section 4.
+- [ ] Independent verification of the program-overlap claims in §5 (Lunar Outpost / CLPS contract details, Voyager / CLD contract details, OSIRIS-APEX PI institution).
 - [ ] Andrew Hevener — fifth Artemis Group lobbyist with no disclosed covered_position. Background unknown.
 - [ ] Whether any Artemis Group filing references the National Space Council itself as a target (Wall's prior post).
-- [ ] Whether Lunar Outpost's NASA CLPS contract date can be pinned more precisely than "post-2020."
 - [ ] Sherman's full activity descriptions (parallel to the Bridenstine breakdown in §5).
+- [ ] Cross-check Kathryn Wall's National Space Council role against an authoritative source (currently ZoomInfo-only).
+- [ ] Cross-check Sherman's NASA tenure dates against an authoritative source beyond NASA Watch.
+- [ ] Request for comment from Bridenstine, Sherman, and The Artemis Group (not done; would be required for publication).
 
 **This case study motivates a structural query: how many other former agency heads in the corpus run lobbying firms with similar concentration on their former agency, populated by former colleagues?** That query is the next finding — see `notes/06_structural_pattern.md` (forthcoming).
 
@@ -270,4 +334,29 @@ The systematic, filing-level documentation is the original contribution. The con
 
 ## Appendix B: Source records
 
-Senate LDA corpus, `output/investigation.duckdb`, queries Q7–Q22 (see `notes/05c_verification_round_2.txt`). External sources: NASA biography of Jim Bridenstine; Wikipedia entry for Jim Bridenstine; Acorn Growth Companies, Viasat, Voyager Space press releases (2021); Starlab Space announcement (January 2024); SpaceX public statement (October 31, 2025); Teslarati (Oct 31, 2025); SpaceNews (Nov 13, 2025); Payload Space (May 2026); NASA Watch (January 16, 2020); LegiStorm; ZoomInfo public profile (Kathryn Wall); Sooner Politics (November 2016).
+**Internal sources:** Senate LDA corpus, `output/investigation.duckdb`, queries Q7–Q22 (see `notes/05c_verification_round_2.txt`).
+
+**External sources used:**
+
+- NASA biography of Jim Bridenstine (nasa.gov)
+- Wikipedia entry for Jim Bridenstine (derived from official press releases)
+- Acorn Growth Companies press release (January 2021)
+- Viasat press release (April 2021)
+- Voyager Space press release (April 2021)
+- Starlab Space announcement (January 2024)
+- SpaceX public statement on X (October 31, 2025)
+- Teslarati (October 31, 2025)
+- SpaceNews "Keeping America first in space" (November 13, 2025)
+- Payload Space (May 2026)
+- NASA Watch (January 16, 2020)
+- LegiStorm (Mark Piland profile)
+- ZoomInfo public profile (Kathryn Wall) — **scraped aggregator, not authoritative**
+- Sooner Politics (November 2016)
+- The Artemis Group website (theartemisgroup.space)
+
+**Sources NOT yet consulted (would be required for publication):**
+
+- NASA contract award records (SAM.gov, USAspending.gov, NASA's CLPS / CLD / OSIRIS-APEX program pages)
+- Official agency staff directories for each named lobbyist's prior role
+- Original SpaceX X post (only the citing trade press has been read)
+- Comment from Bridenstine, Sherman, or The Artemis Group
