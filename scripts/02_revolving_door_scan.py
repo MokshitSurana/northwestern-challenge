@@ -18,17 +18,17 @@ Output:
     output/revolving_door_candidates.csv  — full table for further analysis
 """
 
-import io
-import sys
-import re
+import argparse
 import csv
 import os
+import re
+import sys
+from collections import Counter, defaultdict
 from pathlib import Path
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
-
-import argparse
 import duckdb
+
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 DB_PATH     = Path(os.environ.get("OUTPUT_ROOT", "output")) / "investigation.duckdb"
 OUTPUT_ROOT = Path(os.environ.get("OUTPUT_ROOT", "output"))
@@ -143,8 +143,11 @@ def is_fast_pivot(end_year: int | None, first_filing_year: int | None) -> bool:
 # ── Main scan ──────────────────────────────────────────────────────────────────
 
 def run_scan(top: int = 30, category_filter: str | None = None) -> list[dict]:
-    con = duckdb.connect(str(DB_PATH), read_only=True)
+    with duckdb.connect(str(DB_PATH), read_only=True) as con:
+        return _run_scan_inner(con, top, category_filter)
 
+
+def _run_scan_inner(con: duckdb.DuckDBPyConnection, top: int, category_filter: str | None) -> list[dict]:
     print("Loading Senate lobbyist/filing data…")
     senate_rows = con.execute("""
         SELECT
@@ -193,16 +196,12 @@ def run_scan(top: int = 30, category_filter: str | None = None) -> list[dict]:
           AND length(hl.covered_position) > 10
     """).fetchall()
 
-    con.close()
-
     all_rows = [dict(zip(senate_cols, r)) for r in senate_rows] + \
                [dict(zip(senate_cols, r)) for r in house_rows]
 
     print(f"Total rows with covered_position: {len(all_rows):,}")
 
     # ── Classify and aggregate per lobbyist ───────────────────────────────────
-    from collections import defaultdict
-
     # Key: (lobbyist_name or covered_position snippet, registrant_name)
     # Using covered_position as the identity anchor when name is missing
     buckets: dict[str, dict] = defaultdict(lambda: {
@@ -386,7 +385,6 @@ def main():
     write_csv(candidates, output_csv)
 
     # Summary stats by category
-    from collections import Counter
     cats = Counter(c["category"] for c in candidates)
     print("\n=== Candidates by category ===")
     for label, count in cats.most_common():
