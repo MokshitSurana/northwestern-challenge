@@ -80,7 +80,14 @@ def extract_lobbyists(path: Path) -> list[dict]:
     house_id = safe_str(path.stem)
     lobbyists = []
     for lob_el in root.findall(".//lobbyists/lobbyist"):
-        name = safe_str(lob_el.findtext("lobbyistName"))
+        # House XML uses first/last name fields, not a single lobbyistName tag
+        first  = safe_str(lob_el.findtext("lobbyistFirstName"))
+        last   = safe_str(lob_el.findtext("lobbyistLastName"))
+        suffix = safe_str(lob_el.findtext("lobbyistSuffix"))
+        name   = " ".join(filter(None, [first, last, suffix])) or None
+        # Legacy fallback for older filings that used the combined tag
+        if not name:
+            name = safe_str(lob_el.findtext("lobbyistName"))
         cov  = safe_str(lob_el.findtext("coveredPosition"))
         if name or cov:
             lobbyists.append({
