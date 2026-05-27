@@ -193,6 +193,8 @@ findings/findings_report.md               # final findings (→ PDF)
 notes/05_finding_bridenstine.md           # anchor finding (verified)
 notes/06_structural_pattern_findings.md   # Track 2 output (auto-generated)
 
-web/src/app/page.tsx                      # reporter UI (Next.js)
+web/src/app/page.tsx                      # reporter UI — server component
+web/src/app/FindingsClient.tsx            # reporter UI — interactive client
+web/src/app/types.ts                      # shared TypeScript interfaces
 docker-compose.yml                        # full system orchestration
 ```

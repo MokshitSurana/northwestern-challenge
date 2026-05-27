@@ -90,7 +90,9 @@ The anchor finding: **The Artemis Group** — a lobbying firm founded by former 
     ├── tailwind.config.ts
     └── src/app/
         ├── layout.tsx
-        └── page.tsx                       #   provenance display for findings
+        ├── page.tsx                       #   server component — data loading
+        ├── FindingsClient.tsx             #   interactive findings list (client)
+        └── types.ts                       #   shared TypeScript interfaces
 ```
 
 **Gitignored:** `data/` (8.6 GB corpus), `output/` (2.92 GB DuckDB), `web/node_modules/`, `web/.next/`, `.venv/`.
