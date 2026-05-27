@@ -20,7 +20,8 @@ for year in years:
     write_parquet(lobbyists, PARQUET_DIR / f"senate_lobbyists_{year}.parquet", f"senate_lobbyists_{year}")
 
 print("\nRebuilding DuckDB senate_lobbyists table...")
-con = duckdb.connect("output/investigation.duckdb")
+DB_FILE = Path(os.environ.get("OUTPUT_ROOT", "output")) / "investigation.duckdb"
+con = duckdb.connect(str(DB_FILE))
 glob_path = str(PARQUET_DIR / "senate_lobbyists_*.parquet").replace("\\", "/")
 con.execute("DROP TABLE IF EXISTS senate_lobbyists")
 con.execute(f"CREATE TABLE senate_lobbyists AS SELECT * FROM read_parquet('{glob_path}', union_by_name=True)")
