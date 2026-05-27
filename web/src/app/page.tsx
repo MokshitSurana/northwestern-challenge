@@ -12,35 +12,7 @@
 // If it doesn't exist yet, run: uv run scripts/03_agency_concentration.py
 import rawData from "../../public/findings.json"
 import FindingsClient from "./FindingsClient"
-
-// ── Types ──────────────────────────────────────────────────────────────────────
-
-interface Finding {
-  rank: number
-  score: number
-  agency_short: string
-  lobbyist_name: string
-  registrant_name: string
-  covered_position: string
-  concentration: number
-  agency_filings: number
-  total_filings: number
-  n_clients: number
-  total_income: number
-  first_year: number
-  last_year: number
-  top_clients_str: string
-  sample_uuid: string
-  sample_source: string
-  senate_lda_url: string | null
-  verification_status?: "verified" | "partial" | "unverified" | null
-}
-
-interface FindingsPayload {
-  generated_at: string
-  total_candidates: number
-  findings: Finding[]
-}
+import type { Finding, FindingsPayload } from "./types"
 
 // ── Page (Server Component — data loading only) ────────────────────────────────
 
@@ -76,7 +48,8 @@ export default function Page() {
           Former Agency Officials Lobbying Their Former Agency
         </h1>
         <p className="max-w-2xl text-slate-600">
-          {data.total_candidates} candidates identified across 18 federal agencies.
+          {data.total_candidates} candidates identified across{" "}
+          {new Set(findings.map((f) => f.agency_short)).size} federal agencies.
           Ranked by agency concentration ratio × volume × seniority.
           All figures from Senate LDA 2022-2026. Prior roles are verbatim
           self-disclosures — verify independently before publishing.
