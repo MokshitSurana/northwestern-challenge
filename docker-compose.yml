@@ -1,0 +1,65 @@
+version: "3.9"
+
+# FairGuard — Full system orchestration
+#
+# Services:
+#   etl  — Runs the LDA corpus indexer + analysis scripts. Requires the raw
+#           data to be mounted at ./data. Outputs go to ./output.
+#   web  — Serves the reporter verification UI on port 3000.
+#           Reads findings from output/agency_concentration_web.json.
+#
+# Usage:
+#   # Run ETL only (builds DuckDB + generates findings)
+#   docker compose run --rm etl
+#
+#   # Run ETL in sample mode (fast, ~2 min)
+#   SAMPLE=1 docker compose run --rm etl
+#
+#   # Start reporter UI (after ETL has run)
+#   docker compose up web
+#
+#   # Full stack
+#   docker compose up
+#
+# Prerequisites:
+#   - Raw corpus data extracted to ./data/
+#   - Docker >= 24.0 and docker compose v2
+
+services:
+  etl:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: fairguard-etl
+    volumes:
+      - ./data:/app/data:ro         # raw corpus (read-only inside container)
+      - ./output:/app/output        # shared with web service
+      - ./notes:/app/notes          # findings drafts written here
+    environment:
+      DATA_ROOT: /app/data
+      OUTPUT_ROOT: /app/output
+      SAMPLE: "${SAMPLE:-0}"
+    restart: "no"
+
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    image: fairguard-web
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./output:/app/public/output:ro   # web reads JSON findings here
+    depends_on:
+      etl:
+        condition: service_completed_successfully
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  # Named volumes for data persistence between compose runs
+  # (not used by default — bind mounts are used instead)
