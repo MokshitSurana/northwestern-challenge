@@ -5,10 +5,31 @@ build/
 dist/
 wheels/
 *.egg-info
+
+# Data and output (large, not in repo)
 data/
 output/
 data.zip
 
-
 # Virtual environments
 .venv
+
+# Node / Next.js
+web/node_modules/
+web/.next/
+web/out/
+web/.env*.local
+
+# Docker
+.docker/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
