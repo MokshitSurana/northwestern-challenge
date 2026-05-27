@@ -2,29 +2,7 @@
 
 import { useState } from "react"
 import { clsx } from "clsx"
-
-// ── Types (duplicated here so this file is self-contained) ─────────────────────
-
-interface Finding {
-  rank: number
-  score: number
-  agency_short: string
-  lobbyist_name: string
-  registrant_name: string
-  covered_position: string
-  concentration: number
-  agency_filings: number
-  total_filings: number
-  n_clients: number
-  total_income: number
-  first_year: number
-  last_year: number
-  top_clients_str: string
-  sample_uuid: string
-  sample_source: string
-  senate_lda_url: string | null
-  verification_status?: "verified" | "partial" | "unverified" | null
-}
+import type { Finding } from "./types"
 
 // ── Agency color map ───────────────────────────────────────────────────────────
 
@@ -34,6 +12,7 @@ const AGENCY_COLORS: Record<string, string> = {
   fda:      "bg-purple-100 text-purple-800 ring-purple-300",
   sec:      "bg-orange-100 text-orange-800 ring-orange-300",
   fcc:      "bg-pink-100 text-pink-800 ring-pink-300",
+  ftc:      "bg-fuchsia-100 text-fuchsia-800 ring-fuchsia-300",
   dod:      "bg-red-100 text-red-800 ring-red-300",
   treasury: "bg-yellow-100 text-yellow-800 ring-yellow-300",
   hhs:      "bg-rose-100 text-rose-800 ring-rose-300",
@@ -45,6 +24,13 @@ const AGENCY_COLORS: Record<string, string> = {
   faa:      "bg-sky-100 text-sky-800 ring-sky-300",
   state:    "bg-indigo-100 text-indigo-800 ring-indigo-300",
   cftc:     "bg-violet-100 text-violet-800 ring-violet-300",
+  ferc:     "bg-emerald-100 text-emerald-800 ring-emerald-300",
+  cfpb:     "bg-blue-200 text-blue-900 ring-blue-400",
+  va:       "bg-stone-100 text-stone-800 ring-stone-300",
+  sba:      "bg-orange-200 text-orange-900 ring-orange-400",
+  omb:      "bg-gray-100 text-gray-800 ring-gray-300",
+  ustr:     "bg-purple-200 text-purple-900 ring-purple-400",
+  cms:      "bg-green-200 text-green-900 ring-green-400",
 }
 
 // ── Sub-components ─────────────────────────────────────────────────────────────
@@ -94,7 +80,8 @@ function ConcentrationBar({ value }: { value: number }) {
   )
 }
 
-function SenateLink({ uuid, url }: { uuid: string; url: string | null }) {
+function SenateLink({ uuid, url }: { uuid: string | null; url: string | null }) {
+  if (!uuid) return <span className="font-mono text-xs text-slate-400">—</span>
   const href = url ?? `https://lda.senate.gov/filings/public/filing/${uuid}/print/`
   return (
     <a
