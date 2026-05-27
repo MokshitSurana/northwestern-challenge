@@ -6,7 +6,7 @@ version: "3.9"
 #   etl  — Runs the LDA corpus indexer + analysis scripts. Requires the raw
 #           data to be mounted at ./data. Outputs go to ./output.
 #   web  — Serves the reporter verification UI on port 3000.
-#           Reads findings from output/agency_concentration_web.json.
+#           findings.json is baked into the image from web/public/findings.json.
 #
 # Usage:
 #   # Run ETL only (builds DuckDB + generates findings)
@@ -48,8 +48,6 @@ services:
     image: fairguard-web
     ports:
       - "3000:3000"
-    volumes:
-      - ./output:/app/public/output:ro   # web reads JSON findings here
     depends_on:
       etl:
         condition: service_completed_successfully
