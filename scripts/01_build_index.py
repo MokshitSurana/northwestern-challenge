@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-import sys
-sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 """
 01_build_index.py — ETL pipeline for the Northwestern journalism challenge.
 
@@ -9,26 +7,30 @@ writes flat Parquet files per source chunk, then loads everything into
 a single DuckDB file (investigation.duckdb) for fast querying.
 
 Usage:
-    uv run scripts/01_build_index.py              # full build (~30-90 min)
+    uv run scripts/01_build_index.py              # full build (~2.5 hr)
     uv run scripts/01_build_index.py --sample     # one quarter each (~2 min)
     uv run scripts/01_build_index.py --parquet-only  # skip DuckDB step
     uv run scripts/01_build_index.py --duckdb-only   # rebuild DB from existing Parquet
 
 Environment variables:
-    DATA_ROOT    path to data root directory (default: data/data)
+    DATA_ROOT    path to data root directory (default: data)
     OUTPUT_ROOT  path for output files      (default: output)
 """
 
 import argparse
 import os
+import shutil
 import sys
 import time
 from pathlib import Path
 
+import duckdb
 import orjson
 import polars as pl
 from lxml import etree
 from tqdm import tqdm
+
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
 
@@ -522,61 +524,58 @@ TABLE_PATTERNS = {
 
 
 def build_duckdb():
-    import duckdb
     print(f"\n── DuckDB ──────────────────────────────────────────────────────────")
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    con = duckdb.connect(str(DB_PATH))
+    with duckdb.connect(str(DB_PATH)) as con:
+        for table, pattern in TABLE_PATTERNS.items():
+            files = list(PARQUET_DIR.glob(pattern))
+            if not files:
+                print(f"    [skip] {table}: no Parquet files found")
+                continue
+            glob_path = str(PARQUET_DIR / pattern).replace("\\", "/")
+            con.execute(f"DROP TABLE IF EXISTS {table}")
+            con.execute(f"CREATE TABLE {table} AS SELECT * FROM read_parquet('{glob_path}', union_by_name=True)")
+            count = con.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]
+            print(f"    [ok]   {table}: {count:,} rows")
 
-    for table, pattern in TABLE_PATTERNS.items():
-        files = list(PARQUET_DIR.glob(pattern))
-        if not files:
-            print(f"    [skip] {table}: no Parquet files found")
-            continue
-        glob_path = str(PARQUET_DIR / pattern).replace("\\", "/")
-        con.execute(f"DROP TABLE IF EXISTS {table}")
-        con.execute(f"CREATE TABLE {table} AS SELECT * FROM read_parquet('{glob_path}', union_by_name=True)")
-        count = con.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]
-        print(f"    [ok]   {table}: {count:,} rows")
+        # ── Convenience views ──────────────────────────────────────────────────
+        con.execute("""
+            CREATE OR REPLACE VIEW revolving_door AS
+            SELECT
+                sl.filing_uuid,
+                sf.filing_year,
+                sf.filing_period,
+                sf.registrant_name,
+                sf.client_name,
+                sl.lobbyist_name,
+                sl.covered_position,
+                sf.income,
+                sf.expenses
+            FROM senate_lobbyists sl
+            JOIN senate_filings   sf USING (filing_uuid)
+            WHERE sl.covered_position IS NOT NULL
+              AND sl.covered_position != ''
+        """)
+        print("    [ok]   view: revolving_door")
 
-    # ── Convenience views ──────────────────────────────────────────────────────
-    con.execute("""
-        CREATE OR REPLACE VIEW revolving_door AS
-        SELECT
-            sl.filing_uuid,
-            sf.filing_year,
-            sf.filing_period,
-            sf.registrant_name,
-            sf.client_name,
-            sl.lobbyist_name,
-            sl.covered_position,
-            sf.income,
-            sf.expenses
-        FROM senate_lobbyists sl
-        JOIN senate_filings   sf USING (filing_uuid)
-        WHERE sl.covered_position IS NOT NULL
-          AND sl.covered_position != ''
-    """)
-    print("    [ok]   view: revolving_door")
+        con.execute("""
+            CREATE OR REPLACE VIEW senate_spend_by_issue AS
+            SELECT
+                sa.general_issue_code,
+                sf.filing_year,
+                sf.filing_period,
+                COUNT(DISTINCT sf.filing_uuid)  AS filings,
+                COUNT(DISTINCT sf.client_name)  AS unique_clients,
+                SUM(sf.income)                  AS total_income,
+                SUM(sf.expenses)                AS total_expenses
+            FROM senate_activities sa
+            JOIN senate_filings    sf USING (filing_uuid)
+            WHERE sa.general_issue_code IS NOT NULL
+            GROUP BY ALL
+            ORDER BY filing_year, filing_period, total_income DESC NULLS LAST
+        """)
+        print("    [ok]   view: senate_spend_by_issue")
 
-    con.execute("""
-        CREATE OR REPLACE VIEW senate_spend_by_issue AS
-        SELECT
-            sa.general_issue_code,
-            sf.filing_year,
-            sf.filing_period,
-            COUNT(DISTINCT sf.filing_uuid)  AS filings,
-            COUNT(DISTINCT sf.client_name)  AS unique_clients,
-            SUM(sf.income)                  AS total_income,
-            SUM(sf.expenses)                AS total_expenses
-        FROM senate_activities sa
-        JOIN senate_filings    sf USING (filing_uuid)
-        WHERE sa.general_issue_code IS NOT NULL
-        GROUP BY ALL
-        ORDER BY filing_year, filing_period, total_income DESC NULLS LAST
-    """)
-    print("    [ok]   view: senate_spend_by_issue")
-
-    con.close()
     size_gb = DB_PATH.stat().st_size / 1e9
     print(f"\n  DB written to {DB_PATH}  ({size_gb:.2f} GB)")
 
@@ -602,7 +601,6 @@ def main():
         sys.exit(1)
     
     if args.clean and PARQUET_DIR.exists():
-        import shutil
         print(f"[CLEAN] removing {PARQUET_DIR}")
         shutil.rmtree(PARQUET_DIR)
     PARQUET_DIR.mkdir(parents=True, exist_ok=True)
