@@ -35,19 +35,18 @@ Output:
 
 import argparse
 import csv
-import io
 import json
 import math
 import os
 import re
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
-
 import duckdb
+
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 DB_PATH = Path(os.environ.get("OUTPUT_ROOT", "output")) / "investigation.duckdb"
 OUTPUT_ROOT = Path(os.environ.get("OUTPUT_ROOT", "output"))
@@ -318,7 +317,7 @@ AGENCY_REGISTRY = [
         5,
         [
             r"\bSecretary\b.{0,60}\bVeterans Affairs\b",
-            r"\bSecretary\b.{0,60}\b\bVA\b",
+            r"\bSecretary\b.{0,60}\bVA\b",
             r"\bDeputy Secretary\b.{0,60}\bVeterans Affairs\b",
             r"\bUnder Secretary\b.{0,60}\bVeterans Affairs\b",
             r"\bChief of Staff\b.{0,80}\bVA\b",
@@ -463,55 +462,70 @@ def get_lobbyist_profiles(con: duckdb.DuckDBPyConnection) -> list[dict]:
     return [dict(zip(cols, r)) for r in rows]
 
 
-def get_agency_filing_count(
+def get_agency_filing_counts_batch(
     con: duckdb.DuckDBPyConnection,
-    lobbyist_name: str,
-    registrant_id: str,
     entity_fragment: str,
-) -> int:
+) -> dict[tuple[str, str], int]:
     """
-    Count how many filings this lobbyist has (at their firm) that target
-    the specified agency (matched by entity_name fragment).
+    Return {(lobbyist_name, registrant_id): agency_filing_count} for all lobbyists
+    that have at least one filing targeting this agency.
+
+    One query per agency instead of one query per candidate, eliminating N+1.
     """
-    result = con.execute("""
-        SELECT COUNT(DISTINCT sf.filing_uuid)
+    rows = con.execute("""
+        SELECT
+            sl.lobbyist_name,
+            sf.registrant_id,
+            COUNT(DISTINCT sf.filing_uuid) AS agency_filings
         FROM senate_lobbyists sl
         JOIN senate_filings sf USING (filing_uuid)
-        WHERE sl.lobbyist_name = ?
-          AND sf.registrant_id = ?
-          AND sf.filing_uuid IN (
-              SELECT DISTINCT filing_uuid
-              FROM senate_gov_entities
-              WHERE entity_name ILIKE ?
-          )
-    """, [lobbyist_name, registrant_id, f"%{entity_fragment}%"]).fetchone()
-    return result[0] if result else 0
+        WHERE sf.filing_uuid IN (
+            SELECT DISTINCT filing_uuid
+            FROM senate_gov_entities
+            WHERE entity_name ILIKE ?
+        )
+          AND sl.lobbyist_name IS NOT NULL
+        GROUP BY sl.lobbyist_name, sf.registrant_id
+    """, [f"%{entity_fragment}%"]).fetchall()
+    return {(r[0], r[1]): r[2] for r in rows}
 
 
-def get_top_clients_for_agency(
+def get_top_clients_for_agency_batch(
     con: duckdb.DuckDBPyConnection,
-    lobbyist_name: str,
-    registrant_id: str,
     entity_fragment: str,
     limit: int = 5,
-) -> list[str]:
-    """Top clients this lobbyist lobbied this agency on behalf of."""
+) -> dict[tuple[str, str], list[str]]:
+    """
+    Return {(lobbyist_name, registrant_id): [top_client, ...]} for all lobbyists
+    targeting this agency.
+
+    One query per agency instead of one query per candidate, eliminating N+1.
+    """
     rows = con.execute("""
-        SELECT sf.client_name, COUNT(DISTINCT sf.filing_uuid) AS n
+        SELECT
+            sl.lobbyist_name,
+            sf.registrant_id,
+            sf.client_name,
+            COUNT(DISTINCT sf.filing_uuid) AS n
         FROM senate_lobbyists sl
         JOIN senate_filings sf USING (filing_uuid)
-        WHERE sl.lobbyist_name = ?
-          AND sf.registrant_id = ?
-          AND sf.filing_uuid IN (
-              SELECT DISTINCT filing_uuid
-              FROM senate_gov_entities
-              WHERE entity_name ILIKE ?
-          )
-        GROUP BY sf.client_name
-        ORDER BY n DESC
-        LIMIT ?
-    """, [lobbyist_name, registrant_id, f"%{entity_fragment}%", limit]).fetchall()
-    return [r[0] for r in rows]
+        WHERE sf.filing_uuid IN (
+            SELECT DISTINCT filing_uuid
+            FROM senate_gov_entities
+            WHERE entity_name ILIKE ?
+        )
+          AND sl.lobbyist_name IS NOT NULL
+          AND sf.client_name IS NOT NULL
+        GROUP BY sl.lobbyist_name, sf.registrant_id, sf.client_name
+        ORDER BY sl.lobbyist_name, sf.registrant_id, n DESC
+    """, [f"%{entity_fragment}%"]).fetchall()
+
+    result: dict[tuple[str, str], list[str]] = defaultdict(list)
+    for lobbyist, reg_id, client, _ in rows:
+        key = (lobbyist, reg_id)
+        if len(result[key]) < limit:
+            result[key].append(client)
+    return dict(result)
 
 
 # ── Main scan ──────────────────────────────────────────────────────────────────
@@ -522,84 +536,79 @@ def run_scan(
     agency_filter: str | None = None,
     top: int = DEFAULT_TOP,
 ) -> list[dict]:
-    con = duckdb.connect(str(DB_PATH), read_only=True)
+    with duckdb.connect(str(DB_PATH), read_only=True) as con:
+        print(f"\nLoading lobbyist profiles…")
+        profiles = get_lobbyist_profiles(con)
+        print(f"  {len(profiles):,} distinct (lobbyist, firm) pairs with covered_position")
 
-    print(f"\nLoading lobbyist profiles…")
-    profiles = get_lobbyist_profiles(con)
-    print(f"  {len(profiles):,} distinct (lobbyist, firm) pairs with covered_position")
+        # ── Classify each profile ──────────────────────────────────────────────
+        print(f"\nClassifying by prior agency role…")
+        candidates: list[dict] = []
+        n_classified = 0
+        agency_counts: dict[str, int] = defaultdict(int)
 
-    # ── Classify each profile ──────────────────────────────────────────────────
-    print(f"\nClassifying by prior agency role…")
-    candidates = []
-    n_classified = 0
-    agency_counts: dict[str, int] = defaultdict(int)
-
-    for profile in profiles:
-        cov = profile["covered_position"] or ""
-        matches = classify_covered_position(cov)
-        if not matches:
-            continue
-        n_classified += 1
-
-        for short_name, entity_fragment, seniority in matches:
-            if agency_filter and short_name != agency_filter:
+        for profile in profiles:
+            cov = profile["covered_position"] or ""
+            matches = classify_covered_position(cov)
+            if not matches:
                 continue
-            agency_counts[short_name] += 1
-            candidates.append({
-                **profile,
-                "agency_short":      short_name,
-                "entity_fragment":   entity_fragment,
-                "seniority":         seniority,
-            })
+            n_classified += 1
 
-    print(f"  {n_classified:,} profiles matched a senior agency role")
-    print(f"  {len(candidates):,} (lobbyist, firm, agency) triples to evaluate")
-    for short, cnt in sorted(agency_counts.items(), key=lambda x: -x[1]):
-        print(f"    {short.upper():<12} {cnt:,}")
+            for short_name, entity_fragment, seniority in matches:
+                if agency_filter and short_name != agency_filter:
+                    continue
+                agency_counts[short_name] += 1
+                candidates.append({
+                    **profile,
+                    "agency_short":    short_name,
+                    "entity_fragment": entity_fragment,
+                    "seniority":       seniority,
+                })
 
-    # ── Filter by minimum total filings and compute agency concentration ───────
-    print(f"\nComputing agency concentration (min_filings={min_filings}, min_conc={min_conc:.0%})…")
-    results = []
-    for i, cand in enumerate(candidates):
-        if cand["total_filings"] < min_filings:
-            continue
-        if (i + 1) % 100 == 0:
-            print(f"  {i+1}/{len(candidates)} processed…", end="\r")
+        print(f"  {n_classified:,} profiles matched a senior agency role")
+        print(f"  {len(candidates):,} (lobbyist, firm, agency) triples to evaluate")
+        for short, cnt in sorted(agency_counts.items(), key=lambda x: -x[1]):
+            print(f"    {short.upper():<12} {cnt:,}")
 
-        agency_filings = get_agency_filing_count(
-            con,
-            cand["lobbyist_name"],
-            cand["registrant_id"],
-            cand["entity_fragment"],
-        )
-        if agency_filings == 0:
-            continue
-        concentration = agency_filings / cand["total_filings"]
-        if concentration < min_conc:
-            continue
+        # ── Batch-load agency filing counts (one query per agency, not per candidate) ─
+        print(f"\nComputing agency concentration (min_filings={min_filings}, min_conc={min_conc:.0%})…")
 
-        top_clients = get_top_clients_for_agency(
-            con,
-            cand["lobbyist_name"],
-            cand["registrant_id"],
-            cand["entity_fragment"],
-        )
+        # Group candidates by entity_fragment so we can batch-query per agency
+        by_fragment: dict[str, list[dict]] = defaultdict(list)
+        for cand in candidates:
+            if cand["total_filings"] >= min_filings:
+                by_fragment[cand["entity_fragment"]].append(cand)
 
-        # Bridenstine-style interestingness score:
-        #   concentration × log(total_filings+1) × seniority
-        score = concentration * math.log(cand["total_filings"] + 1) * cand["seniority"]
+        n_agencies = len(by_fragment)
+        print(f"  Batch-querying {n_agencies} agencies (was one query per candidate)…")
 
-        results.append({
-            **cand,
-            "agency_filings":  agency_filings,
-            "concentration":   round(concentration, 4),
-            "score":           round(score, 3),
-            "top_clients_str": " | ".join(top_clients),
-        })
+        results = []
+        for frag_idx, (entity_fragment, frag_candidates) in enumerate(by_fragment.items(), 1):
+            print(f"  [{frag_idx}/{n_agencies}] {entity_fragment[:40]}…", end="\r")
+            agency_counts_map = get_agency_filing_counts_batch(con, entity_fragment)
+            top_clients_map   = get_top_clients_for_agency_batch(con, entity_fragment)
 
-    print(f"  {len(results):,} candidates pass thresholds")
-    con.close()
+            for cand in frag_candidates:
+                key = (cand["lobbyist_name"], cand["registrant_id"])
+                agency_filings = agency_counts_map.get(key, 0)
+                if agency_filings == 0:
+                    continue
+                concentration = agency_filings / cand["total_filings"]
+                if concentration < min_conc:
+                    continue
 
+                top_clients = top_clients_map.get(key, [])
+                score = concentration * math.log(cand["total_filings"] + 1) * cand["seniority"]
+
+                results.append({
+                    **cand,
+                    "agency_filings":  agency_filings,
+                    "concentration":   round(concentration, 4),
+                    "score":           round(score, 3),
+                    "top_clients_str": " | ".join(top_clients),
+                })
+
+    print(f"\n  {len(results):,} candidates pass thresholds")
     results.sort(key=lambda x: x["score"], reverse=True)
     return results
 
@@ -882,7 +891,6 @@ def main() -> None:
         write_web_json(results, args.web_dir, top=args.top)
 
     # Summary by agency
-    from collections import Counter
     agency_hits = Counter(r["agency_short"] for r in results)
     print(f"\n{'='*60}")
     print("HITS BY AGENCY")
