@@ -4,16 +4,14 @@ FROM node:20-alpine AS base
 FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-COPY package.json ./
-RUN npm install --frozen-lockfile 2>/dev/null || npm install
+COPY package.json package-lock.json ./
+RUN npm ci
 
 # ── builder ───────────────────────────────────────────────────────────────────
 FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-# Copy findings output from the ETL pipeline if available
-COPY --from=fairguard-etl /output/agency_concentration_web.json ./public/findings.json 2>/dev/null || true
 RUN npm run build
 
 # ── runner (static export served by nginx) ────────────────────────────────────
