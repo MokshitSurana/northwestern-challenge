@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code when working in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
@@ -14,7 +14,27 @@ This file provides guidance to Claude Code when working in this repository.
 
 All scripts run with `uv`. Install dependencies first: `uv sync`
 
-### ETL pipeline (Skill 1)
+### Agent skill dispatcher (Claude Code)
+
+```
+/fair-guard                         # show available modes, ask which to run
+/fair-guard doctor                  # validate setup + guided onboarding (start here)
+/fair-guard index                   # run ETL pipeline (lda-corpus-indexer)
+/fair-guard scan                    # run Bridenstine-pattern scan (revolving-door-detector)
+/fair-guard scan --agency nasa      # filter to one agency
+/fair-guard resolve                 # entity resolution (planned, not yet implemented)
+```
+
+`argument-hint` shows `[mode: doctor | index | scan | resolve]` in CLI autocomplete. The dispatcher reads `skill/<full-name>/SKILL.md` at runtime and executes its instructions. `allowed-tools: Read Bash` is pre-approved — no permission prompts during execution.
+
+**Prerequisite guard (enforced by dispatcher):** `scan` and `resolve` require `output/investigation.duckdb`. If it doesn't exist, the dispatcher stops and shows two recovery options before attempting anything.
+
+**Two ways to get `output/investigation.duckdb`:**
+- **Fast (~10 min):** Download pre-built `output/` from Google Drive → unzip → place at project root:
+  https://drive.google.com/drive/folders/1O_qsxmFitgRfyjPXsgyDSjrbX3L-1Vlf?usp=sharing
+- **Full build (~2.5 hr):** Run `/fair-guard index` after placing raw corpus in `data/`
+
+### ETL pipeline (Skill: index)
 
 ```bash
 uv run scripts/01_build_index.py              # full build (~2.5 hr)
@@ -45,7 +65,7 @@ for t in ("press_releases", "senate_filings", "house_filings", "house_lobbyists"
 ### Reporter UI (web/)
 
 ```bash
-cd web && npm install && npm run dev   # http://localhost:3000
+cd web && npm ci && npm run dev   # http://localhost:3000
 ```
 
 ### Linting
@@ -106,11 +126,30 @@ web/src/app/page.tsx             (reporter verification UI, reads findings JSON)
 
 Convenience views: `revolving_door` (senate lobbyists with non-empty `covered_position`), `senate_spend_by_issue`.
 
-### Three Agent Skills
+### Four Agent Skills
 
-1. **`lda-corpus-indexer`** — ETL pipeline. Working code in `scripts/01_build_index.py`. Packaged under `skill/lda-corpus-indexer/`.
-2. **`entity-resolver`** — normalizes org/person names. Designed but not yet built. Placeholder in `skill/entity-resolver/`.
-3. **`revolving-door-detector`** — cross-references covered_position with gov entity targets. Working code in `scripts/03_agency_concentration.py`. Packaged under `skill/revolving-door-detector/`.
+| Short name | Full name | Status | Implementation |
+|-----------|-----------|--------|---------------|
+| `doctor` | setup-validator | Working | Agent instructions in `skill/doctor/SKILL.md` |
+| `index` | lda-corpus-indexer | Working | `scripts/01_build_index.py` + `skill/lda-corpus-indexer/` |
+| `resolve` | entity-resolver | Planned | Design doc in `skill/entity-resolver/SKILL.md` |
+| `scan` | revolving-door-detector | Working | `scripts/03_agency_concentration.py` + `skill/revolving-door-detector/` |
+
+### Agent Skills architecture (three layers)
+
+Skills exist at three levels simultaneously — each serves a different audience:
+
+| Layer | Path | Standard | Who uses it |
+|-------|------|----------|-------------|
+| Standalone submission artifacts | `skill/<full-name>/` | agentskills.io (original) | Challenge judges, direct skill users |
+| Canonical agent store with modes | `.agents/skills/fair-guard/` | agentskills.io (modes architecture) | Other agents (Codex, Gemini, Qwen) |
+| Claude Code dispatcher | `.claude/skills/fair-guard/` | Claude Code extensions | Claude Code CLI (`/fair-guard`) |
+
+**Do not put Claude Code-specific fields** (`$ARGUMENTS`, `argument-hint`, `context: fork`, `disable-model-invocation`) into `skill/` files — those are the portable, submission-facing artifacts. Keep those extensions in `.claude/skills/` only.
+
+The `.agents/skills/fair-guard/modes/` copies have cleaned-up frontmatter (non-standard fields like `version`, `author`, `tools` moved under `metadata:` and `compatibility:` per the agentskills.io spec). The originals in `skill/` are untouched.
+
+The dispatcher routes `$ARGUMENTS` short names to `skill/<full-name>/SKILL.md` at runtime. It enforces prerequisites deterministically (DuckDB check for `scan`/`resolve`, data dir check for `index`) before reading any mode file.
 
 ---
 
@@ -148,14 +187,15 @@ Run `uv run scripts/03_agency_concentration.py` to populate.
 
 ---
 
-## Priority Order (remaining work as of May 27, 2026)
+## Priority Order (remaining work as of May 29, 2026)
 
 1. **Run `scripts/03_agency_concentration.py`** → generates Track 2 structural finding
 2. **Verify top candidates from Track 2** against external sources (LinkedIn, news archives, USAspending.gov)
 3. **Populate reporter UI** with findings JSON (`web/public/findings.json`)
 4. **Collect remaining traces from Mokshit** → save to `traces/`
 5. **Complete `findings/findings_report.md`** → export to PDF
-6. **Build entity-resolver** (Skill 2) — target F1 ≥ 0.92 on 500-pair eval set
+6. **Test `/fair-guard doctor`** across Linux, macOS, Windows — see `notes/HANDOFF_TO_MOKSHIT_SKILL_DOCTOR.md`
+7. **Build entity-resolver** (Skill: `resolve`) — target F1 ≥ 0.92 on 500-pair eval set
 
 ---
 
@@ -164,10 +204,12 @@ Run `uv run scripts/03_agency_concentration.py` to populate.
 - [ ] `uv run scripts/01_build_index.py --sample` runs clean from scratch on a new machine
 - [ ] `uv run scripts/03_agency_concentration.py` runs and produces output
 - [ ] All SKILL.md files have valid YAML frontmatter + instructions
+- [ ] `/fair-guard doctor` runs without errors and prints a correct checklist
+- [ ] `/fair-guard scan` routes correctly and executes without permission prompts
 - [ ] `findings/findings_report.md` exported to PDF
 - [ ] `traces/` contains logs keyed to skill invocations
 - [ ] `README.md` maps all submission artifacts
-- [ ] `cd web && npm run build` succeeds
+- [ ] `cd web && npm ci && npm run build` succeeds
 - [ ] No hardcoded absolute paths in any script
 - [ ] `pyproject.toml` has pinned dependency versions
 
@@ -176,22 +218,33 @@ Run `uv run scripts/03_agency_concentration.py` to populate.
 ## Codebase structure (key files)
 
 ```
-skill/lda-corpus-indexer/SKILL.md          # Skill 1 — main instructions
+skill/doctor/SKILL.md                      # Skill: doctor — setup validator
+skill/lda-corpus-indexer/SKILL.md          # Skill: index — submission artifact
 skill/lda-corpus-indexer/references/
     known_quirks.md                         # ← most important ref file
     senate_schema.md
     house_schema.md
     joins.md
-skill/revolving-door-detector/SKILL.md     # Skill 3 — methodology doc
-skill/entity-resolver/SKILL.md             # Skill 2 — design doc (planned)
+skill/revolving-door-detector/SKILL.md     # Skill: scan — submission artifact
+skill/entity-resolver/SKILL.md             # Skill: resolve — design doc (planned)
 
-scripts/01_build_index.py                  # ETL (Skill 1 implementation)
+.agents/skills/fair-guard/SKILL.md         # agentskills.io master skill
+.agents/skills/fair-guard/modes/
+    doctor/SKILL.md                        # agentskills.io compliant copies
+    index/SKILL.md                         # (short names; originals in skill/ unchanged)
+    resolve/SKILL.md
+    scan/SKILL.md
+
+.claude/skills/fair-guard/SKILL.md         # Claude Code dispatcher (/fair-guard)
+
+scripts/01_build_index.py                  # ETL (Skill: index implementation)
 scripts/02_revolving_door_scan.py          # broad revolving door scan
-scripts/03_agency_concentration.py         # Skill 3 implementation (Track 2)
+scripts/03_agency_concentration.py         # Skill: scan implementation (Track 2)
 
 findings/findings_report.md               # final findings (→ PDF)
 notes/05_finding_bridenstine.md           # anchor finding (verified)
 notes/06_structural_pattern_findings.md   # Track 2 output (auto-generated)
+notes/HANDOFF_TO_MOKSHIT_SKILL_DOCTOR.md  # doctor skill spec + testing tasks for Mokshit
 
 web/src/app/page.tsx                      # reporter UI — server component
 web/src/app/FindingsClient.tsx            # reporter UI — interactive client
