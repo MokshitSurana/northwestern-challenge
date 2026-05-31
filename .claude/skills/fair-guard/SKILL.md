@@ -16,9 +16,9 @@ allowed-tools: Read Bash
 
 | Mode | Full skill name | Purpose | Prerequisite |
 |------|----------------|---------|-------------|
-| `doctor` | setup-validator | Check all deps and data; guided onboarding | None — always safe |
-| `index` | lda-corpus-indexer | Parse raw LDA data → `output/investigation.duckdb` | Raw data in `data/` |
-| `resolve` | entity-resolver | Normalize org/person name strings for clean joins | DuckDB built |
+| `doctor` | setup-validator | Cross-platform setup check + next-action routing | None — always safe |
+| `index` | lda-corpus-indexer | Parse raw LDA data → `output/investigation.duckdb` (+ verify) | Raw data in `data/` |
+| `resolve` | entity-resolver | Normalize org/person name strings; write `entity_map` (F1 = 0.963) | DuckDB built |
 | `scan` | revolving-door-detector | Rank former officials by agency concentration ratio | DuckDB built |
 
 ## Invocation examples
@@ -63,10 +63,10 @@ When invoked with `$ARGUMENTS`:
    - `doctor`: no prerequisites — always proceed.
 
    Then read the corresponding skill file and follow its instructions exactly:
-   - `doctor`  → read `skill/doctor/SKILL.md`
-   - `index`   → read `skill/lda-corpus-indexer/SKILL.md`
-   - `resolve` → read `skill/entity-resolver/SKILL.md`
-   - `scan`    → read `skill/revolving-door-detector/SKILL.md`
+   - `doctor`  → read `skill/doctor/SKILL.md`                  (runs `scripts/doctor.py`)
+   - `index`   → read `skill/lda-corpus-indexer/SKILL.md`      (runs `scripts/01_build_index.py`; verify with `scripts/verify_build.py`)
+   - `resolve` → read `skill/entity-resolver/SKILL.md`         (runs `scripts/02_entity_resolver.py`)
+   - `scan`    → read `skill/revolving-door-detector/SKILL.md` (runs `scripts/03_agency_concentration.py`)
 
 3. **Invalid mode name:** Suggest the closest valid mode and ask for confirmation
    before proceeding.
@@ -76,4 +76,7 @@ When invoked with `$ARGUMENTS`:
 
 After reading the mode's SKILL.md, execute its instructions in full.
 Do not summarize or skip steps.
-If the mode body contains `Status: Planned`, report that and stop.
+
+All four modes are currently shipped; there is no `Status: Planned` skill to
+guard against. (Previously `resolve` was a design doc — it now has a full
+implementation with F1 = 0.963 verified by `tests/test_entity_resolver.py`.)
