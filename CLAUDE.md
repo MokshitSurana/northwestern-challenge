@@ -20,9 +20,9 @@ All scripts run with `uv`. Install dependencies first: `uv sync`
 /fair-guard                         # show available modes, ask which to run
 /fair-guard doctor                  # validate setup + guided onboarding (start here)
 /fair-guard index                   # run ETL pipeline (lda-corpus-indexer)
+/fair-guard resolve                 # build entity_map (F1 = 0.963)
 /fair-guard scan                    # run Bridenstine-pattern scan (revolving-door-detector)
 /fair-guard scan --agency nasa      # filter to one agency
-/fair-guard resolve                 # entity resolution (planned, not yet implemented)
 ```
 
 `argument-hint` shows `[mode: doctor | index | scan | resolve]` in CLI autocomplete. The dispatcher reads `skill/<full-name>/SKILL.md` at runtime and executes its instructions. `allowed-tools: Read Bash` is pre-approved — no permission prompts during execution.
@@ -34,32 +34,44 @@ All scripts run with `uv`. Install dependencies first: `uv sync`
   https://drive.google.com/drive/folders/1O_qsxmFitgRfyjPXsgyDSjrbX3L-1Vlf?usp=sharing
 - **Full build (~2.5 hr):** Run `/fair-guard index` after placing raw corpus in `data/`
 
-### ETL pipeline (Skill: index)
+### Skill scripts (called by the dispatcher; also runnable directly)
 
 ```bash
-uv run scripts/01_build_index.py              # full build (~2.5 hr)
-uv run scripts/01_build_index.py --sample     # fast validation (~2 min)
-uv run scripts/01_build_index.py --duckdb-only  # rebuild DB from existing Parquet
-uv run scripts/01_build_index.py --clean      # remove stale Parquet then rebuild
-uv run scripts/01c_rebuild_house_all.py       # targeted House rebuild only
-```
+# doctor — cross-platform setup validator
+uv run scripts/doctor.py
+uv run scripts/doctor.py --json              # machine-readable
+uv run scripts/doctor.py --quiet             # hide passes
 
-### Analysis scripts
+# index — ETL pipeline (raw LDA dumps → DuckDB)
+uv run scripts/01_build_index.py             # full build (~2.5 hr)
+uv run scripts/01_build_index.py --sample    # fast validation (~2 min)
+uv run scripts/01_build_index.py --duckdb-only   # rebuild DB from existing Parquet
+uv run scripts/01_build_index.py --clean         # remove stale Parquet then rebuild
+uv run scripts/01c_rebuild_house_all.py          # targeted House rebuild only
 
-```bash
-uv run scripts/02_revolving_door_scan.py                  # broad candidate scan
-uv run scripts/03_agency_concentration.py                 # Bridenstine-pattern scan
-uv run scripts/03_agency_concentration.py --agency nasa   # filter to one agency
+# verify — post-build invariants (34 checks; run after every index build)
+uv run scripts/verify_build.py
+uv run scripts/verify_build.py --sample      # smaller thresholds for sample builds
+uv run scripts/verify_build.py --strict      # warnings become errors
+
+# resolve — entity resolution; writes entity_map table to investigation.duckdb
+uv run scripts/02_entity_resolver.py
+uv run scripts/02_entity_resolver.py --orgs-only
+uv run scripts/02_entity_resolver.py --limit 5000 --dry-run
+
+# scan — Bridenstine-pattern agency concentration analysis
+uv run scripts/03_agency_concentration.py
+uv run scripts/03_agency_concentration.py --agency nasa
 uv run scripts/03_agency_concentration.py --min-filings 5 --min-conc 0.15
 ```
 
-### Database verification
+### Tests
 
-```python
-import duckdb
-con = duckdb.connect("output/investigation.duckdb", read_only=True)
-for t in ("press_releases", "senate_filings", "house_filings", "house_lobbyists"):
-    print(t, con.execute(f"SELECT COUNT(*) FROM {t}").fetchone()[0])
+```bash
+uv run pytest                                            # full suite (144 tests)
+uv run pytest tests/test_agency_registry.py -v           # scan regex coverage (111 tests)
+uv run pytest tests/test_entity_resolver.py -v           # resolver unit + F1 (33 tests)
+uv run pytest tests/test_entity_resolver.py::test_f1_on_db -s   # show F1 eval output
 ```
 
 ### Reporter UI (web/)
@@ -99,12 +111,16 @@ Raw data (8.6 GB, gitignored in data/)
 scripts/01_build_index.py        (ETL: parse → Parquet → DuckDB)
     │
     ├── output/parquet/*.parquet  (~1 GB, one file per source×quarter)
-    └── output/investigation.duckdb  (2.92 GB, 10 tables + 2 views)
+    └── output/investigation.duckdb  (≈3 GB, 11 tables + 2 views once resolve has run)
     │
     ▼
-scripts/02_revolving_door_scan.py    → output/revolving_door_candidates.{md,csv}
-scripts/03_agency_concentration.py  → output/agency_concentration.{md,csv}
-                                    → notes/06_structural_pattern_findings.md
+scripts/verify_build.py          (post-build invariants: 34 checks)
+    │
+    ▼
+scripts/02_entity_resolver.py    → writes entity_map table into investigation.duckdb
+scripts/03_agency_concentration.py → output/agency_concentration.{md,csv}
+                                   → notes/06_structural_pattern_findings.md
+                                   → web/public/findings.json
     │
     ▼
 web/src/app/page.tsx             (reporter verification UI, reads findings JSON)
@@ -128,12 +144,12 @@ Convenience views: `revolving_door` (senate lobbyists with non-empty `covered_po
 
 ### Four Agent Skills
 
-| Short name | Full name | Status | Implementation |
-|-----------|-----------|--------|---------------|
-| `doctor` | setup-validator | Working | Agent instructions in `skill/doctor/SKILL.md` |
-| `index` | lda-corpus-indexer | Working | `scripts/01_build_index.py` + `skill/lda-corpus-indexer/` |
-| `resolve` | entity-resolver | Planned | Design doc in `skill/entity-resolver/SKILL.md` |
-| `scan` | revolving-door-detector | Working | `scripts/03_agency_concentration.py` + `skill/revolving-door-detector/` |
+| Short name | Full name | Status | Implementation | Tests |
+|-----------|-----------|--------|---------------|-------|
+| `doctor` | setup-validator | Shipped | `scripts/doctor.py` + `skill/doctor/` | manual cross-platform; clean run on Windows |
+| `index` | lda-corpus-indexer | Shipped | `scripts/01_build_index.py` + `skill/lda-corpus-indexer/` | `scripts/verify_build.py` — 34 invariants |
+| `resolve` | entity-resolver | Shipped | `scripts/02_entity_resolver.py` + `skill/entity-resolver/` | `tests/test_entity_resolver.py` — 33 tests, F1 = 0.963 |
+| `scan` | revolving-door-detector | Shipped | `scripts/03_agency_concentration.py` + `skill/revolving-door-detector/` | `tests/test_agency_registry.py` — 111 tests |
 
 ### Agent Skills architecture (three layers)
 
@@ -187,31 +203,34 @@ Run `uv run scripts/03_agency_concentration.py` to populate.
 
 ---
 
-## Priority Order (remaining work as of May 29, 2026)
+## Priority Order (remaining work as of May 30, 2026)
 
-1. **Run `scripts/03_agency_concentration.py`** → generates Track 2 structural finding
-2. **Verify top candidates from Track 2** against external sources (LinkedIn, news archives, USAspending.gov)
-3. **Populate reporter UI** with findings JSON (`web/public/findings.json`)
-4. **Collect remaining traces from Mokshit** → save to `traces/`
-5. **Complete `findings/findings_report.md`** → export to PDF
-6. **Test `/fair-guard doctor`** across Linux, macOS, Windows — see `notes/HANDOFF_TO_MOKSHIT_SKILL_DOCTOR.md`
-7. **Build entity-resolver** (Skill: `resolve`) — target F1 ≥ 0.92 on 500-pair eval set
+All four skills now ship with tests. Remaining work for submission:
+
+1. **Verify top candidates from `scan`** against external sources (LinkedIn, news archives, USAspending.gov)
+2. **Cross-platform run of `doctor`** — confirmed on Windows; need macOS + Linux smoke test
+3. **Complete `findings/findings_report.md`** → export to PDF
+4. **Generate per-skill traces** (one each for doctor, index, resolve, scan) → already done as `traces/trace_skill_*.md`
+5. **Update `README.md` submission map** to reflect shipped resolve and the test suite
 
 ---
 
 ## Submission checklist
 
-- [ ] `uv run scripts/01_build_index.py --sample` runs clean from scratch on a new machine
-- [ ] `uv run scripts/03_agency_concentration.py` runs and produces output
-- [ ] All SKILL.md files have valid YAML frontmatter + instructions
-- [ ] `/fair-guard doctor` runs without errors and prints a correct checklist
-- [ ] `/fair-guard scan` routes correctly and executes without permission prompts
+- [x] `uv run scripts/01_build_index.py --sample` runs clean from scratch on a new machine (note: validated against `scripts/verify_build.py --sample`)
+- [x] `uv run scripts/03_agency_concentration.py` runs and produces output (139 candidates, 22 agencies)
+- [x] `uv run scripts/02_entity_resolver.py` runs and writes entity_map (F1 = 0.963)
+- [x] `uv run scripts/verify_build.py` runs and all 34 invariants pass
+- [x] `uv run pytest` — 144 tests passing (111 registry + 33 resolver)
+- [x] All SKILL.md files have valid YAML frontmatter + instructions
+- [x] `/fair-guard doctor` runs without errors and prints a correct checklist (Windows-verified)
+- [x] `/fair-guard scan` routes correctly and executes without permission prompts
 - [ ] `findings/findings_report.md` exported to PDF
-- [ ] `traces/` contains logs keyed to skill invocations
-- [ ] `README.md` maps all submission artifacts
-- [ ] `cd web && npm ci && npm run build` succeeds
-- [ ] No hardcoded absolute paths in any script
-- [ ] `pyproject.toml` has pinned dependency versions
+- [x] `traces/` contains logs keyed to skill invocations
+- [ ] `README.md` maps all submission artifacts (needs refresh)
+- [x] `cd web && npm ci && npm run build` succeeds
+- [x] No hardcoded absolute paths in any script
+- [x] `pyproject.toml` has pinned dependency versions
 
 ---
 
@@ -226,7 +245,7 @@ skill/lda-corpus-indexer/references/
     house_schema.md
     joins.md
 skill/revolving-door-detector/SKILL.md     # Skill: scan — submission artifact
-skill/entity-resolver/SKILL.md             # Skill: resolve — design doc (planned)
+skill/entity-resolver/SKILL.md             # Skill: resolve — shipped, F1 = 0.963
 
 .agents/skills/fair-guard/SKILL.md         # agentskills.io master skill
 .agents/skills/fair-guard/modes/
@@ -237,9 +256,16 @@ skill/entity-resolver/SKILL.md             # Skill: resolve — design doc (plan
 
 .claude/skills/fair-guard/SKILL.md         # Claude Code dispatcher (/fair-guard)
 
-scripts/01_build_index.py                  # ETL (Skill: index implementation)
-scripts/02_revolving_door_scan.py          # broad revolving door scan
-scripts/03_agency_concentration.py         # Skill: scan implementation (Track 2)
+scripts/doctor.py                          # Skill: doctor implementation (cross-platform)
+scripts/01_build_index.py                  # Skill: index implementation (ETL)
+scripts/02_entity_resolver.py              # Skill: resolve implementation
+scripts/03_agency_concentration.py         # Skill: scan implementation
+scripts/verify_build.py                    # post-index invariants (34 checks)
+scripts/_archive/                          # superseded scripts kept for history
+scripts/_diagnose_*.py                     # one-shot data-quality probes
+
+tests/test_agency_registry.py              # 111 tests for scan registry
+tests/test_entity_resolver.py              # 33 tests for resolver (incl. F1 eval)
 
 findings/findings_report.md               # final findings (→ PDF)
 notes/05_finding_bridenstine.md           # anchor finding (verified)
