@@ -1,5 +1,7 @@
 """Rebuild just the senate_lobbyists Parquet + DuckDB table with fixed name parsing."""
-import sys, os
+import os
+import sys
+
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
 from pathlib import Path
