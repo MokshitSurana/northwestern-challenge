@@ -524,7 +524,7 @@ TABLE_PATTERNS = {
 
 
 def build_duckdb():
-    print(f"\n── DuckDB ──────────────────────────────────────────────────────────")
+    print("\n── DuckDB ──────────────────────────────────────────────────────────")
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     with duckdb.connect(str(DB_PATH)) as con:
         for table, pattern in TABLE_PATTERNS.items():
@@ -599,7 +599,7 @@ def main():
         print(f"ERROR: DATA_ROOT not found: {DATA_ROOT}", file=sys.stderr)
         print("Set the DATA_ROOT environment variable to the correct path.", file=sys.stderr)
         sys.exit(1)
-    
+
     if args.clean and PARQUET_DIR.exists():
         print(f"[CLEAN] removing {PARQUET_DIR}")
         shutil.rmtree(PARQUET_DIR)
