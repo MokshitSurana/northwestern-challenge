@@ -41,7 +41,7 @@ import os
 import re
 import sys
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import duckdb
@@ -68,91 +68,135 @@ DEFAULT_TOP         = 40
 #                      A match on ANY pattern qualifies the lobbyist.
 #                      Patterns should require seniority keywords + agency name.
 
+# Pattern conventions used below:
+#   _AGENCY_NAMES_X = any of the agency's name variants (long form, short form,
+#                     abbreviation). The role-and-agency proximity patterns all
+#                     reference _AGENCY_NAMES_X via Python str interpolation so
+#                     adding a new wording extends every role pattern at once.
+#   Each agency has both `role then agency` AND `agency then role` patterns to
+#   handle disclosure strings written in either word order.
+#   Bridenstine-grade roles only: Secretary, Deputy/Under/Assistant/Associate
+#   Secretary, Administrator (and its Deputy/Associate/Assistant variants),
+#   Commissioner, Chairman/Chairwoman, Director (of agency), Chief of Staff to
+#   the agency head, General Counsel, Inspector General.
+
+# Common senior-role phrases (reused below)
+_HEAD_ROLES = r"(?:Administrator|Commissioner|Chair(?:man|woman)|Secretary|Director)"
+_DEPUTY_ROLES = (
+    r"(?:Deputy|Under|Assistant|Associate|Principal Deputy|"
+    r"Principal Deputy Assistant|Deputy Assistant|Acting)"
+)
+_STAFF_ROLES = r"(?:Chief of Staff|General Counsel|Deputy General Counsel|Inspector General|Counselor)"
+
+
+def _role_agency(role: str, agency_alt: str, gap: int = 60) -> list[str]:
+    """Build the bidirectional `role <agency>` and `<agency> role` patterns.
+
+    Returns both word orders so the same role at either side of the comma
+    triggers a match.
+    """
+    return [
+        rf"\b{role}\b.{{0,{gap}}}(?:{agency_alt})",
+        rf"(?:{agency_alt}).{{0,{gap}}}\b{role}\b",
+    ]
+
+
 AGENCY_REGISTRY = [
+    # ── NASA ──────────────────────────────────────────────────────────────────
     (
         "nasa",
         "Aeronautics & Space",  # matches "Natl Aeronautics & Space Administration (NASA)"
         5,
+        # NASA-name alternation: abbreviation or long form
         [
-            r"\bAdministrator\b.{0,60}\bNASA\b",
-            r"\bAdministrator\b.{0,60}\bNational Aeronautics\b",
-            r"\bNASA\b.{0,60}\bAdministrator\b",
-            r"\bDeputy Administrator\b.{0,60}\bNASA\b",
-            r"\bAssociate Administrator\b.{0,60}\bNASA\b",
-            r"\bChief of Staff\b.{0,80}\bNASA\b",
-            r"\bNASA\b.{0,60}\bChief of Staff\b",
-            r"\bDirector\b.{0,60}\bNASA\b.{0,40}\b(Center|Division|Office)\b",
+            *_role_agency(r"Administrator", r"\bNASA\b|National Aeronautics"),
+            *_role_agency(r"Deputy Administrator", r"\bNASA\b|National Aeronautics"),
+            *_role_agency(r"Associate Administrator", r"\bNASA\b|National Aeronautics"),
+            *_role_agency(r"Assistant Administrator", r"\bNASA\b|National Aeronautics"),
+            *_role_agency(r"Acting Administrator", r"\bNASA\b|National Aeronautics"),
+            *_role_agency(r"Chief of Staff", r"\bNASA\b|National Aeronautics", gap=80),
+            *_role_agency(r"General Counsel", r"\bNASA\b|National Aeronautics"),
+            *_role_agency(r"Inspector General", r"\bNASA\b|National Aeronautics"),
         ],
     ),
+    # ── EPA ───────────────────────────────────────────────────────────────────
     (
         "epa",
         "Environmental Protection Agency",
         5,
         [
-            r"\bAdministrator\b.{0,60}\bEPA\b",
-            r"\bAdministrator\b.{0,60}\bEnvironmental Protection\b",
-            r"\bEPA\b.{0,60}\bAdministrator\b",
-            r"\bDeputy Administrator\b.{0,60}\bEPA\b",
-            r"\bAssistant Administrator\b.{0,60}\bEPA\b",
-            r"\bChief of Staff\b.{0,80}\bEPA\b",
-            r"\bEPA\b.{0,60}\bChief of Staff\b",
+            *_role_agency(r"Administrator", r"\bEPA\b|Environmental Protection"),
+            *_role_agency(r"Deputy Administrator", r"\bEPA\b|Environmental Protection"),
+            *_role_agency(r"Associate Administrator", r"\bEPA\b|Environmental Protection"),
+            # Abbreviated "Admin" (e.g. "Assoc. Admin. Cong. Affairs, EPA")
+            *_role_agency(r"Assoc\.?\s*Admin", r"\bEPA\b|Environmental Protection"),
+            *_role_agency(r"Assistant Administrator", r"\bEPA\b|Environmental Protection"),
+            *_role_agency(r"Acting Administrator", r"\bEPA\b|Environmental Protection"),
+            *_role_agency(r"Chief of Staff", r"\bEPA\b|Environmental Protection", gap=80),
+            *_role_agency(r"General Counsel", r"\bEPA\b|Environmental Protection"),
+            *_role_agency(r"Deputy General Counsel", r"\bEPA\b|Environmental Protection"),
+            *_role_agency(r"Inspector General", r"\bEPA\b|Environmental Protection"),
         ],
     ),
+    # ── FDA ───────────────────────────────────────────────────────────────────
     (
         "fda",
         "Food & Drug Administration",
         5,
         [
-            r"\bCommissioner\b.{0,60}\bFDA\b",
-            r"\bCommissioner\b.{0,60}\bFood and Drug\b",
-            r"\bFDA\b.{0,60}\bCommissioner\b",
-            r"\bDeputy Commissioner\b.{0,60}\bFDA\b",
-            r"\bAssociate Commissioner\b.{0,60}\bFDA\b",
-            r"\bChief of Staff\b.{0,80}\bFDA\b",
-            r"\bCenter Director\b.{0,80}\bFDA\b",
+            *_role_agency(r"Commissioner", r"\bFDA\b|Food and Drug Administration|Food & Drug Administration"),
+            *_role_agency(r"Deputy Commissioner", r"\bFDA\b|Food and Drug Administration|Food & Drug Administration"),
+            *_role_agency(r"Associate Commissioner", r"\bFDA\b|Food and Drug Administration|Food & Drug Administration"),
+            *_role_agency(r"Principal Deputy Commissioner", r"\bFDA\b|Food and Drug"),
+            *_role_agency(r"Acting Commissioner", r"\bFDA\b|Food and Drug"),
+            *_role_agency(r"Chief of Staff", r"\bFDA\b|Food and Drug Administration|Food & Drug Administration", gap=80),
+            *_role_agency(r"Center Director", r"\bFDA\b", gap=80),
+            *_role_agency(r"General Counsel", r"\bFDA\b|Food and Drug"),
         ],
     ),
+    # ── FCC ───────────────────────────────────────────────────────────────────
     (
         "fcc",
         "Federal Communications Commission",
         5,
         [
-            r"\bChairman\b.{0,60}\bFCC\b",
-            r"\bChairwoman\b.{0,60}\bFCC\b",
-            r"\bFCC\b.{0,60}\bChair(man|woman)?\b",
-            r"\bCommissioner\b.{0,60}\bFCC\b",
-            r"\bFCC\b.{0,60}\bCommissioner\b",
-            r"\bChief of Staff\b.{0,80}\bFCC\b",
-            r"\bFCC\b.{0,60}\bChief of Staff\b",
+            *_role_agency(r"Chair(?:man|woman)?", r"\bFCC\b|Federal Communications Commission"),
+            *_role_agency(r"Counselor to the Chair(?:man|woman)?",
+                          r"\bFCC\b|Federal Communications Commission", gap=80),
+            *_role_agency(r"Commissioner", r"\bFCC\b|Federal Communications Commission"),
+            *_role_agency(r"Chief of Staff", r"\bFCC\b|Federal Communications Commission", gap=80),
+            *_role_agency(r"General Counsel", r"\bFCC\b|Federal Communications Commission"),
+            *_role_agency(r"Bureau Chief", r"\bFCC\b", gap=80),
         ],
     ),
+    # ── SEC ───────────────────────────────────────────────────────────────────
     (
         "sec",
         "Securities & Exchange Commission",
         5,
         [
-            r"\bChairman\b.{0,60}\bSEC\b",
-            r"\bChairwoman\b.{0,60}\bSEC\b",
-            r"\bSEC\b.{0,60}\bChair(man|woman)?\b",
-            r"\bCommissioner\b.{0,60}\bSEC\b",
-            r"\bSEC\b.{0,60}\bCommissioner\b",
-            r"\bDirector\b.{0,60}\bSEC\b",
-            r"\bChief of Staff\b.{0,80}\bSEC\b",
+            *_role_agency(r"Chair(?:man|woman)?", r"\bSEC\b|Securities and Exchange Commission|Securities & Exchange Commission"),
+            *_role_agency(r"Commissioner", r"\bSEC\b|Securities and Exchange Commission|Securities & Exchange Commission"),
+            *_role_agency(r"Director", r"\bSEC\b|Securities and Exchange"),
+            *_role_agency(r"Division Director", r"\bSEC\b|Securities and Exchange", gap=80),
+            *_role_agency(r"Chief of Staff", r"\bSEC\b|Securities and Exchange", gap=80),
+            *_role_agency(r"General Counsel", r"\bSEC\b|Securities and Exchange"),
         ],
     ),
+    # ── FTC ───────────────────────────────────────────────────────────────────
     (
         "ftc",
         "Federal Trade Commission",
         5,
         [
-            r"\bChairman\b.{0,60}\bFTC\b",
-            r"\bChairwoman\b.{0,60}\bFTC\b",
-            r"\bFTC\b.{0,60}\bChair(man|woman)?\b",
-            r"\bCommissioner\b.{0,60}\bFTC\b",
-            r"\bFTC\b.{0,60}\bCommissioner\b",
-            r"\bChief of Staff\b.{0,80}\bFTC\b",
+            *_role_agency(r"Chair(?:man|woman)?", r"\bFTC\b|Federal Trade Commission"),
+            *_role_agency(r"Commissioner", r"\bFTC\b|Federal Trade Commission"),
+            *_role_agency(r"Chief of Staff", r"\bFTC\b|Federal Trade Commission", gap=80),
+            *_role_agency(r"General Counsel", r"\bFTC\b|Federal Trade Commission"),
+            *_role_agency(r"Bureau Director", r"\bFTC\b|Federal Trade Commission", gap=80),
         ],
     ),
+    # ── DOD ───────────────────────────────────────────────────────────────────
     (
         "dod",
         "Defense, Dept of",
@@ -160,74 +204,96 @@ AGENCY_REGISTRY = [
         [
             r"\bSecretary of Defense\b",
             r"\bDeputy Secretary of Defense\b",
-            r"\bUnder Secretary\b.{0,60}\bDefense\b",
-            r"\bAssistant Secretary\b.{0,60}\bDefense\b",
-            r"\bChief of Staff\b.{0,80}\bPentagon\b",
+            r"\bUnder Secretary\b.{0,60}\b(?:Defense|DoD|DOD)\b",
+            r"\bAssistant Secretary\b.{0,60}\b(?:Defense|DoD|DOD)\b",
+            r"\bDeputy Assistant Secretary\b.{0,60}\b(?:Defense|DoD|DOD)\b",
+            r"\bPrincipal Deputy Assistant Secretary\b.{0,60}\b(?:Defense|DoD|DOD)\b",
+            r"\bPrincipal Director\b.{0,60}\b(?:Defense|DoD|DOD)\b",
+            r"\bChief of Staff\b.{0,80}\b(?:Pentagon|DoD|DOD|Department of Defense)\b",
+            r"\b(?:Pentagon|DoD|DOD|Department of Defense)\b.{0,80}\bChief of Staff\b",
+            r"\bGeneral Counsel\b.{0,60}\b(?:Defense|DoD|DOD)\b",
         ],
     ),
+    # ── Treasury ──────────────────────────────────────────────────────────────
     (
         "treasury",
         "Treasury, Dept of",
         5,
         [
-            r"\bSecretary\b.{0,60}\bTreasury\b",
-            r"\bTreasury\b.{0,60}\bSecretary\b",
-            r"\bDeputy Secretary\b.{0,60}\bTreasury\b",
-            r"\bUnder Secretary\b.{0,60}\bTreasury\b",
-            r"\bAssistant Secretary\b.{0,60}\bTreasury\b",
-            r"\bDeputy Assistant Secretary\b.{0,60}\bTreasury\b",
-            r"\bChief of Staff\b.{0,80}\bTreasury\b",
+            *_role_agency(r"Secretary", r"\bTreasury\b|Department of the Treasury"),
+            *_role_agency(r"Deputy Secretary", r"\bTreasury\b|Department of the Treasury"),
+            *_role_agency(r"Under Secretary", r"\bTreasury\b|Department of the Treasury"),
+            *_role_agency(r"Assistant Secretary", r"\bTreasury\b|Department of the Treasury"),
+            *_role_agency(r"Deputy Assistant Secretary", r"\bTreasury\b|Department of the Treasury"),
+            *_role_agency(r"Chief of Staff", r"\bTreasury\b|Department of the Treasury", gap=80),
+            *_role_agency(r"General Counsel", r"\bTreasury\b|Department of the Treasury"),
         ],
     ),
+    # ── HHS ───────────────────────────────────────────────────────────────────
     (
         "hhs",
         "Health & Human Services",
         5,
         [
-            r"\bSecretary\b.{0,60}\bHHS\b",
-            r"\bSecretary\b.{0,60}\bHealth and Human Services\b",
-            r"\bDeputy Secretary\b.{0,60}\bHHS\b",
-            r"\bAssistant Secretary\b.{0,60}\bHHS\b",
-            r"\bChief of Staff\b.{0,80}\bHHS\b",
+            *_role_agency(r"Secretary", r"\bHHS\b|Health and Human Services|Health & Human Services"),
+            *_role_agency(r"Deputy Secretary", r"\bHHS\b|Health and Human Services|Health & Human Services"),
+            *_role_agency(r"Assistant Secretary", r"\bHHS\b|Health and Human Services|Health & Human Services"),
+            *_role_agency(r"Chief of Staff", r"\bHHS\b|Health and Human Services|Health & Human Services|Dept(?:\.|artment)?\s+of\s+HHS", gap=80),
+            *_role_agency(r"General Counsel", r"\bHHS\b|Health and Human Services"),
         ],
     ),
+    # ── DHS ───────────────────────────────────────────────────────────────────
     (
         "dhs",
         "Homeland Security, Dept of",
         5,
         [
-            r"\bSecretary\b.{0,60}\bHomeland Security\b",
-            r"\bSecretary\b.{0,60}\bDHS\b",
-            r"\bDeputy Secretary\b.{0,60}\bDHS\b",
-            r"\bUnder Secretary\b.{0,60}\bDHS\b",
-            r"\bChief of Staff\b.{0,80}\bDHS\b",
+            *_role_agency(r"Secretary", r"\bDHS\b|Homeland Security"),
+            *_role_agency(r"Deputy Secretary", r"\bDHS\b|Homeland Security"),
+            *_role_agency(r"Under Secretary", r"\bDHS\b|Homeland Security"),
+            *_role_agency(r"Assistant Secretary", r"\bDHS\b|Homeland Security"),
+            *_role_agency(r"Chief of Staff", r"\bDHS\b|Homeland Security", gap=80),
+            *_role_agency(r"General Counsel", r"\bDHS\b|Homeland Security"),
         ],
     ),
+    # ── Interior ──────────────────────────────────────────────────────────────
     (
         "interior",
         "Interior, Dept of",
         5,
         [
-            r"\bSecretary\b.{0,60}\bInterior\b",
-            r"\bDeputy Secretary\b.{0,60}\bInterior\b",
-            r"\bAssistant Secretary\b.{0,60}\bInterior\b",
-            r"\bChief of Staff\b.{0,80}\bInterior\b",
+            r"\bSecretary\b.{0,60}\b(?:Interior|DOI)\b",
+            r"\b(?:Interior|DOI)\b.{0,60}\bSecretary\b",
+            r"\bDeputy Secretary\b.{0,60}\b(?:Interior|DOI)\b",
+            r"\b(?:Interior|DOI)\b.{0,60}\bDeputy Secretary\b",
+            r"\bAssistant Secretary\b.{0,60}\b(?:Interior|DOI)\b",
+            r"\b(?:Interior|DOI)\b.{0,60}\bAssistant Secretary\b",
+            # Dash separator: "Chief of Staff - DOI"
+            r"\bChief of Staff\b\W{0,5}(?:Interior|DOI)\b",
+            r"\bChief of Staff\b.{0,80}\b(?:Interior|DOI|Department of the Interior)\b",
+            r"\b(?:DOI|Department of the Interior)\b.{0,80}\bChief of Staff\b",
             r"\bDirector\b.{0,60}\bBureau of Land Management\b",
             r"\bDirector\b.{0,60}\bBLM\b",
+            r"\bGeneral Counsel\b.{0,60}\b(?:Interior|DOI)\b",
         ],
     ),
+    # ── Energy ────────────────────────────────────────────────────────────────
     (
         "energy",
         "Energy, Dept of",
         5,
         [
-            r"\bSecretary\b.{0,60}\bEnergy\b",
-            r"\bDeputy Secretary\b.{0,60}\bEnergy\b",
-            r"\bUnder Secretary\b.{0,60}\bEnergy\b",
-            r"\bAssistant Secretary\b.{0,60}\bDOE\b",
-            r"\bChief of Staff\b.{0,80}\bDOE\b",
+            r"\bSecretary of Energy\b",
+            r"\bDeputy Secretary of Energy\b",
+            *_role_agency(r"Secretary", r"\bDOE\b|Department of Energy"),
+            *_role_agency(r"Deputy Secretary", r"\bDOE\b|Department of Energy"),
+            *_role_agency(r"Under Secretary", r"\bDOE\b|Department of Energy|Energy"),
+            *_role_agency(r"Assistant Secretary", r"\bDOE\b|Department of Energy"),
+            *_role_agency(r"Chief of Staff", r"\bDOE\b|Department of Energy", gap=80),
+            *_role_agency(r"General Counsel", r"\bDOE\b|Department of Energy"),
         ],
     ),
+    # ── State ─────────────────────────────────────────────────────────────────
     (
         "state",
         "State, Dept of",
@@ -235,136 +301,178 @@ AGENCY_REGISTRY = [
         [
             r"\bSecretary of State\b",
             r"\bDeputy Secretary of State\b",
-            r"\bUnder Secretary\b.{0,60}\bState Department\b",
-            r"\bAssistant Secretary\b.{0,60}\bState Department\b",
-            r"\bChief of Staff\b.{0,80}\bState Department\b",
+            r"\bUnder Secretary\b.{0,60}\b(?:State Department|Department of State|DOS)\b",
+            r"\b(?:State Department|Department of State|DOS)\b.{0,60}\bUnder Secretary\b",
+            r"\bAssistant Secretary\b.{0,60}\b(?:of State|State Department|Department of State|DOS)\b",
+            r"\b(?:State Department|Department of State|DOS)\b.{0,60}\bAssistant Secretary\b",
+            r"\bChief of Staff\b.{0,80}\b(?:State Department|Department of State|DOS)\b",
+            r"\b(?:State Department|Department of State|DOS)\b.{0,80}\bChief of Staff\b",
+            r"\bGeneral Counsel\b.{0,60}\b(?:State Department|Department of State)\b",
         ],
     ),
+    # ── DOT ───────────────────────────────────────────────────────────────────
+    # NOTE: DOT does NOT include FAA-specific roles — those belong to the
+    # `faa` registry entry. If we listed `Administrator, FAA` here it would
+    # double-count those candidates against both DOT and FAA.
     (
         "dot",
         "Transportation, Dept of",
         5,
         [
-            r"\bSecretary\b.{0,60}\bTransportation\b",
-            r"\bDeputy Secretary\b.{0,60}\bTransportation\b",
-            r"\bUnder Secretary\b.{0,60}\bTransportation\b",
-            r"\bAdministrator\b.{0,60}\bFAA\b",
-            r"\bAdministrator\b.{0,60}\bFederal Aviation\b",
-            r"\bChief of Staff\b.{0,80}\bDOT\b",
+            *_role_agency(r"Secretary", r"\bDOT\b|Department of Transportation|Transportation"),
+            *_role_agency(r"Deputy Secretary", r"\bDOT\b|Department of Transportation|Transportation"),
+            *_role_agency(r"Under Secretary", r"\bDOT\b|Department of Transportation|Transportation"),
+            *_role_agency(r"Assistant Secretary", r"\bDOT\b|Department of Transportation"),
+            # Abbreviated "Asst Sec" / "Asst. Sec."
+            *_role_agency(r"Asst\.?\s*Sec(?:retary|\.)?", r"\bDOT\b|Department of Transportation"),
+            *_role_agency(r"Chief of Staff", r"\bDOT\b|Department of Transportation", gap=80),
+            *_role_agency(r"General Counsel", r"\bDOT\b|Department of Transportation"),
         ],
     ),
+    # ── FAA ───────────────────────────────────────────────────────────────────
     (
         "faa",
         "Federal Aviation Administration",
         5,
         [
-            r"\bAdministrator\b.{0,60}\bFAA\b",
-            r"\bAdministrator\b.{0,60}\bFederal Aviation\b",
-            r"\bFAA\b.{0,60}\bAdministrator\b",
-            r"\bDeputy Administrator\b.{0,60}\bFAA\b",
-            r"\bChief of Staff\b.{0,80}\bFAA\b",
+            *_role_agency(r"Administrator", r"\bFAA\b|Federal Aviation"),
+            # Abbreviated "Asst Administrator, FAA" or "FAA - Asst Admin"
+            *_role_agency(r"Asst\.?\s*Admin(?:istrator)?", r"\bFAA\b|Federal Aviation"),
+            *_role_agency(r"Acting Administrator", r"\bFAA\b|Federal Aviation"),
+            *_role_agency(r"Deputy Administrator", r"\bFAA\b|Federal Aviation"),
+            *_role_agency(r"Associate Administrator", r"\bFAA\b|Federal Aviation"),
+            *_role_agency(r"Assistant Administrator", r"\bFAA\b|Federal Aviation"),
+            *_role_agency(r"Chief of Staff", r"\bFAA\b|Federal Aviation", gap=80),
+            *_role_agency(r"General Counsel", r"\bFAA\b|Federal Aviation"),
         ],
     ),
+    # ── FERC ──────────────────────────────────────────────────────────────────
     (
         "ferc",
         "Federal Energy Regulatory Commission",
         5,
         [
-            r"\bChairman\b.{0,60}\bFERC\b",
-            r"\bChairwoman\b.{0,60}\bFERC\b",
-            r"\bFERC\b.{0,60}\bChair(man|woman)?\b",
-            r"\bCommissioner\b.{0,60}\bFERC\b",
-            r"\bFERC\b.{0,60}\bCommissioner\b",
+            *_role_agency(r"Chair(?:man|woman)?", r"\bFERC\b|Federal Energy Regulatory"),
+            *_role_agency(r"Commissioner", r"\bFERC\b|Federal Energy Regulatory"),
+            *_role_agency(r"Chief of Staff", r"\bFERC\b|Federal Energy Regulatory", gap=80),
+            *_role_agency(r"General Counsel", r"\bFERC\b|Federal Energy Regulatory"),
         ],
     ),
+    # ── CFTC ──────────────────────────────────────────────────────────────────
     (
         "cftc",
         "Commodity Futures Trading Commission",
         5,
         [
-            r"\bChairman\b.{0,60}\bCFTC\b",
-            r"\bChairwoman\b.{0,60}\bCFTC\b",
-            r"\bCFTC\b.{0,60}\bChair(man|woman)?\b",
-            r"\bCommissioner\b.{0,60}\bCFTC\b",
+            *_role_agency(r"Chair(?:man|woman)?", r"\bCFTC\b|Commodity Futures Trading"),
+            *_role_agency(r"Commissioner", r"\bCFTC\b|Commodity Futures Trading"),
+            *_role_agency(r"Chief of Staff", r"\bCFTC\b|Commodity Futures Trading", gap=80),
+            *_role_agency(r"General Counsel", r"\bCFTC\b|Commodity Futures Trading"),
+            *_role_agency(r"Director", r"\bCFTC\b|Commodity Futures Trading"),
         ],
     ),
+    # ── CFPB ──────────────────────────────────────────────────────────────────
     (
         "cfpb",
         "Consumer Financial Protection Bureau",
         5,
         [
-            r"\bDirector\b.{0,60}\bCFPB\b",
-            r"\bCFPB\b.{0,60}\bDirector\b",
-            r"\bDeputy Director\b.{0,60}\bCFPB\b",
-            r"\bChief of Staff\b.{0,80}\bCFPB\b",
+            *_role_agency(r"Director", r"\bCFPB\b|Consumer Financial Protection"),
+            *_role_agency(r"Deputy Director", r"\bCFPB\b|Consumer Financial Protection"),
+            *_role_agency(r"Acting Director", r"\bCFPB\b|Consumer Financial Protection"),
+            *_role_agency(r"Chief of Staff", r"\bCFPB\b|Consumer Financial Protection", gap=80),
+            *_role_agency(r"General Counsel", r"\bCFPB\b|Consumer Financial Protection"),
         ],
     ),
+    # ── USDA ──────────────────────────────────────────────────────────────────
     (
         "usda",
         "Agriculture, Dept of",
         5,
         [
-            r"\bSecretary\b.{0,60}\bAgriculture\b",
-            r"\bSecretary\b.{0,60}\bUSDA\b",
-            r"\bDeputy Secretary\b.{0,60}\bAgriculture\b",
-            r"\bUnder Secretary\b.{0,60}\bUSDA\b",
-            r"\bChief of Staff\b.{0,80}\bUSDA\b",
+            r"\bSecretary of Agriculture\b",
+            r"\bDeputy Secretary of Agriculture\b",
+            *_role_agency(r"Secretary", r"\bUSDA\b|Department of Agriculture"),
+            *_role_agency(r"Deputy Secretary", r"\bUSDA\b|Department of Agriculture|Agriculture"),
+            *_role_agency(r"Under Secretary", r"\bUSDA\b|Department of Agriculture|Agriculture"),
+            *_role_agency(r"Assistant Secretary", r"\bUSDA\b|Department of Agriculture"),
+            *_role_agency(r"Chief of Staff", r"\bUSDA\b|Department of Agriculture", gap=80),
+            *_role_agency(r"General Counsel", r"\bUSDA\b|Department of Agriculture"),
         ],
     ),
+    # ── VA ────────────────────────────────────────────────────────────────────
     (
         "va",
         "Veterans Affairs, Dept of",
         5,
         [
             r"\bSecretary\b.{0,60}\bVeterans Affairs\b",
-            r"\bSecretary\b.{0,60}\bVA\b",
+            r"\bSecretary\b.{0,60}\bVA\b(?!\s*Approps)",  # avoid "VA Approps" (House committee)
+            r"\bVeterans Affairs\b.{0,60}\bSecretary\b",
             r"\bDeputy Secretary\b.{0,60}\bVeterans Affairs\b",
+            r"\bDeputy Secretary\b.{0,60}\bVA\b",
             r"\bUnder Secretary\b.{0,60}\bVeterans Affairs\b",
-            r"\bChief of Staff\b.{0,80}\bVA\b",
+            r"\bUnder Secretary\b.{0,60}\bVA\b",
+            r"\bAssistant Secretary\b.{0,60}\bVeterans Affairs\b",
+            r"\bChief of Staff\b.{0,80}\bVeterans Affairs\b",
+            r"\bChief of Staff\b.{0,80}\bVA\b(?!\s*Approps)",
+            r"\bGeneral Counsel\b.{0,60}\bVeterans Affairs\b",
         ],
     ),
+    # ── SBA ───────────────────────────────────────────────────────────────────
     (
         "sba",
         "Small Business Administration",
         5,
         [
-            r"\bAdministrator\b.{0,60}\bSBA\b",
-            r"\bAdministrator\b.{0,60}\bSmall Business Administration\b",
-            r"\bSBA\b.{0,60}\bAdministrator\b",
-            r"\bDeputy Administrator\b.{0,60}\bSBA\b",
+            *_role_agency(r"Administrator", r"\bSBA\b|Small Business Administration"),
+            *_role_agency(r"Deputy Administrator", r"\bSBA\b|Small Business Administration"),
+            *_role_agency(r"Associate Administrator", r"\bSBA\b|Small Business Administration"),
+            *_role_agency(r"Chief of Staff", r"\bSBA\b|Small Business Administration", gap=80),
+            *_role_agency(r"General Counsel", r"\bSBA\b|Small Business Administration"),
         ],
     ),
+    # ── OMB ───────────────────────────────────────────────────────────────────
     (
         "omb",
         "Office of Management & Budget",
         4,
         [
-            r"\bDirector\b.{0,60}\bOMB\b",
-            r"\bOMB\b.{0,60}\bDirector\b",
-            r"\bDeputy Director\b.{0,60}\bOMB\b",
-            r"\bAssociate Director\b.{0,60}\bOMB\b",
+            *_role_agency(r"Director", r"\bOMB\b|Office of Management and Budget|Office of Management & Budget"),
+            *_role_agency(r"Deputy Director", r"\bOMB\b|Office of Management and Budget|Office of Management & Budget"),
+            *_role_agency(r"Associate Director", r"\bOMB\b|Office of Management and Budget|Office of Management & Budget"),
+            *_role_agency(r"Chief of Staff", r"\bOMB\b|Office of Management and Budget", gap=80),
+            *_role_agency(r"General Counsel", r"\bOMB\b|Office of Management"),
         ],
     ),
+    # ── USTR ──────────────────────────────────────────────────────────────────
     (
         "ustr",
         "U.S. Trade Representative",
         5,
         [
-            r"\bTrade Representative\b",
-            r"\bUSTR\b.{0,60}\bRepresentative\b",
-            r"\bDeputy Trade Representative\b",
+            # "U.S. Trade Representative" alone, with optional "the"
+            r"\b(?:U\.S\.?\s+|United States\s+)?Trade Representative\b",
+            r"\bDeputy (?:U\.S\.?\s+|United States\s+)?Trade Representative\b",
+            r"\bUSTR\b.{0,80}\b(?:Representative|Director|Chief of Staff)\b",
+            r"\bAssistant USTR\b",
+            r"\bDeputy Assistant USTR\b",
+            r"\bChief of Staff\b.{0,80}\bUSTR\b",
+            r"\bGeneral Counsel\b.{0,60}\bUSTR\b",
         ],
     ),
+    # ── CMS ───────────────────────────────────────────────────────────────────
     (
         "cms",
         "Centers For Medicare and Medicaid",
         5,
         [
-            r"\bAdministrator\b.{0,60}\bCMS\b",
-            r"\bAdministrator\b.{0,60}\bCenters for Medicare\b",
-            r"\bCMS\b.{0,60}\bAdministrator\b",
-            r"\bDeputy Administrator\b.{0,60}\bCMS\b",
-            r"\bChief of Staff\b.{0,80}\bCMS\b",
+            *_role_agency(r"Administrator", r"\bCMS\b|Centers for Medicare"),
+            *_role_agency(r"Deputy Administrator", r"\bCMS\b|Centers for Medicare"),
+            *_role_agency(r"Acting Administrator", r"\bCMS\b|Centers for Medicare"),
+            *_role_agency(r"Principal Deputy Administrator", r"\bCMS\b|Centers for Medicare"),
+            *_role_agency(r"Chief of Staff", r"\bCMS\b|Centers for Medicare", gap=80),
+            *_role_agency(r"General Counsel", r"\bCMS\b|Centers for Medicare"),
         ],
     ),
 ]
@@ -410,10 +518,14 @@ def get_lobbyist_profiles(con: duckdb.DuckDBPyConnection) -> list[dict]:
         WITH
         -- The covered_position we care about (non-null rows only)
         cov_profiles AS (
+            -- Group ONLY by (lobbyist, registrant_id) so the same firm under
+            -- two spellings ("THE FERGUSON GROUP" vs "THE FERGUSON GROUP, LLC")
+            -- collapses to one row. MAX(registrant_name) picks the longest /
+            -- canonical-looking variant deterministically.
             SELECT
                 sl.lobbyist_name,
                 sf.registrant_id,
-                sf.registrant_name,
+                MAX(sf.registrant_name)     AS registrant_name,
                 MAX(sl.covered_position)    AS covered_position,
                 MAX(sl.source_path)         AS sample_source,
                 MAX(sf.filing_uuid)         AS sample_uuid
@@ -422,7 +534,7 @@ def get_lobbyist_profiles(con: duckdb.DuckDBPyConnection) -> list[dict]:
             WHERE sl.covered_position IS NOT NULL
               AND LENGTH(sl.covered_position) > 10
               AND sl.lobbyist_name IS NOT NULL
-            GROUP BY sl.lobbyist_name, sf.registrant_id, sf.registrant_name
+            GROUP BY sl.lobbyist_name, sf.registrant_id
         ),
         -- ALL filings for the same (lobbyist, firm) regardless of covered_position
         all_filings AS (
@@ -537,12 +649,12 @@ def run_scan(
     top: int = DEFAULT_TOP,
 ) -> list[dict]:
     with duckdb.connect(str(DB_PATH), read_only=True) as con:
-        print(f"\nLoading lobbyist profiles…")
+        print("\nLoading lobbyist profiles…")
         profiles = get_lobbyist_profiles(con)
         print(f"  {len(profiles):,} distinct (lobbyist, firm) pairs with covered_position")
 
         # ── Classify each profile ──────────────────────────────────────────────
-        print(f"\nClassifying by prior agency role…")
+        print("\nClassifying by prior agency role…")
         candidates: list[dict] = []
         n_classified = 0
         agency_counts: dict[str, int] = defaultdict(int)
@@ -696,7 +808,7 @@ def write_web_json(results: list[dict], web_dir: Path, top: int = 40) -> None:
     ]
 
     payload = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": datetime.now(UTC).isoformat(),
         "total_candidates": len(results),
         "findings": [
             {
