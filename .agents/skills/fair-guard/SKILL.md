@@ -26,7 +26,7 @@ Four skills compose a full investigative pipeline:
 |------|-----------|---------|-------------|
 | `doctor` | setup-validator | Check all deps and data; optionally launch index | None |
 | `index` | lda-corpus-indexer | Parse raw LDA dumps → `investigation.duckdb` | Raw data in `data/` |
-| `resolve` | entity-resolver | Normalize org/person names for clean joins | DuckDB built |
+| `resolve` | entity-resolver | Normalize org/person names; write `entity_map` (F1 = 0.963) | DuckDB built |
 | `scan` | revolving-door-detector | Find former officials lobbying their old agency | DuckDB built |
 
 ## Quickstart for new users
