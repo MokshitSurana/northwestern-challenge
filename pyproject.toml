@@ -22,7 +22,20 @@ dev = ["ipython", "ruff", "pytest"]
 [tool.ruff]
 line-length = 100
 target-version = "py311"
+extend-exclude = ["scripts/_archive"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "UP"]
 ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+# Test and diagnostic scripts intentionally manipulate sys.path before
+# importing local modules — E402 (module-level imports not at top) is the
+# correct behaviour here.
+"tests/*.py" = ["E402"]
+"scripts/_diagnose_*.py" = ["E402"]
+"scripts/01c_rebuild_house_all.py" = ["E402"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
