@@ -162,8 +162,8 @@ def main() -> int:
 
     elapsed = (time.time() - t_start) / 60
     print(f"\n[DONE] {total:,} lobbyist rows in {elapsed:.1f} minutes")
-    print(f"\nNext step:")
-    print(f"    uv run scripts/01_build_index.py --duckdb-only")
+    print("\nNext step:")
+    print("    uv run scripts/01_build_index.py --duckdb-only")
     return 0
 
 
