@@ -1,156 +1,92 @@
 ---
 name: doctor
 description: >
-  Setup validator for FairGuard. Checks all system dependencies (Python 3.11+,
-  uv, Node.js, npm), verifies the Python and web environments, confirms raw LDA
-  data directories are present, and prints a pass/fail checklist. On a clean pass,
-  offers to invoke lda-corpus-indexer to build the analytical database.
-  Run before any other fair-guard mode on a fresh clone or new machine.
-version: 0.1.0
+  Cross-platform setup validator for FairGuard. Checks Python 3.11+, uv,
+  Node.js, npm, project dependencies, raw LDA data presence, and the
+  optional pre-built investigation.duckdb. Prints a pass/fail checklist plus
+  a recommended next action ("ready to scan", "run index", "download pre-built").
+  Run this first on a fresh clone or new machine.
+version: 1.0.0
 author: FairGuard (Mokshit Surana, Archit Rathod)
 license: MIT
-tools: [bash]
-compatibility: Works on Linux, macOS, and Windows (PowerShell).
+tools: [bash, python]
+compatibility: Linux, macOS, Windows (one Python script, no shell-specific logic).
 ---
 
 # doctor
 
-Setup validator for FairGuard. Runs a pass/fail checklist, then optionally
-launches the `index` mode to build the analytical database.
+## Instructions for the agent
 
-## Instructions
-
-Execute each check below using Bash (or PowerShell on Windows). Print each
-result as it completes, then print the full formatted summary at the end.
-
----
-
-## Step 1 — System dependencies
+Run the doctor script and surface its output verbatim to the user. The
+script is self-contained and outputs a final "Next action:" line — pass
+that recommendation through to the user without modification.
 
 ```bash
-python --version 2>&1 || python3 --version 2>&1
-uv --version 2>&1
-node --version 2>&1
-npm --version 2>&1
+uv run scripts/doctor.py
 ```
 
-**Pass conditions:**
-- Python: version string contains `3.11`, `3.12`, `3.13`, or higher
-- uv / node / npm: any output not containing "not found", "not recognized", or "cannot be loaded"
-
----
-
-## Step 2 — Project Python environment
+If the user asks for a machine-readable form (for piping into another tool):
 
 ```bash
-uv sync
+uv run scripts/doctor.py --json
 ```
 
-Pass: exits 0, `.venv/` is created or already present. This is idempotent.
-
----
-
-## Step 3 — Web dependencies
+If the user wants only failures and warnings (shorter output):
 
 ```bash
-cd web && npm ci
+uv run scripts/doctor.py --quiet
 ```
 
-Pass: exits 0. (`npm ci` is used — not `npm install` — to reproduce the locked dependency tree.)
+## Behavior
 
----
+The script exits with code 1 only if a REQUIRED check fails (Python < 3.11,
+uv not installed, dependencies not installed). Missing raw data and missing
+pre-built DB are warnings — the user is expected to choose between building
+or downloading.
 
-## Step 4 — Raw data presence
+## What it checks
 
-Check whether the LDA corpus is present:
+| # | Check | Required? |
+|---|-------|-----------|
+| 1 | Python ≥ 3.11 | yes |
+| 2 | `uv` on PATH | yes |
+| 3 | Node.js on PATH | no (only for web UI) |
+| 4 | npm on PATH | no (only for web UI) |
+| 5 | `.venv` exists with duckdb/polars/rapidfuzz importable | yes |
+| 6 | `web/node_modules` present | no |
+| 7 | `data/senate/`, `data/house/`, `data/congress_press/` | no (alternative: pre-built DB) |
+| 8 | `output/investigation.duckdb` opens and has senate_filings rows | no |
 
-```bash
-# Linux / macOS
-ls data/senate/ 2>/dev/null | head -3
-ls data/house/ 2>/dev/null | head -3
-ls data/congress_press/ 2>/dev/null | head -3
-```
+For each check, the output is one line: `[PASS|WARN|FAIL]  <check name>: <detail>`.
+Failing checks include a `→ <suggested fix>` line.
 
-```powershell
-# Windows (PowerShell fallback if ls fails)
-Get-ChildItem data\senate -ErrorAction SilentlyContinue | Select-Object -First 3
-Get-ChildItem data\house -ErrorAction SilentlyContinue | Select-Object -First 3
-Get-ChildItem data\congress_press -ErrorAction SilentlyContinue | Select-Object -First 3
-```
+The script also detects the common `data/data/` extraction-nesting case and
+suggests setting `DATA_ROOT=data/data`.
 
-Pass: each directory exists and contains at least one file.
+## Next-action routing
 
----
+After all checks, the script prints exactly one of:
 
-## Step 5 — Pre-built output (optional)
+- `Install Python 3.11+ before continuing.`
+- `Install uv: <link>`
+- `Run:  uv sync`
+- `Setup is ready. You can run:  /fair-guard scan` — when the pre-built DB
+  is present and opens cleanly.
+- `Raw data found. Build the DB:  /fair-guard index` — when raw data is
+  present but no DB is built.
+- A two-option block (download pre-built output OR download raw data + index)
+  — when neither raw data nor a DB is present.
 
-```bash
-ls output/investigation.duckdb 2>/dev/null && echo "found" || echo "not found"
-```
+## Why a Python script (not bash + PowerShell)
 
-```powershell
-# Windows
-if (Test-Path output\investigation.duckdb) { "found" } else { "not found" }
-```
+The previous version of this skill mixed `ls`, `head`, and `2>/dev/null`
+(bash) with `Get-ChildItem`, `Test-Path` (PowerShell). That meant the agent
+had to interpret which branch to run per platform — fragile, and it broke
+on Windows. The current version is one Python script that runs the same way
+everywhere, so the SKILL.md is short and unambiguous.
 
-This is an optional check. The pre-built file can substitute for raw data + a full build.
+## Reproducibility note
 
----
-
-## Step 6 — Print the checklist
-
-Format and print:
-
-```
-FairGuard — setup check
-────────────────────────────────────────────────────────
-✓/✗  Python X.X.X                      (≥ 3.11 required)
-✓/✗  uv X.X.X
-✓/✗  Node.js vXX.X.X
-✓/✗  npm X.X.X
-✓/✗  Python deps installed             (uv sync)
-✓/✗  web/ deps installed               (npm ci)
-✓/✗  data/senate/                      (raw corpus)
-✓/✗  data/house/                       (raw corpus)
-✓/✗  data/congress_press/              (raw corpus)
-✓/✗  output/investigation.duckdb       (pre-built, optional)
-────────────────────────────────────────────────────────
-```
-
-If raw data directories are missing, append:
-
-```
-  ✗ Raw data not found. Two options:
-
-  Option A — Download pre-built output/ (recommended for evaluation, ~10 min):
-    1. https://drive.google.com/drive/folders/1O_qsxmFitgRfyjPXsgyDSjrbX3L-1Vlf?usp=sharing
-    2. Unzip the archive
-    3. Place the output/ folder at the project root
-    You can then run /fair-guard scan immediately — no 2.5 hr build required.
-
-  Option B — Download the raw LDA corpus (~8.6 GB) from the challenge data
-    portal, place it in data/, then run /fair-guard index.
-```
-
----
-
-## Step 7 — Offer to build the index
-
-Conditions for offering: all required system checks pass (Python ≥ 3.11, uv, uv sync)
-AND `output/investigation.duckdb` does NOT already exist AND raw data IS present.
-
-Ask:
-
-```
-All required checks passed. Build the analytical database now?
-  [1] Full build  — all 2022–Q1 2026 data  (~2.5 hr)
-  [2] Sample build — one quarter per source (~2 min, validates pipeline)
-  [3] Skip — I will download the pre-built output/ from Drive
-```
-
-- If [1]: read `skill/lda-corpus-indexer/SKILL.md` and run `uv run scripts/01_build_index.py`
-- If [2]: read `skill/lda-corpus-indexer/SKILL.md` and run `uv run scripts/01_build_index.py --sample`
-- If [3]: print the Drive link and exit successfully
-
-If `output/investigation.duckdb` already exists:
-Print "Pre-built database found at output/investigation.duckdb — /fair-guard scan is ready."
+The script is deterministic on a given machine and has no side effects (it
+only reads files and runs `--version` commands). It is safe to run any
+number of times.
