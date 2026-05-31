@@ -73,6 +73,19 @@ uv run scripts/01_build_index.py --clean
 
 ## Verify the build
 
+Run the dedicated verifier — it asserts 34 invariants covering table presence,
+row counts, null fractions on required columns, FK-style join integrity, and
+sentinel anchor queries (the Bridenstine / Artemis Group case must be
+findable).
+
+```bash
+uv run scripts/verify_build.py               # full build
+uv run scripts/verify_build.py --sample      # sample build (smaller thresholds)
+uv run scripts/verify_build.py --strict      # treat warnings as errors
+```
+
+If you want a quick manual sanity check instead:
+
 ```python
 import duckdb
 con = duckdb.connect("output/investigation.duckdb", read_only=True)
