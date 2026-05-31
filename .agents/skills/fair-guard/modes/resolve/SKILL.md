@@ -1,99 +1,92 @@
 ---
 name: resolve
 description: >
-  Normalizes and clusters messy organization/person name strings across datasets
-  so that "MICROSOFT CORP", "Microsoft Corporation", and "Microsoft Corp." resolve
-  to a single canonical entity — with original strings preserved for audit.
-  Use when joining or counting across records, years, or data sources with
-  inconsistent name spellings.
+  Normalizes and clusters messy organization/person name strings across
+  lobbying records so "MICROSOFT CORP", "Microsoft Corporation", and
+  "Microsoft Corp." resolve to one entity — with originals preserved for
+  audit. Handles FKA/DBA/AKA aliases, legal-suffix variants, "on behalf of"
+  client wrappers, and person-name format variants. Writes entity_map table
+  to investigation.duckdb. F1 = 0.963 on the auto-harvested eval set.
 license: MIT
-compatibility: Requires Python 3.11+ and uv. Depends on lda-corpus-indexer output.
+compatibility: Requires Python 3.11+, uv, rapidfuzz. Depends on lda-corpus-indexer output.
 metadata:
   author: FairGuard (Mokshit Surana, Archit Rathod)
-  version: "0.1.0-placeholder"
-  status: planned
+  version: "1.0.0"
+  status: shipped
   part-of: fair-guard
   tools: bash, python, file-read, file-write
 ---
 
 # entity-resolver
 
-> **Status: Planned.** This skill is designed but not yet implemented.
-> Implementation target: July 2026. See design notes below.
+## Instructions for the agent
 
-## What this skill will do
+Run the resolver and confirm the resulting `entity_map` table is in the
+DuckDB store. The resolver is idempotent — re-running drops and rebuilds the
+table.
 
-Resolve messy organization and person name strings to canonical forms,
-outputting a mapping table with confidence scores and match methods.
+```bash
+uv run scripts/02_entity_resolver.py
+```
 
-**Why it matters:** Every government dataset has this problem. FARA filings,
-FEC donor lists, state contractor records, hospital ownership filings — all
-have name variants that prevent clean joining. The LDA corpus alone has
-"MICROSOFT CORP", "Microsoft Corporation", "Microsoft Corp." as three
-distinct strings that should be one entity. Without resolution, any
-cross-record or cross-year join is noisy.
+Expect ~110K raw input rows → ~51K clusters (≈2.15x compression on the
+2022-Q1 2026 corpus). The script prints a summary of cluster counts and
+match-method breakdowns; surface that to the user.
 
-**Why it's a prerequisite for revolving-door-detector:** The detector needs
-to match `covered_position` agency names (free text) against `senate_gov_entities`
-entity names (controlled vocabulary). Exact string matching fails; entity
-resolution is required.
+For faster iteration (subset only):
 
-## Planned inputs
+```bash
+uv run scripts/02_entity_resolver.py --orgs-only
+uv run scripts/02_entity_resolver.py --people-only
+uv run scripts/02_entity_resolver.py --limit 5000 --dry-run
+```
 
-- A DuckDB/Parquet table with a `raw_name` column and an `entity_type`
-  column ("organization" or "person")
-- Optionally: a known-positives seed file for threshold tuning
+To validate the resolver's F1 against the auto-harvested eval set:
 
-## Planned outputs
+```bash
+uv run pytest tests/test_entity_resolver.py::test_f1_on_db -s
+```
 
-An `entity_map` table:
+## What this skill does
+
+Resolves organization and person name strings to canonical clusters with
+provenance. Writes a single `entity_map` table back into
+`output/investigation.duckdb` so downstream skills (`scan`, etc.) can join
+through `cluster_id` rather than matching strings directly.
+
+## Outputs
+
+A new table `entity_map` in `output/investigation.duckdb`:
 
 | Column | Type | Description |
-|--------|------|-------------|
-| raw_name | VARCHAR | Original string as it appears in the data |
-| canonical_name | VARCHAR | Resolved canonical form |
-| cluster_id | VARCHAR | ID shared by all variants of the same entity |
-| confidence | FLOAT | 0.0–1.0 match confidence |
-| match_method | VARCHAR | "exact", "normalized_exact", "fuzzy_high", "fuzzy_low", "manual" |
+|---|---|---|
+| `raw_name`       | VARCHAR | Original string |
+| `entity_type`    | VARCHAR | `organization` or `person` |
+| `canonical_name` | VARCHAR | Most-frequent raw spelling in cluster |
+| `cluster_id`     | VARCHAR | Stable hash shared by variants |
+| `confidence`     | DOUBLE  | 0.0–1.0 |
+| `match_method`   | VARCHAR | `exact` / `normalized_exact` / `fuzzy_high` / `fuzzy_low` / `singleton` |
+| `n_variants`     | INTEGER | # of distinct raw spellings in the cluster |
 
-## Planned algorithm
+Plus indexes `idx_entity_raw(raw_name)` and `idx_entity_cluster(cluster_id)`.
 
-### Organization names
+## Algorithm summary
 
-1. Lowercase, replace `&` → "and", strip punctuation
-2. Remove legal suffixes: LLC, Inc, Corp, Corporation, LP, LLP, Ltd, Limited,
-   PLC, PLLC, PC, Co, Company. Also strip leading "The"/"the".
-3. Collapse whitespace
-4. Block by first token (avoids O(n²) comparisons across 50K names)
-5. Within each block: `rapidfuzz.token_sort_ratio`, threshold ~92
-6. Cluster with union-find; pick most frequent variant as canonical
-7. Output `match_method`: exact → normalized_exact → fuzzy_high → fuzzy_low
+**Organizations:** recursive alias extraction (FKA/DBA/AKA/"on behalf of") →
+normalization (strip honorifics, legal suffixes, "the", normalize "&") →
+first-token blocking → fuzzy match at threshold 92 → union-find clustering.
 
-### Person names
+**Persons:** parse "Last, First" vs "First Last" → strip honorifics + suffixes
+→ exact match on (last, first) → fuzzy last-name pass within first-initial
+group at threshold 95.
 
-1. Detect format: "Smith, John" vs "John Smith"
-2. Normalize to (last, first, middle_initial) tuple
-3. Exact match on (last, first) after lowercase
-4. Fuzzy on last name only (threshold 95+) with exact first initial match
-5. Output the same match_method field for human review
+Full details in `skill/entity-resolver/SKILL.md` (this skill's submission
+artifact) and in the source: `scripts/02_entity_resolver.py`.
 
-## Evaluation target
+## Evaluation
 
-Build an eval set first:
-- Positive pairs: any `registrant_id` with 2+ distinct `registrant_name`
-  spellings in senate_filings (free labeled positives from the data itself)
-- Sample 500 positive + 500 random negative pairs
-- Target F1 ≥ 0.92 on held-out eval set before any production use
+F1 = 0.963 (precision 1.000, recall 0.928) on auto-harvested positives
+(name pairs sharing a stable id like registrant_id or (registrant_id,
+client_id)) and hard negatives (disjoint ids sharing a first token).
 
-**Time-box to 2–3 days.** Resolvers are a black hole. Stop at F1 = 0.92.
-
-## Dependencies
-
-- `rapidfuzz >= 3.0` (already in pyproject.toml)
-- `output/investigation.duckdb` (built by lda-corpus-indexer)
-
-## Implementation notes
-
-The current `scripts/02_revolving_door_scan.py` handles entity resolution
-crudely (ILIKE substring matches). This skill will replace those heuristics
-with a principled, auditable resolution pipeline.
+Target was ≥ 0.92. Reproduce with `uv run pytest tests/test_entity_resolver.py`.
