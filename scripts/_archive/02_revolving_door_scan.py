@@ -370,7 +370,7 @@ def main():
         return
 
     # Print top 10 to terminal
-    print(f"\n=== Top 10 Revolving Door Candidates ===\n")
+    print("\n=== Top 10 Revolving Door Candidates ===\n")
     for i, c in enumerate(candidates[:10], 1):
         fast = " [FAST PIVOT]" if c["fast_pivot"] else ""
         print(f"{i:2}. [{c['score']:6.1f}] {c['lobbyist_name']}{fast}")
