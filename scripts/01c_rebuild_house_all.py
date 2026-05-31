@@ -23,6 +23,7 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 # Import the fixed parser from the main indexer
 sys.path.insert(0, str(Path(__file__).parent))
 from importlib import import_module
+
 _indexer = import_module("01_build_index")
 parse_house_xml      = _indexer.parse_house_xml
 parse_house_dir_name = _indexer.parse_house_dir_name
@@ -130,7 +131,7 @@ def main():
     print(f"   house_filings:    {total_f:,} rows")
     print(f"   house_activities: {total_a:,} rows")
     print(f"   house_lobbyists:  {total_l:,} rows")
-    print(f"\nNext: uv run scripts/01_build_index.py --duckdb-only")
+    print("\nNext: uv run scripts/01_build_index.py --duckdb-only")
     return 0
 
 
