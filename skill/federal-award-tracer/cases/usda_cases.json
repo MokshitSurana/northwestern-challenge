@@ -1,0 +1,20 @@
+{
+  "lobbyist": "USDA cases (Johnson / Bailey / Torrey / Barbic clients)",
+  "agency": "Department of Agriculture",
+  "award_groups": ["grants", "direct", "contracts"],
+  "time_period": {"start": "2021-01-01", "end": "2026-06-04"},
+  "clients": [
+    {"label": "Cargill (operating entities)", "search": "Cargill", "name_tokens": ["CARGILL, INCORPORATED", "CARGILL MEAT SOLUTIONS", "CARGILL KITCHEN SOLUTIONS"]},
+    {"label": "National Rural Water Assn", "search": "National Rural Water", "name_tokens": ["NATIONAL RURAL WATER"]},
+    {"label": "Tri-State Generation", "search": "Tri-State Generation", "name_tokens": ["TRI-STATE GENERATION"]},
+    {"label": "Land O'Lakes (Venture37)", "search": "Land O'Lakes", "name_tokens": ["LAND O'LAKES"]},
+    {"label": "McCain Foods USA", "search": "McCain Foods", "name_tokens": ["MCCAIN FOODS"]},
+    {"label": "Global Clean Energy", "search": "Global Clean Energy", "name_tokens": ["GLOBAL CLEAN ENERGY"]},
+    {"label": "Louis Dreyfus", "search": "Louis Dreyfus", "name_tokens": ["LOUIS DREYFUS"]},
+    {"label": "Ardent Mills", "search": "Ardent Mills", "name_tokens": ["ARDENT MILLS"]},
+    {"label": "California Prune Board", "search": "California Prune", "name_tokens": ["CALIFORNIA PRUNE"]},
+    {"label": "Shenandoah Valley Organic", "search": "Shenandoah Valley Organic", "name_tokens": ["SHENANDOAH VALLEY ORGANIC"]},
+    {"label": "Illinois Soybean Board", "search": "Illinois Soybean", "name_tokens": ["ILLINOIS SOYBEAN"]},
+    {"label": "California Rice Commission", "search": "California Rice Commission", "name_tokens": ["CALIFORNIA RICE"]}
+  ]
+}

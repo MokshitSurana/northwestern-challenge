@@ -1,0 +1,17 @@
+{
+  "lobbyist": "Steinberg (battery / critical-minerals clients)",
+  "agency": "Department of Energy",
+  "award_groups": ["grants"],
+  "time_period": {"start": "2021-01-01", "end": "2026-06-04"},
+  "clients": [
+    {"label": "Cirba Solutions", "search": "Cirba Solutions", "name_tokens": ["CIRBA SOLUTIONS"]},
+    {"label": "EnerSys", "search": "EnerSys", "name_tokens": ["ENERSYS"]},
+    {"label": "South32 Hermosa", "search": "South32 Hermosa", "name_tokens": ["SOUTH32 HERMOSA"]},
+    {"label": "Sila Nanotechnologies", "search": "Sila Nanotechnologies", "name_tokens": ["SILA NANOTECHNOLOGIES"]},
+    {"label": "Anovion", "search": "Anovion", "name_tokens": ["ANOVION"]},
+    {"label": "Talon Nickel", "search": "Talon Nickel", "name_tokens": ["TALON NICKEL"]},
+    {"label": "Forge Battery", "search": "Forge Battery", "name_tokens": ["FORGE BATTERY"]},
+    {"label": "Cabot Corp", "search": "Cabot Corporation", "name_tokens": ["CABOT CORP"]},
+    {"label": "Nanoramic", "search": "Nanoramic", "name_tokens": ["NANORAMIC"]}
+  ]
+}

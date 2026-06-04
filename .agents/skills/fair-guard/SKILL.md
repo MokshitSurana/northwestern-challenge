@@ -2,16 +2,18 @@
 name: fair-guard
 description: >
   Investigative journalism toolkit for federal lobbying disclosure analysis.
-  Four modes: doctor (validate setup and guided onboarding), index (ETL pipeline
-  for raw LDA data), resolve (normalize messy org/person name strings), and scan
-  (find former officials lobbying their old agency by agency concentration ratio).
-  Use when investigating federal lobbying, revolving-door cases, or analyzing
+  Five modes: doctor (validate setup and guided onboarding), index (ETL pipeline
+  for raw LDA data), resolve (normalize messy org/person name strings), scan
+  (find former officials lobbying their old agency by agency concentration ratio),
+  and trace (follow the money — federal awards from an agency to a lobbyist's
+  clients on USAspending.gov). Use when investigating federal lobbying,
+  revolving-door cases, federal award/grant money trails, or analyzing
   congressional press releases against LDA records.
 license: MIT
-compatibility: Requires Python 3.11+, uv, Node.js, and npm. Run scripts via `uv run`.
+compatibility: Requires Python 3.11+, uv, Node.js, and npm. Run scripts via `uv run`. The trace mode needs network access to api.usaspending.gov.
 metadata:
   author: FairGuard (Mokshit Surana, Archit Rathod)
-  version: "1.1"
+  version: "1.2"
 ---
 
 # FairGuard
@@ -20,7 +22,7 @@ Investigative journalism toolkit for federal LDA lobbying disclosure data (2022�
 
 ## Modes
 
-Four skills compose a full investigative pipeline:
+Five skills compose a full investigative pipeline:
 
 | Mode | Full name | Purpose | Prerequisite |
 |------|-----------|---------|-------------|
@@ -28,6 +30,7 @@ Four skills compose a full investigative pipeline:
 | `index` | lda-corpus-indexer | Parse raw LDA dumps → `investigation.duckdb` | Raw data in `data/` |
 | `resolve` | entity-resolver | Normalize org/person names; write `entity_map` (F1 = 0.963) | DuckDB built |
 | `scan` | revolving-door-detector | Find former officials lobbying their old agency | DuckDB built |
+| `trace` | federal-award-tracer | Follow the money: agency → lobbyist's clients on USAspending.gov | Network; a case file |
 
 ## Quickstart for new users
 
@@ -62,6 +65,7 @@ Each mode has detailed instructions in its own SKILL.md:
 - [`modes/index/SKILL.md`](modes/index/SKILL.md) — ETL pipeline
 - [`modes/resolve/SKILL.md`](modes/resolve/SKILL.md) — entity resolution
 - [`modes/scan/SKILL.md`](modes/scan/SKILL.md) — revolving-door detection
+- [`modes/trace/SKILL.md`](modes/trace/SKILL.md) — federal award money trail
 
 ## Anchor finding
 

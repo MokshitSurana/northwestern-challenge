@@ -1,0 +1,27 @@
+{
+  "lobbyist": "Limbaugh (water-district clients)",
+  "agency": "Department of the Interior",
+  "award_groups": ["grants"],
+  "time_period": {"start": "2021-01-01", "end": "2026-06-04"},
+  "clients": [
+    {"label": "Sites Project Authority", "search": "Sites Project Authority", "name_tokens": ["SITES PROJECT"]},
+    {"label": "Glenn-Colusa Irrigation District", "search": "Glenn-Colusa Irrigation", "name_tokens": ["GLENN COLUSA", "GLENN-COLUSA"]},
+    {"label": "Friant Water Authority", "search": "Friant Water Authority", "name_tokens": ["FRIANT WATER"]},
+    {"label": "Reclamation District 108", "search": "Reclamation District 108", "name_tokens": ["RECLAMATION DISTRICT 108", "RECLAMATION DISTRICT NO. 108"]},
+    {"label": "Turlock Irrigation District", "search": "Turlock Irrigation", "name_tokens": ["TURLOCK IRRIGATION"]},
+    {"label": "The Freshwater Trust", "search": "Freshwater Trust", "name_tokens": ["FRESHWATER TRUST"]},
+    {"label": "North Unit Irrigation District", "search": "North Unit Irrigation", "name_tokens": ["NORTH UNIT IRRIGATION"]},
+    {"label": "Western Municipal Water District", "search": "Western Municipal Water", "name_tokens": ["WESTERN MUNICIPAL WATER"]},
+    {"label": "Sutter Mutual Water Company", "search": "Sutter Mutual Water", "name_tokens": ["SUTTER MUTUAL"]},
+    {"label": "El Dorado County Water Agency", "search": "El Dorado County Water", "name_tokens": ["EL DORADO"]},
+    {"label": "City of Woodland, CA", "search": "City of Woodland", "name_tokens": ["WOODLAND"]},
+    {"label": "Merced Irrigation District", "search": "Merced Irrigation", "name_tokens": ["MERCED IRRIGATION"]},
+    {"label": "Klamath Water Users", "search": "Klamath Water Users", "name_tokens": ["KLAMATH"]},
+    {"label": "Maricopa-Stanfield Irr. & Drainage", "search": "Maricopa Stanfield Irrigation", "name_tokens": ["MARICOPA"]},
+    {"label": "Solano Irrigation District", "search": "Solano Irrigation", "name_tokens": ["SOLANO IRRIGATION"]},
+    {"label": "City of Folsom, CA", "search": "Folsom", "name_tokens": ["FOLSOM"]},
+    {"label": "Yakima Basin", "search": "Yakima Basin", "name_tokens": ["YAKIMA"]},
+    {"label": "San Juan Water District", "search": "San Juan Water District", "name_tokens": ["SAN JUAN WATER"]},
+    {"label": "Central Arizona Irr. & Drainage", "search": "Central Arizona Irrigation", "name_tokens": ["CENTRAL ARIZONA IRRIGATION"]}
+  ]
+}

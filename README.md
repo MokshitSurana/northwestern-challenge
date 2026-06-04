@@ -24,6 +24,7 @@ The anchor finding: **The Artemis Group** — a lobbying firm founded by former 
 | Agent Skill 2 — `lda-corpus-indexer` (`index`) | `skill/lda-corpus-indexer/` | ✅ Shipped (`scripts/verify_build.py` — 34 invariants pass) |
 | Agent Skill 3 — `entity-resolver` (`resolve`) | `skill/entity-resolver/` | ✅ Shipped (F1 = 0.963 on held-out eval) |
 | Agent Skill 4 — `revolving-door-detector` (`scan`) | `skill/revolving-door-detector/` | ✅ Shipped (139 candidates, 22 agencies) |
+| Agent Skill 5 — `federal-award-tracer` (`trace`) | `skill/federal-award-tracer/` | ✅ Shipped (USAspending money trail; 3 reproducible case files) |
 | Test suite (pytest) | `tests/` | ✅ 144 tests passing |
 | Findings report (PDF) | `findings/findings_report.md` → PDF | ✅ Builds via pandoc + typst (see report header) |
 | Interaction traces | `traces/` | ✅ 4 per-skill traces + 2 narrative traces |
@@ -59,8 +60,11 @@ The anchor finding: **The Artemis Group** — a lobbying firm founded by former 
 │   │       └── example_query.sql         #     ready-to-run DuckDB queries
 │   ├── entity-resolver/                   #   Skill: resolve — name normalization (F1 0.963)
 │   │   └── SKILL.md
-│   └── revolving-door-detector/           #   Skill: scan — agency concentration scan
-│       └── SKILL.md
+│   ├── revolving-door-detector/           #   Skill: scan — agency concentration scan
+│   │   └── SKILL.md
+│   └── federal-award-tracer/              #   Skill: trace — USAspending money trail
+│       ├── SKILL.md
+│       └── cases/                         #     3 reproducible case files
 │
 ├── scripts/                               # ── Pipeline scripts
 │   ├── doctor.py                         #   Skill: doctor implementation (cross-platform)
@@ -69,7 +73,9 @@ The anchor finding: **The Artemis Group** — a lobbying firm founded by former 
 │   ├── 01c_rebuild_house_all.py          #   targeted full House rebuild
 │   ├── 02_entity_resolver.py             #   Skill: resolve implementation
 │   ├── 03_agency_concentration.py        #   Skill: scan implementation
+│   ├── 04_award_tracer.py                #   Skill: trace implementation (USAspending)
 │   ├── verify_build.py                   #   post-index invariants (34 checks)
+│   ├── _probe_usaspending.py             #   original money-trail probe (trace's ancestor)
 │   ├── _archive/                         #   superseded scripts (see _archive/README.md)
 │   └── _diagnose_*.py                    #   one-shot data-quality probes
 │
@@ -226,7 +232,7 @@ docker compose up
 
 ## Agent Skills
 
-All four skills are shipped. The `/fair-guard` dispatcher routes between them
+All five skills are shipped. The `/fair-guard` dispatcher routes between them
 and enforces prerequisites deterministically before reading any mode file.
 
 ### Skill 1 — `doctor` (setup-validator)
@@ -267,6 +273,21 @@ Registry covers 23 federal agencies and is exhaustively unit-tested
 
 Implementation: `scripts/03_agency_concentration.py`.
 See `skill/revolving-door-detector/SKILL.md`.
+
+### Skill 5 — `federal-award-tracer` (`trace`)
+
+Follows the money behind a revolving-door case. Given a lobbyist, their client
+list, and a target agency, it traces the federal awards each client received from
+that agency on USAspending.gov, verifies every row against the recipient's real
+name (the API's recipient search is fuzzy), and emits a sourced per-client table
+plus a framing note that separates discretionary grants (newsworthy) from routine
+program participation (commodity purchases, food aid, formula financing). The
+"follow the money" companion to `scan`. Three reproducible case files ship in
+`skill/federal-award-tracer/cases/` — Steinberg → DOE ($1,080,820,046) and the
+USDA cases ($1,398,877,777) reproduce to the dollar.
+
+Implementation: `scripts/04_award_tracer.py` (live USAspending.gov API).
+See `skill/federal-award-tracer/SKILL.md`.
 
 ---
 

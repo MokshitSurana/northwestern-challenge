@@ -23,11 +23,12 @@ All scripts run with `uv`. Install dependencies first: `uv sync`
 /fair-guard resolve                 # build entity_map (F1 = 0.963)
 /fair-guard scan                    # run Bridenstine-pattern scan (revolving-door-detector)
 /fair-guard scan --agency nasa      # filter to one agency
+/fair-guard trace                   # follow the money (federal-award-tracer; USAspending.gov)
 ```
 
-`argument-hint` shows `[mode: doctor | index | scan | resolve]` in CLI autocomplete. The dispatcher reads `skill/<full-name>/SKILL.md` at runtime and executes its instructions. `allowed-tools: Read Bash` is pre-approved — no permission prompts during execution.
+`argument-hint` shows `[mode: doctor | index | scan | resolve | trace]` in CLI autocomplete. The dispatcher reads `skill/<full-name>/SKILL.md` at runtime and executes its instructions. `allowed-tools: Read Bash` is pre-approved — no permission prompts during execution.
 
-**Prerequisite guard (enforced by dispatcher):** `scan` and `resolve` require `output/investigation.duckdb`. If it doesn't exist, the dispatcher stops and shows two recovery options before attempting anything.
+**Prerequisite guard (enforced by dispatcher):** `scan` and `resolve` require `output/investigation.duckdb`. If it doesn't exist, the dispatcher stops and shows two recovery options before attempting anything. `trace` is the exception — it does **not** need the DuckDB; it makes live calls to api.usaspending.gov and takes a case file.
 
 **Two ways to get `output/investigation.duckdb`:**
 - **Fast (~10 min):** Download pre-built `output/` from Google Drive → unzip → place at project root:
@@ -63,6 +64,11 @@ uv run scripts/02_entity_resolver.py --limit 5000 --dry-run
 uv run scripts/03_agency_concentration.py
 uv run scripts/03_agency_concentration.py --agency nasa
 uv run scripts/03_agency_concentration.py --min-filings 5 --min-conc 0.15
+
+# trace — USAspending money trail (agency → a lobbyist's clients); needs network
+uv run scripts/04_award_tracer.py --print-template            # show case-file schema
+uv run scripts/04_award_tracer.py --case skill/federal-award-tracer/cases/steinberg_doe.json
+uv run scripts/04_award_tracer.py --case skill/federal-award-tracer/cases/usda_cases.json --out notes/usda_trail.md --json output/usda_awards.json
 ```
 
 ### Tests
@@ -169,7 +175,7 @@ web/src/app/page.tsx             (reporter verification UI, reads findings JSON)
 
 Convenience views: `revolving_door` (senate lobbyists with non-empty `covered_position`), `senate_spend_by_issue`.
 
-### Four Agent Skills
+### Five Agent Skills
 
 | Short name | Full name | Status | Implementation | Tests |
 |-----------|-----------|--------|---------------|-------|
@@ -177,6 +183,7 @@ Convenience views: `revolving_door` (senate lobbyists with non-empty `covered_po
 | `index` | lda-corpus-indexer | Shipped | `scripts/01_build_index.py` + `skill/lda-corpus-indexer/` | `scripts/verify_build.py` — 34 invariants |
 | `resolve` | entity-resolver | Shipped | `scripts/02_entity_resolver.py` + `skill/entity-resolver/` | `tests/test_entity_resolver.py` — 33 tests, F1 = 0.963 |
 | `scan` | revolving-door-detector | Shipped | `scripts/03_agency_concentration.py` + `skill/revolving-door-detector/` | `tests/test_agency_registry.py` — 111 tests |
+| `trace` | federal-award-tracer | Shipped | `scripts/04_award_tracer.py` + `skill/federal-award-tracer/` | 3 reproducible case files (Steinberg DOE $1.08B, USDA $1.40B exact); `evals/evals.json` |
 
 ### Agent Skills architecture (three layers)
 
@@ -192,7 +199,7 @@ Skills exist at three levels simultaneously — each serves a different audience
 
 The `.agents/skills/fair-guard/modes/` copies have cleaned-up frontmatter (non-standard fields like `version`, `author`, `tools` moved under `metadata:` and `compatibility:` per the agentskills.io spec). The originals in `skill/` are untouched.
 
-The dispatcher routes `$ARGUMENTS` short names to `skill/<full-name>/SKILL.md` at runtime. It enforces prerequisites deterministically (DuckDB check for `scan`/`resolve`, data dir check for `index`) before reading any mode file.
+The dispatcher routes `$ARGUMENTS` short names to `skill/<full-name>/SKILL.md` at runtime. It enforces prerequisites deterministically (DuckDB check for `scan`/`resolve`, data dir check for `index`, network + case file for `trace`) before reading any mode file.
 
 ---
 
@@ -249,8 +256,9 @@ are weighted over formulaic program payments.
 
 ## Priority Order (remaining work as of June 4, 2026)
 
-All four skills ship with tests; cross-platform CI is green; the findings report,
-external verification, and money trail are done. Remaining work for submission:
+All five skills ship with tests/reproducible cases; cross-platform CI is green; the
+findings report, external verification, and money trail are done. Remaining work for
+submission:
 
 1. **Close the remaining reportability gates per case** — cooling-off / 18 USC §207
    compliance, and requests for comment from each lobbyist/firm. The first two gates
@@ -264,7 +272,12 @@ recipient-name-verified USAspending money trail across all top candidates (Stein
 README submission map refreshed; cross-platform CI workflow (Linux/macOS/Windows);
 reconciled both firm-name discrepancies against the raw LDA corpus — Sherman's "Waneta
 Strategies, LLC" (45 filings: CTIA/Crown Castle/Lynk) and Martin's "Spirit Rock
-Consulting" (264 filings) are both authoritative in the filing record.
+Consulting" (264 filings) are both authoritative in the filing record. **Built the fifth
+skill, `trace` (federal-award-tracer): `scripts/04_award_tracer.py` productionizes the
+probe into a case-driven CLI (markdown table + discretionary-vs-routine framing note),
+with 3 reproducible case files in `skill/federal-award-tracer/cases/` (Steinberg DOE
+$1,080,820,046 and USDA $1,398,877,777 reproduce to the dollar), wired into all three
+skill layers + `evals/evals.json`.**
 
 ---
 
@@ -300,6 +313,8 @@ skill/lda-corpus-indexer/references/
     joins.md
 skill/revolving-door-detector/SKILL.md     # Skill: scan — submission artifact
 skill/entity-resolver/SKILL.md             # Skill: resolve — shipped, F1 = 0.963
+skill/federal-award-tracer/SKILL.md        # Skill: trace — submission artifact
+skill/federal-award-tracer/cases/          # 3 reproducible USAspending case files
 
 .agents/skills/fair-guard/SKILL.md         # agentskills.io master skill
 .agents/skills/fair-guard/modes/
@@ -307,6 +322,7 @@ skill/entity-resolver/SKILL.md             # Skill: resolve — shipped, F1 = 0.
     index/SKILL.md                         # (short names; originals in skill/ unchanged)
     resolve/SKILL.md
     scan/SKILL.md
+    trace/SKILL.md
 
 .claude/skills/fair-guard/SKILL.md         # Claude Code dispatcher (/fair-guard)
 
@@ -314,10 +330,13 @@ scripts/doctor.py                          # Skill: doctor implementation (cross
 scripts/01_build_index.py                  # Skill: index implementation (ETL)
 scripts/02_entity_resolver.py              # Skill: resolve implementation
 scripts/03_agency_concentration.py         # Skill: scan implementation
+scripts/04_award_tracer.py                 # Skill: trace implementation (USAspending)
 scripts/verify_build.py                    # post-index invariants (34 checks)
+scripts/_probe_usaspending.py              # original money-trail probe (trace's ancestor)
 scripts/_archive/                          # superseded scripts kept for history
 scripts/_diagnose_*.py                     # one-shot data-quality probes
 
+evals/evals.json                           # trace skill test prompts + assertions
 tests/test_agency_registry.py              # 111 tests for scan registry
 tests/test_entity_resolver.py              # 33 tests for resolver (incl. F1 eval)
 

@@ -1,0 +1,47 @@
+{
+  "skill_name": "federal-award-tracer",
+  "notes": "Test prompts are grounded in the three recipient-name-verified money trails in notes/08_external_verification_top_candidates.md, so the expected dollar totals are ground truth. Assertions check that the skill (a) reproduces the verified totals, (b) verifies recipient names rather than trusting the fuzzy search, and (c) produces the discretionary-vs-routine framing distinction.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "steinberg-doe-grants",
+      "prompt": "I'm investigating a lobbyist, Steinberg, whose lobbying clients are battery and critical-minerals companies, and who lobbies the Department of Energy. How much has DOE actually awarded in federal grants to these clients? The clients are: Cirba Solutions, EnerSys, South32 Hermosa, Sila Nanotechnologies, Anovion, Talon Nickel, Forge Battery, Cabot Corporation, and Nanoramic. Give me a sourced per-client breakdown I can put in a story.",
+      "expected_output": "A markdown table of per-client DOE grant totals summing to $1,080,820,046, with verified recipient names (e.g. CIRBA SOLUTIONS, LLC), and a framing note. All nine clients should resolve. DOE battery grants are discretionary, so the framing should reflect ~100% discretionary / $0 routine.",
+      "files": [],
+      "assertions": [
+        {"text": "Total across all clients equals $1,080,820,046 (verified DOE grant trail)", "type": "exact_total"},
+        {"text": "Output is a per-client markdown table, not a single lump sum", "type": "format"},
+        {"text": "Recipient names are verified/shown (e.g. CIRBA SOLUTIONS, LLC), not just the fuzzy search terms", "type": "name_verification"},
+        {"text": "Includes a framing note distinguishing discretionary grants from routine program participation", "type": "framing"},
+        {"text": "Frames the figure as conflict-of-interest structure, not proven wrongdoing", "type": "responsible_framing"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "usda-discretionary-vs-routine",
+      "prompt": "Several lobbyists have agribusiness clients that lobby USDA. I want to know how much USDA money actually flows to these clients AND how much of it is discretionary grant money versus routine program participation (commodity purchases, food aid, rural financing). Clients: Cargill, National Rural Water Association, Tri-State Generation, Land O'Lakes Venture37, McCain Foods, Global Clean Energy, Louis Dreyfus, Ardent Mills, California Prune Board, Shenandoah Valley Organic, Illinois Soybean Board, California Rice Commission. Use grants, direct payments, and contracts.",
+      "expected_output": "A per-client table summing to $1,398,877,777, and a framing analysis showing that the large majority (~97%) flows through routine USDA programs (AMS commodity purchases, FAS food aid, RUS financing) while only a small slice (~$38M, notably Global Clean Energy's ~$32.3M NRCS award) is discretionary. The key insight: most USDA dollars here are routine, NOT a revolving-door grant story.",
+      "files": [],
+      "assertions": [
+        {"text": "Total across all clients equals $1,398,877,777", "type": "exact_total"},
+        {"text": "Explicitly separates discretionary dollars from routine program participation", "type": "framing"},
+        {"text": "Identifies that the large majority (~97%) of the USDA total is routine program participation, not discretionary grants", "type": "correct_conclusion"},
+        {"text": "Correctly treats Global Clean Energy's ~$32.3M as discretionary (not flagged routine)", "type": "discretionary_exception"},
+        {"text": "Cargill total is verified to operating entities (~$704.9M), excluding fuzzy non-Cargill matches", "type": "name_verification"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "limbaugh-interior-water",
+      "prompt": "Trace federal Interior/Bureau of Reclamation grant money to the water-district clients of a lobbyist named Limbaugh. The clients include the Sites Project Authority, Friant Water Authority, Reclamation District 108, Turlock Irrigation District, The Freshwater Trust, Glenn-Colusa Irrigation District, and a dozen other California/Arizona water agencies. Give me a per-client sourced table.",
+      "expected_output": "A per-client markdown table of Interior grant totals (Sites Project Authority ~$43.5M is the largest), with verified recipient names. The Glenn-Colusa recipient is spelled 'GLENN COLUSA IRRIGATION DIST' (space, no hyphen) so name tokens must account for that. Total is in the ~$136M (grants-only) to ~$161.7M range depending on whether the Glenn-Colusa Reclamation award is counted. Framing note included.",
+      "files": [],
+      "assertions": [
+        {"text": "Produces a per-client table with Sites Project Authority as the largest line (~$43.5M)", "type": "format"},
+        {"text": "Handles the Glenn-Colusa spelling (GLENN COLUSA, no hyphen) so it is not silently dropped", "type": "name_verification"},
+        {"text": "Grants-only total is approximately $136M (or ~$161.7M if the Glenn-Colusa Reclamation award is included)", "type": "approximate_total"},
+        {"text": "Includes a responsible framing note (conflict-of-interest structure, not wrongdoing)", "type": "responsible_framing"}
+      ]
+    }
+  ]
+}
