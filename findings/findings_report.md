@@ -7,14 +7,15 @@
 
 ---
 
-> **Instructions for final submission:**
-> Convert this file to PDF using Pandoc or a Markdown → PDF tool:
+> **Instructions for final submission (reproducible, no system libs):**
+> Convert this file to PDF with Pandoc + Typst (Typst ships as a self-contained
+> Python wheel, so this works cross-platform without GTK/LaTeX):
 > ```bash
-> pandoc findings/findings_report.md -o findings/findings_report.pdf \
->     --pdf-engine=weasyprint \
->     --variable margin-top=1in --variable margin-bottom=1in
+> pandoc -s findings/findings_report.md -t typst -o findings/_report.typ
+> uv run --with typst python -c "import typst; typst.compile('findings/_report.typ', output='findings/findings_report.pdf')"
+> rm findings/_report.typ
 > ```
-> Or export from a tool like Notion, Obsidian, or Typora.
+> Alternative engines if installed: `pandoc findings/findings_report.md -o findings/findings_report.pdf --pdf-engine=weasyprint` (needs GTK), or export from Notion/Obsidian/Typora.
 
 ---
 

@@ -33,3 +33,7 @@ Thumbs.db
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Generated report PDF (rebuild from findings_report.md via pandoc + typst)
+findings/*.pdf
+findings/_report.typ
