@@ -34,8 +34,8 @@ cooling-off compliance under 18 USC §207, client contracts at the targeted agen
 | 6 | Jim Newsome → CFTC | CFTC Chairman | ✅ Yes | cftc.gov ("Sworn In as CFTC Chairman"); Bloomberg Law; FIA Hall of Fame |
 | 7 | Michael Torrey → USDA | USDA Deputy Chief of Staff | ✅ Yes | torreydc.com team bio; LinkedIn |
 | 8 | Kenneth Barbic → USDA | Asst. Sec. Congressional Relations 2018–21 | ✅ Yes | usda.gov; Senate Ag Committee release; Farm Progress |
-| 9 | Roger Sherman → FCC | Chief, Wireless Telecom Bureau | ✅ Role / ⚠️ firm | fcc.gov bureau-chief page |
-| 10 | Aurene Martin → INTERIOR | Acting Asst. Sec. Indian Affairs | ✅ Role / ⚠️ firm | bia.gov + doi.gov press releases (2003); House docs bio |
+| 9 | Roger Sherman → FCC | Chief, Wireless Telecom Bureau | ✅ Role / ✅ firm (corpus-confirmed) | fcc.gov bureau-chief page; LDA corpus (see reconciliation) |
+| 10 | Aurene Martin → INTERIOR | Acting Asst. Sec. Indian Affairs | ✅ Role / ✅ firm (corpus-confirmed) | bia.gov + doi.gov press releases (2003); House docs bio; LDA corpus |
 
 **Not yet externally checked:** #3 Ashlee Johnson (USDA) and #5 Kevin Bailey (USDA) —
 both disclose sub-Cabinet USDA staff roles (Chief of Staff to the Deputy Secretary;
@@ -62,15 +62,20 @@ Policy Assistant to the Secretary) that are harder to confirm via public directo
   independent individuals.
 
 - **#9 Roger Sherman** — Prior role (FCC Wireless Telecom Bureau Chief) confirmed via
-  FCC.gov. ⚠️ The LDA registrant name "Waneta Strategies, LLC" was **not** corroborated
-  online; his LinkedIn lists Quadra Partners and he has a Jenner & Block profile.
-  Before publication, reconcile the registrant name against the raw LDA filing — the
-  firm field in the corpus is authoritative for the filing, but the public footprint
-  is under different entities.
+  FCC.gov. **Firm-name discrepancy RESOLVED (2026-06-04, corpus reconciliation):** the
+  registrant name "Waneta Strategies, LLC" is authoritative and dominant in the raw LDA
+  corpus — Sherman files under it for CTIA – The Wireless Association (17 filings), Crown
+  Castle (17), and Lynk (11), all wireless/telecom clients squarely matching his FCC
+  Wireless Telecom Bureau tenure. Only a single filing (Sorenson Communications) is under
+  Jenner & Block. His thin *public* footprint under Quadra Partners / Jenner & Block is
+  separate from, and does not contradict, the filing record. The earlier ⚠️ flag was a
+  false alarm. Sample filing_uuid: `0786f70d-2cd8-459b-a641-b2df81c4340f` (CTIA).
 
 - **#10 Aurene Martin** — Acting Assistant Secretary – Indian Affairs (2003) confirmed
-  via BIA/DOI. ⚠️ "Spirit Rock Consulting" did not surface in search; confirm the
-  registrant entity against the LDA filing.
+  via BIA/DOI. **Firm-name discrepancy RESOLVED (2026-06-04, corpus reconciliation):**
+  "Spirit Rock Consulting" is definitively her registrant entity in the raw LDA corpus —
+  264 filings under that name. The entity simply has a minimal web presence; the filing
+  record is unambiguous. Sample filing_uuid: `015f19bb-012a-4836-adfe-fad49d0ddf0d`.
 
 ---
 

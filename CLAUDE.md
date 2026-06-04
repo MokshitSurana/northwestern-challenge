@@ -251,13 +251,13 @@ external verification, and money trail are done. Remaining work for submission:
    cases, and close the remaining reportability gates per case (cooling-off / 18 USC §207,
    client contracts at the targeted agency, requests for comment). Tracked in
    `notes/08_external_verification_top_candidates.md`.
-2. **Reconcile two firm-name discrepancies** — Roger Sherman ("Waneta Strategies") and
-   Aurene Martin ("Spirit Rock Consulting") roles confirmed but registrant names not
-   corroborated online; check against the raw LDA filing before publication.
 
 Done this cycle (do not redo): external verification of top scan candidates;
 USAspending money trail; `findings_report.md` numbers refreshed + exported to PDF;
-README submission map refreshed; cross-platform CI workflow (Linux/macOS/Windows).
+README submission map refreshed; cross-platform CI workflow (Linux/macOS/Windows);
+reconciled both firm-name discrepancies against the raw LDA corpus — Sherman's "Waneta
+Strategies, LLC" (45 filings: CTIA/Crown Castle/Lynk) and Martin's "Spirit Rock
+Consulting" (264 filings) are both authoritative in the filing record.
 
 ---
 
