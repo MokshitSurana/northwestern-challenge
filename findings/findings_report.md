@@ -36,14 +36,20 @@ the top twelve most-active NASA-targeting lobbyists in the Senate corpus are
 Artemis Group employees, four of whom worked directly under Bridenstine.
 
 **Structural finding:** Across the 2022–Q1 2026 Senate LDA corpus, the same
-pattern recurs at scale. 106 candidates across 18 agencies hold a former
+pattern recurs at scale. 139 candidates across 22 agencies hold a former
 senior agency role and now work at a firm whose filings target that agency
 at ≥20% concentration with ≥10 total filings. The top cases (ranked by
 concentration × log(filings) × seniority) include Benjamin Steinberg
 (DOE, 90.2%), Mark Limbaugh (Interior, 72.6%), Ashlee Johnson (USDA, 82.7%),
-Kevin Bailey (USDA, 87.3%), Jim Newsome (CFTC, 96.0%), and Kate Marks
-(DOE, 91.3%). Full ranking is auto-generated at
-`notes/06_structural_pattern_findings.md`.
+Scott Parsons (CFTC, 89.8%), and Jim Newsome (CFTC, 96.0%). Full ranking is
+auto-generated at `notes/06_structural_pattern_findings.md`.
+
+**Independent confirmation:** Eight of the top ten candidates have had their
+prior senior-agency role verified against public sources (agency websites,
+CFTC.gov, FCC.gov, USDA and Senate committee releases). The pattern is not a
+false positive of the detection method — the scan's highest-ranked outputs are
+genuine former agency principals, including a former CFTC Chairman and multiple
+Senate-confirmed Assistant Secretaries. See `notes/08_external_verification_top_candidates.md`.
 
 ---
 
@@ -76,19 +82,19 @@ uv run scripts/03_agency_concentration.py
 
 ### Headline numbers
 
-- **106 candidates** across **18 agencies** pass thresholds
+- **139 candidates** across **22 agencies** pass thresholds
   (concentration ≥ 20%, total filings ≥ 10)
-- Top cases by Bridenstine-score:
-  1. **Benjamin Steinberg** → DOE — 90.2% (213/236), firm: Venn Strategies
-  2. **Mark Limbaugh** → Interior — 72.6% (527/726), firm: The Ferguson Group
+- Top cases by Bridenstine-score (✅ = prior role externally confirmed, see Finding 2 verification subsection):
+  1. **Benjamin Steinberg** → DOE — 90.2% (213/236), firm: Venn Strategies ✅
+  2. **Mark Limbaugh** → Interior — 72.6% (527/726), firm: The Ferguson Group ✅
   3. **Ashlee Johnson** → USDA — 82.7% (230/278), firm: The Russell Group
-  4. **Kevin Bailey** → USDA — 87.3% (144/165), firm: FGS Global
-  5. **Jim Newsome** → CFTC — 96.0% (95/99), firm: Delta Strategy Group
-  6. **Michael Torrey** → USDA — 79.0% (180/228), firm: Torrey Advisory Group
-  7. **Kate Marks** → DOE — 91.3% (94/103), firm: Venn Strategies
-  8. **Kenneth Barbic** → USDA — 78.8% (108/137), firm: Invariant LLC
-  9. **Aurene Martin** → Interior — 68.2% (180/264), firm: Spirit Rock Consulting
-  10. **Jennifer Heide Van Der** → Interior — 80.6% (83/103), firm: Spirit Rock Consulting
+  4. **Scott Parsons** → CFTC — 89.8% (149/166), firm: Delta Strategy Group ✅
+  5. **Kevin Bailey** → USDA — 87.3% (144/165), firm: FGS Global
+  6. **Jim Newsome** → CFTC — 96.0% (95/99), firm: Delta Strategy Group ✅
+  7. **Michael Torrey** → USDA — 79.0% (180/228), firm: Torrey Advisory Group ✅
+  8. **Kenneth Barbic** → USDA — 78.8% (108/137), firm: Invariant LLC ✅
+  9. **Roger Sherman** → FCC — 100.0% (45/45), firm: Waneta Strategies ✅
+  10. **Aurene Martin** → Interior — 68.2% (180/264), firm: Spirit Rock Consulting ✅
 
 ### Methodology
 
@@ -109,6 +115,67 @@ firm whose filings concentrate on their former head's agency at an even higher
 rate than Artemis. The Bridenstine case is journalism-rich because of the
 five-staffer concentration around one individual; the other cases warrant
 independent reporting on their own merits.
+
+### External verification (2026-06-04)
+
+To test whether the scan surfaces real revolving-door cases or merely artifacts of
+the regex-matching method, we independently checked the claimed prior-agency role of
+the top ten candidates against public sources. **Eight of ten were confirmed:**
+
+| Candidate → Agency | Confirmed role | Source |
+|--------------------|----------------|--------|
+| Jim Newsome → CFTC | CFTC **Chairman**, 2001–04 | cftc.gov; FIA Hall of Fame |
+| Scott Parsons → CFTC | CFTC Chief of Staff / COO | deltastrategygroup.com; MarketsWiki |
+| Mark Limbaugh → Interior | Asst. Secretary, Water & Science, 2005–07 | thefergusongroup.com; Presidential Transition |
+| Kenneth Barbic → USDA | Senate-confirmed Asst. Secretary, Congressional Relations, 2018–21 | usda.gov; Senate Ag Committee |
+| Aurene Martin → Interior | Acting Asst. Secretary, Indian Affairs, 2003 | bia.gov / doi.gov |
+| Michael Torrey → USDA | Deputy Chief of Staff (Veneman/Johanns) | torreydc.com |
+| Roger Sherman → FCC | Chief, Wireless Telecom Bureau | fcc.gov |
+| Benjamin Steinberg → DOE | Chief of Staff, Office of Energy Policy & Systems Analysis | energy.gov |
+
+Two findings emerge from the verification beyond the headline confirmation rate:
+
+1. **A firm-level pattern at Delta Strategy Group.** Two of the confirmed CFTC cases —
+   former Chairman Jim Newsome and former Chief of Staff/COO Scott Parsons — lobby the
+   CFTC through the *same firm*, which they co-founded. Roughly 90–96% of each
+   principal's filings target their former agency. This is a firm built around two
+   former senior CFTC officials, not two unrelated individuals.
+
+2. **A seniority caveat worth flagging.** Benjamin Steinberg, the top-ranked candidate,
+   is confirmed — but his "DOE Chief of Staff" role was at the *office* level (Office of
+   Energy Policy & Systems Analysis), not agency-wide. The disclosure is accurate but
+   reads as more senior than the post was. Reporting should characterize it precisely.
+
+Full per-case sourcing, URLs, and caveats (including two firm-name discrepancies that
+must be reconciled against the raw LDA filing before publication) are recorded in
+`notes/08_external_verification_top_candidates.md`. This verification closes only the
+first reportability checkbox below; the remaining gates stay open for all cases.
+
+### Following the money — USAspending.gov (2026-06-04)
+
+Confirming a prior role establishes the revolving door exists; the stakes become
+concrete when the lobbyist's *clients* receive federal awards from the agency the
+lobbyist once ran. We queried the USAspending.gov API (FY2022–2026) for the two
+top cases whose agencies actually disburse funds:
+
+- **Mark Limbaugh → Interior.** As Assistant Secretary for Water & Science he oversaw
+  the **Bureau of Reclamation**. His Ferguson Group water-district clients — Glenn-Colusa,
+  Turlock, Sutter Mutual, and Yakima Basin — received **$43.3M in Bureau of Reclamation
+  awards** over 2022–2026 (11 awards; Glenn-Colusa alone, $25.6M).
+- **Benjamin Steinberg → DOE.** A former DOE Chief of Staff (Office of Energy Policy &
+  Systems Analysis), he lobbies DOE for **Talon Nickel (USA) LLC**, which received a
+  single **$114.8M DOE award** for critical-minerals/battery materials.
+
+This lens does not apply to every case: the CFTC cases (Newsome, Parsons) involve a
+*regulator*, and the USDA cases (Torrey, Barbic) represent trade associations — none
+receive agency awards, so they lobby on rules and programs rather than money. The
+tribal-client case (Martin) was inconclusive under a name-based search.
+
+**Framing note:** a client receiving agency funds while represented by a former agency
+official is a *conflict-of-interest structure*, not in itself wrongdoing. It is legal
+absent a specific violation (cooling-off period, 18 USC §207). These figures are the
+stakes of the revolving door, not an accusation. Full queries and caveats:
+`notes/08_external_verification_top_candidates.md`.
 
 ### Verification checklist (per case)
 
