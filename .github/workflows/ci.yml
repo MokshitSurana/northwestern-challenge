@@ -1,0 +1,68 @@
+name: CI
+
+# Cross-platform reproducibility gate for the FairGuard submission.
+# Verifies that a clean clone sets up and the skills run on Linux, macOS, and
+# Windows — without the 8.6 GB raw corpus or the pre-built DuckDB (both optional
+# in `doctor`, and the one DB-dependent test auto-skips when the DB is absent).
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+# Avoid stacking redundant runs on rapid pushes.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  setup-and-skills:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    env:
+      # doctor.py prints Unicode (≥, ─); force UTF-8 so Windows runners don't choke.
+      PYTHONUTF8: "1"
+      PYTHONIOENCODING: "utf-8"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install Python dependencies (uv sync)
+        run: uv sync --extra dev
+
+      - name: Install web dependencies (npm ci)
+        working-directory: web
+        run: npm ci
+
+      - name: Run doctor (setup validator)
+        # Exits non-zero only on a REQUIRED failure; missing corpus/DB are optional
+        # and surface as warnings, so this is a true cross-platform setup check.
+        run: uv run scripts/doctor.py
+
+      - name: Run test suite
+        # 143 tests run; the single DB-dependent F1 eval auto-skips (no DuckDB on CI).
+        run: uv run python -m pytest -q
+
+      - name: Lint (ruff)
+        run: uv run ruff check scripts/
+
+      - name: Build web (Next.js)
+        working-directory: web
+        run: npm run build
