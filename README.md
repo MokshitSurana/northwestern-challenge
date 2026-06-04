@@ -295,11 +295,15 @@ Scott Parsons (CFTC, 89.8%), Jim Newsome (CFTC, 96.0%).
 
 **External verification:** The prior senior-agency role of 8 of the top 10
 candidates was independently confirmed against public sources (CFTC.gov, FCC.gov,
-USDA, Senate committee releases, agency bios). Two concrete money trails were
-traced via the USAspending.gov API — Mark Limbaugh's water-district clients drew
-$43.3M in Bureau of Reclamation awards, and Benjamin Steinberg's client Talon
-Nickel received a $114.8M DOE award. Details and conflict-of-interest framing:
-`notes/08_external_verification_top_candidates.md`.
+USDA, Senate committee releases, agency bios). A deepened, recipient-name-verified
+money trail was then traced via the USAspending.gov API (reproducible via
+`scripts/_probe_usaspending.py`): Steinberg's nine battery/critical-minerals clients
+hold **~$1.08B** in discretionary DOE infrastructure-law grants; Limbaugh's nineteen
+water-district clients hold **~$161.7M** in Interior/Reclamation awards; and the four
+USDA cases (initially dismissed) turn out to have large USDA award trails — though
+mostly *routine* program participation (commodity purchases, food aid, rural-utility
+financing), a weaker conflict signal than discretionary grants. Details and
+conflict-of-interest framing: `notes/08_external_verification_top_candidates.md`.
 
 Output: `notes/06_structural_pattern_findings.md` (auto-generated)
 Reporter UI: `web/` — run `cd web && npm install && npm run dev` → http://localhost:3000

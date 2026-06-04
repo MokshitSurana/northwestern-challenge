@@ -95,29 +95,107 @@ generalizes across the corpus.
 
 **Second reportability gate:** do the lobbyist's *clients* receive federal awards from
 the agency the lobbyist used to run? Queried the USAspending.gov API
-(`/api/v2/search/spending_by_award/`) for FY2022–2026, filtering award results to the
+(`/api/v2/search/spending_by_award/`) for FY2021–2026, filtering award results to the
 relevant agency. This lens only applies to **spending** agencies — it is not meaningful
-for regulators (CFTC) or trade-association clients that receive no awards.
+for regulators (CFTC).
+
+**Deepened 2026-06-04** (queries reproducible via `scripts/_probe_usaspending.py`): the
+initial pass checked only a handful of clients per case and dismissed USDA as "not
+applicable." A full sweep of every top-candidate client list overturned both: Steinberg's
+and Limbaugh's trails are an order of magnitude larger than first logged, and the four
+**USDA** cases do have large award trails (USDA is a major spending agency). All figures
+below are **recipient-name-verified** — `recipient_search_text` is a fuzzy match, so every
+total counts only awards whose actual `Recipient Name` matches the client (this stripped,
+e.g., "555 Hugh Cargill Road LLC" from Cargill and "BioNutrients"/"4R Nutrient" noise from
+Nutrien). Loan instruments are **excluded** (the API's loan mapping can't sort by amount),
+so USDA figures are conservative grants + contracts + direct payments only.
 
 ### Confirmed money trails
 
-**Mark Limbaugh → Interior (Bureau of Reclamation).** Limbaugh was Assistant Secretary
-for Water & Science, which oversees the Bureau of Reclamation. His Ferguson Group
-water-district clients received Reclamation assistance awards 2022–2026:
+**Benjamin Steinberg → DOE — ~$1.08 billion (strongest trail).** Steinberg (former DOE
+Chief of Staff, EPSA; Venn Strategies) lobbies DOE for a roster of battery-materials and
+critical-minerals firms. **Nine** of them hold DOE assistance awards — almost all
+discretionary Bipartisan Infrastructure Law battery-supply-chain grants — totaling
+**$1,080,820,047**:
 
-| Client | Reclamation awards | # |
-|--------|-------------------:|---|
+| Client (recipient verified) | DOE awards | # |
+|-----------------------------|-----------:|---|
+| Cirba Solutions, LLC | $205,417,813 | 3 |
+| EnerSys Advanced Systems Inc | $198,679,760 | 1 |
+| South32 Hermosa Inc | $122,993,646 | 1 |
+| Sila Nanotechnologies, Inc. | $117,017,665 | 4 |
+| Anovion LLC | $117,000,000 | 1 |
+| Talon Nickel (USA) LLC | $114,846,344 | 1 |
+| Forge Battery, Inc. | $100,000,000 | 1 |
+| Cabot Corp | $57,336,573 | 3 |
+| Nanoramic, Inc. | $47,528,246 | 1 |
+| **Total** | **$1,080,820,047** | **16** |
+
+These are competitive, discretionary BIL/IRA grants — the highest-signal conflict
+structure in the corpus. (Earlier we had logged only the single Talon Nickel award.)
+
+**Mark Limbaugh → Interior (Bureau of Reclamation) — ~$161.7 million.** Limbaugh was
+Assistant Secretary for Water & Science, which oversees the Bureau of Reclamation. A full
+sweep of his ~50 Ferguson Group water-district clients found **19** with Interior awards
+(overwhelmingly Reclamation WaterSMART / storage / drought grants), FY2021–2026:
+
+| Client | Interior awards | # |
+|--------|----------------:|---|
+| Sites Project Authority | $43,454,922 | 3 |
 | Glenn-Colusa Irrigation District | $25,568,100 | 1 |
+| Friant Water Authority | $20,513,436 | 3 |
+| Reclamation District 108 | $13,876,350 | 5 |
 | Turlock Irrigation District | $12,057,752 | 5 |
+| The Freshwater Trust | $9,361,048 | 10 |
+| North Unit Irrigation District | $8,857,472 | 7 |
+| Western Municipal Water District | $8,487,633 | 12 |
 | Sutter Mutual Water Company | $4,787,610 | 3 |
-| Yakima (Basin) | $881,822 | 2 |
-| **Total** | **$43,295,284** | **11** |
+| El Dorado County Water Agency | $3,249,800 | 6 |
+| City of Woodland, CA | $3,000,000 | 1 |
+| Merced Irrigation District | $2,659,156 | 4 |
+| Klamath Water Users | $2,133,007 | 2 |
+| Maricopa-Stanfield Irrigation & Drainage | $1,159,870 | 4 |
+| Solano Irrigation District | $771,489 | 1 |
+| City of Folsom, CA | $750,000 | 1 |
+| Yakima Basin (BLM) | $515,000 | 2 |
+| San Juan Water District | $284,866 | 1 |
+| Central Arizona Irrigation & Drainage | $200,000 | 2 |
+| **Total** | **≈$161,687,512** | **73** |
 
-**Benjamin Steinberg → DOE.** Steinberg (former DOE Chief of Staff, EPSA; Venn
-Strategies) lobbies DOE for **Talon Nickel (USA) LLC**, which received a single
-**$114,846,344 DOE assistance award** (battery-materials / critical minerals). Talon
-also holds ~$23M in DoD awards. Other Steinberg DOE clients checked (Wabtec, Burns &
-McDonnell) draw mainly DoD/DoT awards, not DOE.
+(Up from the $43.3M / 4-district figure first logged. A small share — Yakima BLM, two
+USFWS line items — is Interior but not strictly Reclamation; "Merced Irrigation" /
+"Merced Irrigation District" deduplicated to one entity.)
+
+**USDA cases — the "not applicable" dismissal was wrong.** USDA is a major spending
+agency, and all four USDA candidates have clients with large USDA award trails
+(recipient-name-verified; grants + contracts + direct, loans excluded):
+
+| Lobbyist (former USDA role) | Client | USDA awards | Dominant program |
+|------------------------------|--------|------------:|------------------|
+| Ashlee Johnson | Cargill (operating entities) | $704,852,208 | AMS commodity purchases (98% of awards) |
+| Johnson | Land O'Lakes (Venture37 affiliate) | $104,471,391 | Foreign Agricultural Service (food aid) |
+| Johnson / Barbic | McCain Foods USA, Inc. | $82,649,985 | Agricultural Marketing Service |
+| Kevin Bailey | National Rural Water Association | $271,949,425 | Rural Utilities / Rural Housing |
+| Bailey | Tri-State Generation & Transmission | $148,344,449 | Rural Utilities Service |
+| Barbic | Global Clean Energy Holdings | $32,260,500 | NRCS Climate-Smart Commodities |
+| Michael Torrey | Louis Dreyfus Company | $21,812,752 | FSA / Rural Business Coop |
+| Torrey | Ardent Mills LLC | $16,927,765 | Agricultural Marketing Service |
+| Torrey | California Prune Board | $9,200,000 | Foreign Agricultural Service |
+| Bailey | Shenandoah Valley Organic | $3,567,302 | Rural Business Coop |
+| Torrey | Illinois Soybean Board | $2,157,000 | NRCS |
+| Johnson | California Rice Commission | $685,000 | NRCS |
+
+**Critical framing distinction.** Most USDA dollars are *routine, formulaic program
+participation* — AMS Section-32 commodity purchases (the government buying meat and food
+from Cargill/McCain for school-lunch and food-bank programs), FAS food-aid awards to Land
+O'Lakes's development arm, RUS utility financing to a generation co-op. These are a
+**weaker** conflict signal than discretionary, competitively-awarded grants, because they
+flow on program rules rather than on case-by-case decisions a former official could sway.
+The standout *discretionary* USDA award is **Global Clean Energy's $32.26M NRCS
+Climate-Smart Commodities grant** — competitive, and lobbied by Barbic, who was USDA
+Assistant Secretary for Congressional Relations (2018–21). By contrast, Steinberg's DOE
+battery grants and Limbaugh's Reclamation grants are discretionary throughout, which is
+why those remain the two cleanest conflict structures.
 
 ### Inconclusive / not applicable
 
@@ -126,20 +204,27 @@ McDonnell) draw mainly DoD/DoT awards, not DOE.
   tribal funding flows through varied recipient entity names and many programs (IHS,
   Treasury, BIA self-determination compacts) that a simple name search misses. Tribal
   lobbying also centers on gaming/policy rather than competitive awards.
-- **USDA cases (Torrey, Barbic, Johnson, Bailey)** and **CFTC cases (Newsome, Parsons).**
-  Clients are trade associations or regulated firms; they lobby on rules and programs,
-  not on receiving agency awards. The money-trail lens does not apply.
+- **CFTC cases (Newsome, Parsons).** The CFTC is a market regulator that issues no
+  awards; its registrants' clients (exchanges, trading firms, crypto platforms) lobby on
+  rules, not funding. The money-trail lens does not apply.
 
 ### Caveats
 
 - USAspending "Award Amount" reflects total obligated/funding per award; multi-year
   cooperative agreements appear as a single large figure.
+- **Recipient matching:** `recipient_search_text` is fuzzy, so every figure above counts
+  only awards whose actual `Recipient Name` matches the client. "Land O'Lakes" awards are
+  to **Venture37**, the co-op's international-development nonprofit affiliate (not the
+  lobbying co-op itself) — flagged rather than silently merged.
+- **Loans excluded** (API loan mapping can't sort by amount); USDA RUS figures would be
+  larger if loan guarantees were included. Figures are therefore conservative.
 - A client receiving agency funds while represented by a former agency official is a
   **conflict-of-interest structure**, not in itself evidence of wrongdoing. It is legal
   absent a specific violation (cooling-off period, 18 USC §207, procurement integrity).
-  Reporting must frame it as the *stakes* of the revolving door, not an accusation.
-- Figures are reproducible via the USAspending API; queries are documented in the
-  session trace.
+  Reporting must frame it as the *stakes* of the revolving door, not an accusation —
+  and, per the framing distinction above, weight discretionary grants over formulaic
+  program payments.
+- Figures are reproducible via `scripts/_probe_usaspending.py` against the USAspending API.
 
 ---
 

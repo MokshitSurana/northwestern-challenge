@@ -156,27 +156,43 @@ first reportability checkbox below; the remaining gates stay open for all cases.
 
 Confirming a prior role establishes the revolving door exists; the stakes become
 concrete when the lobbyist's *clients* receive federal awards from the agency the
-lobbyist once ran. We queried the USAspending.gov API (FY2022–2026) for the two
-top cases whose agencies actually disburse funds:
+lobbyist once ran. We swept every top-candidate client list against the USAspending.gov
+API (FY2021–2026), counting only awards whose actual recipient name matches the client
+(the API's text search is fuzzy). Three of the scanned agencies disburse funds at scale:
 
-- **Mark Limbaugh → Interior.** As Assistant Secretary for Water & Science he oversaw
-  the **Bureau of Reclamation**. His Ferguson Group water-district clients — Glenn-Colusa,
-  Turlock, Sutter Mutual, and Yakima Basin — received **$43.3M in Bureau of Reclamation
-  awards** over 2022–2026 (11 awards; Glenn-Colusa alone, $25.6M).
-- **Benjamin Steinberg → DOE.** A former DOE Chief of Staff (Office of Energy Policy &
-  Systems Analysis), he lobbies DOE for **Talon Nickel (USA) LLC**, which received a
-  single **$114.8M DOE award** for critical-minerals/battery materials.
+- **Benjamin Steinberg → DOE — ~$1.08 billion (strongest trail).** A former DOE Chief of
+  Staff (Office of Energy Policy & Systems Analysis), he lobbies DOE for a roster of
+  battery and critical-minerals firms. **Nine** hold DOE awards — almost all discretionary
+  Bipartisan Infrastructure Law battery-supply-chain grants — totaling **$1,080,820,047**
+  (e.g. Cirba Solutions $205.4M, EnerSys $198.7M, South32 Hermosa $123.0M, Sila
+  Nanotechnologies $117.0M, Talon Nickel $114.8M).
+- **Mark Limbaugh → Interior — ~$161.7 million.** As Assistant Secretary for Water &
+  Science he oversaw the **Bureau of Reclamation**. **19** of his ~50 Ferguson Group
+  water-district clients hold Interior awards (mostly Reclamation WaterSMART/storage/
+  drought grants), led by Sites Project Authority ($43.5M), Glenn-Colusa ($25.6M), and
+  Friant Water Authority ($20.5M).
+- **USDA cases — a real trail, but a weaker signal.** USDA is a major spending agency, and
+  all four USDA candidates have clients with large USDA awards: Bailey's National Rural
+  Water Association ($272.0M) and Tri-State Generation ($148.3M), Johnson's Cargill
+  ($704.9M) and McCain Foods ($82.6M), Barbic's Global Clean Energy ($32.3M). **But most of
+  these dollars are routine, formulaic program participation** — Agricultural Marketing
+  Service commodity purchases (the government buying food from Cargill/McCain), food-aid
+  awards, and Rural Utilities financing — a weaker conflict signal than discretionary,
+  competitively-awarded grants. The standout *discretionary* USDA award is Global Clean
+  Energy's **$32.3M NRCS Climate-Smart Commodities grant**, lobbied by Barbic, who was USDA
+  Assistant Secretary for Congressional Relations.
 
-This lens does not apply to every case: the CFTC cases (Newsome, Parsons) involve a
-*regulator*, and the USDA cases (Torrey, Barbic) represent trade associations — none
-receive agency awards, so they lobby on rules and programs rather than money. The
-tribal-client case (Martin) was inconclusive under a name-based search.
+This lens does not apply to the CFTC cases (Newsome, Parsons) — a *market regulator* that
+issues no awards. The tribal-client case (Martin) was inconclusive under a name-based
+search.
 
 **Framing note:** a client receiving agency funds while represented by a former agency
 official is a *conflict-of-interest structure*, not in itself wrongdoing. It is legal
-absent a specific violation (cooling-off period, 18 USC §207). These figures are the
-stakes of the revolving door, not an accusation. Full queries and caveats:
-`notes/08_external_verification_top_candidates.md`.
+absent a specific violation (cooling-off period, 18 USC §207), and discretionary grants
+weigh more heavily than formulaic program payments. These figures are the stakes of the
+revolving door, not an accusation. Full per-client tables, recipient-name verification,
+and caveats: `notes/08_external_verification_top_candidates.md` (queries reproducible via
+`scripts/_probe_usaspending.py`).
 
 ### Verification checklist (per case)
 
