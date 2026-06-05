@@ -256,16 +256,22 @@ are weighted over formulaic program payments.
 
 ---
 
-## Priority Order (remaining work as of June 4, 2026)
+## Priority Order (remaining work as of June 5, 2026)
 
 All five skills ship with tests/reproducible cases; cross-platform CI is green; the
-findings report, external verification, and money trail are done. Remaining work for
-submission:
+findings report, external verification, and money trail are done. **All four
+per-case reportability gates are now closed** (role, money trail → `notes/08`;
+§207 cooling-off + request-for-comment → `notes/09`).
 
-1. **Close the remaining reportability gates per case** — cooling-off / 18 USC §207
-   compliance, and requests for comment from each lobbyist/firm. The first two gates
-   (confirm prior role; client contracts at the targeted agency) are now closed for the
-   top cases. Tracked in `notes/08_external_verification_top_candidates.md`.
+Remaining work for submission is editorial/operational, not in-repo:
+
+1. **Actually send the drafted requests for comment** and log responses (the per-firm
+   drafts + questions are ready in `notes/09_reportability_gates_207_and_comment.md`).
+   Before print, also pin the four †-flagged departure dates to the month and confirm
+   Barbic had no 2021 USDA contact (the one residual §207 timing check) — both noted in
+   `notes/09`. The structural finding itself is reportable now: confirmed role, confirmed
+   money trail, confirmed legality (timed §207 bans clear in all examined cases), fair-
+   comment plan drafted.
 
 Done this cycle (do not redo): external verification of top scan candidates; deepened,
 recipient-name-verified USAspending money trail across all top candidates (Steinberg DOE
@@ -345,7 +351,8 @@ tests/test_entity_resolver.py              # 33 tests for resolver (incl. F1 eva
 findings/findings_report.md               # final findings (→ PDF via pandoc + typst)
 notes/05_finding_bridenstine.md           # anchor finding (verified)
 notes/06_structural_pattern_findings.md   # Track 2 output (AUTO-GENERATED — never hand-edit)
-notes/08_external_verification_top_candidates.md  # durable verification + USAspending money trail
+notes/08_external_verification_top_candidates.md  # durable verification + USAspending money trail (gates 1-2)
+notes/09_reportability_gates_207_and_comment.md   # §207 cooling-off analysis + request-for-comment drafts (gates 3-4)
 notes/HANDOFF_TO_MOKSHIT_SKILL_DOCTOR.md  # doctor skill spec + testing tasks for Mokshit
 
 .github/workflows/ci.yml                  # cross-platform CI (Linux/macOS/Windows)

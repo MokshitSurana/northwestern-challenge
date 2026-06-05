@@ -17,10 +17,13 @@ sourced directly from `output/investigation.duckdb` and is reproducible. The
 their LDA `covered_position` field — is the part that requires independent confirmation
 before publication.
 
-This document records that confirmation for the top candidates. **It closes only the
-first reportability checkbox per case ("Confirm prior role").** The remaining gates —
-cooling-off compliance under 18 USC §207, client contracts at the targeted agency
-(USAspending.gov), and a request for comment — remain open for every case.
+This document records that confirmation for the top candidates. **It closes the first
+two reportability gates per case:** "Confirm prior role" (the verification table below)
+and "client contracts at the targeted agency" (the USAspending money-trail section). The
+remaining two gates — **cooling-off compliance under 18 USC §207** and a **request for
+comment** — are closed in the companion note
+`notes/09_reportability_gates_207_and_comment.md` (all examined cases clear the timed
+§207 bans; per-firm comment requests drafted).
 
 ---
 
