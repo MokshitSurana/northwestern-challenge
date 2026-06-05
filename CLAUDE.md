@@ -183,7 +183,7 @@ Convenience views: `revolving_door` (senate lobbyists with non-empty `covered_po
 | `index` | lda-corpus-indexer | Shipped | `scripts/01_build_index.py` + `skill/lda-corpus-indexer/` | `scripts/verify_build.py` — 34 invariants |
 | `resolve` | entity-resolver | Shipped | `scripts/02_entity_resolver.py` + `skill/entity-resolver/` | `tests/test_entity_resolver.py` — 33 tests, F1 = 0.963 |
 | `scan` | revolving-door-detector | Shipped | `scripts/03_agency_concentration.py` + `skill/revolving-door-detector/` | `tests/test_agency_registry.py` — 111 tests |
-| `trace` | federal-award-tracer | Shipped | `scripts/04_award_tracer.py` + `skill/federal-award-tracer/` | 3 reproducible case files (Steinberg DOE $1.08B, USDA $1.40B exact); `evals/evals.json` |
+| `trace` | federal-award-tracer (v1.1.0) | Shipped | `scripts/04_award_tracer.py` + `skill/federal-award-tracer/` | 3 reproducible case files (Steinberg DOE $1.08B, USDA $1.40B exact) + a no-case-file generalization eval; `evals/evals.json` |
 
 ### Agent Skills architecture (three layers)
 
@@ -200,6 +200,8 @@ Skills exist at three levels simultaneously — each serves a different audience
 The `.agents/skills/fair-guard/modes/` copies have cleaned-up frontmatter (non-standard fields like `version`, `author`, `tools` moved under `metadata:` and `compatibility:` per the agentskills.io spec). The originals in `skill/` are untouched.
 
 The dispatcher routes `$ARGUMENTS` short names to `skill/<full-name>/SKILL.md` at runtime. It enforces prerequisites deterministically (DuckDB check for `scan`/`resolve`, data dir check for `index`, network + case file for `trace`) before reading any mode file.
+
+**Editing `trace` (federal-award-tracer):** the load-bearing judgment in this skill is the **wide-net-first name-token discipline** in its "Choosing search terms and name tokens" section — search the *shortest distinctive core term* (`Group14`, not the full legal name), read every returned recipient name, then keep same-company project SPVs (e.g. `GROUP14 BAM-2, INC.`), exclude coincidental collisions, and surface/flag same-parent-but-distinct entities (e.g. `ICL SPECIALTY PRODUCTS INC` vs `ICL-IP America`). A too-narrow search silently undercounts a client's biggest awards by hundreds of millions with no visible warning — this is the exact failure the v1.0→v1.1 fix addressed (see the generalization eval). Preserve this guidance when editing, and keep the `.agents/.../modes/trace/SKILL.md` copy in sync (it defers full guidance to `skill/` but mirrors the version + a one-line summary).
 
 ---
 
@@ -336,7 +338,7 @@ scripts/_probe_usaspending.py              # original money-trail probe (trace's
 scripts/_archive/                          # superseded scripts kept for history
 scripts/_diagnose_*.py                     # one-shot data-quality probes
 
-evals/evals.json                           # trace skill test prompts + assertions
+evals/evals.json                           # trace skill test prompts + assertions (incl. eval #4 generalization, no shipped case file)
 tests/test_agency_registry.py              # 111 tests for scan registry
 tests/test_entity_resolver.py              # 33 tests for resolver (incl. F1 eval)
 
