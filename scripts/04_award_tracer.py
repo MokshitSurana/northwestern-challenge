@@ -227,14 +227,22 @@ def build_markdown(case: dict, results: list[dict]) -> str:
     lines.append("")
     if grand > 0:
         pct_disc = 100 * discretionary / grand
-        lines.append(
-            f"Of the {fmt_usd(grand)} traced, roughly {fmt_usd(discretionary)} "
-            f"({pct_disc:.0f}%) flows through programs that are *not* obviously "
-            "routine, and "
-            f"{fmt_usd(routine)} flows through sub-agencies that typically "
-            "administer formula / commodity / financing programs "
-            "(e.g. AMS commodity purchases, FAS food aid, RUS financing)."
-        )
+        if routine <= 0:
+            lines.append(
+                f"All {fmt_usd(grand)} traced flows through programs that are "
+                "*not* obviously routine — none of it through sub-agencies that "
+                "typically administer formula / commodity / financing programs "
+                "(e.g. AMS commodity purchases, FAS food aid, RUS financing)."
+            )
+        else:
+            lines.append(
+                f"Of the {fmt_usd(grand)} traced, {fmt_usd(discretionary)} "
+                f"(about {pct_disc:.0f}%) flows through programs that are *not* "
+                "obviously routine, while "
+                f"{fmt_usd(routine)} flows through sub-agencies that typically "
+                "administer formula / commodity / financing programs "
+                "(e.g. AMS commodity purchases, FAS food aid, RUS financing)."
+            )
     lines.append("")
     lines.append(
         "**Report this as conflict-of-interest *structure*, not proven wrongdoing.** "

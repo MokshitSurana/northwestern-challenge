@@ -1,6 +1,6 @@
 {
   "skill_name": "federal-award-tracer",
-  "notes": "Test prompts are grounded in the three recipient-name-verified money trails in notes/08_external_verification_top_candidates.md, so the expected dollar totals are ground truth. Assertions check that the skill (a) reproduces the verified totals, (b) verifies recipient names rather than trusting the fuzzy search, and (c) produces the discretionary-vs-routine framing distinction.",
+  "notes": "Evals 1-3 are grounded in the three recipient-name-verified money trails in notes/08_external_verification_top_candidates.md (each has a shipped case file in skill/federal-award-tracer/cases/), so their expected dollar totals are ground truth. Eval 4 is a GENERALIZATION test: a clean-energy client set with NO shipped case file, so the skill must drive the workflow ad-hoc (construct the query, apply recipient-name-token discipline, exclude loans, report misses). Its oracle ($556,841,071) was locked by running scripts/04_award_tracer.py against the live API (federal-award-tracer-workspace/oracle/). Assertions across the suite check that the skill (a) reproduces the verified totals, (b) verifies recipient names rather than trusting the fuzzy search, (c) produces the discretionary-vs-routine framing distinction, and (d) transparently reports clients with no awards found.",
   "evals": [
     {
       "id": 1,
@@ -41,6 +41,22 @@
         {"text": "Handles the Glenn-Colusa spelling (GLENN COLUSA, no hyphen) so it is not silently dropped", "type": "name_verification"},
         {"text": "Grants-only total is approximately $136M (or ~$161.7M if the Glenn-Colusa Reclamation award is included)", "type": "approximate_total"},
         {"text": "Includes a responsible framing note (conflict-of-interest structure, not wrongdoing)", "type": "responsible_framing"}
+      ]
+    },
+    {
+      "id": 4,
+      "name": "generalization-no-case-file",
+      "prompt": "I'm looking at a lobbyist whose clients are clean-energy and battery-materials startups, and who lobbies the Department of Energy. How much has DOE awarded these clients in federal grants? The clients are: Group14 Technologies, Ascend Elements, Form Energy, Microvast, ICL-IP America, and Lyten. Give me a per-client sourced breakdown I can put in a story, and flag any clients with no DOE grant money.",
+      "expected_output": "A per-client markdown table of DOE grant totals summing to ~$556,841,071, with verified recipient names. Ascend Elements (~$318.9M) and Group14 Technologies (~$226.8M) are the two largest lines. Group14's total must include BOTH recipient variants on file — 'GROUP14 TECHNOLOGIES, INC' and 'GROUP14 BAM-2, INC.' — which a recipient-name-token match catches but a naive single-string match would miss. ICL-IP America should be reported as having NO verified DOE grants (transparent miss). Loans are excluded. Framing note included (all discretionary, ~100% non-routine).",
+      "files": [],
+      "no_shipped_case_file": true,
+      "assertions": [
+        {"text": "Total across all clients is approximately $556,841,071 (the live-API-verified oracle)", "type": "approximate_total"},
+        {"text": "Output is a per-client markdown table, not a single lump sum", "type": "format"},
+        {"text": "Group14 total (~$226.8M) captures BOTH recipient variants (GROUP14 TECHNOLOGIES + GROUP14 BAM-2) via name-token matching", "type": "name_verification"},
+        {"text": "ICL-IP America is transparently reported as having no verified DOE grants found", "type": "transparent_miss"},
+        {"text": "Loans are excluded so the total is not inflated by non-grant financing", "type": "methodology"},
+        {"text": "Includes the discretionary-vs-routine framing note and responsible conflict-of-interest framing", "type": "framing"}
       ]
     }
   ]

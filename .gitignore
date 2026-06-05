@@ -37,3 +37,6 @@ Thumbs.db
 # Generated report PDF (rebuild from findings_report.md via pandoc + typst)
 findings/*.pdf
 findings/_report.typ
+
+# skill-creator eval workspace (transient)
+federal-award-tracer-workspace/

@@ -11,7 +11,7 @@ description: >
   clients — the "follow the money" companion to revolving-door-detector. Reach for it
   any time someone asks how much an agency awarded a company, mentions USAspending,
   federal grants/contracts, or wants to put a dollar figure on a conflict of interest.
-version: 1.0.0
+version: 1.1.0
 author: FairGuard (Mokshit Surana, Archit Rathod)
 license: MIT
 tools: [bash, python, file-read, file-write]
@@ -107,13 +107,47 @@ uv run scripts/04_award_tracer.py \
   --json output/limbaugh_awards.json
 ```
 
-## Choosing name tokens (the part that needs judgment)
+## Choosing search terms and name tokens (the part that needs judgment)
 
-The whole accuracy of the total rides on the `name_tokens`. Guidance:
+The accuracy of the total rides on two fields working together: `search` (what you ask
+the API for) and `name_tokens` (which returned rows you keep). The failure mode that
+quietly costs the most money is **missing a client's project entities and
+subsidiaries** — companies often win their biggest awards through a single-purpose LLC,
+not their headline name. Group14 Technologies holds a $123M grant as
+`GROUP14 TECHNOLOGIES, INC` *and a separate $100M grant as `GROUP14 BAM-2, INC.`* (its
+second battery-materials plant). Search `"Group14 Technologies"` and you will never see
+that $100M; search `"Group14"` and both surface. A too-specific token silently
+undercounts — and a number that's $100M light is worse than no number.
 
-- **Start specific, then loosen only if you miss real rows.** `["CIRBA SOLUTIONS"]`
-  is safer than `["CIRBA"]`. Run once, read the "Recipient name(s) on file" column,
-  and adjust.
+So work in two passes:
+
+1. **Cast a wide net to see the landscape first.** Set `search` to the *shortest
+   distinctive* core term — `Group14`, `Cirba`, `Ascend Elements` — not the full legal
+   name. Run once and read **every** value in the "Recipient name(s) on file" column
+   (the `--json` dump lists them all). This is how you discover SPVs, `… 2, INC.` /
+   `… BAM` / `… HOLDINGS` variants, and acquisitions you'd otherwise never know to look
+   for.
+
+2. **Then sort what came back into three buckets and set `name_tokens` accordingly:**
+   - **Same-company variants and project SPVs** (`GROUP14 BAM-2`, a `… CATHODE LLC`, a
+     `… 2, INC.`) — these *are* the client; their awards belong in the total. Pick a
+     `name_tokens` value broad enough to catch them, often the bare core token
+     (`["GROUP14"]`).
+   - **Coincidental name collisions** (`Paseo Cargill Energy`, `4R Nutrient`,
+     `555 Hugh Cargill Road LLC`) — different entities that merely share a word. Exclude
+     them; this is what a narrower token or an explicit operating-entity list is for.
+   - **Same-parent but genuinely distinct entities** (`ICL SPECIALTY PRODUCTS INC` vs a
+     client named `ICL-IP America Inc.`) — do **not** silently include or silently drop.
+     Report the client's own total, then surface the sibling award and its amount with a
+     "confirm which entity the lobbyist represented before counting this" note.
+
+The underlying tension is precision vs. recall: too narrow and you undercount a client's
+SPVs; too broad and you sweep in strangers. The wide-net-first pass is what lets you make
+that call with the real recipient names in front of you instead of guessing — and when a
+borderline entity is genuinely ambiguous, **surface it in the output rather than deciding
+silently.** An explicit "excluded X (~$Y), confirm before counting" line is worth more to
+a reporter than a clean-looking total that hides a judgment call.
+
 - **Watch for spelling drift in the recipient record.** The USAspending recipient for
   Glenn-Colusa is spelled `GLENN COLUSA IRRIGATION DIST` (a space, no hyphen), so the
   token set is `["GLENN COLUSA", "GLENN-COLUSA"]`. If a client returns `--` in the

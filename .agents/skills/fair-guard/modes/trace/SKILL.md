@@ -15,7 +15,7 @@ license: MIT
 compatibility: Requires Python 3.11+ and uv. Needs network access to api.usaspending.gov. Does not require the DuckDB.
 metadata:
   author: FairGuard (Mokshit Surana, Archit Rathod)
-  version: "1.0.0"
+  version: "1.1.0"
   part-of: fair-guard
   companion-to: revolving-door-detector
   tools: bash, python, file-read, file-write
@@ -50,7 +50,11 @@ fresh agent hits every time; all three are handled inside the script:
    totals stay conservative.
 3. **`recipient_search_text` is fuzzy.** Searching "Cargill" also returns
    "Paseo Cargill Energy". Every row is filtered against caller-supplied **name
-   tokens** that must appear in the real `Recipient Name`.
+   tokens** that must appear in the real `Recipient Name`. Cast a **wide net first**
+   — search the shortest distinctive core term (`Group14`, not the full legal name),
+   read every recipient name that comes back, then set tokens to keep same-company
+   project SPVs (e.g. `GROUP14 BAM-2, INC.`) while excluding coincidental collisions.
+   A too-narrow token silently undercounts a client's biggest awards.
 
 ## Inputs
 
