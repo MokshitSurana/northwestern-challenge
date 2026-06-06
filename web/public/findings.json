@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-31T04:18:38.488323+00:00",
+  "generated_at": "2026-06-06T21:18:40.120726+00:00",
   "total_candidates": 139,
   "findings": [
     {
@@ -16,11 +16,128 @@
       "total_income": 44770000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "AMSTED INDUSTRIES | BATTERY MATERIALS AND TECHNOLOGY COALITION | WABTEC CORPORATION | BURNS & MCDONNELL ENGINEERING COMPANY INC | TALON NICKEL (USA) LLC",
+      "top_clients_str": "AMSTED INDUSTRIES | TALON NICKEL (USA) LLC | BURNS & MCDONNELL ENGINEERING COMPANY INC | WABTEC CORPORATION | BATTERY MATERIALS AND TECHNOLOGY COALITION",
       "sample_uuid": "fedf1282-ee62-4cd4-a04e-61501a367ed7",
       "sample_source": "data\\data\\senate\\2025\\filings\\filings_2025.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fedf1282-ee62-4cd4-a04e-61501a367ed7/print/",
-      "verification_status": null
+      "verification_status": null,
+      "trail": {
+        "case_id": "steinberg_doe",
+        "lobbyist_label": "Steinberg (battery / critical-minerals clients)",
+        "agency": "Department of Energy",
+        "award_groups": [
+          "grants"
+        ],
+        "time_period": {
+          "start": "2021-01-01",
+          "end": "2026-06-04"
+        },
+        "match": [
+          {
+            "lobbyist_name": "Benjamin Steinberg",
+            "agency_short": "energy"
+          }
+        ],
+        "generated_at": "2026-06-06T21:32:52.179252+00:00",
+        "total": 1080820046.02,
+        "routine_total": 0,
+        "discretionary_total": 1080820046.02,
+        "n_clients_with_awards": 9,
+        "n_clients_total": 9,
+        "clients": [
+          {
+            "label": "Cirba Solutions",
+            "total": 205417812.63,
+            "n_awards": 3,
+            "routine_amount": 0,
+            "discretionary_amount": 205417812.63,
+            "recipients": [
+              "CIRBA SOLUTIONS, LLC"
+            ]
+          },
+          {
+            "label": "EnerSys",
+            "total": 198679760.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 198679760.0,
+            "recipients": [
+              "ENERSYS ADVANCED SYSTEMS INC"
+            ]
+          },
+          {
+            "label": "South32 Hermosa",
+            "total": 122993645.63,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 122993645.63,
+            "recipients": [
+              "SOUTH32 HERMOSA INC"
+            ]
+          },
+          {
+            "label": "Sila Nanotechnologies",
+            "total": 117017664.53,
+            "n_awards": 4,
+            "routine_amount": 0,
+            "discretionary_amount": 117017664.53,
+            "recipients": [
+              "SILA NANOTECHNOLOGIES, INC."
+            ]
+          },
+          {
+            "label": "Anovion",
+            "total": 117000000.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 117000000.0,
+            "recipients": [
+              "ANOVION LLC"
+            ]
+          },
+          {
+            "label": "Talon Nickel",
+            "total": 114846344.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 114846344.0,
+            "recipients": [
+              "TALON NICKEL (USA) LLC"
+            ]
+          },
+          {
+            "label": "Forge Battery",
+            "total": 100000000.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 100000000.0,
+            "recipients": [
+              "FORGE BATTERY, INC."
+            ]
+          },
+          {
+            "label": "Cabot Corp",
+            "total": 57336573.23,
+            "n_awards": 3,
+            "routine_amount": 0,
+            "discretionary_amount": 57336573.23,
+            "recipients": [
+              "CABOT CORP"
+            ]
+          },
+          {
+            "label": "Nanoramic",
+            "total": 47528246.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 47528246.0,
+            "recipients": [
+              "NANORAMIC, INC."
+            ]
+          }
+        ],
+        "misses": []
+      }
     },
     {
       "rank": 2,
@@ -36,7 +153,7 @@
       "total_income": 30215000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "GLENN-COLUSA IRRIGATION DISTRICT-CA | SUTTER MUTUAL WATER COMPANY AND RECLAMATION DISTRICT 1500 | IDAHO WATER RESOURCE BOARD | TURLOCK IRRIGATION DISTRICT | YAKIMA BASIN JOINT BOARD",
+      "top_clients_str": "SUTTER MUTUAL WATER COMPANY AND RECLAMATION DISTRICT 1500 | GLENN-COLUSA IRRIGATION DISTRICT-CA | TURLOCK IRRIGATION DISTRICT | IDAHO WATER RESOURCE BOARD | YAKIMA BASIN JOINT BOARD",
       "sample_uuid": "ff8936a1-30eb-45bc-b240-d8555ac404f3",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff8936a1-30eb-45bc-b240-d8555ac404f3/print/",
@@ -56,11 +173,176 @@
       "total_income": 17370000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "GROWTH ENERGY | CARGILL INC | BAYER CORPORATION | MUSKET CORPORATION | WHOLESTONE PRESTAGE LLC (FORMERLY KNOW AS WHOLESTONE FARMS)",
+      "top_clients_str": "GROWTH ENERGY | CARGILL INC | WHOLESTONE PRESTAGE LLC (FORMERLY KNOW AS WHOLESTONE FARMS) | MUSKET CORPORATION | BAYER CORPORATION",
       "sample_uuid": "ffbfe8ac-5cf0-4c1e-82b7-bd7d305f9ba1",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ffbfe8ac-5cf0-4c1e-82b7-bd7d305f9ba1/print/",
-      "verification_status": null
+      "verification_status": null,
+      "trail": {
+        "case_id": "usda_cases",
+        "lobbyist_label": "USDA cases (Johnson / Bailey / Torrey / Barbic clients)",
+        "agency": "Department of Agriculture",
+        "award_groups": [
+          "grants",
+          "direct",
+          "contracts"
+        ],
+        "time_period": {
+          "start": "2021-01-01",
+          "end": "2026-06-04"
+        },
+        "match": [
+          {
+            "lobbyist_name": "Ashlee Johnson",
+            "agency_short": "usda"
+          },
+          {
+            "lobbyist_name": "Kevin Bailey",
+            "agency_short": "usda"
+          },
+          {
+            "lobbyist_name": "Michael Torrey",
+            "agency_short": "usda"
+          },
+          {
+            "lobbyist_name": "Kenneth Barbic",
+            "agency_short": "usda"
+          }
+        ],
+        "generated_at": "2026-06-06T21:32:26.063093+00:00",
+        "total": 1398877776.51,
+        "routine_total": 1360845203.14,
+        "discretionary_total": 38032573.369999886,
+        "n_clients_with_awards": 12,
+        "n_clients_total": 12,
+        "clients": [
+          {
+            "label": "Cargill (operating entities)",
+            "total": 704852207.5899999,
+            "n_awards": 109,
+            "routine_amount": 702968591.2599999,
+            "discretionary_amount": 1883616.330000043,
+            "recipients": [
+              "CARGILL KITCHEN SOLUTIONS, INC",
+              "CARGILL MEAT SOLUTIONS CORPORATION",
+              "CARGILL, INCORPORATED"
+            ]
+          },
+          {
+            "label": "National Rural Water Assn",
+            "total": 271949425.34999996,
+            "n_awards": 34,
+            "routine_amount": 271949425.34999996,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "NATIONAL RURAL WATER ASSOCIATION"
+            ]
+          },
+          {
+            "label": "Tri-State Generation",
+            "total": 148344449.0,
+            "n_awards": 5,
+            "routine_amount": 148344449.0,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "TRI-STATE GENERATION AND TRANSMISSION ASSOCIATION, INC."
+            ]
+          },
+          {
+            "label": "Land O'Lakes (Venture37)",
+            "total": 104471391.41000003,
+            "n_awards": 97,
+            "routine_amount": 103471391.41000003,
+            "discretionary_amount": 1000000.0,
+            "recipients": [
+              "LAND O'LAKES VENTURE37"
+            ]
+          },
+          {
+            "label": "McCain Foods USA",
+            "total": 82649984.60000001,
+            "n_awards": 19,
+            "routine_amount": 82649984.60000001,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "MCCAIN FOODS USA, INC."
+            ]
+          },
+          {
+            "label": "Global Clean Energy",
+            "total": 32260500.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 32260500.0,
+            "recipients": [
+              "GLOBAL CLEAN ENERGY HOLDINGS INC"
+            ]
+          },
+          {
+            "label": "Louis Dreyfus",
+            "total": 21812751.630000003,
+            "n_awards": 23,
+            "routine_amount": 21812751.630000003,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "LOUIS DREYFUS CO COTTON LLC",
+              "LOUIS DREYFUS COMPANY AGRICULTURAL PRODUCTS LLC",
+              "LOUIS DREYFUS COMPANY LLC"
+            ]
+          },
+          {
+            "label": "Ardent Mills",
+            "total": 16927765.030000005,
+            "n_awards": 81,
+            "routine_amount": 16881307.990000006,
+            "discretionary_amount": 46457.039999999106,
+            "recipients": [
+              "ARDENT MILLS LLC"
+            ]
+          },
+          {
+            "label": "California Prune Board",
+            "total": 9200000.0,
+            "n_awards": 2,
+            "routine_amount": 9200000.0,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "CALIFORNIA PRUNE BOARD"
+            ]
+          },
+          {
+            "label": "Shenandoah Valley Organic",
+            "total": 3567301.9,
+            "n_awards": 1,
+            "routine_amount": 3567301.9,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "SHENANDOAH VALLEY ORGANIC, LLC"
+            ]
+          },
+          {
+            "label": "Illinois Soybean Board",
+            "total": 2157000.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 2157000.0,
+            "recipients": [
+              "ILLINOIS SOYBEAN BOARD"
+            ]
+          },
+          {
+            "label": "California Rice Commission",
+            "total": 685000.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 685000.0,
+            "recipients": [
+              "CALIFORNIA RICE COMMISSION"
+            ]
+          }
+        ],
+        "misses": []
+      }
     },
     {
       "rank": 4,
@@ -100,7 +382,172 @@
       "sample_uuid": "f6379ddf-1a38-4955-ab4e-2addde9fcc2c",
       "sample_source": "data\\data\\senate\\2025\\filings\\filings_2025.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/f6379ddf-1a38-4955-ab4e-2addde9fcc2c/print/",
-      "verification_status": null
+      "verification_status": null,
+      "trail": {
+        "case_id": "usda_cases",
+        "lobbyist_label": "USDA cases (Johnson / Bailey / Torrey / Barbic clients)",
+        "agency": "Department of Agriculture",
+        "award_groups": [
+          "grants",
+          "direct",
+          "contracts"
+        ],
+        "time_period": {
+          "start": "2021-01-01",
+          "end": "2026-06-04"
+        },
+        "match": [
+          {
+            "lobbyist_name": "Ashlee Johnson",
+            "agency_short": "usda"
+          },
+          {
+            "lobbyist_name": "Kevin Bailey",
+            "agency_short": "usda"
+          },
+          {
+            "lobbyist_name": "Michael Torrey",
+            "agency_short": "usda"
+          },
+          {
+            "lobbyist_name": "Kenneth Barbic",
+            "agency_short": "usda"
+          }
+        ],
+        "generated_at": "2026-06-06T21:32:26.063093+00:00",
+        "total": 1398877776.51,
+        "routine_total": 1360845203.14,
+        "discretionary_total": 38032573.369999886,
+        "n_clients_with_awards": 12,
+        "n_clients_total": 12,
+        "clients": [
+          {
+            "label": "Cargill (operating entities)",
+            "total": 704852207.5899999,
+            "n_awards": 109,
+            "routine_amount": 702968591.2599999,
+            "discretionary_amount": 1883616.330000043,
+            "recipients": [
+              "CARGILL KITCHEN SOLUTIONS, INC",
+              "CARGILL MEAT SOLUTIONS CORPORATION",
+              "CARGILL, INCORPORATED"
+            ]
+          },
+          {
+            "label": "National Rural Water Assn",
+            "total": 271949425.34999996,
+            "n_awards": 34,
+            "routine_amount": 271949425.34999996,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "NATIONAL RURAL WATER ASSOCIATION"
+            ]
+          },
+          {
+            "label": "Tri-State Generation",
+            "total": 148344449.0,
+            "n_awards": 5,
+            "routine_amount": 148344449.0,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "TRI-STATE GENERATION AND TRANSMISSION ASSOCIATION, INC."
+            ]
+          },
+          {
+            "label": "Land O'Lakes (Venture37)",
+            "total": 104471391.41000003,
+            "n_awards": 97,
+            "routine_amount": 103471391.41000003,
+            "discretionary_amount": 1000000.0,
+            "recipients": [
+              "LAND O'LAKES VENTURE37"
+            ]
+          },
+          {
+            "label": "McCain Foods USA",
+            "total": 82649984.60000001,
+            "n_awards": 19,
+            "routine_amount": 82649984.60000001,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "MCCAIN FOODS USA, INC."
+            ]
+          },
+          {
+            "label": "Global Clean Energy",
+            "total": 32260500.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 32260500.0,
+            "recipients": [
+              "GLOBAL CLEAN ENERGY HOLDINGS INC"
+            ]
+          },
+          {
+            "label": "Louis Dreyfus",
+            "total": 21812751.630000003,
+            "n_awards": 23,
+            "routine_amount": 21812751.630000003,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "LOUIS DREYFUS CO COTTON LLC",
+              "LOUIS DREYFUS COMPANY AGRICULTURAL PRODUCTS LLC",
+              "LOUIS DREYFUS COMPANY LLC"
+            ]
+          },
+          {
+            "label": "Ardent Mills",
+            "total": 16927765.030000005,
+            "n_awards": 81,
+            "routine_amount": 16881307.990000006,
+            "discretionary_amount": 46457.039999999106,
+            "recipients": [
+              "ARDENT MILLS LLC"
+            ]
+          },
+          {
+            "label": "California Prune Board",
+            "total": 9200000.0,
+            "n_awards": 2,
+            "routine_amount": 9200000.0,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "CALIFORNIA PRUNE BOARD"
+            ]
+          },
+          {
+            "label": "Shenandoah Valley Organic",
+            "total": 3567301.9,
+            "n_awards": 1,
+            "routine_amount": 3567301.9,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "SHENANDOAH VALLEY ORGANIC, LLC"
+            ]
+          },
+          {
+            "label": "Illinois Soybean Board",
+            "total": 2157000.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 2157000.0,
+            "recipients": [
+              "ILLINOIS SOYBEAN BOARD"
+            ]
+          },
+          {
+            "label": "California Rice Commission",
+            "total": 685000.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 685000.0,
+            "recipients": [
+              "CALIFORNIA RICE COMMISSION"
+            ]
+          }
+        ],
+        "misses": []
+      }
     },
     {
       "rank": 6,
@@ -116,7 +563,7 @@
       "total_income": 935000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "CITADEL INVESTMENT GROUP | DIGITAL CHAMBER OF COMMERCE | AMERICAN COTTON SHIPPERS ASSOCIATION | COMMODITY MARKETS COUNCIL | FIA / PTG",
+      "top_clients_str": "DIGITAL CHAMBER OF COMMERCE | CITADEL INVESTMENT GROUP | FIA / PTG | COMMODITY MARKETS COUNCIL | AMERICAN COTTON SHIPPERS ASSOCIATION",
       "sample_uuid": "ff78910b-4f40-4511-8c8d-a6aa93fb4c50",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff78910b-4f40-4511-8c8d-a6aa93fb4c50/print/",
@@ -136,11 +583,176 @@
       "total_income": 30430000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "CROP INSURANCE AND REINSURANCE BUREAU | EDGE DAIRY FARMER COOPERATIVE (FORMERLY EDGE) | ANIMAL HEALTH INSTITUTE | AMERICAN BEVERAGE ASSOCIATION | AMERICAN SOC. OF AGRONOMY, CROP SCI. SOC. OF AMERICA & SOIL SCI. SOC. OF AMERICA",
+      "top_clients_str": "CROP INSURANCE AND REINSURANCE BUREAU | ANIMAL HEALTH INSTITUTE | EDGE DAIRY FARMER COOPERATIVE (FORMERLY EDGE) | AMERICAN BEVERAGE ASSOCIATION | GRUPO NAVIS, LLC",
       "sample_uuid": "eaca1218-a480-4989-bbcf-5a91ce705d12",
       "sample_source": "data\\data\\senate\\2023\\filings\\filings_2023.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/eaca1218-a480-4989-bbcf-5a91ce705d12/print/",
-      "verification_status": null
+      "verification_status": null,
+      "trail": {
+        "case_id": "usda_cases",
+        "lobbyist_label": "USDA cases (Johnson / Bailey / Torrey / Barbic clients)",
+        "agency": "Department of Agriculture",
+        "award_groups": [
+          "grants",
+          "direct",
+          "contracts"
+        ],
+        "time_period": {
+          "start": "2021-01-01",
+          "end": "2026-06-04"
+        },
+        "match": [
+          {
+            "lobbyist_name": "Ashlee Johnson",
+            "agency_short": "usda"
+          },
+          {
+            "lobbyist_name": "Kevin Bailey",
+            "agency_short": "usda"
+          },
+          {
+            "lobbyist_name": "Michael Torrey",
+            "agency_short": "usda"
+          },
+          {
+            "lobbyist_name": "Kenneth Barbic",
+            "agency_short": "usda"
+          }
+        ],
+        "generated_at": "2026-06-06T21:32:26.063093+00:00",
+        "total": 1398877776.51,
+        "routine_total": 1360845203.14,
+        "discretionary_total": 38032573.369999886,
+        "n_clients_with_awards": 12,
+        "n_clients_total": 12,
+        "clients": [
+          {
+            "label": "Cargill (operating entities)",
+            "total": 704852207.5899999,
+            "n_awards": 109,
+            "routine_amount": 702968591.2599999,
+            "discretionary_amount": 1883616.330000043,
+            "recipients": [
+              "CARGILL KITCHEN SOLUTIONS, INC",
+              "CARGILL MEAT SOLUTIONS CORPORATION",
+              "CARGILL, INCORPORATED"
+            ]
+          },
+          {
+            "label": "National Rural Water Assn",
+            "total": 271949425.34999996,
+            "n_awards": 34,
+            "routine_amount": 271949425.34999996,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "NATIONAL RURAL WATER ASSOCIATION"
+            ]
+          },
+          {
+            "label": "Tri-State Generation",
+            "total": 148344449.0,
+            "n_awards": 5,
+            "routine_amount": 148344449.0,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "TRI-STATE GENERATION AND TRANSMISSION ASSOCIATION, INC."
+            ]
+          },
+          {
+            "label": "Land O'Lakes (Venture37)",
+            "total": 104471391.41000003,
+            "n_awards": 97,
+            "routine_amount": 103471391.41000003,
+            "discretionary_amount": 1000000.0,
+            "recipients": [
+              "LAND O'LAKES VENTURE37"
+            ]
+          },
+          {
+            "label": "McCain Foods USA",
+            "total": 82649984.60000001,
+            "n_awards": 19,
+            "routine_amount": 82649984.60000001,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "MCCAIN FOODS USA, INC."
+            ]
+          },
+          {
+            "label": "Global Clean Energy",
+            "total": 32260500.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 32260500.0,
+            "recipients": [
+              "GLOBAL CLEAN ENERGY HOLDINGS INC"
+            ]
+          },
+          {
+            "label": "Louis Dreyfus",
+            "total": 21812751.630000003,
+            "n_awards": 23,
+            "routine_amount": 21812751.630000003,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "LOUIS DREYFUS CO COTTON LLC",
+              "LOUIS DREYFUS COMPANY AGRICULTURAL PRODUCTS LLC",
+              "LOUIS DREYFUS COMPANY LLC"
+            ]
+          },
+          {
+            "label": "Ardent Mills",
+            "total": 16927765.030000005,
+            "n_awards": 81,
+            "routine_amount": 16881307.990000006,
+            "discretionary_amount": 46457.039999999106,
+            "recipients": [
+              "ARDENT MILLS LLC"
+            ]
+          },
+          {
+            "label": "California Prune Board",
+            "total": 9200000.0,
+            "n_awards": 2,
+            "routine_amount": 9200000.0,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "CALIFORNIA PRUNE BOARD"
+            ]
+          },
+          {
+            "label": "Shenandoah Valley Organic",
+            "total": 3567301.9,
+            "n_awards": 1,
+            "routine_amount": 3567301.9,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "SHENANDOAH VALLEY ORGANIC, LLC"
+            ]
+          },
+          {
+            "label": "Illinois Soybean Board",
+            "total": 2157000.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 2157000.0,
+            "recipients": [
+              "ILLINOIS SOYBEAN BOARD"
+            ]
+          },
+          {
+            "label": "California Rice Commission",
+            "total": 685000.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 685000.0,
+            "recipients": [
+              "CALIFORNIA RICE COMMISSION"
+            ]
+          }
+        ],
+        "misses": []
+      }
     },
     {
       "rank": 8,
@@ -156,11 +768,176 @@
       "total_income": 12130000.0,
       "first_year": 2024,
       "last_year": 2026,
-      "top_clients_str": "PEPSICO, INC. | CALIFORNIA DATE COMMISSION | MCCAIN FOODS USA, INC. | INTERNATIONAL FRESH PRODUCE ASSOCIATION | COALITION FOR CLIMATE SMART AGRICULTURE FKA SUSTAINABLE SUPPLY CHAIN COALITION",
+      "top_clients_str": "INTERNATIONAL FRESH PRODUCE ASSOCIATION | MCCAIN FOODS USA, INC. | CALIFORNIA DATE COMMISSION | PEPSICO, INC. | COALITION FOR CLIMATE SMART AGRICULTURE FKA SUSTAINABLE SUPPLY CHAIN COALITION",
       "sample_uuid": "ffd9bf73-2754-455f-bcdf-89d77cabb5eb",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ffd9bf73-2754-455f-bcdf-89d77cabb5eb/print/",
-      "verification_status": null
+      "verification_status": null,
+      "trail": {
+        "case_id": "usda_cases",
+        "lobbyist_label": "USDA cases (Johnson / Bailey / Torrey / Barbic clients)",
+        "agency": "Department of Agriculture",
+        "award_groups": [
+          "grants",
+          "direct",
+          "contracts"
+        ],
+        "time_period": {
+          "start": "2021-01-01",
+          "end": "2026-06-04"
+        },
+        "match": [
+          {
+            "lobbyist_name": "Ashlee Johnson",
+            "agency_short": "usda"
+          },
+          {
+            "lobbyist_name": "Kevin Bailey",
+            "agency_short": "usda"
+          },
+          {
+            "lobbyist_name": "Michael Torrey",
+            "agency_short": "usda"
+          },
+          {
+            "lobbyist_name": "Kenneth Barbic",
+            "agency_short": "usda"
+          }
+        ],
+        "generated_at": "2026-06-06T21:32:26.063093+00:00",
+        "total": 1398877776.51,
+        "routine_total": 1360845203.14,
+        "discretionary_total": 38032573.369999886,
+        "n_clients_with_awards": 12,
+        "n_clients_total": 12,
+        "clients": [
+          {
+            "label": "Cargill (operating entities)",
+            "total": 704852207.5899999,
+            "n_awards": 109,
+            "routine_amount": 702968591.2599999,
+            "discretionary_amount": 1883616.330000043,
+            "recipients": [
+              "CARGILL KITCHEN SOLUTIONS, INC",
+              "CARGILL MEAT SOLUTIONS CORPORATION",
+              "CARGILL, INCORPORATED"
+            ]
+          },
+          {
+            "label": "National Rural Water Assn",
+            "total": 271949425.34999996,
+            "n_awards": 34,
+            "routine_amount": 271949425.34999996,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "NATIONAL RURAL WATER ASSOCIATION"
+            ]
+          },
+          {
+            "label": "Tri-State Generation",
+            "total": 148344449.0,
+            "n_awards": 5,
+            "routine_amount": 148344449.0,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "TRI-STATE GENERATION AND TRANSMISSION ASSOCIATION, INC."
+            ]
+          },
+          {
+            "label": "Land O'Lakes (Venture37)",
+            "total": 104471391.41000003,
+            "n_awards": 97,
+            "routine_amount": 103471391.41000003,
+            "discretionary_amount": 1000000.0,
+            "recipients": [
+              "LAND O'LAKES VENTURE37"
+            ]
+          },
+          {
+            "label": "McCain Foods USA",
+            "total": 82649984.60000001,
+            "n_awards": 19,
+            "routine_amount": 82649984.60000001,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "MCCAIN FOODS USA, INC."
+            ]
+          },
+          {
+            "label": "Global Clean Energy",
+            "total": 32260500.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 32260500.0,
+            "recipients": [
+              "GLOBAL CLEAN ENERGY HOLDINGS INC"
+            ]
+          },
+          {
+            "label": "Louis Dreyfus",
+            "total": 21812751.630000003,
+            "n_awards": 23,
+            "routine_amount": 21812751.630000003,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "LOUIS DREYFUS CO COTTON LLC",
+              "LOUIS DREYFUS COMPANY AGRICULTURAL PRODUCTS LLC",
+              "LOUIS DREYFUS COMPANY LLC"
+            ]
+          },
+          {
+            "label": "Ardent Mills",
+            "total": 16927765.030000005,
+            "n_awards": 81,
+            "routine_amount": 16881307.990000006,
+            "discretionary_amount": 46457.039999999106,
+            "recipients": [
+              "ARDENT MILLS LLC"
+            ]
+          },
+          {
+            "label": "California Prune Board",
+            "total": 9200000.0,
+            "n_awards": 2,
+            "routine_amount": 9200000.0,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "CALIFORNIA PRUNE BOARD"
+            ]
+          },
+          {
+            "label": "Shenandoah Valley Organic",
+            "total": 3567301.9,
+            "n_awards": 1,
+            "routine_amount": 3567301.9,
+            "discretionary_amount": 0.0,
+            "recipients": [
+              "SHENANDOAH VALLEY ORGANIC, LLC"
+            ]
+          },
+          {
+            "label": "Illinois Soybean Board",
+            "total": 2157000.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 2157000.0,
+            "recipients": [
+              "ILLINOIS SOYBEAN BOARD"
+            ]
+          },
+          {
+            "label": "California Rice Commission",
+            "total": 685000.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 685000.0,
+            "recipients": [
+              "CALIFORNIA RICE COMMISSION"
+            ]
+          }
+        ],
+        "misses": []
+      }
     },
     {
       "rank": 9,
@@ -196,7 +973,7 @@
       "total_income": 24125000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "VIDEO GAMING TECHNOLOGIES | SAGINAW CHIPPEWA INDIAN TRIBE OF MICHIGAN | PIT RIVER TRIBE | PECHANGA BAND OF LUISENO MISSION INDIANS | NATIVE AMERICAN FINANCE OFFICER'S ASSOCIATION",
+      "top_clients_str": "VIDEO GAMING TECHNOLOGIES | SAGINAW CHIPPEWA INDIAN TRIBE OF MICHIGAN | PIT RIVER TRIBE | NATIVE AMERICAN FINANCE OFFICER'S ASSOCIATION | NATIONAL INDIAN GAMING ASSOCIATION",
       "sample_uuid": "ff6d6ea2-5f7e-45dd-b411-4b577d6d87d8",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff6d6ea2-5f7e-45dd-b411-4b577d6d87d8/print/",
@@ -216,7 +993,7 @@
       "total_income": 9450000.0,
       "first_year": 2024,
       "last_year": 2026,
-      "top_clients_str": "SAGINAW CHIPPEWA INDIAN TRIBE OF MICHIGAN | PUEBLO OF LAGUNA | PECHANGA BAND OF LUISENO MISSION INDIANS | YOCHA DEHE WINTUN NATION | MASHANTUCKET PEQUOT TRIBAL NATION",
+      "top_clients_str": "SAGINAW CHIPPEWA INDIAN TRIBE OF MICHIGAN | PECHANGA BAND OF LUISENO MISSION INDIANS | YOCHA DEHE WINTUN NATION | PUEBLO OF LAGUNA | PIT RIVER TRIBE",
       "sample_uuid": "ff0285fa-476a-45bb-8c58-2de01dd91393",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff0285fa-476a-45bb-8c58-2de01dd91393/print/",
@@ -236,7 +1013,7 @@
       "total_income": 5870000.0,
       "first_year": 2023,
       "last_year": 2026,
-      "top_clients_str": "EQUINOR US OPERATIONS LLC | EDISON INTERNATIONAL | STEM, INC. | GENERAL MATTER INC | KANIN ENERGY",
+      "top_clients_str": "EQUINOR US OPERATIONS LLC | EDISON INTERNATIONAL | STEM, INC. | GENERAL MATTER INC | ARBOR ENERGY AND RESOURCES CORPORATION",
       "sample_uuid": "ff4f9d69-7a12-4c4c-b048-2169592f95ef",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff4f9d69-7a12-4c4c-b048-2169592f95ef/print/",
@@ -256,7 +1033,7 @@
       "total_income": 3280000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "SWIFT SOLAR | AMERICAN COUNCIL FOR AN ENERGY-EFFICIENT ECONOMY | XEROX CORPORATION | FERVO ENERGY | MITSUBISHI ELECTRIC TRANE HVAC US LLC.",
+      "top_clients_str": "SWIFT SOLAR | AMERICAN COUNCIL FOR AN ENERGY-EFFICIENT ECONOMY | MITSUBISHI ELECTRIC TRANE HVAC US LLC. | FERVO ENERGY | XEROX CORPORATION",
       "sample_uuid": "c49d4944-ff46-4bd9-beed-110ea775c5a1",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/c49d4944-ff46-4bd9-beed-110ea775c5a1/print/",
@@ -276,7 +1053,7 @@
       "total_income": 30400000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "AMERICAN INVESTMENT COUNCIL | FEDEX CORPORATION | CITADEL LLC | QUALCOMM INCORPORATED | DISCOVERY COMMUNICATIONS",
+      "top_clients_str": "AMERICAN INVESTMENT COUNCIL | FEDEX CORPORATION | GOLDMAN SACHS GROUP INC | DISCOVERY COMMUNICATIONS | QUALCOMM INCORPORATED",
       "sample_uuid": "fb3eecc8-282c-4ed3-8923-46135b8be6be",
       "sample_source": "data\\data\\senate\\2025\\filings\\filings_2025.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fb3eecc8-282c-4ed3-8923-46135b8be6be/print/",
@@ -296,7 +1073,7 @@
       "total_income": 7320400.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "CINTRA US | OREGON DEPARTMENT OF TRANSPORTATION | NATIONAL AIR TRAFFIC CONTROLLERS ASSOCIATION | CENTER FOR TRANSPORTATION AND THE ENVIRONMENT | NORTHERN TECHNOLOGIES INTERNATIONAL CORPORATION",
+      "top_clients_str": "CINTRA US | NATIONAL AIR TRAFFIC CONTROLLERS ASSOCIATION | CENTER FOR TRANSPORTATION AND THE ENVIRONMENT | OREGON DEPARTMENT OF TRANSPORTATION | NORTHERN TECHNOLOGIES INTERNATIONAL CORPORATION",
       "sample_uuid": "ff5cc224-9cd4-4f7f-a382-23ede208c064",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff5cc224-9cd4-4f7f-a382-23ede208c064/print/",
@@ -316,7 +1093,7 @@
       "total_income": 25890000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "REDWOOD HOLDINGS, LLC FKA REDWOOD CAPITAL INVESTMENTS | CVS HEALTH | AMERICA'S HEALTH INSURANCE PLANS (AHIP) | COLORADO HOSPITAL ASSOCIATION | DEXCOM, INC.",
+      "top_clients_str": "CVS HEALTH | REDWOOD HOLDINGS, LLC FKA REDWOOD CAPITAL INVESTMENTS | AMERICA'S HEALTH INSURANCE PLANS (AHIP) | COLORADO HOSPITAL ASSOCIATION | DEXCOM, INC.",
       "sample_uuid": "feb39d7e-2f04-4ec6-a5d1-d23467f1efff",
       "sample_source": "data\\data\\senate\\2025\\filings\\filings_2025.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/feb39d7e-2f04-4ec6-a5d1-d23467f1efff/print/",
@@ -336,7 +1113,7 @@
       "total_income": 39580000.0,
       "first_year": 2022,
       "last_year": 2025,
-      "top_clients_str": "BIODESIX, INC. | MCKESSON CORPORATION | AMGEN INC. | SIEMENS HEALTHINEERS | ADULT VACCINE ACCESS COALITION",
+      "top_clients_str": "BIODESIX, INC. | MCKESSON CORPORATION | SIEMENS HEALTHINEERS | AMGEN INC. | ADULT VACCINE ACCESS COALITION",
       "sample_uuid": "ffbda424-f583-46f3-8932-f43f1ee63779",
       "sample_source": "data\\data\\senate\\2025\\filings\\filings_2025.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ffbda424-f583-46f3-8932-f43f1ee63779/print/",
@@ -356,7 +1133,7 @@
       "total_income": 9340000.0,
       "first_year": 2023,
       "last_year": 2026,
-      "top_clients_str": "CONSUMER TECHNOLOGY ASSOCIATION | STACK AV CO. | BNSF RAILWAY CO | HYUNDAI MOTOR COMPANY, LTD. | TORC ROBOTICS",
+      "top_clients_str": "STACK AV CO. | CONSUMER TECHNOLOGY ASSOCIATION | BNSF RAILWAY CO | HYUNDAI MOTOR COMPANY, LTD. | SHIKUN & BINUI USA",
       "sample_uuid": "fe7a6dc4-6ef8-4f2a-bbd6-2dead6b2d5e8",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fe7a6dc4-6ef8-4f2a-bbd6-2dead6b2d5e8/print/",
@@ -385,26 +1162,6 @@
     {
       "rank": 20,
       "score": 15.223,
-      "agency_short": "energy",
-      "lobbyist_name": "CHRISTOPHER SMITH",
-      "registrant_name": "FORD MOTOR COMPANY",
-      "covered_position": "2009-2017 Department of Energy Deputy Assistant Secretary Oil and Natural Gas - 2009-2013 Principal Deputy Assistant Secretary Fossil Energy Acting Assistant Secretary Fossil Energy - 2013-2017 Assistant Secretary Fossil Energy",
-      "concentration": 1.0,
-      "agency_filings": 20,
-      "total_filings": 20,
-      "n_clients": 1,
-      "total_income": 0.0,
-      "first_year": 2022,
-      "last_year": 2026,
-      "top_clients_str": "FORD MOTOR COMPANY",
-      "sample_uuid": "fc115de8-fab2-4f71-a75d-7fd0f4fb021a",
-      "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
-      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fc115de8-fab2-4f71-a75d-7fd0f4fb021a/print/",
-      "verification_status": null
-    },
-    {
-      "rank": 21,
-      "score": 15.223,
       "agency_short": "state",
       "lobbyist_name": "JESSICA MOORE",
       "registrant_name": "GENERAL ELECTRIC COMPANY (INCLUDING SUBSIDIARIES)",
@@ -423,6 +1180,26 @@
       "verification_status": null
     },
     {
+      "rank": 21,
+      "score": 15.223,
+      "agency_short": "energy",
+      "lobbyist_name": "CHRISTOPHER SMITH",
+      "registrant_name": "FORD MOTOR COMPANY",
+      "covered_position": "2009-2017 Department of Energy Deputy Assistant Secretary Oil and Natural Gas - 2009-2013 Principal Deputy Assistant Secretary Fossil Energy Acting Assistant Secretary Fossil Energy - 2013-2017 Assistant Secretary Fossil Energy",
+      "concentration": 1.0,
+      "agency_filings": 20,
+      "total_filings": 20,
+      "n_clients": 1,
+      "total_income": 0.0,
+      "first_year": 2022,
+      "last_year": 2026,
+      "top_clients_str": "FORD MOTOR COMPANY",
+      "sample_uuid": "fc115de8-fab2-4f71-a75d-7fd0f4fb021a",
+      "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
+      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fc115de8-fab2-4f71-a75d-7fd0f4fb021a/print/",
+      "verification_status": null
+    },
+    {
       "rank": 22,
       "score": 14.944,
       "agency_short": "interior",
@@ -436,7 +1213,7 @@
       "total_income": 3980000.0,
       "first_year": 2025,
       "last_year": 2026,
-      "top_clients_str": "EQUINOR US OPERATIONS LLC FKA EQUINOR | TWIN METALS MINNESOTA | DELAWARE NORTH COMPANIES, INCORPORATED | DEVON ENERGY | AMERICAN EXPLORATION AND PRODUCTION COUNCIL",
+      "top_clients_str": "EQUINOR US OPERATIONS LLC FKA EQUINOR | DELAWARE NORTH COMPANIES, INCORPORATED | TWIN METALS MINNESOTA | AMERICAN EXPLORATION AND PRODUCTION COUNCIL | DEVON ENERGY",
       "sample_uuid": "fb505ec7-3185-496b-ade4-5a485534e5f0",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fb505ec7-3185-496b-ade4-5a485534e5f0/print/",
@@ -444,6 +1221,26 @@
     },
     {
       "rank": 23,
+      "score": 14.722,
+      "agency_short": "sec",
+      "lobbyist_name": "BRYAN WOOD",
+      "registrant_name": "BLACKROCK FUNDS SERVICES GROUP, LLC",
+      "covered_position": "SEC:6/17-6/21;Sr Policy Advisor/Counsel, Deputy Chief of Staff, Dir, Ofc of Legis/IG Affairs; House Fin Svcs.Committee: Sr. Advisor, Counsel 2/15-6/17;Rep.Robert Hurt: LD, Adv, 1/11-1/15; Rep. Brett Guthrie: 1/09-1/11; Rep. Virgil Goode:9/07-1/09",
+      "concentration": 1.0,
+      "agency_filings": 18,
+      "total_filings": 18,
+      "n_clients": 1,
+      "total_income": 0.0,
+      "first_year": 2022,
+      "last_year": 2026,
+      "top_clients_str": "BLACKROCK FUNDS SERVICES GROUP LLC",
+      "sample_uuid": "f2b21782-3aef-4d5d-82aa-9dd5d8118934",
+      "sample_source": "data\\data\\senate\\2024\\filings\\filings_2024.json",
+      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/f2b21782-3aef-4d5d-82aa-9dd5d8118934/print/",
+      "verification_status": null
+    },
+    {
+      "rank": 24,
       "score": 14.722,
       "agency_short": "ustr",
       "lobbyist_name": "TONY RICE",
@@ -463,7 +1260,7 @@
       "verification_status": null
     },
     {
-      "rank": 24,
+      "rank": 25,
       "score": 14.722,
       "agency_short": "ustr",
       "lobbyist_name": "TIFFANY SMITH",
@@ -480,26 +1277,6 @@
       "sample_uuid": "b362d65a-5286-4dc6-87fa-af5217cbae83",
       "sample_source": "data\\data\\senate\\2023\\filings\\filings_2023.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/b362d65a-5286-4dc6-87fa-af5217cbae83/print/",
-      "verification_status": null
-    },
-    {
-      "rank": 25,
-      "score": 14.722,
-      "agency_short": "sec",
-      "lobbyist_name": "BRYAN WOOD",
-      "registrant_name": "BLACKROCK FUNDS SERVICES GROUP, LLC",
-      "covered_position": "SEC:6/17-6/21;Sr Policy Advisor/Counsel, Deputy Chief of Staff, Dir, Ofc of Legis/IG Affairs; House Fin Svcs.Committee: Sr. Advisor, Counsel 2/15-6/17;Rep.Robert Hurt: LD, Adv, 1/11-1/15; Rep. Brett Guthrie: 1/09-1/11; Rep. Virgil Goode:9/07-1/09",
-      "concentration": 1.0,
-      "agency_filings": 18,
-      "total_filings": 18,
-      "n_clients": 1,
-      "total_income": 0.0,
-      "first_year": 2022,
-      "last_year": 2026,
-      "top_clients_str": "BLACKROCK FUNDS SERVICES GROUP LLC",
-      "sample_uuid": "f2b21782-3aef-4d5d-82aa-9dd5d8118934",
-      "sample_source": "data\\data\\senate\\2024\\filings\\filings_2024.json",
-      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/f2b21782-3aef-4d5d-82aa-9dd5d8118934/print/",
       "verification_status": null
     },
     {
@@ -545,6 +1322,26 @@
     {
       "rank": 28,
       "score": 14.452,
+      "agency_short": "dot",
+      "lobbyist_name": "EDWARD O'MALLEY",
+      "registrant_name": "DIRECT CHASSISLINK, INC.",
+      "covered_position": "Deputy Assistant Secretary & others, US Department of Transportation (2002-2007)",
+      "concentration": 1.0,
+      "agency_filings": 17,
+      "total_filings": 17,
+      "n_clients": 1,
+      "total_income": 0.0,
+      "first_year": 2022,
+      "last_year": 2026,
+      "top_clients_str": "DIRECT CHASSISLINK, INC.",
+      "sample_uuid": "ee0f28dc-9388-4a06-9e84-96d77d39616e",
+      "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
+      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ee0f28dc-9388-4a06-9e84-96d77d39616e/print/",
+      "verification_status": null
+    },
+    {
+      "rank": 29,
+      "score": 14.452,
       "agency_short": "ustr",
       "lobbyist_name": "JENNIFER MCDOWELL",
       "registrant_name": "INTERNATIONAL TRADEMARK ASSOCIATION",
@@ -563,7 +1360,7 @@
       "verification_status": null
     },
     {
-      "rank": 29,
+      "rank": 30,
       "score": 14.452,
       "agency_short": "hhs",
       "lobbyist_name": "BRADLEY WOLTERS",
@@ -583,7 +1380,7 @@
       "verification_status": null
     },
     {
-      "rank": 30,
+      "rank": 31,
       "score": 14.452,
       "agency_short": "usda",
       "lobbyist_name": "REBECKAH ADCOCK",
@@ -600,26 +1397,6 @@
       "sample_uuid": "c6ec8b51-a142-4703-822c-d0654aa802d1",
       "sample_source": "data\\data\\senate\\2023\\filings\\filings_2023.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/c6ec8b51-a142-4703-822c-d0654aa802d1/print/",
-      "verification_status": null
-    },
-    {
-      "rank": 31,
-      "score": 14.452,
-      "agency_short": "dot",
-      "lobbyist_name": "EDWARD O'MALLEY",
-      "registrant_name": "DIRECT CHASSISLINK, INC.",
-      "covered_position": "Deputy Assistant Secretary & others, US Department of Transportation (2002-2007)",
-      "concentration": 1.0,
-      "agency_filings": 17,
-      "total_filings": 17,
-      "n_clients": 1,
-      "total_income": 0.0,
-      "first_year": 2022,
-      "last_year": 2026,
-      "top_clients_str": "DIRECT CHASSISLINK, INC.",
-      "sample_uuid": "ee0f28dc-9388-4a06-9e84-96d77d39616e",
-      "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
-      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ee0f28dc-9388-4a06-9e84-96d77d39616e/print/",
       "verification_status": null
     },
     {
@@ -645,26 +1422,6 @@
     {
       "rank": 33,
       "score": 14.166,
-      "agency_short": "dod",
-      "lobbyist_name": "MATTHEW HASKINS",
-      "registrant_name": "ANDURIL INDUSTRIES, INC.",
-      "covered_position": "Deputy Assistant Secretary of Defense; Special Assistant, Office of the Secretary of Defense; Deputy Chief of Staff & Legislative Director, Rep. Will Hurd; Senior Legislative Assistant, Rep. Richard Hudson.",
-      "concentration": 1.0,
-      "agency_filings": 16,
-      "total_filings": 16,
-      "n_clients": 1,
-      "total_income": 0.0,
-      "first_year": 2022,
-      "last_year": 2026,
-      "top_clients_str": "ANDURIL INDUSTRIES, INC.",
-      "sample_uuid": "de166766-71e5-4546-941e-b0bc0560ffdc",
-      "sample_source": "data\\data\\senate\\2022\\filings\\filings_2022.json",
-      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/de166766-71e5-4546-941e-b0bc0560ffdc/print/",
-      "verification_status": null
-    },
-    {
-      "rank": 34,
-      "score": 14.166,
       "agency_short": "treasury",
       "lobbyist_name": "JEB MASON",
       "registrant_name": "MINDSET ADVOCACY, LLC",
@@ -683,6 +1440,26 @@
       "verification_status": null
     },
     {
+      "rank": 34,
+      "score": 14.166,
+      "agency_short": "dod",
+      "lobbyist_name": "MATTHEW HASKINS",
+      "registrant_name": "ANDURIL INDUSTRIES, INC.",
+      "covered_position": "Deputy Assistant Secretary of Defense; Special Assistant, Office of the Secretary of Defense; Deputy Chief of Staff & Legislative Director, Rep. Will Hurd; Senior Legislative Assistant, Rep. Richard Hudson.",
+      "concentration": 1.0,
+      "agency_filings": 16,
+      "total_filings": 16,
+      "n_clients": 1,
+      "total_income": 0.0,
+      "first_year": 2022,
+      "last_year": 2026,
+      "top_clients_str": "ANDURIL INDUSTRIES, INC.",
+      "sample_uuid": "de166766-71e5-4546-941e-b0bc0560ffdc",
+      "sample_source": "data\\data\\senate\\2022\\filings\\filings_2022.json",
+      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/de166766-71e5-4546-941e-b0bc0560ffdc/print/",
+      "verification_status": null
+    },
+    {
       "rank": 35,
       "score": 14.13,
       "agency_short": "ustr",
@@ -696,7 +1473,7 @@
       "total_income": 7760000.0,
       "first_year": 2022,
       "last_year": 2025,
-      "top_clients_str": "VOLKSWAGEN GROUP OF AMERICA, INC. | EASTMAN CHEMICAL COMPANY | GILEAD SCIENCES INC | CENTRIENT PHARMACEUTICALS LLC | STANLEY BLACK & DECKER, INC.",
+      "top_clients_str": "VOLKSWAGEN GROUP OF AMERICA, INC. | EASTMAN CHEMICAL COMPANY | CENTRIENT PHARMACEUTICALS LLC | GILEAD SCIENCES INC | STANLEY BLACK & DECKER, INC.",
       "sample_uuid": "cb502df2-12bb-43c0-a2f9-d1c5fb7241be",
       "sample_source": "data\\data\\senate\\2025\\filings\\filings_2025.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/cb502df2-12bb-43c0-a2f9-d1c5fb7241be/print/",
@@ -756,7 +1533,7 @@
       "total_income": 8580000.0,
       "first_year": 2022,
       "last_year": 2024,
-      "top_clients_str": "GLOBAL MEDICAL RESPONSE | VIR BIOTECHNOLOGY, INC. | TENNESSEE RURAL HEALTH IMPROVEMENT ASSOCIATION | ULTRAGENYX PHARMACEUTICAL | MOLINA HEALTHCARE, INC.",
+      "top_clients_str": "VIR BIOTECHNOLOGY, INC. | GLOBAL MEDICAL RESPONSE | TENNESSEE RURAL HEALTH IMPROVEMENT ASSOCIATION | ULTRAGENYX PHARMACEUTICAL | MOLINA HEALTHCARE, INC.",
       "sample_uuid": "f99d755c-b21a-442b-b173-cbba96b083dc",
       "sample_source": "data\\data\\senate\\2024\\filings\\filings_2024.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/f99d755c-b21a-442b-b173-cbba96b083dc/print/",
