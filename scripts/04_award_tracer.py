@@ -35,6 +35,10 @@ Case file schema (JSON):
       "agency":   "Department of Energy",       # USAspending toptier agency name
       "award_groups": ["grants"],               # any of: grants contracts direct loans
       "time_period": {"start": "2021-01-01", "end": "2026-06-04"},   # optional
+      "match": [                                 # optional — keys this trail to one or
+        {"lobbyist_name": "Benjamin Steinberg",  #   more scan findings so the trail
+         "agency_short": "energy"}               #   shows up on the matching card in
+      ],                                         #   the reporter UI
       "clients": [
         {
           "label":       "Cirba Solutions",        # display name in the table
@@ -57,7 +61,15 @@ import sys
 import time
 import urllib.error
 import urllib.request
+from datetime import UTC, datetime
 from pathlib import Path
+
+# Project layout: scripts/ sits one level below the repo root; web/public is the
+# Next.js reporter UI's static-asset directory.
+REPO_ROOT = Path(__file__).resolve().parent.parent
+WEB_PUBLIC = REPO_ROOT / "web" / "public"
+FINDINGS_JSON = WEB_PUBLIC / "findings.json"
+TRAILS_JSON = WEB_PUBLIC / "trails.json"
 
 API = "https://api.usaspending.gov/api/v2/search/spending_by_award/"
 
@@ -276,6 +288,9 @@ CASE_TEMPLATE = {
     "agency": "Department of Energy",
     "award_groups": ["grants"],
     "time_period": {"start": "2021-01-01", "end": "2026-06-04"},
+    "match": [
+        {"lobbyist_name": "Benjamin Steinberg", "agency_short": "energy"}
+    ],
     "clients": [
         {
             "label": "Cirba Solutions",
@@ -289,6 +304,102 @@ CASE_TEMPLATE = {
         },
     ],
 }
+
+
+def case_id(case_path: Path) -> str:
+    """Stable id for a case file — used as the trails.json key so re-running the
+    same case overwrites in place rather than accumulating duplicates."""
+    return case_path.stem
+
+
+def build_trail_payload(case: dict, case_path: Path, results: list[dict]) -> dict:
+    """Compact, web-UI-shaped summary of a trace run. The fields here are what
+    the Reporter UI renders directly — keep this lean and JSON-clean."""
+    sorted_hits = sorted(
+        (r for r in results if r["total"] > 0),
+        key=lambda r: r["total"],
+        reverse=True,
+    )
+    grand = sum(r["total"] for r in sorted_hits)
+    routine = sum(r["routine_amount"] for r in sorted_hits)
+    discretionary = grand - routine
+    return {
+        "case_id": case_id(case_path),
+        "lobbyist_label": case["lobbyist"],
+        "agency": case["agency"],
+        "award_groups": case["award_groups"],
+        "time_period": case.get("time_period", {}),
+        "match": case.get("match", []),
+        "generated_at": datetime.now(UTC).isoformat(),
+        "total": grand,
+        "routine_total": routine,
+        "discretionary_total": discretionary,
+        "n_clients_with_awards": len(sorted_hits),
+        "n_clients_total": len(results),
+        "clients": [
+            {
+                "label": r["label"],
+                "total": r["total"],
+                "n_awards": r["n_awards"],
+                "routine_amount": r["routine_amount"],
+                "discretionary_amount": r["discretionary_amount"],
+                "recipients": r["recipients"],
+            }
+            for r in sorted_hits
+        ],
+        "misses": [r["label"] for r in results if r["total"] <= 0],
+    }
+
+
+def write_trails_json(trail: dict) -> None:
+    """Upsert this trail into web/public/trails.json (keyed by case_id), so the
+    /trails route always shows the union of every trace run."""
+    if not WEB_PUBLIC.exists():
+        WEB_PUBLIC.mkdir(parents=True, exist_ok=True)
+    existing: dict = {"trails": []}
+    if TRAILS_JSON.exists():
+        try:
+            existing = json.loads(TRAILS_JSON.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            existing = {"trails": []}
+    trails = [t for t in existing.get("trails", []) if t.get("case_id") != trail["case_id"]]
+    trails.append(trail)
+    trails.sort(key=lambda t: t.get("total", 0), reverse=True)
+    payload = {
+        "generated_at": datetime.now(UTC).isoformat(),
+        "total_trails": len(trails),
+        "trails": trails,
+    }
+    TRAILS_JSON.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+    sys.stderr.write(f"wrote {TRAILS_JSON} ({len(trails)} trail(s))\n")
+
+
+def embed_trail_in_findings(trail: dict) -> int:
+    """Attach (or refresh) this trail on every findings.json row that matches one
+    of the case's (lobbyist_name, agency_short) pairs. Returns the number of
+    rows updated. No-op if findings.json doesn't exist yet (scan hasn't run)
+    or the case has no `match` block."""
+    match_keys = trail.get("match") or []
+    if not match_keys or not FINDINGS_JSON.exists():
+        return 0
+    try:
+        data = json.loads(FINDINGS_JSON.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return 0
+    # Case-insensitive match — scan writes lobbyist_name verbatim from the LDA
+    # disclosure (often UPPERCASE), but case files are written in title case.
+    def _norm(name: str | None, agency: str | None) -> tuple[str, str]:
+        return ((name or "").strip().upper(), (agency or "").strip().lower())
+    wanted = {_norm(m.get("lobbyist_name"), m.get("agency_short")) for m in match_keys}
+    updated = 0
+    for f in data.get("findings", []):
+        if _norm(f.get("lobbyist_name"), f.get("agency_short")) in wanted:
+            f["trail"] = trail
+            updated += 1
+    if updated:
+        FINDINGS_JSON.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+        sys.stderr.write(f"updated {FINDINGS_JSON} ({updated} finding row(s) enriched)\n")
+    return updated
 
 
 def load_case(path: Path) -> dict:
@@ -315,6 +426,8 @@ def main() -> int:
                     help="also write the raw per-client results as JSON here")
     ap.add_argument("--print-template", action="store_true",
                     help="print the case-file JSON schema and exit")
+    ap.add_argument("--no-web", action="store_true",
+                    help="skip writing web/public/trails.json + enriching findings.json")
     args = ap.parse_args()
 
     # Windows consoles default to cp1252, which can't encode "→"/"§". Force UTF-8
@@ -350,6 +463,11 @@ def main() -> int:
     if args.json_out:
         args.json_out.write_text(json.dumps(results, indent=2), encoding="utf-8")
         sys.stderr.write(f"wrote {args.json_out}\n")
+
+    if not args.no_web:
+        trail = build_trail_payload(case, args.case, results)
+        write_trails_json(trail)
+        embed_trail_in_findings(trail)
     return 0
 
 
