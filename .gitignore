@@ -19,6 +19,10 @@ web/node_modules/
 web/.next/
 web/out/
 web/.env*.local
+web/tsconfig.tsbuildinfo
+
+# Stray Next.js build traces at the repo root (created when next runs outside web/)
+.next/
 
 # Docker
 .docker/
