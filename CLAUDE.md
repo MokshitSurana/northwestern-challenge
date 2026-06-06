@@ -69,6 +69,7 @@ uv run scripts/03_agency_concentration.py --min-filings 5 --min-conc 0.15
 uv run scripts/04_award_tracer.py --print-template            # show case-file schema
 uv run scripts/04_award_tracer.py --case skill/federal-award-tracer/cases/steinberg_doe.json
 uv run scripts/04_award_tracer.py --case skill/federal-award-tracer/cases/usda_cases.json --out notes/usda_trail.md --json output/usda_awards.json
+uv run scripts/04_award_tracer.py --case <case.json> --no-web # skip web/public writes
 ```
 
 ### Tests
@@ -90,8 +91,19 @@ runs green without `output/investigation.duckdb` (CI relies on this).
 ### Reporter UI (web/)
 
 ```bash
-cd web && npm ci && npm run dev   # http://localhost:3000
+cd web && npm ci && npm run dev   # http://localhost:3000  (also serves /trails)
+cd web && npm run build           # production build (also gated in CI)
+cd web && npm run lint            # next lint
+cd web && npm run typecheck       # tsc --noEmit
 ```
+
+The UI reads two static JSON files from `web/public/`: `findings.json` (written by
+`scan`) and `trails.json` (written by `trace`). Both pages have a ↻ Refresh button
+that re-fetches the JSON without a page reload, so the flow is: run `/fair-guard scan`
+or `/fair-guard trace`, switch to the browser tab, click refresh. The trace script
+also embeds each trail into the matching scan-finding row (keyed on the case file's
+`match: [{lobbyist_name, agency_short}]` block, case-insensitive), so a Money-trail
+panel appears inline on the matching candidate's card on `/`.
 
 ### Linting
 
@@ -154,9 +166,12 @@ scripts/02_entity_resolver.py    → writes entity_map table into investigation.
 scripts/03_agency_concentration.py → output/agency_concentration.{md,csv}
                                    → notes/06_structural_pattern_findings.md
                                    → web/public/findings.json
+scripts/04_award_tracer.py        → web/public/trails.json (upserts per case_id)
+                                   → web/public/findings.json (enriches matching rows with `trail`)
     │
     ▼
-web/src/app/page.tsx             (reporter verification UI, reads findings JSON)
+web/src/app/page.tsx             (reporter UI — findings + inline Money trail panels)
+web/src/app/trails/page.tsx      (reporter UI — full money-trail index, refresh button)
 ```
 
 ### DuckDB tables
