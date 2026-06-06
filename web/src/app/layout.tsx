@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import "./globals.css"
+import NavTabs from "./NavTabs"
 
 export const metadata: Metadata = {
   title: "FairGuard — Revolving Door Findings",
@@ -16,25 +18,28 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="border-b border-slate-200 bg-white px-6 py-4">
-          <div className="mx-auto max-w-5xl flex items-center justify-between">
-            <div>
-              <span className="text-lg font-bold text-slate-900">FairGuard</span>
-              <span className="ml-2 text-sm text-slate-500">
-                Revolving Door Verification UI
+        <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/95 backdrop-blur">
+          <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-6 py-4">
+            <Link href="/" className="flex items-baseline gap-3">
+              <span className="text-2xl font-bold tracking-tight text-slate-900">
+                FairGuard
               </span>
-            </div>
-            <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-800">
+              <span className="hidden text-base text-slate-500 sm:inline">
+                Revolving Door Verification
+              </span>
+            </Link>
+            <span className="rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-800 ring-1 ring-amber-200">
               Competition draft — not for publication
             </span>
           </div>
+          <NavTabs />
         </header>
-        <main className="mx-auto max-w-5xl px-6 py-8">{children}</main>
-        <footer className="border-t border-slate-200 bg-white px-6 py-4 text-center text-xs text-slate-400">
+        <main className="mx-auto max-w-6xl px-6 py-10">{children}</main>
+        <footer className="border-t border-slate-200 bg-white px-6 py-6 text-center text-sm text-slate-500">
           FairGuard · Northwestern GAIN Agentic AI Investigative Journalism Challenge · July 2026 ·{" "}
           <a
             href="https://github.com/fairguard/northwestern-challenge"
-            className="underline hover:text-slate-600"
+            className="font-medium text-indigo-600 underline decoration-dotted hover:text-indigo-800"
           >
             Source
           </a>
