@@ -3,6 +3,9 @@
   "agency": "Department of Energy",
   "award_groups": ["grants"],
   "time_period": {"start": "2021-01-01", "end": "2026-06-04"},
+  "match": [
+    {"lobbyist_name": "Benjamin Steinberg", "agency_short": "energy"}
+  ],
   "clients": [
     {"label": "Cirba Solutions", "search": "Cirba Solutions", "name_tokens": ["CIRBA SOLUTIONS"]},
     {"label": "EnerSys", "search": "EnerSys", "name_tokens": ["ENERSYS"]},
