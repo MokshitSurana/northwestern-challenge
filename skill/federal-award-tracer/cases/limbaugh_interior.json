@@ -3,6 +3,9 @@
   "agency": "Department of the Interior",
   "award_groups": ["grants"],
   "time_period": {"start": "2021-01-01", "end": "2026-06-04"},
+  "match": [
+    {"lobbyist_name": "Mark Limbaugh", "agency_short": "interior"}
+  ],
   "clients": [
     {"label": "Sites Project Authority", "search": "Sites Project Authority", "name_tokens": ["SITES PROJECT"]},
     {"label": "Glenn-Colusa Irrigation District", "search": "Glenn-Colusa Irrigation", "name_tokens": ["GLENN COLUSA", "GLENN-COLUSA"]},
