@@ -3,6 +3,12 @@
   "agency": "Department of Agriculture",
   "award_groups": ["grants", "direct", "contracts"],
   "time_period": {"start": "2021-01-01", "end": "2026-06-04"},
+  "match": [
+    {"lobbyist_name": "Ashlee Johnson", "agency_short": "usda"},
+    {"lobbyist_name": "Kevin Bailey", "agency_short": "usda"},
+    {"lobbyist_name": "Michael Torrey", "agency_short": "usda"},
+    {"lobbyist_name": "Kenneth Barbic", "agency_short": "usda"}
+  ],
   "clients": [
     {"label": "Cargill (operating entities)", "search": "Cargill", "name_tokens": ["CARGILL, INCORPORATED", "CARGILL MEAT SOLUTIONS", "CARGILL KITCHEN SOLUTIONS"]},
     {"label": "National Rural Water Assn", "search": "National Rural Water", "name_tokens": ["NATIONAL RURAL WATER"]},
