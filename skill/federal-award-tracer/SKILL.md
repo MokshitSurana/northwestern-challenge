@@ -80,6 +80,7 @@ clients. Run `uv run scripts/04_award_tracer.py --print-template` to see the sch
 | `clients[].label` | Display name in the table |
 | `clients[].search` | `recipient_search_text` sent to the API (fuzzy) |
 | `clients[].name_tokens` | Uppercase fragments; a row counts only if one appears in the real `Recipient Name` |
+| `match` (optional) | List of `{lobbyist_name, agency_short}` pairs that key this trail to one or more scan findings. When present, the trail is attached to those rows in `web/public/findings.json` so the Reporter UI shows a **Money trail** panel inline on the matching card. Case-insensitive on `lobbyist_name`. |
 
 **Network required** — this makes live HTTPS calls to `api.usaspending.gov`. It does
 *not* touch `output/investigation.duckdb`.
@@ -90,6 +91,10 @@ clients. Run `uv run scripts/04_award_tracer.py --print-template` to see the sch
 |-------------|-------------|
 | stdout (or `--out FILE`) | The markdown table + framing note |
 | `--json FILE` (optional) | Raw per-client results: totals, award counts, recipient names, per-award sub-agency / type for auditing the split |
+| `web/public/trails.json` | Upserted on every run (keyed by case-file stem). Drives the `/trails` route in the Reporter UI |
+| `web/public/findings.json` | If the case file has a `match` block, the matching scan-finding row(s) gain a `trail` field, surfacing a Money-trail panel on the candidate's card on `/` |
+
+Pass `--no-web` to skip both web writes (useful in CI or when reproducing numbers offline).
 
 ## Invocation
 
