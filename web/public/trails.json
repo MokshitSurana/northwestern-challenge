@@ -1,0 +1,288 @@
+{
+  "generated_at": "2026-06-06T21:32:52.180269+00:00",
+  "total_trails": 2,
+  "trails": [
+    {
+      "case_id": "usda_cases",
+      "lobbyist_label": "USDA cases (Johnson / Bailey / Torrey / Barbic clients)",
+      "agency": "Department of Agriculture",
+      "award_groups": [
+        "grants",
+        "direct",
+        "contracts"
+      ],
+      "time_period": {
+        "start": "2021-01-01",
+        "end": "2026-06-04"
+      },
+      "match": [
+        {
+          "lobbyist_name": "Ashlee Johnson",
+          "agency_short": "usda"
+        },
+        {
+          "lobbyist_name": "Kevin Bailey",
+          "agency_short": "usda"
+        },
+        {
+          "lobbyist_name": "Michael Torrey",
+          "agency_short": "usda"
+        },
+        {
+          "lobbyist_name": "Kenneth Barbic",
+          "agency_short": "usda"
+        }
+      ],
+      "generated_at": "2026-06-06T21:32:26.063093+00:00",
+      "total": 1398877776.51,
+      "routine_total": 1360845203.14,
+      "discretionary_total": 38032573.369999886,
+      "n_clients_with_awards": 12,
+      "n_clients_total": 12,
+      "clients": [
+        {
+          "label": "Cargill (operating entities)",
+          "total": 704852207.5899999,
+          "n_awards": 109,
+          "routine_amount": 702968591.2599999,
+          "discretionary_amount": 1883616.330000043,
+          "recipients": [
+            "CARGILL KITCHEN SOLUTIONS, INC",
+            "CARGILL MEAT SOLUTIONS CORPORATION",
+            "CARGILL, INCORPORATED"
+          ]
+        },
+        {
+          "label": "National Rural Water Assn",
+          "total": 271949425.34999996,
+          "n_awards": 34,
+          "routine_amount": 271949425.34999996,
+          "discretionary_amount": 0.0,
+          "recipients": [
+            "NATIONAL RURAL WATER ASSOCIATION"
+          ]
+        },
+        {
+          "label": "Tri-State Generation",
+          "total": 148344449.0,
+          "n_awards": 5,
+          "routine_amount": 148344449.0,
+          "discretionary_amount": 0.0,
+          "recipients": [
+            "TRI-STATE GENERATION AND TRANSMISSION ASSOCIATION, INC."
+          ]
+        },
+        {
+          "label": "Land O'Lakes (Venture37)",
+          "total": 104471391.41000003,
+          "n_awards": 97,
+          "routine_amount": 103471391.41000003,
+          "discretionary_amount": 1000000.0,
+          "recipients": [
+            "LAND O'LAKES VENTURE37"
+          ]
+        },
+        {
+          "label": "McCain Foods USA",
+          "total": 82649984.60000001,
+          "n_awards": 19,
+          "routine_amount": 82649984.60000001,
+          "discretionary_amount": 0.0,
+          "recipients": [
+            "MCCAIN FOODS USA, INC."
+          ]
+        },
+        {
+          "label": "Global Clean Energy",
+          "total": 32260500.0,
+          "n_awards": 1,
+          "routine_amount": 0,
+          "discretionary_amount": 32260500.0,
+          "recipients": [
+            "GLOBAL CLEAN ENERGY HOLDINGS INC"
+          ]
+        },
+        {
+          "label": "Louis Dreyfus",
+          "total": 21812751.630000003,
+          "n_awards": 23,
+          "routine_amount": 21812751.630000003,
+          "discretionary_amount": 0.0,
+          "recipients": [
+            "LOUIS DREYFUS CO COTTON LLC",
+            "LOUIS DREYFUS COMPANY AGRICULTURAL PRODUCTS LLC",
+            "LOUIS DREYFUS COMPANY LLC"
+          ]
+        },
+        {
+          "label": "Ardent Mills",
+          "total": 16927765.030000005,
+          "n_awards": 81,
+          "routine_amount": 16881307.990000006,
+          "discretionary_amount": 46457.039999999106,
+          "recipients": [
+            "ARDENT MILLS LLC"
+          ]
+        },
+        {
+          "label": "California Prune Board",
+          "total": 9200000.0,
+          "n_awards": 2,
+          "routine_amount": 9200000.0,
+          "discretionary_amount": 0.0,
+          "recipients": [
+            "CALIFORNIA PRUNE BOARD"
+          ]
+        },
+        {
+          "label": "Shenandoah Valley Organic",
+          "total": 3567301.9,
+          "n_awards": 1,
+          "routine_amount": 3567301.9,
+          "discretionary_amount": 0.0,
+          "recipients": [
+            "SHENANDOAH VALLEY ORGANIC, LLC"
+          ]
+        },
+        {
+          "label": "Illinois Soybean Board",
+          "total": 2157000.0,
+          "n_awards": 1,
+          "routine_amount": 0,
+          "discretionary_amount": 2157000.0,
+          "recipients": [
+            "ILLINOIS SOYBEAN BOARD"
+          ]
+        },
+        {
+          "label": "California Rice Commission",
+          "total": 685000.0,
+          "n_awards": 1,
+          "routine_amount": 0,
+          "discretionary_amount": 685000.0,
+          "recipients": [
+            "CALIFORNIA RICE COMMISSION"
+          ]
+        }
+      ],
+      "misses": []
+    },
+    {
+      "case_id": "steinberg_doe",
+      "lobbyist_label": "Steinberg (battery / critical-minerals clients)",
+      "agency": "Department of Energy",
+      "award_groups": [
+        "grants"
+      ],
+      "time_period": {
+        "start": "2021-01-01",
+        "end": "2026-06-04"
+      },
+      "match": [
+        {
+          "lobbyist_name": "Benjamin Steinberg",
+          "agency_short": "energy"
+        }
+      ],
+      "generated_at": "2026-06-06T21:32:52.179252+00:00",
+      "total": 1080820046.02,
+      "routine_total": 0,
+      "discretionary_total": 1080820046.02,
+      "n_clients_with_awards": 9,
+      "n_clients_total": 9,
+      "clients": [
+        {
+          "label": "Cirba Solutions",
+          "total": 205417812.63,
+          "n_awards": 3,
+          "routine_amount": 0,
+          "discretionary_amount": 205417812.63,
+          "recipients": [
+            "CIRBA SOLUTIONS, LLC"
+          ]
+        },
+        {
+          "label": "EnerSys",
+          "total": 198679760.0,
+          "n_awards": 1,
+          "routine_amount": 0,
+          "discretionary_amount": 198679760.0,
+          "recipients": [
+            "ENERSYS ADVANCED SYSTEMS INC"
+          ]
+        },
+        {
+          "label": "South32 Hermosa",
+          "total": 122993645.63,
+          "n_awards": 1,
+          "routine_amount": 0,
+          "discretionary_amount": 122993645.63,
+          "recipients": [
+            "SOUTH32 HERMOSA INC"
+          ]
+        },
+        {
+          "label": "Sila Nanotechnologies",
+          "total": 117017664.53,
+          "n_awards": 4,
+          "routine_amount": 0,
+          "discretionary_amount": 117017664.53,
+          "recipients": [
+            "SILA NANOTECHNOLOGIES, INC."
+          ]
+        },
+        {
+          "label": "Anovion",
+          "total": 117000000.0,
+          "n_awards": 1,
+          "routine_amount": 0,
+          "discretionary_amount": 117000000.0,
+          "recipients": [
+            "ANOVION LLC"
+          ]
+        },
+        {
+          "label": "Talon Nickel",
+          "total": 114846344.0,
+          "n_awards": 1,
+          "routine_amount": 0,
+          "discretionary_amount": 114846344.0,
+          "recipients": [
+            "TALON NICKEL (USA) LLC"
+          ]
+        },
+        {
+          "label": "Forge Battery",
+          "total": 100000000.0,
+          "n_awards": 1,
+          "routine_amount": 0,
+          "discretionary_amount": 100000000.0,
+          "recipients": [
+            "FORGE BATTERY, INC."
+          ]
+        },
+        {
+          "label": "Cabot Corp",
+          "total": 57336573.23,
+          "n_awards": 3,
+          "routine_amount": 0,
+          "discretionary_amount": 57336573.23,
+          "recipients": [
+            "CABOT CORP"
+          ]
+        },
+        {
+          "label": "Nanoramic",
+          "total": 47528246.0,
+          "n_awards": 1,
+          "routine_amount": 0,
+          "discretionary_amount": 47528246.0,
+          "recipients": [
+            "NANORAMIC, INC."
+          ]
+        }
+      ],
+      "misses": []
+    }
+  ]
+}
