@@ -137,6 +137,77 @@
           }
         ],
         "misses": []
+      },
+      "press_releases": {
+        "case_id": "auto-enrich-1",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:51.694382+00:00",
+        "n_clients_with_matches": 3,
+        "n_matches_total": 4,
+        "by_client": [
+          {
+            "client": "WABTEC CORPORATION",
+            "n_matches": 2,
+            "matches": [
+              {
+                "client": "WABTEC CORPORATION",
+                "date": "2025-09-23",
+                "member_name": "Mike Kelly",
+                "party": "Republican",
+                "state": "PA",
+                "chamber": "House",
+                "title": "Rep. Kelly statement on historic Wabtec locomotive deal",
+                "url": "https://kelly.house.gov/media/press-releases/rep-kelly-statement-historic-wabtec-locomotive-deal",
+                "snippet": "WASHINGTON, D.C. -- Today, U.S. Rep. Mike Kelly (R-PA) released the following statement after **Wabtec Corporation** announced Monday a historic agreement with National Company Kazakhstan Temir Zholy (KTZ), the national railway of Kazak…"
+              },
+              {
+                "client": "WABTEC CORPORATION",
+                "date": "2023-09-29",
+                "member_name": "Christopher R. Deluzio",
+                "party": "Democrat",
+                "state": "PA",
+                "chamber": "House",
+                "title": "Deluzio, Kelly Celebrate $10 Million for Neighborhood 91 at PIT Innovation Campus",
+                "url": "https://deluzio.house.gov/media/press-releases/deluzio-kelly-celebrate-10-million-neighborhood-91-pit-innovation-campus",
+                "snippet": "…s, advanced coatings, material characterization, mechanical testing, and workforce development. Current tenants include **Wabtec Corporation**, Cumberland Additive, Metal Powder Works, HAMR, RJ Lee, The Future of Jewelry, and Westmoreland Mechanical Testing Labo…"
+              }
+            ]
+          },
+          {
+            "client": "BATTERY MATERIALS AND TECHNOLOGY COALITION",
+            "n_matches": 1,
+            "matches": [
+              {
+                "client": "BATTERY MATERIALS AND TECHNOLOGY COALITION",
+                "date": "2024-05-01",
+                "member_name": "Paul Tonko",
+                "party": "Democrat",
+                "state": "NY",
+                "chamber": "House",
+                "title": "Tonko, Graves Introduce Critical Material TRACE Act",
+                "url": "https://tonko.house.gov/news/documentsingle.aspx?DocumentID=4115",
+                "snippet": "…ct energy security. The Representatives’ Critical Material TRACE Act has been endorsed by: the Advanced Energy United, **Battery Materials and Technology Coalition**, Circulor, Earthjustice, Earthworks, the Global Battery Alliance, Optel, SAFE, Sierra Club, Umicore, and the Union of C…"
+              }
+            ]
+          },
+          {
+            "client": "TALON NICKEL (USA) LLC",
+            "n_matches": 1,
+            "matches": [
+              {
+                "client": "TALON NICKEL (USA) LLC",
+                "date": "2023-11-02",
+                "member_name": "Kevin Cramer",
+                "party": "Republican",
+                "state": "ND",
+                "chamber": "Senate",
+                "title": "Sen. Cramer: DOE Awards Nearly $115 Million to Talon Metals’ Battery Mineral Processing Facility",
+                "url": "https://www.cramer.senate.gov/news/press-releases/sen-cramer-doe-awards-nearly-115-million-to-talon-metals-battery-mineral-processing-facility",
+                "snippet": "…ement after the U.S. Department of Energy (DOE) awarded $114,846,344 from the Infrastructure Investment and Jobs Act to **Talon Nickel (USA) LLC** for the construction of a battery minerals processing facility in Mercer County, North Dakota. This facility will proce…"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -157,7 +228,89 @@
       "sample_uuid": "ff8936a1-30eb-45bc-b240-d8555ac404f3",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff8936a1-30eb-45bc-b240-d8555ac404f3/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-2",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:51.734366+00:00",
+        "n_clients_with_matches": 3,
+        "n_matches_total": 5,
+        "by_client": [
+          {
+            "client": "TURLOCK IRRIGATION DISTRICT",
+            "n_matches": 2,
+            "matches": [
+              {
+                "client": "TURLOCK IRRIGATION DISTRICT",
+                "date": "2025-06-11",
+                "member_name": "Adam Gray",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "CONGRESSMAN GRAY INTRODUCES VALLEY WATER PROTECTION ACT",
+                "url": "https://gray.house.gov/media/press-releases/congressman-gray-introduces-valley-water-protection-act",
+                "snippet": "…onomic impacts of Endangered Species Act regulation are understood and considered,” said Brad Koehn, General Manager of **Turlock Irrigation District**. “We appreciate Congressman Gray for introducing this bill, which recognizes that improving conditions for species does…"
+              },
+              {
+                "client": "TURLOCK IRRIGATION DISTRICT",
+                "date": "2022-05-12",
+                "member_name": "Josh Harder",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Harder Announces $2 Million for Ceres Reservoir Project",
+                "url": "https://harder.house.gov/media/press-releases/harder-announces-2-million-for-ceres-reservoir-project",
+                "snippet": "WASHINGTON – Today, Representative Josh Harder announced that **Turlock Irrigation District** will receive $2 million from the United States Bureau of Reclamation toward their Ceres Main Regulation Reservoir Proje…"
+              }
+            ]
+          },
+          {
+            "client": "YAKIMA BASIN JOINT BOARD",
+            "n_matches": 2,
+            "matches": [
+              {
+                "client": "YAKIMA BASIN JOINT BOARD",
+                "date": "2023-09-22",
+                "member_name": "Kim Schrier",
+                "party": "Democrat",
+                "state": "WA",
+                "chamber": "House",
+                "title": "Rep. Schrier Introduces Bipartisan Legislation to Fund Critical Local Water Infrastructure and Keep Customer Rates Affordable",
+                "url": "https://schrier.house.gov/media/press-releases/rep-schrier-introduces-bipartisan-legislation-fund-critical-local-water",
+                "snippet": "…mbia Basin Project,” said Sara Higgins, Executive Director of the Columbia Basin Development League. “On behalf of the **Yakima Basin Joint Board** (Joint Board), I write in full support of your amendment to the Water Resources Development Act of 2023 that, among oth…"
+              },
+              {
+                "client": "YAKIMA BASIN JOINT BOARD",
+                "date": "2022-06-16",
+                "member_name": "Kim Schrier",
+                "party": "Democrat",
+                "state": "WA",
+                "chamber": "House",
+                "title": "Rep. Schrier Introduces Bipartisan Bill to Fund Critical Water Infrastructure, Keep Customer Rates Affordable",
+                "url": "https://schrier.house.gov/media/press-releases/rep-schrier-introduces-bipartisan-bill-fund-critical-water-infrastructure-keep",
+                "snippet": "…Columbia Basin Project.” – Sara Higgins, Executive Director of the Columbia Basin Development League “On behalf of the **Yakima Basin Joint Board** (Joint Board), I write in full support of your amendment to the Water Resources Development Act of 2022 that, among oth…"
+              }
+            ]
+          },
+          {
+            "client": "IDAHO WATER RESOURCE BOARD",
+            "n_matches": 1,
+            "matches": [
+              {
+                "client": "IDAHO WATER RESOURCE BOARD",
+                "date": "2025-01-16",
+                "member_name": "David G. Valadao",
+                "party": "Republican",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Congressman Valadao Introduces Key Water Infrastructure Legislation to Address California’s Water Crisis",
+                "url": "https://valadao.house.gov/news/documentsingle.aspx?DocumentID=1685",
+                "snippet": "…uthority, Kern Fan Groundwater Storage Project (Irvine Ranch Water District and Rosedale-Bravo Water Storage District), **Idaho Water Resource Board**, San Joaquin River Exchange Contractors, Tulare Irrigation District, and Self-Help Enterprises. The Groundwater Techni…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 3,
@@ -342,6 +495,93 @@
           }
         ],
         "misses": []
+      },
+      "press_releases": {
+        "case_id": "auto-enrich-3",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:51.771368+00:00",
+        "n_clients_with_matches": 2,
+        "n_matches_total": 79,
+        "by_client": [
+          {
+            "client": "GROWTH ENERGY",
+            "n_matches": 78,
+            "matches": [
+              {
+                "client": "GROWTH ENERGY",
+                "date": "2026-03-24",
+                "member_name": "Joni Ernst",
+                "party": "Republican",
+                "state": "IA",
+                "chamber": "Senate",
+                "title": "Ernst Recognized for Championing Renewable Fuels",
+                "url": "https://www.ernst.senate.gov/news/press-releases/ernst-recognized-for-championing-renewable-fuels",
+                "snippet": "WASHINGTON – Today, U.S. Senator Joni Ernst (R-Iowa) was recognized with **Growth Energy**’s America’s Fuel Award for her work promoting renewable fuels to increase U.S. energy independence and lower prices at…"
+              },
+              {
+                "client": "GROWTH ENERGY",
+                "date": "2026-01-13",
+                "member_name": "Tammy Duckworth",
+                "party": "Democrat",
+                "state": "IL",
+                "chamber": "Senate",
+                "title": "Duckworth Meets with Growth Energy, Highlights Importance of U.S. Biofuels for Americans and the Economy",
+                "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-meets-with-growth-energy-highlights-importance-of-us-biofuels-for-americans-and-the-economy",
+                "snippet": "[WASHINGTON, D.C.] – U.S. Senator Tammy Duckworth (D-IL) today met with officials from **Growth Energy**, the nation’s leading biofuel trade association, to underscore her support for ethanol production, as well as her commi…"
+              },
+              {
+                "client": "GROWTH ENERGY",
+                "date": "2025-09-17",
+                "member_name": "Chuck Grassley",
+                "party": "Republican",
+                "state": "IA",
+                "chamber": "Senate",
+                "title": "Grassley Awarded for Biofuels Leadership",
+                "url": "https://www.grassley.senate.gov/news/news-releases/grassley-awarded-for-biofuels-leadership",
+                "snippet": "…NGTON – Sen. Chuck Grassley (R-Iowa), a lifelong family farmer and member of the Senate Agriculture Committee, accepted **Growth Energy**’s 2025 “Fueling Growth Award” for his efforts to support biofuel production. “Homegrown biofuels are good, good, good.…"
+              },
+              {
+                "client": "GROWTH ENERGY",
+                "date": "2025-08-08",
+                "member_name": "Pete Ricketts",
+                "party": "Republican",
+                "state": "NE",
+                "chamber": "Senate",
+                "title": "Ricketts Leads Bipartisan Resolution Celebrating the 20th Anniversary of the Renewable Fuel Standard",
+                "url": "https://www.ricketts.senate.gov/news/press-releases/ricketts-leads-bipartisan-resolution-celebrating-the-20thanniversary-of-the-renewable-fuel-standard/",
+                "snippet": "…o America’s farmers and rural communities.” “The RFS is the foundation of America’s bioeconomy,” said Emily Skor, CEO, **Growth Energy**. “It supports hundreds of thousands of rural jobs and has shielded an entire generation of drivers from volatility in g…"
+              },
+              {
+                "client": "GROWTH ENERGY",
+                "date": "2025-08-07",
+                "member_name": "Adrian Smith",
+                "party": "Republican",
+                "state": "NE",
+                "chamber": "House",
+                "title": "Smith, Budzinski Introduce Bipartisan Legislation, Call on EPA to Cut Red Tape Around E15",
+                "url": "https://adriansmith.house.gov/media/press-releases/smith-budzinski-introduce-bipartisan-legislation-call-epa-cut-red-tape-around",
+                "snippet": "…of the legislation here. The legislation is supported by industry groups including the Renewable Fuels Association and **Growth Energy**, which provided the following statements. “We thank Reps. Smith and Budzinski for introducing this commonsense legisla…"
+              }
+            ]
+          },
+          {
+            "client": "CARGILL INC",
+            "n_matches": 1,
+            "matches": [
+              {
+                "client": "CARGILL INC",
+                "date": "2023-06-01",
+                "member_name": "Tammy Baldwin",
+                "party": "Democrat",
+                "state": "WI",
+                "chamber": "Senate",
+                "title": "Baldwin Joins Senators in Effort to Hold Companies Accountable for Contracting with Packers Sanitation Services, Inc. Which Unlawfully Employed Migrant Child Labor",
+                "url": "https://www.baldwin.senate.gov/news/press-releases/baldwin-joins-senators-in-effort-to-hold-companies-accountable-for-contracting-with-packers-sanitation-services-inc-which-unlawfully-employed-migrant-child-labor",
+                "snippet": "…with PSSI, including Tyson Foods, George’s Inc. (part of Rosen's Diversified, Inc.), JBS Foods, Maple Leaf Farms Inc., **Cargill Inc**., Turkey Valley Farms, Buckhead Meat of Minnesota (part of Sysco Corporation), Gibbon Packing Co., and Greater Omaha Pa…"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -362,7 +602,77 @@
       "sample_uuid": "ff78910b-4f40-4511-8c8d-a6aa93fb4c50",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff78910b-4f40-4511-8c8d-a6aa93fb4c50/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-4",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:51.811368+00:00",
+        "n_clients_with_matches": 1,
+        "n_matches_total": 7,
+        "by_client": [
+          {
+            "client": "AMERICAN COTTON SHIPPERS ASSOCIATION",
+            "n_matches": 7,
+            "matches": [
+              {
+                "client": "AMERICAN COTTON SHIPPERS ASSOCIATION",
+                "date": "2026-03-02",
+                "member_name": "Jodey C. Arrington",
+                "party": "Republican",
+                "state": "TX",
+                "chamber": "House",
+                "title": "Arrington Leads Effort to Eliminate India's Tariff on American Cotton",
+                "url": "https://arrington.house.gov/news/documentsingle.aspx?DocumentID=4373",
+                "snippet": "…who have suffered several years of historic losses resulting from inflation, low demand, and inclement weather.” “The **American Cotton Shippers Association** (ACSA) strongly supports Chairman Arrington’s leadership in urging USTR to eliminate India’s 11% tariff on U.S. cotton,…"
+              },
+              {
+                "client": "AMERICAN COTTON SHIPPERS ASSOCIATION",
+                "date": "2025-09-30",
+                "member_name": "Ronny Jackson",
+                "party": "Republican",
+                "state": "TX",
+                "chamber": "House",
+                "title": "Rep. Jackson Introduces Bill to Fortify the TX-13 Cotton Industry",
+                "url": "https://jackson.house.gov/news/documentsingle.aspx?DocumentID=2443",
+                "snippet": "…cotton producers and supporting rural communities across the U.S.” Cosponsors include Representative Jodey Arrington. **American Cotton Shippers Association**, Buddy Allen, President & CEO: “Thank you, Congressman Ronny Jackson, for introducing legislation urging the Federal Cr…"
+              },
+              {
+                "client": "AMERICAN COTTON SHIPPERS ASSOCIATION",
+                "date": "2025-07-22",
+                "member_name": "Tracey Mann",
+                "party": "Republican",
+                "state": "KS",
+                "chamber": "House",
+                "title": "Rep. Mann Introduces Legislation to Strengthen Agricultural Supply Chain",
+                "url": "https://mann.house.gov/media/press-releases/rep-mann-introduces-legislation-strengthen-agricultural-supply-chain",
+                "snippet": "…of Indiana, Agricultural Council of Arkansas, Agricultural Retailers Association, Agriculture Transportation Coalition, **American Cotton Shippers Association**, American Farm Bureau Federation, American Feed Industry Association, American Honey Producers Association, American Ma…"
+              },
+              {
+                "client": "AMERICAN COTTON SHIPPERS ASSOCIATION",
+                "date": "2024-12-13",
+                "member_name": "Jodey C. Arrington",
+                "party": "Republican",
+                "state": "TX",
+                "chamber": "House",
+                "title": "Arrington Urges Trump to Boost WTX Cotton Exports",
+                "url": "https://arrington.house.gov/news/documentsingle.aspx?DocumentID=2503",
+                "snippet": "…to intensify, establishing meaningful market access is critically important,” saidBuddy Allen, President and CEO of the **American Cotton Shippers Association**. “The American Cotton Shippers Association commends Congressman Arrington for recognizing this in his recent letter to…"
+              },
+              {
+                "client": "AMERICAN COTTON SHIPPERS ASSOCIATION",
+                "date": "2024-01-23",
+                "member_name": "Jerry Moran",
+                "party": "Republican",
+                "state": "KS",
+                "chamber": "Senate",
+                "title": "Sen. Moran, Rep. Nunn Caution Federal Regulators on Harmful Impacts of Proposed Banking Regulations",
+                "url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=682C4164-C895-426F-A013-29F7845C2C24",
+                "snippet": "…Glenn Thompson (R-Pa.) and Roger Williams (R-Texas). This effort is supported by the American Farm Bureau Federation, **National Milk Producers Federation**, Louis Dreyfus Company, Commodity Markets Council, American Cotton Shippers Association, Futures Industry Association,…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 5,
@@ -547,6 +857,60 @@
           }
         ],
         "misses": []
+      },
+      "press_releases": {
+        "case_id": "auto-enrich-5",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:51.852368+00:00",
+        "n_clients_with_matches": 2,
+        "n_matches_total": 3,
+        "by_client": [
+          {
+            "client": "MICHIGAN SUGAR COMPANY",
+            "n_matches": 2,
+            "matches": [
+              {
+                "client": "MICHIGAN SUGAR COMPANY",
+                "date": "2025-09-12",
+                "member_name": "Kristen McDonald Rivet",
+                "party": "Democrat",
+                "state": "MI",
+                "chamber": "House",
+                "title": "McDonald Rivet Advocates to Secure Supply Chains And Lower Costs for Michigan Manufacturing and Farmers",
+                "url": "https://mcdonaldrivet.house.gov/media/press-releases/mcdonald-rivet-advocates-secure-supply-chains-and-lower-costs-michigan",
+                "snippet": "…t of other nutrients,” said Michael Houghtaling, a Saginaw County farmer who serves on the Co-op Board of Directors for **Michigan Sugar Company**. “When advocating for potash to be recognized as a critical mineral, Congresswoman McDonald Rivet is standing up for Am…"
+              },
+              {
+                "client": "MICHIGAN SUGAR COMPANY",
+                "date": "2025-03-03",
+                "member_name": "Kristen McDonald Rivet",
+                "party": "Democrat",
+                "state": "MI",
+                "chamber": "House",
+                "title": "McDonald Rivet Announces Neil Juhnke of Michigan Sugar Will Join Her at Trump’s Joint Address",
+                "url": "https://mcdonaldrivet.house.gov/media/press-releases/mcdonald-rivet-announces-neil-juhnke-michigan-sugar-will-join-her-trumps-joint",
+                "snippet": "…need to pass a Farm Bill, and with so much at stake, we need to make sure Michigan farmers have a seat at the table.” **Michigan Sugar Company** was founded in 1906 and is headquartered in Bay City. They have sugar beet processing facilities in Bay City, Caro, Cro…"
+              }
+            ]
+          },
+          {
+            "client": "SUSTAINABLE FOOD POLICY ALLIANCE",
+            "n_matches": 1,
+            "matches": [
+              {
+                "client": "SUSTAINABLE FOOD POLICY ALLIANCE",
+                "date": "2025-11-15",
+                "member_name": "Haley M. Stevens",
+                "party": "Democrat",
+                "state": "MI",
+                "chamber": "House",
+                "title": "WHAT THEY’RE SAYING: MI Congresswoman Haley Stevens’ Resolution Designating Today as ‘America Recycles Day’",
+                "url": "https://stevens.house.gov/media/press-releases/what-theyre-saying-mi-congresswoman-haley-stevens-resolution-designating-today",
+                "snippet": "…ection and processing infrastructure, and driving innovation in packaging design to increase recovery and reuse.” “The **Sustainable Food Policy Alliance** endorses the resolution to recognize November 15, 2025, as ‘‘America Recycles Day.” As global food companies, our membe…"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -567,7 +931,105 @@
       "sample_uuid": "ff78910b-4f40-4511-8c8d-a6aa93fb4c50",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff78910b-4f40-4511-8c8d-a6aa93fb4c50/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-6",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:51.895899+00:00",
+        "n_clients_with_matches": 2,
+        "n_matches_total": 7,
+        "by_client": [
+          {
+            "client": "AMERICAN COTTON SHIPPERS ASSOCIATION",
+            "n_matches": 4,
+            "matches": [
+              {
+                "client": "AMERICAN COTTON SHIPPERS ASSOCIATION",
+                "date": "2026-03-02",
+                "member_name": "Jodey C. Arrington",
+                "party": "Republican",
+                "state": "TX",
+                "chamber": "House",
+                "title": "Arrington Leads Effort to Eliminate India's Tariff on American Cotton",
+                "url": "https://arrington.house.gov/news/documentsingle.aspx?DocumentID=4373",
+                "snippet": "…who have suffered several years of historic losses resulting from inflation, low demand, and inclement weather.” “The **American Cotton Shippers Association** (ACSA) strongly supports Chairman Arrington’s leadership in urging USTR to eliminate India’s 11% tariff on U.S. cotton,…"
+              },
+              {
+                "client": "AMERICAN COTTON SHIPPERS ASSOCIATION",
+                "date": "2025-09-30",
+                "member_name": "Ronny Jackson",
+                "party": "Republican",
+                "state": "TX",
+                "chamber": "House",
+                "title": "Rep. Jackson Introduces Bill to Fortify the TX-13 Cotton Industry",
+                "url": "https://jackson.house.gov/news/documentsingle.aspx?DocumentID=2443",
+                "snippet": "…cotton producers and supporting rural communities across the U.S.” Cosponsors include Representative Jodey Arrington. **American Cotton Shippers Association**, Buddy Allen, President & CEO: “Thank you, Congressman Ronny Jackson, for introducing legislation urging the Federal Cr…"
+              },
+              {
+                "client": "AMERICAN COTTON SHIPPERS ASSOCIATION",
+                "date": "2025-07-22",
+                "member_name": "Tracey Mann",
+                "party": "Republican",
+                "state": "KS",
+                "chamber": "House",
+                "title": "Rep. Mann Introduces Legislation to Strengthen Agricultural Supply Chain",
+                "url": "https://mann.house.gov/media/press-releases/rep-mann-introduces-legislation-strengthen-agricultural-supply-chain",
+                "snippet": "…of Indiana, Agricultural Council of Arkansas, Agricultural Retailers Association, Agriculture Transportation Coalition, **American Cotton Shippers Association**, American Farm Bureau Federation, American Feed Industry Association, American Honey Producers Association, American Ma…"
+              },
+              {
+                "client": "AMERICAN COTTON SHIPPERS ASSOCIATION",
+                "date": "2024-12-13",
+                "member_name": "Jodey C. Arrington",
+                "party": "Republican",
+                "state": "TX",
+                "chamber": "House",
+                "title": "Arrington Urges Trump to Boost WTX Cotton Exports",
+                "url": "https://arrington.house.gov/news/documentsingle.aspx?DocumentID=2503",
+                "snippet": "…to intensify, establishing meaningful market access is critically important,” saidBuddy Allen, President and CEO of the **American Cotton Shippers Association**. “The American Cotton Shippers Association commends Congressman Arrington for recognizing this in his recent letter to…"
+              }
+            ]
+          },
+          {
+            "client": "COMMODITY MARKETS COUNCIL",
+            "n_matches": 3,
+            "matches": [
+              {
+                "client": "COMMODITY MARKETS COUNCIL",
+                "date": "2024-01-23",
+                "member_name": "Jerry Moran",
+                "party": "Republican",
+                "state": "KS",
+                "chamber": "Senate",
+                "title": "Sen. Moran, Rep. Nunn Caution Federal Regulators on Harmful Impacts of Proposed Banking Regulations",
+                "url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=682C4164-C895-426F-A013-29F7845C2C24",
+                "snippet": "…Glenn Thompson (R-Pa.) and Roger Williams (R-Texas). This effort is supported by the American Farm Bureau Federation, **National Milk Producers Federation**, Louis Dreyfus Company, Commodity Markets Council, American Cotton Shippers Association, Futures Industry Association,…"
+              },
+              {
+                "client": "COMMODITY MARKETS COUNCIL",
+                "date": "2024-01-23",
+                "member_name": "Kevin Cramer",
+                "party": "Republican",
+                "state": "ND",
+                "chamber": "Senate",
+                "title": "Letters Call for Withdrawal of Basel III Endgame Proposal, Highlight Impact on Derivatives End Users",
+                "url": "https://www.cramer.senate.gov/news/press-releases/letters-call-for-withdrawal-of-basel-iii-endgame-proposal-highlight-impact-on-derivatives-end-users",
+                "snippet": "…hedge against instability.” The letter is endorsed by the Farm Bureau Foundation, National Grain and Feed Association, **National Milk Producers Federation**, Louis Dreyfus, Commodity Markets Council, American Cotton Shippers Association, Futures Industry Association, and Inte…"
+              },
+              {
+                "client": "COMMODITY MARKETS COUNCIL",
+                "date": "2024-01-23",
+                "member_name": "Zachary Nunn",
+                "party": "Republican",
+                "state": "IA",
+                "chamber": "House",
+                "title": "Nunn, Bipartisan Members Caution Federal Regulators on Harmful Impacts of Proposed Banking Regulations",
+                "url": "https://nunn.house.gov/2024/01/23/nunn-bipartisan-members-caution-federal-regulators-harmful-impacts-proposed/",
+                "snippet": "…s and risk management tools is a misguided approach.” This effort is supported by the American Farm Bureau Federation, **National Milk Producers Federation**, Louis Dreyfus Company, Commodity Markets Council, American Cotton Shippers Association, Futures Industry Association,…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 7,
@@ -752,6 +1214,187 @@
           }
         ],
         "misses": []
+      },
+      "press_releases": {
+        "case_id": "auto-enrich-7",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:51.934909+00:00",
+        "n_clients_with_matches": 3,
+        "n_matches_total": 15,
+        "by_client": [
+          {
+            "client": "CROP INSURANCE AND REINSURANCE BUREAU",
+            "n_matches": 6,
+            "matches": [
+              {
+                "client": "CROP INSURANCE AND REINSURANCE BUREAU",
+                "date": "2025-05-13",
+                "member_name": "John Boozman",
+                "party": "Republican",
+                "state": "AR",
+                "chamber": "Senate",
+                "title": "Boozman, Hoeven Introduce Bill to Strengthen Farm Safety Net",
+                "url": "https://www.boozman.senate.gov/public/index.cfm/press-releases?ID=AA44D64E-F01E-49E9-85CF-27169D8C6189",
+                "snippet": "…supported by the American Farm Bureau Federation, American Soybean Association, American Sugarbeet Growers Association, **Crop Insurance and Reinsurance Bureau**, Crop Insurance Professionals Association, Farm Credit Council, Midwest Council on Agriculture, National Association of…"
+              },
+              {
+                "client": "CROP INSURANCE AND REINSURANCE BUREAU",
+                "date": "2025-05-12",
+                "member_name": "Chuck Grassley",
+                "party": "Republican",
+                "state": "IA",
+                "chamber": "Senate",
+                "title": "Grassley, Hoeven Reintroduce FARMER Act to Strengthen Farm Safety Net, Increase Access to Higher Levels of Crop Insurance Coverage",
+                "url": "https://www.grassley.senate.gov/news/news-releases/grassley-hoeven-reintroduce-farmer-act-to-strengthen-farm-safety-net-increase-access-to-higher-levels-of-crop-insurance-coverage",
+                "snippet": "…supported by the American Farm Bureau Federation, American Soybean Association, American Sugarbeet Growers Association, **Crop Insurance and Reinsurance Bureau**, Crop Insurance Professionals Association, Farm Credit Council, Midwest Council on Agriculture, National Association of…"
+              },
+              {
+                "client": "CROP INSURANCE AND REINSURANCE BUREAU",
+                "date": "2025-05-09",
+                "member_name": "John Hoeven",
+                "party": "Republican",
+                "state": "ND",
+                "chamber": "Senate",
+                "title": "Hoeven Reintroduces Farmer Act to Strengthen Farm Safety Net, Make Higher Levels of Crop Insurance More Affordable",
+                "url": "https://www.hoeven.senate.gov/news/news-releases/hoeven-reintroduces-farmer-act-to-strengthen-farm-safety-net-make-higher-levels-of-crop-insurance-more-affordable",
+                "snippet": "…supported by the American Farm Bureau Federation, American Soybean Association, American Sugarbeet Growers Association, **Crop Insurance and Reinsurance Bureau**, Crop Insurance Professionals Association, Farm Credit Council, Midwest Council on Agriculture, National Association of…"
+              },
+              {
+                "client": "CROP INSURANCE AND REINSURANCE BUREAU",
+                "date": "2025-03-14",
+                "member_name": "Randy Feenstra",
+                "party": "Republican",
+                "state": "IA",
+                "chamber": "House",
+                "title": "Feenstra Introduces Legislation to Lower the Cost of Crop Insurance for New, Beginning, and Veteran Farmers and Producers",
+                "url": "https://feenstra.house.gov/media/press-releases/feenstra-introduces-legislation-lower-cost-crop-insurance-new-beginning-and",
+                "snippet": "…an farmers and ranchers as possible is a critical goal of crop insurance,” said Lindsey Rinkenberger, Chairwoman of the **Crop Insurance and Reinsurance Bureau** (CIRB) and Director of Commercial Agribusiness Underwriting Operations at COUNTRY Financial. “We applaud Representative…"
+              },
+              {
+                "client": "CROP INSURANCE AND REINSURANCE BUREAU",
+                "date": "2024-04-09",
+                "member_name": "John Hoeven",
+                "party": "Republican",
+                "state": "ND",
+                "chamber": "Senate",
+                "title": "Hoeven Introduces FARMER Act to Strengthen Crop Insurance, Make Higher Levels of Coverage More Affordable",
+                "url": "https://www.hoeven.senate.gov/news/news-releases/hoeven-introduces-farmer-act-to-strengthen-crop-insurance-make-higher-levels-of-coverage-more-affordable",
+                "snippet": "…ration, American Soybean Association, American Sugarbeet Growers Association, Crop Insurance Professionals Association, **Crop Insurance and Reinsurance Bureau**, Midwest Council on Agriculture, National Association of Wheat Growers, National Barley Growers Association, National C…"
+              }
+            ]
+          },
+          {
+            "client": "ANIMAL HEALTH INSTITUTE",
+            "n_matches": 5,
+            "matches": [
+              {
+                "client": "ANIMAL HEALTH INSTITUTE",
+                "date": "2024-03-13",
+                "member_name": "John Boozman",
+                "party": "Republican",
+                "state": "AR",
+                "chamber": "Senate",
+                "title": "Boozman Joins Bipartisan Call for Passage of Legislation to Crack Down on Xylazine",
+                "url": "https://www.boozman.senate.gov/public/index.cfm/press-releases?ID=BC179E3A-7B16-444F-8C2E-EB9412F1A25A",
+                "snippet": "…Law Enforcement Officers Association, Peace Officers Research Association of California, North American Meat Institute, **Animal Health Institute**, the American Association of Bovine Practitioners and the Major Cities Chiefs Association. “The AVMA strongly endorses…"
+              },
+              {
+                "client": "ANIMAL HEALTH INSTITUTE",
+                "date": "2024-03-07",
+                "member_name": "Chris Pappas",
+                "party": "Democrat",
+                "state": "NH",
+                "chamber": "House",
+                "title": "Pappas Joins Bipartisan Group of Senate and House Colleagues Calling for Passage of Bipartisan Legislation to Crack Down on Xylazine, Highlight Growing Support for Bill",
+                "url": "https://pappas.house.gov/media/press-releases/pappas-joins-bipartisan-group-of-senate-and-house-colleagues-calling-for-passage-of-bipartisan-legislation-to-crack-down-on-xylazine-highlight-growing-support-for-bill",
+                "snippet": "…evada Veterinary Medical Association, Peace Officers Research Association of California, North American Meat Institute, **Animal Health Institute**, the American Association of Bovine Practitioners, and the Major Cities Chiefs Association. The bill is also endorsed b…"
+              },
+              {
+                "client": "ANIMAL HEALTH INSTITUTE",
+                "date": "2024-03-06",
+                "member_name": "Margaret Wood Hassan",
+                "party": "Democrat",
+                "state": "NH",
+                "chamber": "Senate",
+                "title": "Senator Hassan and Bipartisan Group of Senate and House Colleagues Call for Passage of Legislation to Crack Down on Xylazine, Highlight Growing Support for Bill",
+                "url": "https://www.hassan.senate.gov/news/press-releases/senator-hassan-and-bipartisan-group-of-senate-and-house-colleagues-call-for-passage-of-legislation-to-crack-down-on-xylazine-highlight-growing-support-for-bill",
+                "snippet": "…evada Veterinary Medical Association, Peace Officers Research Association of California, North American Meat Institute, **Animal Health Institute**, the American Association of Bovine Practitioners, and the Major Cities Chiefs Association. “The rise of xylazine-adul…"
+              },
+              {
+                "client": "ANIMAL HEALTH INSTITUTE",
+                "date": "2023-03-28",
+                "member_name": "Jimmy Panetta",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "U.S. Rep Panetta Authors and Introduces Bipartisan, Bicameral Legislation to Crack Down on Xylazine",
+                "url": "https://panetta.house.gov/media/press-releases/us-rep-panetta-authors-and-introduces-bipartisan-bicameral-legislation-crack",
+                "snippet": "…d States Deputy Sheriff’s Association, Peace Officers Research Association of California North American Meat Institute, **Animal Health Institute**, and the American Association of Bovine Practitioners. “The AVMA fully supports this congressional effort to combat il…"
+              },
+              {
+                "client": "ANIMAL HEALTH INSTITUTE",
+                "date": "2023-03-28",
+                "member_name": "Gus M. Bilirakis",
+                "party": "Republican",
+                "state": "FL",
+                "chamber": "House",
+                "title": "Bilirakis, Pfluger, Panetta, Buck and Pappas Introduce Bill to Tackle Public Health Crisis by Cracking Down on Xylazine",
+                "url": "https://bilirakis.house.gov/media/press-releases/bilirakis-pfluger-panetta-buck-and-pappas-introduce-bill-tackle-public-health",
+                "snippet": "…d States Deputy Sheriff’s Association, Peace Officers Research Association of California North American Meat Institute, **Animal Health Institute**, and the American Association of Bovine Practitioners. The Combating Illicit Xylazine Act is cosponsored by Senators Je…"
+              }
+            ]
+          },
+          {
+            "client": "AMERICAN BEVERAGE ASSOCIATION",
+            "n_matches": 4,
+            "matches": [
+              {
+                "client": "AMERICAN BEVERAGE ASSOCIATION",
+                "date": "2025-11-14",
+                "member_name": "Haley M. Stevens",
+                "party": "Democrat",
+                "state": "MI",
+                "chamber": "House",
+                "title": "MI Congresswoman Haley Stevens to Introduce a Resolution Celebrating America Recycles Day",
+                "url": "https://stevens.house.gov/media/press-releases/mi-congresswoman-haley-stevens-introduce-resolution-celebrating-america",
+                "snippet": "…g organizations including Keep America Beautiful, Advanced Drainage Systems, Alpeck Polyester US, Aluminum Association, **American Beverage Association**, American Cleaning Institute, American Critical Minerals Association (ACMA), American Forest & Paper Association, Ameri…"
+              },
+              {
+                "client": "AMERICAN BEVERAGE ASSOCIATION",
+                "date": "2024-03-19",
+                "member_name": "John Boozman",
+                "party": "Republican",
+                "state": "AR",
+                "chamber": "Senate",
+                "title": "Boozman-Led Recycling and Composting Bills Pass Senate",
+                "url": "https://www.boozman.senate.gov/public/index.cfm/press-releases?ID=D09EDB5E-8417-48B0-A0B6-1727DBD27160",
+                "snippet": "…s broad support for the recycling and composting legislation. Here are what stakeholders are saying about these bills: **American Beverage Association** “The Recycling and Composting Accountability Act and the Recycling Infrastructure and Accessibility Act will help move…"
+              },
+              {
+                "client": "AMERICAN BEVERAGE ASSOCIATION",
+                "date": "2023-06-08",
+                "member_name": "Tammy Baldwin",
+                "party": "Democrat",
+                "state": "WI",
+                "chamber": "Senate",
+                "title": "Baldwin, Cotton Lead Bill to Ensure Fair Aluminum Pricing for American Brewers",
+                "url": "https://www.baldwin.senate.gov/news/press-releases/baldwin-cotton-lead-bill-to-ensure-fair-aluminum-pricing-for-american-brewers",
+                "snippet": "…ding those that publish the Midwest Premium. The bill is supported by the Beer Institute, the Brewers Association, the **American Beverage Association**, the Flexible Packaging Association, the National Marine Manufacturers Association, and the Consumer Brands Association…"
+              },
+              {
+                "client": "AMERICAN BEVERAGE ASSOCIATION",
+                "date": "2023-04-26",
+                "member_name": "John Boozman",
+                "party": "Republican",
+                "state": "AR",
+                "chamber": "Senate",
+                "title": "Boozman-Backed Bills to Strengthen Recycling and Composting Pass Committee, Advance to Full Senate",
+                "url": "https://www.boozman.senate.gov/public/index.cfm/press-releases?ID=93D6A7B8-8A46-431C-9C03-848FC5F00B8A",
+                "snippet": "…and environmental benefits. Here is what recycling advocates and industry are saying about these legislative efforts: **American Beverage Association** “The Recycling and Composting Accountability Act and the Recycling Infrastructure and Accessibility Act of 2023represe…"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -937,6 +1580,115 @@
           }
         ],
         "misses": []
+      },
+      "press_releases": {
+        "case_id": "auto-enrich-8",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:51.972268+00:00",
+        "n_clients_with_matches": 2,
+        "n_matches_total": 46,
+        "by_client": [
+          {
+            "client": "INTERNATIONAL FRESH PRODUCE ASSOCIATION",
+            "n_matches": 43,
+            "matches": [
+              {
+                "client": "INTERNATIONAL FRESH PRODUCE ASSOCIATION",
+                "date": "2026-03-24",
+                "member_name": "Mike Crapo",
+                "party": "Republican",
+                "state": "ID",
+                "chamber": "Senate",
+                "title": "Working Families Tax Cuts Invest in Farmers and Ranchers",
+                "url": "https://www.crapo.senate.gov/media/newsreleases/working-families-tax-cuts-invest-in-farmers-and-ranchers",
+                "snippet": "…sts, access to markets—the extension of these provisions provide much needed relief.” – Cathy Burns, President and CEO, **International Fresh Produce Association** Click HERE to learn more about how the Working Families Tax Cuts support American agriculture. Click HERE to learn mo…"
+              },
+              {
+                "client": "INTERNATIONAL FRESH PRODUCE ASSOCIATION",
+                "date": "2026-03-11",
+                "member_name": "Cindy Hyde-Smith",
+                "party": "Republican",
+                "state": "MS",
+                "chamber": "Senate",
+                "title": "Senate Ag Committee holds hearing on domestic consumption",
+                "url": "https://www.hydesmith.senate.gov/senate-ag-committee-holds-hearing-domestic-consumption",
+                "snippet": "…tutes of Health, and the Environmental Protection Agency to further research the health implications of microplastics. **International Fresh Produce Association** President and CEO Cathy Burns, who represents the full supply chain of fresh fruits and vegetables — growers, shippers,…"
+              },
+              {
+                "client": "INTERNATIONAL FRESH PRODUCE ASSOCIATION",
+                "date": "2026-02-02",
+                "member_name": "Vern Buchanan",
+                "party": "Republican",
+                "state": "FL",
+                "chamber": "House",
+                "title": "Buchanan, Durbin, Pingree Introduce Bicameral, Bipartisan Legislation to Help Veterans Manage Chronic Disease Through Nutrition",
+                "url": "https://buchanan.house.gov/2026/2/buchanan-durbin-pingree-introduce-bicameral-bipartisan-legislation-to-help-veterans-manage-chronic-disease-through-nutrition",
+                "snippet": "…er preventive health strategy. The legislation is supported by the National Produce Prescription Collaborative and the **International Fresh Produce Association**. “When a doctor prescribes eating more fruits and vegetables to manage chronic illness, veterans should have access to…"
+              },
+              {
+                "client": "INTERNATIONAL FRESH PRODUCE ASSOCIATION",
+                "date": "2026-01-27",
+                "member_name": "Richard J. Durbin",
+                "party": "Democrat",
+                "state": "IL",
+                "chamber": "Senate",
+                "title": "Durbin, Pingree, Buchanan Introduce Bicameral, Bipartisan Legislation To Establish ‘Produce Prescription’ Program For Veterans",
+                "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-pingree-buchanan-introduce-bicameral-bipartisan-legislation-to-establish-produce-prescription-program-for-veterans",
+                "snippet": "…the results could be transformational for the health of those who have served our nation,” said Cathy Burns, CEO of the **International Fresh Produce Association**. Currently, less than 13 percent of Americans consume their recommended daily serving of fruits and vegetables. Inacce…"
+              },
+              {
+                "client": "INTERNATIONAL FRESH PRODUCE ASSOCIATION",
+                "date": "2026-01-27",
+                "member_name": "Chellie Pingree",
+                "party": "Democrat",
+                "state": "ME",
+                "chamber": "House",
+                "title": "Durbin, Pingree, Buchanan Introduce Bicameral, Bipartisan Legislation to Establish ‘Produce Prescription’ Program for Veterans",
+                "url": "https://pingree.house.gov/news/documentsingle.aspx?DocumentID=6700",
+                "snippet": "…the results could be transformational for the health of those who have served our nation,” said Cathy Burns, CEO of the **International Fresh Produce Association**. Currently, less than 13 percent of Americans consume their recommended daily serving of fruits and vegetables. Inacce…"
+              }
+            ]
+          },
+          {
+            "client": "PEPSICO, INC.",
+            "n_matches": 3,
+            "matches": [
+              {
+                "client": "PEPSICO, INC.",
+                "date": "2025-07-10",
+                "member_name": "Elizabeth Warren",
+                "party": "Democrat",
+                "state": "MA",
+                "chamber": "Senate",
+                "title": "Warren, DeLauro, Lawmakers Renew Push For FTC Action to Prevent Corporations From Using Trump’s Chaotic Tariffs as Cover to Price Gouge Americans",
+                "url": "https://www.warren.senate.gov/newsroom/press-releases/warren-delauro-lawmakers-renew-push-for-ftc-action-to-prevent-corporations-from-using-trumps-chaotic-tariffs-as-cover-to-price-gouge-americans",
+                "snippet": "…viduals and companies that price gouge American consumers. In May 2025, Senator Warren wrote to Ramon Laguarta, CEO of **PepsiCo, Inc.** (Pepsi), demanding an explanation for the company’s potentially illegal price discrimination against small and independ…"
+              },
+              {
+                "client": "PEPSICO, INC.",
+                "date": "2025-05-12",
+                "member_name": "Elizabeth Warren",
+                "party": "Democrat",
+                "state": "MA",
+                "chamber": "Senate",
+                "title": "Warren, Booker, Nadler Press Pepsi on Potentially Illegal Price Discrimination Against Small, Independently-Owned Grocery Stores",
+                "url": "https://www.warren.senate.gov/newsroom/press-releases/warren-booker-nadler-press-pepsi-on-potentially-illegal-price-discrimination-against-small-independently-owned-grocery-stores",
+                "snippet": "…ren (D-Mass.) and Cory Booker (D-N.J.), along with Representative Jerry Nadler (D-N.Y.) wrote to Ramon Laguarta, CEO of **PepsiCo, Inc.** (Pepsi) demanding an explanation for the company’s potentially illegal price discrimination against small and independe…"
+              },
+              {
+                "client": "PEPSICO, INC.",
+                "date": "2025-05-12",
+                "member_name": "Cory A. Booker",
+                "party": "Democrat",
+                "state": "NJ",
+                "chamber": "Senate",
+                "title": "Booker, Warren, Nadler Press Pepsi on Potentially Illegal Price Discrimination Against Small, Independently-Owned Grocery Stores",
+                "url": "https://www.booker.senate.gov/news/press/booker-warren-nadler-press-pepsi-on-potentially-illegal-price-discrimination-against-small-independently-owned-grocery-stores",
+                "snippet": "…(D-NJ) and Elizabeth Warren (D-MA), along with U.S. Representative Jerry Nadler (D-NY), wrote to Ramon Laguarta, CEO of **PepsiCo, Inc.** (Pepsi) demanding an explanation for the company’s potentially illegal price discrimination against small and independe…"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -957,7 +1709,61 @@
       "sample_uuid": "feacc264-63b9-4af5-b29a-35702803b3ef",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/feacc264-63b9-4af5-b29a-35702803b3ef/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-9",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:51.997272+00:00",
+        "n_clients_with_matches": 2,
+        "n_matches_total": 3,
+        "by_client": [
+          {
+            "client": "CTIA - THE WIRELESS ASSOCIATION",
+            "n_matches": 2,
+            "matches": [
+              {
+                "client": "CTIA - THE WIRELESS ASSOCIATION",
+                "date": "2025-11-21",
+                "member_name": "Erin Houchin",
+                "party": "Republican",
+                "state": "IN",
+                "chamber": "House",
+                "title": "Ahead of Holiday Season, Houchin and Menendez Introduce Bipartisan Legislation to Protect Americans from Scams",
+                "url": "https://houchin.house.gov/media/press-releases/ahead-holiday-season-houchin-and-menendez-introduce-bipartisan-legislation",
+                "snippet": "…nd law enforcement to combat spam and protect consumers,” said Kelly Cole, Senior Vice President of Government Affairs, **CTIA - The Wireless Association**. “This interagency task force will be a vital tool in educating Americans and strengthening our collective ability to d…"
+              },
+              {
+                "client": "CTIA - THE WIRELESS ASSOCIATION",
+                "date": "2025-11-13",
+                "member_name": "Robert Menendez",
+                "party": "Democrat",
+                "state": "NJ",
+                "chamber": "House",
+                "title": "Ahead of Holiday Season, Menendez and Houchin Introduce Bipartisan Legislation to Protect Americans from Scams",
+                "url": "https://menendez.house.gov/media/press-releases/ahead-of-holiday-season-menendez-and-houchin-introduce-bipartisan-legislation-to-protect-americans-from-scams",
+                "snippet": "…nd law enforcement to combat spam and protect consumers,” said Kelly Cole, Senior Vice President of Government Affairs, **CTIA - The Wireless Association**.“This interagency task force will be a vital tool in educating Americans and strengthening our collective ability to de…"
+              }
+            ]
+          },
+          {
+            "client": "LYNK",
+            "n_matches": 1,
+            "matches": [
+              {
+                "client": "LYNK",
+                "date": "2023-09-26",
+                "member_name": "Haley M. Stevens",
+                "party": "Democrat",
+                "state": "MI",
+                "chamber": "House",
+                "title": "Congresswoman Haley Stevens (D-MI) Introduces the Union Auto Workers Job Protection Act to Ensure that Federal Contracts for Vehicles Deal Workers In",
+                "url": "https://stevens.house.gov/media/press-releases/congresswoman-haley-stevens-d-mi-introduces-union-auto-workers-job-protection",
+                "snippet": "…ehicle was awarded to Oshkosh Defense due to the long-standing hard work ethic of our UAW members in Oshkosh,” said Bob **Lynk**, UAW Local 578 President. “The Company has done the surrounding communities a disservice by not producing it where the…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 10,
@@ -977,7 +1783,61 @@
       "sample_uuid": "ff6d6ea2-5f7e-45dd-b411-4b577d6d87d8",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff6d6ea2-5f7e-45dd-b411-4b577d6d87d8/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-10",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.031360+00:00",
+        "n_clients_with_matches": 2,
+        "n_matches_total": 3,
+        "by_client": [
+          {
+            "client": "PIT RIVER TRIBE",
+            "n_matches": 2,
+            "matches": [
+              {
+                "client": "PIT RIVER TRIBE",
+                "date": "2026-03-12",
+                "member_name": "Alex Padilla",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "Senate",
+                "title": "Padilla, Schiff Introduce Bill to Transfer Land to Pechanga Band of Indians",
+                "url": "https://www.padilla.senate.gov/newsroom/press-releases/padilla-schiff-introduce-bill-to-transfer-land-to-pechanga-band-of-indians/",
+                "snippet": "…ent of over 2,000 acres of land in California by transferring federal land to the Yuhaaviatam of San Manuel Nation, the **Pit River Tribe**, and the Shingle Springs Band of Miwok Indians. In 2024, the Senate passed of a pair of Padilla’s bills to support the…"
+              },
+              {
+                "client": "PIT RIVER TRIBE",
+                "date": "2025-09-29",
+                "member_name": "Alex Padilla",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "Senate",
+                "title": "Padilla, Schiff Announce Bipartisan Bills to Support Over 2,000 Acres of Tribal Land Management",
+                "url": "https://www.padilla.senate.gov/newsroom/press-releases/padilla-schiff-announce-bipartisan-bills-to-support-over-2000-acres-of-tribal-land-management/",
+                "snippet": "…r 2,000 acres of land in California. The bills would transfer federal land to the Yuhaaviatam of San Manuel Nation, the **Pit River Tribe**, and the Shingle Springs Band of Miwok Indians. “For too long, senseless conflict and bureaucratic barriers have kept…"
+              }
+            ]
+          },
+          {
+            "client": "SAGINAW CHIPPEWA INDIAN TRIBE OF MICHIGAN",
+            "n_matches": 1,
+            "matches": [
+              {
+                "client": "SAGINAW CHIPPEWA INDIAN TRIBE OF MICHIGAN",
+                "date": "2024-03-06",
+                "member_name": "John R. Moolenaar",
+                "party": "Republican",
+                "state": "MI",
+                "chamber": "House",
+                "title": "House Advances 2024 Appropriations Package",
+                "url": "https://moolenaar.house.gov/media-center/press-releases/house-advances-2024-appropriations-package",
+                "snippet": "…ity Park project. Sparta Fire Department: $1,000,000 for the Sparta Fire Department Expansion and Renovation project. **Saginaw Chippewa Indian Tribe of Michigan**: $1,480,000 for the Fresh Water Treatment Plant and $1,681,600 for the Wastewater Treatment Plant projects. Midland Co…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 11,
@@ -997,7 +1857,183 @@
       "sample_uuid": "ff0285fa-476a-45bb-8c58-2de01dd91393",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff0285fa-476a-45bb-8c58-2de01dd91393/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-11",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.072198+00:00",
+        "n_clients_with_matches": 4,
+        "n_matches_total": 24,
+        "by_client": [
+          {
+            "client": "YOCHA DEHE WINTUN NATION",
+            "n_matches": 11,
+            "matches": [
+              {
+                "client": "YOCHA DEHE WINTUN NATION",
+                "date": "2025-04-14",
+                "member_name": "Mike Thompson",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "THOMPSON ANNOUNCES 2025 YOLO COUNTY CLIMATE CRISIS CHAMPION",
+                "url": "https://mikethompson.house.gov/newsroom/press-releases/thompson-announces-2025-yolo-county-climate-crisis-champion",
+                "snippet": "Napa – Sunday, Rep. Mike Thompson (CA-04) announced that Anthony Roberts, Chairman of the **Yocha Dehe Wintun Nation**, was chosen as the 2025 Yolo County Climate Crisis Champion. Each year, Rep. Thompson recognizes community members acro…"
+              },
+              {
+                "client": "YOCHA DEHE WINTUN NATION",
+                "date": "2024-09-27",
+                "member_name": "John Garamendi",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Garamendi, Padilla Introduce San Pablo Bay National Wildlife Refuge Expansion Act",
+                "url": "https://garamendi.house.gov/media/press-releases/garamendi-padilla-introduce-san-pablo-bay-national-wildlife-refuge-expansion",
+                "snippet": "…proposed boundary expansion is available HERE. Endorsements: Sonoma Land Trust, California State Coastal Conservancy, **Yocha Dehe Wintun Nation**, CalWild, Sierra Club, Tuleyome, California Waterfowl Association, American Rivers, Friends of the Lost Coast, Great Ol…"
+              },
+              {
+                "client": "YOCHA DEHE WINTUN NATION",
+                "date": "2024-05-30",
+                "member_name": "Mike Thompson",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Thompson, Padilla, Local tribes, Bureau of Land Management Announce Historic Co-Stewardship Agreement, Celebrate Expansion of Berryessa Snow Mountain National Monument",
+                "url": "https://mikethompson.house.gov/newsroom/press-releases/thompson-padilla-local-tribes-bureau-land-management-announce-historic-co",
+                "snippet": "Brooks, CA – Today, Representative Mike Thompson (CA-04), U.S. Senator Alex Padilla (D-CA), the **Yocha Dehe Wintun Nation**, Kletsel Dehe Wintun Nation, Bureau of Land Management (BLM) Director Tracy Stone-Manning, and community leaders celebr…"
+              },
+              {
+                "client": "YOCHA DEHE WINTUN NATION",
+                "date": "2024-05-02",
+                "member_name": "Mike Thompson",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Thompson, Garamendi Join President Biden to Announce Expansion of Berryessa Snow Mountain National Monument",
+                "url": "https://mikethompson.house.gov/newsroom/press-releases/thompson-garamendi-join-president-biden-announce-expansion-berryessa-snow",
+                "snippet": "…renaming the former Walker Ridge tract to Molok Luyuk, which translates to “Condor Ridge” in the Patwin language of the **Yocha Dehe Wintun Nation** and other Native American tribes indigenous to the area. This expansion follows yearslong advocacy from Reps. Thompson…"
+              },
+              {
+                "client": "YOCHA DEHE WINTUN NATION",
+                "date": "2024-05-02",
+                "member_name": "John Garamendi",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Garamendi, Thompson Join President Biden to Announce Expansion of Berryessa Snow Mountain National Monument",
+                "url": "https://garamendi.house.gov/media/press-releases/garamendi-thompson-join-president-biden-announce-expansion-berryessa-snow",
+                "snippet": "…renaming the former Walker Ridge tract to Molok Luyuk, which translates as “Condor Ridge” in the Patwin language of the **Yocha Dehe Wintun Nation** and other Native American tribes indigenous to the area. This expansion follows yearslong advocacy from Reps. Garamend…"
+              }
+            ]
+          },
+          {
+            "client": "PUEBLO OF LAGUNA",
+            "n_matches": 10,
+            "matches": [
+              {
+                "client": "PUEBLO OF LAGUNA",
+                "date": "2026-03-06",
+                "member_name": "Gabe Vasquez",
+                "party": "Democrat",
+                "state": "NM",
+                "chamber": "House",
+                "title": "WATCH: Vasquez Stands Up to Protect New Mexico's Tribal Gaming Industry and Sovereignty",
+                "url": "https://vasquez.house.gov/media/press-releases/watch-vasquez-stands-protect-new-mexicos-tribal-gaming-industry-and",
+                "snippet": "…ing the integrity of regulated gaming by offering this critical amendment,” said Harry A. Antonio, Jr., Governor of the **Pueblo of Laguna**. “On behalf of the Pueblo of Laguna, I applaud his clear intent to shut the door on unregulated sports and casino-style…"
+              },
+              {
+                "client": "PUEBLO OF LAGUNA",
+                "date": "2026-01-15",
+                "member_name": "Ben Ray Luján",
+                "party": "Democrat",
+                "state": "NM",
+                "chamber": "Senate",
+                "title": "Luján Delivers Nearly $982 Million for Vital New Mexico Projects in Senate-Passed Appropriations Bills",
+                "url": "https://www.lujan.senate.gov/newsroom/press-releases/lujan-delivers-nearly-982-million-for-vital-new-mexico-projects-in-senate-passed-appropriations-bills/",
+                "snippet": "…elden Historic Site Water System Improvements project. Secured by Senator Luján and Senator Heinrich. $500,000 for the **Pueblo of Laguna**’s Saint Joseph’s Church building historic site. $250,000 for the Village of Mosquero’s water infrastructure. Strength…"
+              },
+              {
+                "client": "PUEBLO OF LAGUNA",
+                "date": "2025-07-29",
+                "member_name": "Ben Ray Luján",
+                "party": "Democrat",
+                "state": "NM",
+                "chamber": "Senate",
+                "title": "Luján Delivers Nearly $45 Million in Federal Investments to Strengthen Infrastructure, Support Housing Projects in New Mexico in Committee-Passed Appropriations Bills",
+                "url": "https://www.lujan.senate.gov/newsroom/press-releases/lujan-delivers-nearly-45-million-in-federal-investments-to-strengthen-infrastructure-support-housing-projects-in-new-mexico-in-committee-passed-appropriations-bills/",
+                "snippet": "…elden Historic Site Water System Improvements project. Secured by Senator Luján and Senator Heinrich. $500,000 for the **Pueblo of Laguna**’s Saint Joseph’s Church building historic site. $250,000 for the Village of Mosquero’s water infrastructure. ###"
+              },
+              {
+                "client": "PUEBLO OF LAGUNA",
+                "date": "2024-12-13",
+                "member_name": "Gabe Vasquez",
+                "party": "Democrat",
+                "state": "NM",
+                "chamber": "House",
+                "title": "Rep. Gabe Vasquez, Zuni Pueblo Call on Speaker Mike Johnson to Pass New Mexico Water Rights Settlements",
+                "url": "https://vasquez.house.gov/media/press-releases/rep-gabe-vasquez-zuni-pueblo-call-speaker-mike-johnson-pass-new-mexico-water",
+                "snippet": "…Rio Jemez Water Settlements Act, which would secure water rights and infrastructure funding for the Pueblo of Acoma and **Pueblo of Laguna**. This summer, Vasquez introduced the Zuni Indian Tribe Water Rights Settlement Act. U.S. Senator Martin Heinrich (D-N.…"
+              },
+              {
+                "client": "PUEBLO OF LAGUNA",
+                "date": "2024-07-25",
+                "member_name": "Martin Heinrich",
+                "party": "Democrat",
+                "state": "NM",
+                "chamber": "Senate",
+                "title": "Heinrich Announces Committee Passage of Over $169 Million for New Mexico",
+                "url": "https://www.heinrich.senate.gov/newsroom/press-releases/heinrich-announces-committee-passage-of-over-169-million-for-new-mexico",
+                "snippet": "…r the Ojo Caliente Mutual Domestic Water Consumers Association to construct a new water storage tank. $500,000 for the **Pueblo of Laguna** to rehabilitate the roof of the historic Saint Joseph’s Church. $200,000 for Eight Northern Indian Pueblos Council for…"
+              }
+            ]
+          },
+          {
+            "client": "PIT RIVER TRIBE",
+            "n_matches": 2,
+            "matches": [
+              {
+                "client": "PIT RIVER TRIBE",
+                "date": "2026-03-12",
+                "member_name": "Alex Padilla",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "Senate",
+                "title": "Padilla, Schiff Introduce Bill to Transfer Land to Pechanga Band of Indians",
+                "url": "https://www.padilla.senate.gov/newsroom/press-releases/padilla-schiff-introduce-bill-to-transfer-land-to-pechanga-band-of-indians/",
+                "snippet": "…ent of over 2,000 acres of land in California by transferring federal land to the Yuhaaviatam of San Manuel Nation, the **Pit River Tribe**, and the Shingle Springs Band of Miwok Indians. In 2024, the Senate passed of a pair of Padilla’s bills to support the…"
+              },
+              {
+                "client": "PIT RIVER TRIBE",
+                "date": "2025-09-29",
+                "member_name": "Alex Padilla",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "Senate",
+                "title": "Padilla, Schiff Announce Bipartisan Bills to Support Over 2,000 Acres of Tribal Land Management",
+                "url": "https://www.padilla.senate.gov/newsroom/press-releases/padilla-schiff-announce-bipartisan-bills-to-support-over-2000-acres-of-tribal-land-management/",
+                "snippet": "…r 2,000 acres of land in California. The bills would transfer federal land to the Yuhaaviatam of San Manuel Nation, the **Pit River Tribe**, and the Shingle Springs Band of Miwok Indians. “For too long, senseless conflict and bureaucratic barriers have kept…"
+              }
+            ]
+          },
+          {
+            "client": "SAGINAW CHIPPEWA INDIAN TRIBE OF MICHIGAN",
+            "n_matches": 1,
+            "matches": [
+              {
+                "client": "SAGINAW CHIPPEWA INDIAN TRIBE OF MICHIGAN",
+                "date": "2024-03-06",
+                "member_name": "John R. Moolenaar",
+                "party": "Republican",
+                "state": "MI",
+                "chamber": "House",
+                "title": "House Advances 2024 Appropriations Package",
+                "url": "https://moolenaar.house.gov/media-center/press-releases/house-advances-2024-appropriations-package",
+                "snippet": "…ity Park project. Sparta Fire Department: $1,000,000 for the Sparta Fire Department Expansion and Renovation project. **Saginaw Chippewa Indian Tribe of Michigan**: $1,480,000 for the Fresh Water Treatment Plant and $1,681,600 for the Wastewater Treatment Plant projects. Midland Co…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 12,
@@ -1017,7 +2053,66 @@
       "sample_uuid": "ff4f9d69-7a12-4c4c-b048-2169592f95ef",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff4f9d69-7a12-4c4c-b048-2169592f95ef/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-12",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.113203+00:00",
+        "n_clients_with_matches": 1,
+        "n_matches_total": 4,
+        "by_client": [
+          {
+            "client": "EDISON INTERNATIONAL",
+            "n_matches": 4,
+            "matches": [
+              {
+                "client": "EDISON INTERNATIONAL",
+                "date": "2024-07-23",
+                "member_name": "Mark R. Warner",
+                "party": "Democrat",
+                "state": "VA",
+                "chamber": "Senate",
+                "title": "Warner, Crapo, Adeyemo Celebrate Two-Year Anniversary of the Economic Opportunity Coalition with New Private Sector Partners and Commitments",
+                "url": "https://www.warner.senate.gov/public/index.cfm/pressreleases?ID=45F3960C-1683-4BF0-8BFF-ABB957F3B84E",
+                "snippet": "…om companies including BNY, Google, KKR, and VISA. This event follows last week’s announcement that Exelon Corporation, **Edison International**, and Southern Company have joined the procurement pledge to expand opportunities for small and historically underutiliz…"
+              },
+              {
+                "client": "EDISON INTERNATIONAL",
+                "date": "2024-07-23",
+                "member_name": "Mike Crapo",
+                "party": "Republican",
+                "state": "ID",
+                "chamber": "Senate",
+                "title": "Crapo, Warner, Adeyemo Celebrate Two-Year Anniversary of the Economic Opportunity Coalition",
+                "url": "https://www.crapo.senate.gov/media/newsreleases/crapo-warner-adeyemo-celebrate-two-year-anniversary-of-the-economic-opportunity-coalition",
+                "snippet": "…om companies including BNY, Google, KKR, and VISA. This event follows last week’s announcement that Exelon Corporation, **Edison International**, and Southern Company have joined the procurement pledge to expand opportunities for small and historically underutiliz…"
+              },
+              {
+                "client": "EDISON INTERNATIONAL",
+                "date": "2024-04-16",
+                "member_name": "Raul Ruiz",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Padilla, Butler, Ruiz Introduce Legislation and Call on President Biden to Establish the Chuckwalla National Monument",
+                "url": "https://ruiz.house.gov/media-center/press-releases/padilla-butler-ruiz-introduce-legislation-and-call-president-biden",
+                "snippet": "…for the electric power lines essential for the state’s clean energy future,” said Pedro J. Pizarro, President and CEO, **Edison International**. “The solar and storage industry commends Senator Padilla and Representative Ruiz for their efforts to ensure we balan…"
+              },
+              {
+                "client": "EDISON INTERNATIONAL",
+                "date": "2024-04-16",
+                "member_name": "Raul Ruiz",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Padilla, Butler y Ruiz presentan legislación y piden al Presidente Biden que establezca el Monumento Nacional Chuckwalla",
+                "url": "https://ruiz.house.gov/es/media-center/press-releases/padilla-butler-y-ruiz-presentan-legislacion-y-piden-al-presidente-biden",
+                "snippet": "…s líneas eléctricas esenciales para el futuro energético limpio del estado\", dijo Pedro J. Pizarro, Presidente y CEO de **Edison International**. \"La industria solar y de almacenamiento elogia al senador Padilla y al representante Ruiz por sus esfuerzos para gara…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 13,
@@ -1037,7 +2132,177 @@
       "sample_uuid": "c49d4944-ff46-4bd9-beed-110ea775c5a1",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/c49d4944-ff46-4bd9-beed-110ea775c5a1/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-13",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.153203+00:00",
+        "n_clients_with_matches": 3,
+        "n_matches_total": 35,
+        "by_client": [
+          {
+            "client": "AMERICAN COUNCIL FOR AN ENERGY-EFFICIENT ECONOMY",
+            "n_matches": 21,
+            "matches": [
+              {
+                "client": "AMERICAN COUNCIL FOR AN ENERGY-EFFICIENT ECONOMY",
+                "date": "2026-02-27",
+                "member_name": "Peter Welch",
+                "party": "Democrat",
+                "state": "VT",
+                "chamber": "Senate",
+                "title": "Welch, Van Hollen, Mullin, Levin Introduce Bicameral Bill to Improve Access to Energy Consumption Data, Lower Utility Bills",
+                "url": "https://www.welch.senate.gov/welch-van-hollen-mullin-levin-introduce-bicameral-bill-to-improve-access-to-energy-consumption-data-lower-utility-bills/",
+                "snippet": "…g them secure, real‑time access to their own energy information,” said Alexander Ratner, Senior Federal Policy Counsel, **American Council for an Energy-Efficient Economy**. “It is a simple, commonsense step that would deliver real savings and expand consumer choice in a rapidly changing ene…"
+              },
+              {
+                "client": "AMERICAN COUNCIL FOR AN ENERGY-EFFICIENT ECONOMY",
+                "date": "2026-02-27",
+                "member_name": "Chris Van Hollen",
+                "party": "Democrat",
+                "state": "MD",
+                "chamber": "Senate",
+                "title": "Van Hollen, Welch, Mullin, Levin Introduce Bicameral Bill to Improve Access to Energy Consumption Data, Lower Utility Bills",
+                "url": "https://www.vanhollen.senate.gov/news/press-releases/van-hollen-welch-mullin-levin-introduce-bicameral-bill-to-improve-access-to-energy-consumption-data-lower-utility-bills",
+                "snippet": "…g them secure, real-time access to their own energy information,” said Alexander Ratner, Senior Federal Policy Counsel, **American Council for an Energy-Efficient Economy**. “It is a simple, commonsense step that would deliver real savings and expand consumer choice in a rapidly changing ene…"
+              },
+              {
+                "client": "AMERICAN COUNCIL FOR AN ENERGY-EFFICIENT ECONOMY",
+                "date": "2026-02-27",
+                "member_name": "Kevin Mullin",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Mullin, Levin, Welch, Van Hollen Introduce Bicameral Bill to Improve Access to Energy Consumption Data, Lower Utility Bills",
+                "url": "https://kevinmullin.house.gov/2026/02/27/mullin-levin-welch-van-hollen-introduce-bicameral-bill-to-improve-access-to-energy-consumption-data-lower-utility-bills/",
+                "snippet": "…g them secure, real‑time access to their own energy information,” said Alexander Ratner, Senior Federal Policy Counsel, **American Council for an Energy-Efficient Economy**. “It is a simple, commonsense step that would deliver real savings and expand consumer choice in a rapidly changing ene…"
+              },
+              {
+                "client": "AMERICAN COUNCIL FOR AN ENERGY-EFFICIENT ECONOMY",
+                "date": "2026-02-20",
+                "member_name": "Sean Casten",
+                "party": "Democrat",
+                "state": "IL",
+                "chamber": "House",
+                "title": "Casten Introduces Two Bills to Provide Insights Needed to Improve Energy Efficiency, Lower Energy Bills",
+                "url": "https://casten.house.gov/media/press-releases/casten-introduces-two-bills-to-provide-insights-needed-to-improve-energy-efficiency-lower-energy-bills",
+                "snippet": "…at our country uses energy as efficiently and productively as possible,” said Jennifer Layke, executive director of the **American Council for an Energy-Efficient Economy**. “These two bills would fill critical gaps in current data collection efforts, modernizing energy accounting and report…"
+              },
+              {
+                "client": "AMERICAN COUNCIL FOR AN ENERGY-EFFICIENT ECONOMY",
+                "date": "2025-12-11",
+                "member_name": "Paul Tonko",
+                "party": "Democrat",
+                "state": "NY",
+                "chamber": "House",
+                "title": "Tonko Introduces ‘Flex-Tech’ Bill that Spurs U.S. Competitiveness & Cuts Emissions",
+                "url": "https://tonko.house.gov/news/documentsingle.aspx?DocumentID=4502",
+                "snippet": "…ove the nation’s expansion of manufacturing forward as rapidly as possible.” Jennifer Layke, executive director of the **American Council for an Energy-Efficient Economy**, said: “Small and medium-sized manufacturers are the backbone of America’s economy—but rising energy costs threaten the…"
+              }
+            ]
+          },
+          {
+            "client": "FERVO ENERGY",
+            "n_matches": 11,
+            "matches": [
+              {
+                "client": "FERVO ENERGY",
+                "date": "2025-12-18",
+                "member_name": "Celeste Maloy",
+                "party": "Republican",
+                "state": "UT",
+                "chamber": "House",
+                "title": "Rep. Maloy Introduces the Geothermal Tax Parity Act of 2025",
+                "url": "https://maloy.house.gov/news/documentsingle.aspx?DocumentID=1818",
+                "snippet": "…, reducing upfront risk and encouraging private sector investment. In Utah, geothermal innovation is already underway. **Fervo Energy** is constructing the world’s largest next generation geothermal development in Beaver County. The project is expected to…"
+              },
+              {
+                "client": "FERVO ENERGY",
+                "date": "2025-12-18",
+                "member_name": "John Garamendi",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Reps. Garamendi and Maloy Introduce the Bipartisan Geothermal Tax Parity Act of 2025",
+                "url": "https://garamendi.house.gov/media/press-releases/reps-garamendi-and-maloy-introduce-bipartisan-geothermal-tax-parity-act-2025",
+                "snippet": "…uding Geothermal Rising, Clean Air Task Force, Citizens for Responsible Energy Solutions, the Bipartisan Policy Center, **Fervo Energy**, Greenfire Energy, Quaise Energy, and Eavor. “Quaise Energy strongly endorses the Geothermal Tax Parity Act. This legi…"
+              },
+              {
+                "client": "FERVO ENERGY",
+                "date": "2025-09-30",
+                "member_name": "Mike Kennedy",
+                "party": "Republican",
+                "state": "UT",
+                "chamber": "House",
+                "title": "Rep. Kennedy Introduces Bipartisan Energy Legislation to Unleash American Energy",
+                "url": "https://mikekennedy.house.gov/media/press-releases/rep-kennedy-introduces-bipartisan-energy-legislation-unleash-american-energy",
+                "snippet": "…lties on new geothermal facilities, and unleash investment in America’s energy future. Read more about the bill here. “**Fervo Energy** supports Congressman Kennedy’s efforts to modernize geothermal royalties through the Geothermal Royalty Act. This legis…"
+              },
+              {
+                "client": "FERVO ENERGY",
+                "date": "2025-06-04",
+                "member_name": "John R. Curtis",
+                "party": "Republican",
+                "state": "UT",
+                "chamber": "Senate",
+                "title": "CURTIS VISITS FERVO ENERGY’S CAPE STATION GEOTHERMAL PROJECT IN BEAVER, UTAH",
+                "url": "https://www.curtis.senate.gov/press-releases/curtis-visits-fervo-energys-cape-station-geothermal-project-in-beaver-utah",
+                "snippet": "…of the distant future; it’s scaling today, and Cape Station is proof of that,” said Tim Latimer, CEO and co-founder of **Fervo Energy**. “This project represents years of hard work by engineers, policymakers, and local partners who believe in the power of…"
+              },
+              {
+                "client": "FERVO ENERGY",
+                "date": "2025-03-20",
+                "member_name": "Susie Lee",
+                "party": "Democrat",
+                "state": "NV",
+                "chamber": "House",
+                "title": "Congresswoman Lee Co-Leads Pair of Bipartisan Bills to Boost Geothermal Energy",
+                "url": "https://susielee.house.gov/media/press-releases/congresswoman-lee-co-leads-pair-bipartisan-bills-boost-geothermal-energy",
+                "snippet": "…ojects, helping companies like Fervo provide more energy to power America’s economy at lower prices to consumers,” said **Fervo Energy** Senior Manager of Government Affairs & Policy Ben Serrurier. “Geothermal Rising is thrilled with the re-introduction o…"
+              }
+            ]
+          },
+          {
+            "client": "SWIFT SOLAR",
+            "n_matches": 3,
+            "matches": [
+              {
+                "client": "SWIFT SOLAR",
+                "date": "2024-06-05",
+                "member_name": "Tammy Baldwin",
+                "party": "Democrat",
+                "state": "WI",
+                "chamber": "Senate",
+                "title": "Baldwin Works to Level Playing Field for Workers in U.S. Solar Industry",
+                "url": "https://www.baldwin.senate.gov/news/press-releases/baldwin-works-to-level-playing-field-for-workers-in-us-solar-industry_-baldwin-works-to-level-playing-field-for-workers-in-us-solar-industry",
+                "snippet": "…The Alliance, which includes Convalt Energy, First Solar, Hanwha-QCells, Meyer Burger Mission Solar, REC Silicon, and **Swift Solar**, has filed its petitions on behalf of the domestic solar manufacturing industry, which supports 34,000 workers and has…"
+              },
+              {
+                "client": "SWIFT SOLAR",
+                "date": "2024-06-05",
+                "member_name": "Marcy Kaptur",
+                "party": "Democrat",
+                "state": "OH",
+                "chamber": "House",
+                "title": "Kaptur, Brown Lead Push For A Level Playing Field For Workers In US Solar Industry",
+                "url": "https://kaptur.house.gov/media-center/press-releases/kaptur-brown-lead-push-level-playing-field-workers-us-solar-industry",
+                "snippet": "…The Alliance, which includes Convalt Energy, First Solar, Hanwha-QCells, Meyer Burger Mission Solar, REC Silicon, and **Swift Solar**, has filed its petitions on behalf of the domestic solar manufacturing industry, which supports 34,000 workers and has…"
+              },
+              {
+                "client": "SWIFT SOLAR",
+                "date": "2024-06-05",
+                "member_name": "Jared F. Golden",
+                "party": "Democrat",
+                "state": "ME",
+                "chamber": "House",
+                "title": "Golden urges regulators, Biden administration to level the playing field for workers in US solar industry",
+                "url": "https://golden.house.gov/media/press-releases/golden-urges-regulators-biden-administration-to-level-the-playing-field-for-workers-in-us-solar-industry",
+                "snippet": "…The Alliance, which includes Convalt Energy, First Solar, Hanwha-QCells, Meyer Burger Mission Solar, REC Silicon, and **Swift Solar**, has filed its petitions on behalf of the domestic solar manufacturing industry, which supports 34,000 workers and has…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 14,
@@ -1057,7 +2322,83 @@
       "sample_uuid": "fb3eecc8-282c-4ed3-8923-46135b8be6be",
       "sample_source": "data\\data\\senate\\2025\\filings\\filings_2025.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fb3eecc8-282c-4ed3-8923-46135b8be6be/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-14",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.193560+00:00",
+        "n_clients_with_matches": 2,
+        "n_matches_total": 5,
+        "by_client": [
+          {
+            "client": "AMERICAN INVESTMENT COUNCIL",
+            "n_matches": 3,
+            "matches": [
+              {
+                "client": "AMERICAN INVESTMENT COUNCIL",
+                "date": "2025-06-04",
+                "member_name": "Andy Barr",
+                "party": "Republican",
+                "state": "KY",
+                "chamber": "House",
+                "title": "Barr Reintroduces Bipartisan Bill to Spur Private Investment in Small Businesses",
+                "url": "https://barr.house.gov/press-releases?ID=67D4C514-9050-406A-B9D9-D2339CA6E48F",
+                "snippet": "…t bank lending requirements have tightened. Private investment could help fill the gap. According to 2022 data from the **American Investment Council**, approximately 85% of businesses backed by private equity were small businesses—collectively employing 1.4 million Amer…"
+              },
+              {
+                "client": "AMERICAN INVESTMENT COUNCIL",
+                "date": "2024-02-06",
+                "member_name": "Ted Cruz",
+                "party": "Republican",
+                "state": "TX",
+                "chamber": "Senate",
+                "title": "Sens. Cruz and Hagerty Launch Effort to Protect Americans’ Affordable Access to Investing",
+                "url": "https://www.cruz.senate.gov/newsroom/press-releases/sens-cruz-and-hagerty-launch-effort-to-protect-americans-affordable-access-to-investing",
+                "snippet": "…ective. The legislation has strong support from stakeholders, including: the American Council of Life Insurers (ACLI), **American Investment Council** (AIC), American Securities Association (ASA), Alternative Investment Management Association (AIMA), U.S. Chamber of Com…"
+              },
+              {
+                "client": "AMERICAN INVESTMENT COUNCIL",
+                "date": "2023-11-21",
+                "member_name": "Daniel S. Goldman",
+                "party": "Democrat",
+                "state": "NY",
+                "chamber": "House",
+                "title": "Congressmen Dan Goldman, Jamie Raskin Demand Elon Musk, X Leadership Enforce Platform Guidelines and Cease Profiting Off Surging Misinformation, Antisemitic and Violent Content",
+                "url": "https://goldman.house.gov/media/press-releases/congressmen-dan-goldman-jamie-raskin-demand-elon-musk-x-leadership-enforce",
+                "snippet": "…onversation ads” in the replies of Hamas propaganda videos circulated by these Premium accounts. TTP noted ads from the **American Investment Council** and the National Football League in the replies of posts from the EQB’s @Pal_resi48 account, which misleads users into…"
+              }
+            ]
+          },
+          {
+            "client": "FEDEX CORPORATION",
+            "n_matches": 2,
+            "matches": [
+              {
+                "client": "FEDEX CORPORATION",
+                "date": "2025-06-27",
+                "member_name": "David Kustoff",
+                "party": "Republican",
+                "state": "TN",
+                "chamber": "House",
+                "title": "Kustoff, TN Delegation Introduce Resolution to Honor FedEx Founder Frederick W. Smith",
+                "url": "https://kustoff.house.gov/media/press-releases/kustoff-tn-delegation-introduce-resolution-honor-fedex-founder-frederick-w",
+                "snippet": "…see House Delegation introduced a Resolution in the House of Representatives to honor the founder, chairman, and CEO of **FedEx Corporation**, Frederick W. Smith. \"I am pleased to introduce this Resolution to honor the Founder of FedEx, Fred Smith, in the Hous…"
+              },
+              {
+                "client": "FEDEX CORPORATION",
+                "date": "2025-06-24",
+                "member_name": "David Kustoff",
+                "party": "Republican",
+                "state": "TN",
+                "chamber": "House",
+                "title": "Kustoff Honors Frederick W. Smith, Founder of FedEx, on House Floor",
+                "url": "https://kustoff.house.gov/media/press-releases/kustoff-honors-frederick-w-smith-founder-fedex-house-floor",
+                "snippet": "WASHINGTON, D.C. — Today, Congressman David Kustoff (R-TN) honored the founder, chairman, and CEO of **FedEx Corporation**, Frederick W. Smith, on the Floor of the House of Representatives. Click here for a downloadable link to his speech.…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 15,
@@ -1077,7 +2418,166 @@
       "sample_uuid": "ff5cc224-9cd4-4f7f-a382-23ede208c064",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff5cc224-9cd4-4f7f-a382-23ede208c064/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-15",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.231576+00:00",
+        "n_clients_with_matches": 3,
+        "n_matches_total": 89,
+        "by_client": [
+          {
+            "client": "NATIONAL AIR TRAFFIC CONTROLLERS ASSOCIATION",
+            "n_matches": 57,
+            "matches": [
+              {
+                "client": "NATIONAL AIR TRAFFIC CONTROLLERS ASSOCIATION",
+                "date": "2026-03-06",
+                "member_name": "Richard J. Durbin",
+                "party": "Democrat",
+                "state": "IL",
+                "chamber": "Senate",
+                "title": "Durbin, Duckworth Call For Greater FAA Investment & Efficiency At Chicago O’Hare Airport",
+                "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-duckworth-call-for-greater-faa-investment-and-efficiency-at-chicago-ohare-airport",
+                "snippet": "…irect flights at ORD are currently well under the targets established by the FAA Air Traffic Organization (ATO) and the **National Air Traffic Controllers Association** (NATCA) in the Collaborative Workforce Plan: Chicago O’Hare Tower needs 71 controllers and it is staffed with 57 (78.1%…"
+              },
+              {
+                "client": "NATIONAL AIR TRAFFIC CONTROLLERS ASSOCIATION",
+                "date": "2026-03-06",
+                "member_name": "Tammy Duckworth",
+                "party": "Democrat",
+                "state": "IL",
+                "chamber": "Senate",
+                "title": "Duckworth, Durbin Call for Greater FAA Investment and Efficiency at Chicago O’Hare Airport",
+                "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-durbin-call-for-greater-faa-investment-and-efficiency-at-chicago-ohare-airport",
+                "snippet": "…direct flights at ORD is currently well under the targets established by the FAA Air Traffic Organization (ATO) and the **National Air Traffic Controllers Association** (NATCA) in the Collaborative Workforce Plan: Chicago O’Hare Tower needs 71 controllers and it is staffed with 57 (78.1%…"
+              },
+              {
+                "client": "NATIONAL AIR TRAFFIC CONTROLLERS ASSOCIATION",
+                "date": "2026-02-13",
+                "member_name": "Jeanne Shaheen",
+                "party": "Democrat",
+                "state": "NH",
+                "chamber": "Senate",
+                "title": "Senate Commerce Committee Advances Shaheen-Backed Legislation to Review and Strengthen FAA’s Safety Management System",
+                "url": "https://www.shaheen.senate.gov/news/press/senate-commerce-committee-advances-shaheen-backed-legislation-to-review-and-strengthen-faas-safety-management-system",
+                "snippet": "…izations (ODA) Expert Panel Member; Bret Oestreich, National President of Aircraft Mechanics Fraternal Association; the **National Air Traffic Controllers Association**; Captain Jason Ambrosi, Air Line Pilots Association, International; First Officer Nick Silva, Allied Pilots Association…"
+              },
+              {
+                "client": "NATIONAL AIR TRAFFIC CONTROLLERS ASSOCIATION",
+                "date": "2026-02-12",
+                "member_name": "Mark R. Warner",
+                "party": "Democrat",
+                "state": "VA",
+                "chamber": "Senate",
+                "title": "Warner, Commerce Committee Pass Legislation to Strengthen FAA’s Safety Management System",
+                "url": "https://www.warner.senate.gov/public/index.cfm/pressreleases?ID=4DE038D0-7675-4A3A-ACFD-328A4B5E4A93",
+                "snippet": "…re that truly delivers results.” - Bret Oestreich, National President of Aircraft Mechanics Fraternal Association \"The **National Air Traffic Controllers Association** (NATCA) thanks Senator Cantwell for introducing the FAA SMS Compliance Review Act of 2026, which, when passed, will res…"
+              },
+              {
+                "client": "NATIONAL AIR TRAFFIC CONTROLLERS ASSOCIATION",
+                "date": "2026-01-28",
+                "member_name": "Mark R. Warner",
+                "party": "Democrat",
+                "state": "VA",
+                "chamber": "Senate",
+                "title": "Warner, Colleagues Introduce Legislation to Review and Strengthen FAA's Safety Management System to Ensure Agency Identifies and Corrects Safety Risks",
+                "url": "https://www.warner.senate.gov/public/index.cfm/pressreleases?ID=FE9092C4-A98A-4FC8-986B-0783E86C6E46",
+                "snippet": "…izations (ODA) Expert Panel Member; Bret Oestreich, National President of Aircraft Mechanics Fraternal Association; the **National Air Traffic Controllers Association**; Captain Jason Ambrosi, Air Line Pilots Association, International; First Officer Nick Silva, Allied Pilots Association…"
+              }
+            ]
+          },
+          {
+            "client": "OREGON DEPARTMENT OF TRANSPORTATION",
+            "n_matches": 30,
+            "matches": [
+              {
+                "client": "OREGON DEPARTMENT OF TRANSPORTATION",
+                "date": "2026-02-23",
+                "member_name": "Jeff Merkley",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Wyden, Merkley, Salinas Announce $3 Million for Salem Bus Transit Center",
+                "url": "https://www.merkley.senate.gov/wyden-merkley-salinas-announce-3-million-for-salem-bus-transit-center/",
+                "snippet": "…unced for the project in 2023, and $500,000 in 2024. In November 2025, Wyden and Merkley announced $11.5 million to the **Oregon Department of Transportation** (ODOT) on behalf of Coos County Area Transportation, Yamhill County Transit Area, and Benton Area Transit to acquire an…"
+              },
+              {
+                "client": "OREGON DEPARTMENT OF TRANSPORTATION",
+                "date": "2026-02-23",
+                "member_name": "Andrea Salinas",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "House",
+                "title": "Salinas, Wyden, Merkley Announce $3 Million for Salem Bus Transit Center",
+                "url": "https://salinas.house.gov/media/press-releases/salinas-wyden-merkley-announce-3-million-salem-bus-transit-center",
+                "snippet": "…unced for the project in 2023, and $500,000 in 2024. In November 2025, Wyden and Merkley announced $11.5 million to the **Oregon Department of Transportation** (ODOT) on behalf of Coos County Area Transportation, Yamhill County Transit Area, and Benton Area Transit to acquire an…"
+              },
+              {
+                "client": "OREGON DEPARTMENT OF TRANSPORTATION",
+                "date": "2026-02-11",
+                "member_name": "Jeff Merkley",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Merkley, Wyden Announce More Than $92 million in Additional Funding for Critical Community Projects Across Oregon",
+                "url": "https://www.merkley.senate.gov/merkley-wyden-announce-more-than-92-million-in-additional-funding-for-critical-community-projects-across-oregon/",
+                "snippet": "…ng that occupants can remain in their homes and not be displaced by uninhabitable housing conditions. $850,000 for the **Oregon Department of Transportation** to make critically needed safety enhancements along the McDougall Rd/OR-99W corridor in Yamhill County. This project is…"
+              },
+              {
+                "client": "OREGON DEPARTMENT OF TRANSPORTATION",
+                "date": "2026-02-11",
+                "member_name": "Ron Wyden",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Merkley, Wyden Announce More Than $92 million in Additional Funding for Critical Community Projects Across Oregon",
+                "url": "https://www.wyden.senate.gov/news/press-releases/merkley-wyden-announce-more-than-92-million-in-additional-funding-for-critical-community-projects-across-oregon",
+                "snippet": "…ng that occupants can remain in their homes and not be displaced by uninhabitable housing conditions. $850,000 for the **Oregon Department of Transportation** to make critically needed safety enhancements along the McDougall Rd/OR-99W corridor in Yamhill County. This project is…"
+              },
+              {
+                "client": "OREGON DEPARTMENT OF TRANSPORTATION",
+                "date": "2026-02-04",
+                "member_name": "Janelle S. Bynum",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "House",
+                "title": "Bynum Secures Over $6 Million for Projects in Oregon’s Fifth District",
+                "url": "https://bynum.house.gov/media/press-releases/bynum-secures-over-6-million-projects-oregons-fifth-district",
+                "snippet": "…acres in West Stayton. $250,000 for OR 126: 35th Street Signal and Pedestrian Improvements (Redmond) Recipient Name: **Oregon Department of Transportation** Project Purpose: This project would construct a new signal, pedestrian and bicycle crossings and ADA features at the i…"
+              }
+            ]
+          },
+          {
+            "client": "CENTER FOR TRANSPORTATION AND THE ENVIRONMENT",
+            "n_matches": 2,
+            "matches": [
+              {
+                "client": "CENTER FOR TRANSPORTATION AND THE ENVIRONMENT",
+                "date": "2025-08-13",
+                "member_name": "Greg Stanton",
+                "party": "Democrat",
+                "state": "AZ",
+                "chamber": "House",
+                "title": "Stanton, DeSaulnier Introduce Legislation to Incentivize Electric Vehicle Use, Alleviate Congestion, and Protect the Environment",
+                "url": "https://stanton.house.gov/2025/8/stanton-desaulnier-introduce-legislation-to-incentivize-electric-vehicle-use-alleviate-congestion-and-protect-the-environment",
+                "snippet": "…anet,” said DeSaulnier. The HOV Lane Exemption Reauthorization Act is supported by Alliance for Automotive Innovation, **Center for Transportation and the Environment**, Electric Drive Transportation Association, Fuel Cell and Hydrogen Energy Association, Renewable Fuels Association, Ren…"
+              },
+              {
+                "client": "CENTER FOR TRANSPORTATION AND THE ENVIRONMENT",
+                "date": "2025-08-13",
+                "member_name": "Mark DeSaulnier",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Representatives DeSaulnier and Stanton Introduce Legislation to Incentivize Electric Vehicle Use, Alleviate Congestion, and Protect the Environment",
+                "url": "https://desaulnier.house.gov/media-center/press-releases/representatives-desaulnier-and-stanton-introduce-legislation",
+                "snippet": "…ce of legislation,” said Rebecca Konolige, Zero Emission Transportation Association, Director of Federal Affairs. “The **Center for Transportation and the Environment** (CTE) supports the reauthorization of the High Occupancy Vehicle (HOV) Lane Exemption Program through 2031. This progra…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 16,
@@ -1097,7 +2597,177 @@
       "sample_uuid": "feb39d7e-2f04-4ec6-a5d1-d23467f1efff",
       "sample_source": "data\\data\\senate\\2025\\filings\\filings_2025.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/feb39d7e-2f04-4ec6-a5d1-d23467f1efff/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-16",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.271080+00:00",
+        "n_clients_with_matches": 3,
+        "n_matches_total": 45,
+        "by_client": [
+          {
+            "client": "CVS HEALTH",
+            "n_matches": 36,
+            "matches": [
+              {
+                "client": "CVS HEALTH",
+                "date": "2026-01-27",
+                "member_name": "Earl L. \"Buddy\" Carter",
+                "party": "Republican",
+                "state": "GA",
+                "chamber": "House",
+                "title": "ICYMI: Carter holds Insurance CEOs' feet to fire during heated E&C hearing",
+                "url": "https://buddycarter.house.gov/news/documentsingle.aspx?DocumentID=16293",
+                "snippet": "…the heads of these major companies- including Stephen Hemsley, CEO, UnitedHealth Group; David Joyner, Chairman and CEO, **CVS Health**; Gail Boudreaux, President and CEO, Elevance Health; David Cordani, President, CEO, and Chairman of the Board, The Cign…"
+              },
+              {
+                "client": "CVS HEALTH",
+                "date": "2026-01-23",
+                "member_name": "Vern Buchanan",
+                "party": "Republican",
+                "state": "FL",
+                "chamber": "House",
+                "title": "ICYMI: Buchanan Presses Health Insurance CEOs on Rising Health Care Costs, Calls for Prevention and Affordability",
+                "url": "https://buchanan.house.gov/2026/1/icymi-buchanan-presses-health-insurance-ceos-on-rising-health-care-costs-calls-for-prevention-and-affordability/0bfabdcd-130e-434b-a824-03ed76acf990",
+                "snippet": "…d Stephen Hemsley, Chief Executive Officer at UnitedHealth Group; David Joyner, Chairman and Chief Executive Officer at **CVS Health**; Gail Boudreaux, President and Chief Executive Officer at Elevance Health; David Cordani, President, Chief Executive Of…"
+              },
+              {
+                "client": "CVS HEALTH",
+                "date": "2026-01-22",
+                "member_name": "Mike Kelly",
+                "party": "Republican",
+                "state": "PA",
+                "chamber": "House",
+                "title": "Kelly to Health Insurance CEOs: Support the 'Improving Seniors' Timely Access to Care Act'",
+                "url": "https://kelly.house.gov/media/press-releases/kelly-health-insurance-ceos-support-improving-seniors-timely-access-care-act",
+                "snippet": "…ction here. Hearing witnesses included: Stephen Hemsley -- CEO, UnitedHealth Group David Joyner -- Chairman and CEO, **CVS Health** Gail Boudreaux -- President and CEO, Elevance Health David Cordani -- President, CEO, and Chairman of the Board, The…"
+              },
+              {
+                "client": "CVS HEALTH",
+                "date": "2026-01-22",
+                "member_name": "Steven Horsford",
+                "party": "Democrat",
+                "state": "NV",
+                "chamber": "House",
+                "title": "Horsford Discusses Impact of Health Care Cuts with Top Health Care CEOs in the Ways and Means Committee",
+                "url": "https://horsford.house.gov/media/press-releases/horsford-discusses-impact-of-health-care-cuts-with-top-health-care-ceos-in-the-ways-and-means-committee",
+                "snippet": "…growing need for increased transparency in Medicare Advantage. Executives testifying before the Committee represented **CVS Health**, Cigna, Ascendum, Elevance Health, and UnitedHealth Group, alongside a small business owner from Waterloo, Iowa. “This…"
+              },
+              {
+                "client": "CVS HEALTH",
+                "date": "2025-12-15",
+                "member_name": "Marsha Blackburn",
+                "party": "Republican",
+                "state": "TN",
+                "chamber": "Senate",
+                "title": "Blackburn Presses CVS on Driving Up Health Care Costs and Forcing Taxpayers to Fund Fraud",
+                "url": "https://www.blackburn.senate.gov/2025/12/health care/blackburn-presses-cvs-on-driving-up-health-care-costs-and-forcing-taxpayers-to-fund-fraud",
+                "snippet": "WASHINGTON, D.C. – Today, U.S. Senator Marsha Blackburn (R-Tenn.) sent a letter **CVS Health** CEO David Joyner, pressing him on the company’s lengthy record of fraud and regulatory violations at taxpayers’ expense…"
+              }
+            ]
+          },
+          {
+            "client": "COLORADO HOSPITAL ASSOCIATION",
+            "n_matches": 6,
+            "matches": [
+              {
+                "client": "COLORADO HOSPITAL ASSOCIATION",
+                "date": "2026-03-30",
+                "member_name": "John W. Hickenlooper",
+                "party": "Democrat",
+                "state": "CO",
+                "chamber": "Senate",
+                "title": "Hickenlooper, Blackburn Reintroduce Bipartisan Bill to Bolster Rural Health Care",
+                "url": "https://www.hickenlooper.senate.gov/press_releases/hickenlooper-blackburn-reintroduce-bipartisan-bill-to-bolster-rural-health-care/",
+                "snippet": "…as never been more important to invest in rural health care infrastructure,” said Jeff Tieman, president and CEO of the **Colorado Hospital Association**. “Across Colorado, nearly 70% of hospitals, and more than 80% of rural hospitals, are operating without sustainable mar…"
+              },
+              {
+                "client": "COLORADO HOSPITAL ASSOCIATION",
+                "date": "2026-03-19",
+                "member_name": "Michael F. Bennet",
+                "party": "Democrat",
+                "state": "CO",
+                "chamber": "Senate",
+                "title": "Bennet, Moran Introduce Legislation to Revitalize Rural Hospitals",
+                "url": "https://www.bennet.senate.gov/2026/03/19/bennet-moran-introduce-legislation-to-revitalize-rural-hospitals/",
+                "snippet": "…ly impossible to secure affordable capital to modernize aging infrastructure,” said Jeff Tieman, President & CEO of the **Colorado Hospital Association**. “This bill creates a realistic pathway for rural hospitals to invest in up-to-date facilities without jeopardizing the…"
+              },
+              {
+                "client": "COLORADO HOSPITAL ASSOCIATION",
+                "date": "2025-07-29",
+                "member_name": "Michael F. Bennet",
+                "party": "Democrat",
+                "state": "CO",
+                "chamber": "Senate",
+                "title": "Bennet Introduces Bill to Ensure Children Have Continuous Access to Health Care as Republican Budget Bill Strips Coverage from Millions",
+                "url": "https://www.bennet.senate.gov/2025/07/29/bennet-introduces-bill-to-ensure-children-have-continuous-access-to-health-care-as-republican-budget-bill-strips-coverage-from-millions/",
+                "snippet": "…ard children, support families, and build healthier communities across our state,” said Jeff Tieman, President and CEO, **Colorado Hospital Association**. “Keep Kids Covered is a smart policy. It will help kids get medical care when they need it. It will help their famili…"
+              },
+              {
+                "client": "COLORADO HOSPITAL ASSOCIATION",
+                "date": "2025-07-23",
+                "member_name": "Kathy Castor",
+                "party": "Democrat",
+                "state": "FL",
+                "chamber": "House",
+                "title": "U.S. Reps. Castor, Tran Reintroduce “Keep Kids Covered Act” to Improve Outcomes, Lower Costs & Support Families Across America",
+                "url": "https://castor.house.gov/news/documentsingle.aspx?DocumentID=404998",
+                "snippet": "…se Fund, Children’s Hospital Colorado, Children’s Hospitals Association, Colorado Access, Colorado Children’s Campaign, **Colorado Hospital Association**, Denver Health, Families USA, First Focus Campaign for Children, Florida Health Justice Project, Florida Policy Institu…"
+              },
+              {
+                "client": "COLORADO HOSPITAL ASSOCIATION",
+                "date": "2025-03-18",
+                "member_name": "Brittany Pettersen",
+                "party": "Democrat",
+                "state": "CO",
+                "chamber": "House",
+                "title": "Rep. Pettersen, Local Health Care Leaders Highlight Devastating Impact of GOP’s Medicaid Cuts in Colorado",
+                "url": "https://pettersen.house.gov/news/documentsingle.aspx?DocumentID=1084",
+                "snippet": "…saving care Colorado families rely on.” At today’s press conference at Lutheran Hospital, Rep. Pettersen was joined by **Colorado Hospital Association** CEO and President Jeff Tieman; Denver Health Chief Government and Community Affairs Officer Dr. Steven Federico; Westsi…"
+              }
+            ]
+          },
+          {
+            "client": "AMERICA'S HEALTH INSURANCE PLANS (AHIP)",
+            "n_matches": 3,
+            "matches": [
+              {
+                "client": "AMERICA'S HEALTH INSURANCE PLANS (AHIP)",
+                "date": "2026-03-31",
+                "member_name": "Raja Krishnamoorthi",
+                "party": "Democrat",
+                "state": "IL",
+                "chamber": "House",
+                "title": "Krishnamoorthi Presses Insurers Over Potentially Pocketing Funds Reserved for Reproductive Health Care",
+                "url": "https://krishnamoorthi.house.gov/media/press-releases/krishnamoorthi-presses-insurers-over-potentially-pocketing-funds-reserved",
+                "snippet": "…ting premium funds that federal law expressly requires to be reserved for abortion coverage. In a letter sent today to **America’s Health Insurance Plans (AHIP)**, Krishnamoorthi warned: “Recent guidance issued by the Centers for Medicare and Medicaid Services fundamentally misrea…"
+              },
+              {
+                "client": "AMERICA'S HEALTH INSURANCE PLANS (AHIP)",
+                "date": "2026-02-13",
+                "member_name": "Tim Scott",
+                "party": "Republican",
+                "state": "SC",
+                "chamber": "Senate",
+                "title": "Sen. Tim Scott introduces legislation to make Medicare plan choices clearer for seniors",
+                "url": "https://www.scott.senate.gov/media-center/press-releases/sen-tim-scott-introduces-legislation-to-make-medicare-plan-choices-clearer-for-seniors/",
+                "snippet": "…information and consistent methodology – not on flawed extrapolations or agendas,” said Mike Tuffin, president and CEO, **America’s Health Insurance Plans (AHIP)**. “As physician groups seeking to be held accountable for the costs and quality of health care, members of America’s Ph…"
+              },
+              {
+                "client": "AMERICA'S HEALTH INSURANCE PLANS (AHIP)",
+                "date": "2024-02-22",
+                "member_name": "Yvette D. Clarke",
+                "party": "Democrat",
+                "state": "NY",
+                "chamber": "House",
+                "title": "DEM WOMEN’S CAUCUS LEADS HOUSE AND SENATE DEMOCRATS IN DEMANDING HEALTH INSURERS FULLY COVER BIRTH CONTROL, AS REQUIRED BY THE ACA",
+                "url": "https://clarke.house.gov/dem-womens-caucus-leads-house-and-senate-democrats-in-demanding-health-insurers-fully-cover-birth-control-as-required-by-the-aca/",
+                "snippet": "…Departments of Health and Human Services, Labor, and Treasury on January 22, 2024,” wrote the lawmakers in a letter to **America’s Health Insurance Plans (AHIP)**—whose membership includes major health insurers across the country—and UnitedHealth Group. Despite the ACA’s protectio…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 17,
@@ -1117,7 +2787,61 @@
       "sample_uuid": "ffbda424-f583-46f3-8932-f43f1ee63779",
       "sample_source": "data\\data\\senate\\2025\\filings\\filings_2025.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ffbda424-f583-46f3-8932-f43f1ee63779/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-17",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.314624+00:00",
+        "n_clients_with_matches": 2,
+        "n_matches_total": 3,
+        "by_client": [
+          {
+            "client": "MCKESSON CORPORATION",
+            "n_matches": 2,
+            "matches": [
+              {
+                "client": "MCKESSON CORPORATION",
+                "date": "2024-10-29",
+                "member_name": "Elizabeth Warren",
+                "party": "Democrat",
+                "state": "MA",
+                "chamber": "Senate",
+                "title": "Warren Urges FTC to Protect Cancer Patients, Closely Scrutinize Acquisitions of Oncology Practices for Anticompetitive Effects",
+                "url": "https://www.warren.senate.gov/newsroom/press-releases/warren-urges-ftc-to-protect-cancer-patients-closely-scrutinize-acquisitions-of-oncology-practices-for-anticompetitive-effects",
+                "snippet": "…ly scrutinize two proposed deals in the oncology market and block them if they violate antitrust law. The deals include **McKesson Corporation**’s (McKesson’s) $2.49 billion proposed acquisition of a controlling stake in Core Ventures and Cardinal Health’s (Cardin…"
+              },
+              {
+                "client": "MCKESSON CORPORATION",
+                "date": "2022-03-14",
+                "member_name": "Jimmy Gomez",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Gomez, Maloney, DeSaulnier Urges DOJ and Treasury to Examine Tax Benefits Claimed by Opioid Companies for $26 Billion Settlement",
+                "url": "https://gomez.house.gov/news/documentsingle.aspx?DocumentID=2603",
+                "snippet": "…tice and Secretary Janet Yellen of the Department of Treasury to examine tax deductions four companies—Cardinal Health, **McKesson Corporation**, AmerisourceBergen, and Johnson & Johnson—are taking related to their $26 billion settlement for their role in fueling…"
+              }
+            ]
+          },
+          {
+            "client": "SIEMENS HEALTHINEERS",
+            "n_matches": 1,
+            "matches": [
+              {
+                "client": "SIEMENS HEALTHINEERS",
+                "date": "2023-06-28",
+                "member_name": "Thom Tillis",
+                "party": "Republican",
+                "state": "NC",
+                "chamber": "Senate",
+                "title": "Tillis Introduces Bipartisan Bill to Strengthen Medical Supply Chains",
+                "url": "https://www.tillis.senate.gov/2023/6/tillis-introduces-bipartisan-bill-to-strengthen-medical-supply-chains",
+                "snippet": "…patients during a public health crisis or national security threat.” Dave Pacitti, President and Head of the Americas, **Siemens Healthineers**: “Siemens Healthineers supports the Trusted Partners in Medical Supply Chains Act introduced by Senator Tillis. We are…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 18,
@@ -1137,7 +2861,77 @@
       "sample_uuid": "fe7a6dc4-6ef8-4f2a-bbd6-2dead6b2d5e8",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fe7a6dc4-6ef8-4f2a-bbd6-2dead6b2d5e8/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-18",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.356213+00:00",
+        "n_clients_with_matches": 1,
+        "n_matches_total": 40,
+        "by_client": [
+          {
+            "client": "CONSUMER TECHNOLOGY ASSOCIATION",
+            "n_matches": 40,
+            "matches": [
+              {
+                "client": "CONSUMER TECHNOLOGY ASSOCIATION",
+                "date": "2026-02-06",
+                "member_name": "Robert E. Latta",
+                "party": "Republican",
+                "state": "OH",
+                "chamber": "House",
+                "title": "Latta Introduces Legislation to Safeguard Autonomous Vehicles",
+                "url": "https://latta.house.gov/news/documentsingle.aspx?DocumentID=406708",
+                "snippet": "…framework that prioritizes certainty, safety and American competitiveness,\" said Gary Shapiro, Executive Chair and CEO, **Consumer Technology Association**. \"The SELF DRIVE Act would establish a clear national framework for the deployment of autonomous vehicles that will sa…"
+              },
+              {
+                "client": "CONSUMER TECHNOLOGY ASSOCIATION",
+                "date": "2026-02-02",
+                "member_name": "Chuck Grassley",
+                "party": "Republican",
+                "state": "IA",
+                "chamber": "Senate",
+                "title": "Grassley, Blackburn, Schiff Introduce Bipartisan Legislation to Expand Care for Veterans with Hearing Loss",
+                "url": "https://www.grassley.senate.gov/news/news-releases/grassley-blackburn-schiff-introduce-bipartisan-legislation-to-expand-care-for-veterans-with-hearing-loss",
+                "snippet": "…t of the program on the VA. This legislation is supported by the Hearing Loss Association of America, American Legion, **Consumer Technology Association** (CTA) and American Association of Retired Persons (AARP). Find bill text HERE. Background: Grassley has led the effo…"
+              },
+              {
+                "client": "CONSUMER TECHNOLOGY ASSOCIATION",
+                "date": "2026-01-30",
+                "member_name": "Marsha Blackburn",
+                "party": "Republican",
+                "state": "TN",
+                "chamber": "Senate",
+                "title": "Blackburn, Schiff, Grassley Introduce Legislation to Improve Access to Care for Veterans with Hearing Loss",
+                "url": "https://www.blackburn.senate.gov/2026/1/veterans/blackburn-schiff-grassley-introduce-legislation-to-improve-access-to-care-for-veterans-with-hearing-loss/3f6ebbdb-06c7-410a-8830-bc1d1280edb6",
+                "snippet": "…or bill text. ENDORSEMENTS This legislation is supported by the Hearing Loss Association of America, American Legion, **Consumer Technology Association** (CTA), and American Association of Retired Persons (AARP): “The Hearing Loss Association of America is proud to suppor…"
+              },
+              {
+                "client": "CONSUMER TECHNOLOGY ASSOCIATION",
+                "date": "2025-12-02",
+                "member_name": "Troy A. Carter",
+                "party": "Democrat",
+                "state": "LA",
+                "chamber": "House",
+                "title": "Congressman Troy Carter Announces Relaunch of the Bipartisan, Bicameral Wi-Fi Caucus",
+                "url": "https://troycarter.house.gov/media/press-releases/congressman-troy-carter-announces-relaunch-bipartisan-bicameral-wi-fi-caucus",
+                "snippet": "…reliable Wi-Fi is the backbone of America’s digital economy and everyday life,” said Gary Shapiro, CEO and Vice Chair, **Consumer Technology Association**(CTA). “We thank Senators Pete Ricketts and Jacky Rosen, and Representatives Bob Latta and Troy Carter, for relaunching…"
+              },
+              {
+                "client": "CONSUMER TECHNOLOGY ASSOCIATION",
+                "date": "2025-10-29",
+                "member_name": "Mark R. Warner",
+                "party": "Democrat",
+                "state": "VA",
+                "chamber": "Senate",
+                "title": "Warner, Kaine, Paul, Klobuchar & Schumer Legislation Challenging Trump's Tariffs on Canada Passes Senate",
+                "url": "https://www.warner.senate.gov/public/index.cfm/pressreleases?ID=C80DC3A8-7B0B-4835-91CF-08FDC0517FA3",
+                "snippet": "…ssociation, National Retail Federation, The Sheet Metal and Air Conditioning Contractors National Association (SMACNA), **Consumer Technology Association**, We Pay the Tariffs, Foreign Policy for America, and American Craft Spirits Association. In addition to Sens. Warner,…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 19,
@@ -1157,7 +2951,183 @@
       "sample_uuid": "f9458b24-ba89-4679-be8d-dc120dd9342f",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/f9458b24-ba89-4679-be8d-dc120dd9342f/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-19",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.397769+00:00",
+        "n_clients_with_matches": 4,
+        "n_matches_total": 13,
+        "by_client": [
+          {
+            "client": "PERATON",
+            "n_matches": 5,
+            "matches": [
+              {
+                "client": "PERATON",
+                "date": "2025-12-18",
+                "member_name": "Jerry Moran",
+                "party": "Republican",
+                "state": "KS",
+                "chamber": "Senate",
+                "title": "Sen. Moran Leads Hearing to Review FAA ATC Modernization Plan",
+                "url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=1F0095CA-AA5A-4BC7-8DFB-570E9B1D2994",
+                "snippet": "…dernization in the One Big Beautiful Bill Act, and the Department of Transportation recently announced the selection of **Peraton** as the Prime Integrator, which functions as the project manager for integrating the new ATC system. “On January 29th,…"
+              },
+              {
+                "client": "PERATON",
+                "date": "2025-12-16",
+                "member_name": "Jerry Moran",
+                "party": "Republican",
+                "state": "KS",
+                "chamber": "Senate",
+                "title": "Sen. Moran to Hold Hearing on FAA’s ATC Modernization Plan",
+                "url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=D5EAE740-B77F-4B63-AF06-016380D4315D",
+                "snippet": "…air traffic control (ATC) modernization plan, focusing on the progress of the new ATC system following the selection of **Peraton** as the Prime Integrator, which will function as the project manager. The hearing will be held on Wednesday, December 17…"
+              },
+              {
+                "client": "PERATON",
+                "date": "2025-12-16",
+                "member_name": "André Carson",
+                "party": "Democrat",
+                "state": "IN",
+                "chamber": "House",
+                "title": "Ranking Members Larsen, Carson Statements from Hearing with FAA Administrator Bedford",
+                "url": "https://carson.house.gov/media/press-releases/ranking-members-larsen-carson-statements-hearing-faa-administrator-bedford",
+                "snippet": "…s work’ and be more transparent about how it’s spending this investment. Although the FAA selected a Prime Integrator, **Peraton**, to oversee its modernization efforts, there are still several questions about next steps. As the Administration moves…"
+              },
+              {
+                "client": "PERATON",
+                "date": "2025-12-05",
+                "member_name": "Jerry Moran",
+                "party": "Republican",
+                "state": "KS",
+                "chamber": "Senate",
+                "title": "Sen. Moran Statement on Selection of Prime Integrator to Oversee New Air Traffic Control System",
+                "url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=379822B1-D8F4-4473-BEC0-7E1E5E60E210",
+                "snippet": "…t on the announcement by the U.S. Department of Transportation (DOT) and the Federal Aviation Administration (FAA) that **Peraton** will be the Prime Integrator to lead the construction of the new air traffic control system: “This announcement is goo…"
+              },
+              {
+                "client": "PERATON",
+                "date": "2022-05-24",
+                "member_name": "Charles E. Schumer",
+                "party": "Democrat",
+                "state": "NY",
+                "chamber": "Senate",
+                "title": "FOLLOWING HIS DIRECT ADVOCACY, SCHUMER DELIVERS $2.6 MILLION TO UPGRADE ROME’S GRIFFISS BUSINESS AND TECHNOLOGY PARK, ATTRACT NEW EMPLOYERS, CREATE NEW GOOD-PAYING JOBS, & SUPERCHARGE THE MOHAWK...",
+                "url": "https://www.schumer.senate.gov/newsroom/press-releases/following-his-direct-advocacy-schumer-delivers-26-million-to-upgrade-romes-griffiss-business-and-technology-park-attract-new-employers-create-new-good-paying-jobs-and-supercharge-the-mohawk-valleys-economic-recovery",
+                "snippet": "…ldings, which are owned and maintained by GLDC, are leased to multiple private companies (Assured Information Security, **Peraton**, BAE, CUBRC), many of which support various aspects of the Department of Defense through contracts with the Air Force R…"
+              }
+            ]
+          },
+          {
+            "client": "ENTERPRISE CLOUD COALITION",
+            "n_matches": 5,
+            "matches": [
+              {
+                "client": "ENTERPRISE CLOUD COALITION",
+                "date": "2024-01-10",
+                "member_name": "Ted Lieu",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "REPS LIEU, NUNN, BEYER AND MOLINARO INTRODUCE BIPARTISAN BILL TO ESTABLISH AI GUIDELINES FOR FEDERAL AGENCIES AND VENDORS",
+                "url": "https://lieu.house.gov/media-center/press-releases/reps-lieu-nunn-beyer-and-molinaro-introduce-bipartisan-bill-establish",
+                "snippet": "…forward to the further opportunities it will bring to build AI technology more responsibly and collaboratively.\" “The **Enterprise Cloud Coalition** supports the Federal AI Risk Management Act of 2024, which mandates agencies adopt the NIST AI Risk Management Framewor…"
+              },
+              {
+                "client": "ENTERPRISE CLOUD COALITION",
+                "date": "2024-01-10",
+                "member_name": "Donald S. Beyer, Jr.",
+                "party": "Democrat",
+                "state": "VA",
+                "chamber": "House",
+                "title": "Reps Lieu, Nunn, Beyer, Molinaro Introduce Bipartisan Bill To Establish AI Guidelines For Federal Agencies And Vendors",
+                "url": "https://beyer.house.gov/news/documentsingle.aspx?DocumentID=6066",
+                "snippet": "…forward to the further opportunities it will bring to build AI technology more responsibly and collaboratively.\" “The **Enterprise Cloud Coalition** supports the Federal AI Risk Management Act of 2024, which mandates agencies adopt the NIST AI Risk Management Framewor…"
+              },
+              {
+                "client": "ENTERPRISE CLOUD COALITION",
+                "date": "2023-11-13",
+                "member_name": "Jerry Moran",
+                "party": "Republican",
+                "state": "KS",
+                "chamber": "Senate",
+                "title": "What They Are Saying: Tech Companies Applaud Federal Artificial Intelligence Risk Management Act",
+                "url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=C45970F3-0B52-4604-9CC3-4A3A46086A23",
+                "snippet": "…forward to the further opportunities it will bring to build AI technology more responsibly and collaboratively.\" “The **Enterprise Cloud Coalition** supports the Federal AI Risk Management Act of 2023, which mandates agencies adopt the NIST AI Risk Management Framewor…"
+              },
+              {
+                "client": "ENTERPRISE CLOUD COALITION",
+                "date": "2023-11-02",
+                "member_name": "Mark R. Warner",
+                "party": "Democrat",
+                "state": "VA",
+                "chamber": "Senate",
+                "title": "Sens. Warner, Moran Introduce Legislation to Establish AI Guidelines for Federal Government",
+                "url": "https://www.warner.senate.gov/public/index.cfm/pressreleases?ID=4AD39388-9CF8-49E0-BAB5-055EF45291A1",
+                "snippet": "…forward to the further opportunities it will bring to build AI technology more responsibly and collaboratively.\" “The **Enterprise Cloud Coalition** supports the Federal AI Risk Management Act of 2023, which mandates agencies adopt the NIST AI Risk Management Framewor…"
+              },
+              {
+                "client": "ENTERPRISE CLOUD COALITION",
+                "date": "2023-11-02",
+                "member_name": "Jerry Moran",
+                "party": "Republican",
+                "state": "KS",
+                "chamber": "Senate",
+                "title": "Sens. Moran, Warner Introduce Legislation to Establish AI Guidelines for Federal Government",
+                "url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=17018C56-4B23-4DEC-A7B7-E899CD43C2C0",
+                "snippet": "…forward to the further opportunities it will bring to build AI technology more responsibly and collaboratively.\" “The **Enterprise Cloud Coalition** supports the Federal AI Risk Management Act of 2023, which mandates agencies adopt the NIST AI Risk Management Framewor…"
+              }
+            ]
+          },
+          {
+            "client": "EQUINIX",
+            "n_matches": 2,
+            "matches": [
+              {
+                "client": "EQUINIX",
+                "date": "2026-01-22",
+                "member_name": "Elizabeth Warren",
+                "party": "Democrat",
+                "state": "MA",
+                "chamber": "Senate",
+                "title": "Warren, Senators Secure New Commitments from Big Tech on Electricity Costs, But Companies Dodge Accountability for Hiking Families’ Utility Bills",
+                "url": "https://www.warren.senate.gov/newsroom/press-releases/warren-senators-secure-new-commitments-from-big-tech-on-electricity-costs-but-companies-dodge-accountability-for-hiking-families-utility-bills",
+                "snippet": "…with some failing to address the issue entirely. Additionally, several companies, including Microsoft, Coreweave, and **Equinix**, announced they would support separate rate classes for data centers. This is a reversal from prior industry positions,…"
+              },
+              {
+                "client": "EQUINIX",
+                "date": "2025-12-16",
+                "member_name": "Elizabeth Warren",
+                "party": "Democrat",
+                "state": "MA",
+                "chamber": "Senate",
+                "title": "Senator Warren, Lawmakers Open Investigation into Big Tech Data Centers’ Role in Driving Up Families’ Utility Costs",
+                "url": "https://www.warren.senate.gov/newsroom/press-releases/senator-warren-lawmakers-open-investigation-into-big-tech-data-centers-role-in-driving-up-families-utility-costs",
+                "snippet": "…sumers’ electricity costs. The senators sent letters to Google, Microsoft, Amazon, Meta, CoreWeave, Digital Realty, and **Equinix**. “We write in light of alarming reports that tech companies are passing on the costs of building and operating their d…"
+              }
+            ]
+          },
+          {
+            "client": "ATLASSIAN",
+            "n_matches": 1,
+            "matches": [
+              {
+                "client": "ATLASSIAN",
+                "date": "2024-09-17",
+                "member_name": "Nicholas A. Langworthy",
+                "party": "Republican",
+                "state": "NY",
+                "chamber": "House",
+                "title": "Congressman Langworthy Introduces SHARE IT Act to End Wasteful Spending on Redundant Software for Federal Agencies",
+                "url": "https://langworthy.house.gov/media/press-releases/congressman-langworthy-introduces-share-it-act-end-wasteful-spending-redundant",
+                "snippet": "…3594), led by Senator Ted Cruz (R-TX) and Senator Gary Peters (D-MI). It is also supported by outside groups, including **Atlassian** and GitLab. Stan Shepard, General Counsel for Atlassian, said, “Atlassian supports the SHARE IT Act, and we appreciate…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 20,
@@ -1197,7 +3167,77 @@
       "sample_uuid": "fc115de8-fab2-4f71-a75d-7fd0f4fb021a",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fc115de8-fab2-4f71-a75d-7fd0f4fb021a/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-21",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.413703+00:00",
+        "n_clients_with_matches": 1,
+        "n_matches_total": 20,
+        "by_client": [
+          {
+            "client": "FORD MOTOR COMPANY",
+            "n_matches": 20,
+            "matches": [
+              {
+                "client": "FORD MOTOR COMPANY",
+                "date": "2025-04-22",
+                "member_name": "Gary C. Peters",
+                "party": "Democrat",
+                "state": "MI",
+                "chamber": "Senate",
+                "title": "Senators Peters, Young Introduce Bipartisan Legislation to Expand Research of Emerging Driver Assistance Systems and Improve Roadway Safety",
+                "url": "https://www.peters.senate.gov/newsroom/press-releases/senators-peters-young-introduce-bipartisan-legislation-to-expand-research-of-emerging-driver-assistance-systems-and-improve-roadway-safety",
+                "snippet": "…le in keeping Americans safe in their communities,” said Emily Frascaroli, Global Director, Automotive Safety Office at **Ford Motor Company**. “GM remains committed to the PARTS program and its industry-wide collaborative mission to support advanced driver ass…"
+              },
+              {
+                "client": "FORD MOTOR COMPANY",
+                "date": "2025-04-22",
+                "member_name": "Gary C. Peters",
+                "party": "Democrat",
+                "state": "MI",
+                "chamber": "Senate",
+                "title": "Senator Peters Introduces Bipartisan Legislation to Expand Research of Emerging Driver Assistance Systems and Improve Roadway Safety",
+                "url": "https://www.peters.senate.gov/newsroom/press-releases/senator-peters-introduces-bipartisan-legislation-to-expand-research-of-emerging-driver-assistance-systems-and-improve-roadway-safety",
+                "snippet": "…le in keeping Americans safe in their communities,” said Emily Frascaroli, Global Director, Automotive Safety Office at **Ford Motor Company**. “GM remains committed to the PARTS program and its industry-wide collaborative mission to support advanced driver ass…"
+              },
+              {
+                "client": "FORD MOTOR COMPANY",
+                "date": "2025-03-27",
+                "member_name": "Marcy Kaptur",
+                "party": "Democrat",
+                "state": "OH",
+                "chamber": "House",
+                "title": "Kaptur Statement On Trump Proposed 25% Auto Tariffs",
+                "url": "https://kaptur.house.gov/media-center/press-releases/kaptur-statement-trump-proposed-25-auto-tariffs",
+                "snippet": "…ve fought to keep our industrial regions alive, well, and competitive — such as at Toledo Jeep, General Motors, and the **Ford Motor Company**. As a grateful daughter of UAW workers, I know what the union way of life means — it means better wages, job security,…"
+              },
+              {
+                "client": "FORD MOTOR COMPANY",
+                "date": "2025-02-25",
+                "member_name": "Neal P. Dunn",
+                "party": "Republican",
+                "state": "FL",
+                "chamber": "House",
+                "title": "Congressman Dunn Puts Vehicle Owners in the Drivers Seat, Giving them Control of Crucial Vehicle Repair Data",
+                "url": "https://dunn.house.gov/news/documentsingle.aspx?DocumentID=471",
+                "snippet": "…tiative. Top donors to the Coalition for Safe and Secure Data include General Motors, Toyota Motor North America, Inc., **Ford Motor Company**, and American Honda Motor Co., Inc. On July 11th, 2023, the Alliance for Automotive Innovation released a memorandum o…"
+              },
+              {
+                "client": "FORD MOTOR COMPANY",
+                "date": "2025-02-13",
+                "member_name": "Sean Casten",
+                "party": "Democrat",
+                "state": "IL",
+                "chamber": "House",
+                "title": "Casten, 25 House Dems Urge DOE to Maintain Loan Program Office Obligations",
+                "url": "https://casten.house.gov/media/press-releases/casten-25-house-dems-urge-doe-to-maintain-loan-program-office-obligations",
+                "snippet": "…al office has a proven track record of success. Over the years, for example, DOE has issued a $5.9 billion loan to the **Ford Motor Company** to support the manufacture of more efficient vehicles and a $465 million loan to Tesla Motors to assist in the producti…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 22,
@@ -1217,7 +3257,199 @@
       "sample_uuid": "fb505ec7-3185-496b-ade4-5a485534e5f0",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fb505ec7-3185-496b-ade4-5a485534e5f0/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-22",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.452405+00:00",
+        "n_clients_with_matches": 3,
+        "n_matches_total": 30,
+        "by_client": [
+          {
+            "client": "AMERICAN EXPLORATION AND PRODUCTION COUNCIL",
+            "n_matches": 17,
+            "matches": [
+              {
+                "client": "AMERICAN EXPLORATION AND PRODUCTION COUNCIL",
+                "date": "2025-12-18",
+                "member_name": "Kevin Cramer",
+                "party": "Republican",
+                "state": "ND",
+                "chamber": "Senate",
+                "title": "Cramer Introduces Legislation to Prevent Discrimination Against Energy Sources",
+                "url": "https://www.cramer.senate.gov/news/press-releases/cramer-introduces-legislation-to-prevent-discrimination-against-energy-sources",
+                "snippet": "…is leadership on this important issue and urge swift passage of this legislation.\" This legislation is endorsed by the **American Exploration and Production Council**, the American Petroleum Institute, the Independent Petroleum Association of America, the Lignite Energy Council, and th…"
+              },
+              {
+                "client": "AMERICAN EXPLORATION AND PRODUCTION COUNCIL",
+                "date": "2025-11-19",
+                "member_name": "Nicholas A. Langworthy",
+                "party": "Republican",
+                "state": "NY",
+                "chamber": "House",
+                "title": "Congressman Langworthy’s Landmark Energy Choice Act Passes Out of House Energy Subcommittee",
+                "url": "https://langworthy.house.gov/media/press-releases/congressman-langworthys-landmark-energy-choice-act-passes-out-house-energy-0",
+                "snippet": "….” The bill is being sponsored in the Senate by U.S. Senator Jim Justice of West Virginia. Supporting Organizations: **American Exploration and Production Council** (AXPC) American Gas Association (AGA) American Petroleum Institute (API) American Public Gas Association (APGA) Ame…"
+              },
+              {
+                "client": "AMERICAN EXPLORATION AND PRODUCTION COUNCIL",
+                "date": "2025-07-25",
+                "member_name": "Jodey C. Arrington",
+                "party": "Republican",
+                "state": "TX",
+                "chamber": "House",
+                "title": "Arrington Leads Fight to Lower Trade Barriers for American Energy Producers",
+                "url": "https://arrington.house.gov/news/documentsingle.aspx?DocumentID=3949",
+                "snippet": "…c growth at home and strengthening energy security abroad,” said Parker Kasmer, Vice President of Government Affairs at **American Exploration and Production Council**. “Ensuring reciprocal access to energy markets enables U.S. LNG exports to remain a reliable and stabilizing force acro…"
+              },
+              {
+                "client": "AMERICAN EXPLORATION AND PRODUCTION COUNCIL",
+                "date": "2025-07-22",
+                "member_name": "Mike Carey",
+                "party": "Republican",
+                "state": "OH",
+                "chamber": "House",
+                "title": "WHAT THEY ARE SAYING: Republican Reconciliation Package Praised by Ohio Industry Leaders",
+                "url": "https://carey.house.gov/2025/07/22/what-they-are-saying-republican-reconciliation-package-praised-by-ohio-industry-leaders-officials/",
+                "snippet": "…nd ushers in a new era of energy development,” Mike Sommers, American Petroleum Institute President and CEO, said. THE **AMERICAN EXPLORATION AND PRODUCTION COUNCIL**: “America’s independent oil and natural gas producers applaud Representative Mike Carey’s instrumental leadership to h…"
+              },
+              {
+                "client": "AMERICAN EXPLORATION AND PRODUCTION COUNCIL",
+                "date": "2025-06-05",
+                "member_name": "Tommy Tuberville",
+                "party": "Republican",
+                "state": "AL",
+                "chamber": "Senate",
+                "title": "Tuberville, Justice Advance American Energy Dominance, Prioritize Consumer Choice",
+                "url": "https://www.tuberville.senate.gov/newsroom/press-releases/tuberville-justice-advance-american-energy-dominance-prioritize-consumer-choice/",
+                "snippet": "…energy production. Americans ought to have the right to choose what is best for their energy needs,”said Sen. Justice. **American Exploration and Production Council**, American Gas Association, American Public Gas Association, Americans for Prosperity, Consumer Energy Alliance, Energy…"
+              }
+            ]
+          },
+          {
+            "client": "TWIN METALS MINNESOTA",
+            "n_matches": 8,
+            "matches": [
+              {
+                "client": "TWIN METALS MINNESOTA",
+                "date": "2026-02-17",
+                "member_name": "Martin Heinrich",
+                "party": "Democrat",
+                "state": "NM",
+                "chamber": "Senate",
+                "title": "Ranking Member Heinrich Uplifts Call from President Roosevelt’s Descendants to Protect the Boundary Waters",
+                "url": "https://www.heinrich.senate.gov/newsroom/press-releases/ranking-member-heinrich-uplifts-call-from-president-roosevelts-descendants-to-protect-the-boundary-waters",
+                "snippet": "…onomic revenue the wilderness area provides, and threatening wildlife. Notably, the resolution targets lands sought by **Twin Metals Minnesota**, a subsidiary of Chile-based mining company Antofagasta — a company with a questionable environmental record — and the…"
+              },
+              {
+                "client": "TWIN METALS MINNESOTA",
+                "date": "2025-02-05",
+                "member_name": "Pete Stauber",
+                "party": "Republican",
+                "state": "MN",
+                "chamber": "House",
+                "title": "Stauber Reintroduces Superior National Forest Restoration Act",
+                "url": "https://stauber.house.gov/media/press-releases/stauber-reintroduces-superior-national-forest-restoration-act",
+                "snippet": "…2, the Biden administration cancelled two decades-old mineral leases held by a prospective mine operator in the region, **Twin Metals Minnesota**. A year later, on January 31, 2023, the Biden administration’s mineral withdrawal of 225,504 acres in the Superior Nati…"
+              },
+              {
+                "client": "TWIN METALS MINNESOTA",
+                "date": "2022-05-26",
+                "member_name": "Tom Emmer",
+                "party": "Republican",
+                "state": "MN",
+                "chamber": "House",
+                "title": "Emmer & Fischbach Support Ranking Member Stauber in Advocating for American Resource Independence",
+                "url": "https://emmer.house.gov/media-center/press-releases/emmer-fischbach-support-ranking-member-stauber-in-advocating-for-american-resource-independence",
+                "snippet": "…xample of how important it is for America to decrease its reliance on adversaries,” said Rep. Fischbach. “Projects like **Twin Metals Minnesota**’s are what we need to become more independent. We can produce the critical minerals needed for everything from cellphon…"
+              },
+              {
+                "client": "TWIN METALS MINNESOTA",
+                "date": "2022-03-01",
+                "member_name": "Dan Sullivan",
+                "party": "Republican",
+                "state": "AK",
+                "chamber": "Senate",
+                "title": "Sullivan, Colleagues Demand Biden Change Course on Failing Energy Policy as Prices Skyrocket at Home and Putin is Emboldened",
+                "url": "https://www.sullivan.senate.gov/newsroom/press-releases/sullivan-colleagues-demand-biden-change-course-on-failing-energy-policy-as-prices-skyrocket-at-home-and-putin-is-emboldened",
+                "snippet": "…critical minerals mining and processing, particularly Alaska’s Ambler Road project, and reinstate the leases issued to **Twin Metals Minnesota** LLC for the northeastern Minnesota mining project. Reinstate the January 2021 proposed rule from the U.S. Office of th…"
+              },
+              {
+                "client": "TWIN METALS MINNESOTA",
+                "date": "2022-01-27",
+                "member_name": "Michelle Fischbach",
+                "party": "Republican",
+                "state": "MN",
+                "chamber": "House",
+                "title": "Rep. Fischbach Blasts Biden's Revoking of Twin Metals Permits",
+                "url": "https://fischbach.house.gov/2022/1/rep-fischbach-blasts-biden-s-revoking-of-twin-metals-permits",
+                "snippet": "…ngton, DC - Yesterday, President Biden's Department of the Interior (DOI) revoked existing long-held federal leases for **Twin Metals Minnesota** to mine in the Superior National Forest. \"This action will only increase our dependence on foreign minerals at a time…"
+              }
+            ]
+          },
+          {
+            "client": "DEVON ENERGY",
+            "n_matches": 5,
+            "matches": [
+              {
+                "client": "DEVON ENERGY",
+                "date": "2024-05-22",
+                "member_name": "Frank Pallone, Jr.",
+                "party": "Democrat",
+                "state": "NJ",
+                "chamber": "House",
+                "title": "Pallone Launches Investigation Into Reports of Oil Companies Colluding to Drive Up Gas Prices",
+                "url": "https://pallone.house.gov/media/press-releases/pallone-launches-investigation-reports-oil-companies-colluding-drive-gas",
+                "snippet": "…ce record profits for shareholders,” Pallone wrote to the CEOs of BP America, Shell USA, Chevron, Occidental Petroleum, **Devon Energy**, Hess, and ExxonMobil Corporation (Exxon). Pallone went on to underscore that Democrats’ concerns have been realized: “…"
+              },
+              {
+                "client": "DEVON ENERGY",
+                "date": "2022-07-16",
+                "member_name": "Stephanie I. Bice",
+                "party": "Republican",
+                "state": "OK",
+                "chamber": "House",
+                "title": "Bice Participates in Leader McCarthy Roundtable on Domestic Energy",
+                "url": "https://bice.house.gov/media/press-releases/bice-participates-leader-mccarthy-roundtable-domestic-energy",
+                "snippet": "…agement, Inc; Tom Jorden, President and CEO of Coterra; Jeff Wilson, Vice President of Public and Government Affairs of **Devon Energy**; Joe Leimkuhler, COO of Beacon Offshore Energy; and Steve Pruett, President and CEO of Elevation Resources. They all a…"
+              },
+              {
+                "client": "DEVON ENERGY",
+                "date": "2022-04-06",
+                "member_name": "Lori Trahan",
+                "party": "Democrat",
+                "state": "MA",
+                "chamber": "House",
+                "title": "ICYMI: Trahan Calls Out Oil Executives on Their Corporate Greed and Harmful Price-Gouging",
+                "url": "https://trahan.house.gov/news/documentsingle.aspx?DocumentID=2436",
+                "snippet": "…Chairman and Chief Executive Officer, Chevron Corporation Richard E. Muncrief, President and Chief Executive Officer, **Devon Energy** Corporation -------- Congresswoman Lori Trahan Hearing Questions as Delivered Hearing on “Gouged at the Gas Station…"
+              },
+              {
+                "client": "DEVON ENERGY",
+                "date": "2022-04-06",
+                "member_name": "Lizzie Fletcher",
+                "party": "Democrat",
+                "state": "TX",
+                "chamber": "House",
+                "title": "Congresswoman Lizzie Fletcher Pushes To Develop Thoughtful Energy Policy at Hearing on Gas Prices",
+                "url": "https://fletcher.house.gov/news/documentsingle.aspx?DocumentID=3797",
+                "snippet": "…ent weeks. Witnesses included executives from six major oil and gas corporations: BP America Inc., Chevron Corporation, **Devon Energy** Corporation, ExxonMobil Corporation, Pioneer Natural Resources Company, and Shell USA, Inc. Congresswoman Fletcher spok…"
+              },
+              {
+                "client": "DEVON ENERGY",
+                "date": "2022-03-29",
+                "member_name": "Diana DeGette",
+                "party": "Democrat",
+                "state": "CO",
+                "chamber": "House",
+                "title": "Oil executives to testify before Congress on record-high gas prices",
+                "url": "https://degette.house.gov/media-center/press-releases/oil-executives-testify-congress-record-high-gas-prices",
+                "snippet": "…which oversees the nation's fossil fuel industry – announced today that executives from Chevron, ExxonMobil, BP, Shell, **Devon Energy** and Pioneer Natural Resources will all appear before the panel on Wednesday, April 6, to answer lawmakers' questions ab…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 23,
@@ -1257,7 +3489,77 @@
       "sample_uuid": "f1af5c4d-a23a-4c35-a363-c635c1740d00",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/f1af5c4d-a23a-4c35-a363-c635c1740d00/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-24",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.468406+00:00",
+        "n_clients_with_matches": 1,
+        "n_matches_total": 153,
+        "by_client": [
+          {
+            "client": "NATIONAL MILK PRODUCERS FEDERATION",
+            "n_matches": 153,
+            "matches": [
+              {
+                "client": "NATIONAL MILK PRODUCERS FEDERATION",
+                "date": "2026-01-14",
+                "member_name": "Glenn Thompson",
+                "party": "Republican",
+                "state": "PA",
+                "chamber": "House",
+                "title": "President Trump signs Thompson's Whole Milk for Healthy Kids Act into Law",
+                "url": "https://thompson.house.gov/media-center/press-releases/president-trump-signs-thompsons-whole-milk-healthy-kids-act-law",
+                "snippet": "…stration in bringing the full spectrum of school milk choice back into our schools.” — Gregg Doud, President and CEO of **National Milk Producers Federation** “The long wait is over! Whole milk is coming back to schools! Today’s House passage marks a defining victory for child…"
+              },
+              {
+                "client": "NATIONAL MILK PRODUCERS FEDERATION",
+                "date": "2026-01-07",
+                "member_name": "Donald G. Davis",
+                "party": "Democrat",
+                "state": "NC",
+                "chamber": "House",
+                "title": "Congressman Don Davis Introduces Bipartisan Legislation to Protect Farmers and Strengthen Rural Communities in Eastern North Carolina",
+                "url": "https://dondavis.house.gov/media/press-releases/congressman-don-davis-introduces-bipartisan-legislation-protect-farmers-and",
+                "snippet": "…tion, National Farmers Union, American Soybean Association, National Corn Growers Association, National Cotton Council, **National Milk Producers Federation**, and many others. Congressman Don Davis serves as a member of the House Agriculture Committee and as Ranking Member on…"
+              },
+              {
+                "client": "NATIONAL MILK PRODUCERS FEDERATION",
+                "date": "2026-01-05",
+                "member_name": "Cindy Hyde-Smith",
+                "party": "Republican",
+                "state": "MS",
+                "chamber": "Senate",
+                "title": "Hyde-Smith Leads Senate Introduction of Roll-Over Prevention & Safety Act",
+                "url": "https://www.hydesmith.senate.gov/hyde-smith-leads-senate-introduction-roll-over-prevention-safety-act-0",
+                "snippet": "…ional Farmers Union, John Deere, Kubota, CoBank, Farm Credit, National Association of State Departments of Agriculture, **National Milk Producers Federation**, American Soybean Association, National Corn Growers Association, USA Rice, National Cotton Council, National Associati…"
+              },
+              {
+                "client": "NATIONAL MILK PRODUCERS FEDERATION",
+                "date": "2026-01-05",
+                "member_name": "Cindy Hyde-Smith",
+                "party": "Republican",
+                "state": "MS",
+                "chamber": "Senate",
+                "title": "HYDE-SMITH LEADS SENATE INTRODUCTION OF ROLL-OVER PREVENTION & SAFETY ACT",
+                "url": "https://www.hydesmith.senate.gov/hyde-smith-leads-senate-introduction-roll-over-prevention-safety-act",
+                "snippet": "…ional Farmers Union, John Deere, Kubota, CoBank, Farm Credit, National Association of State Departments of Agriculture, **National Milk Producers Federation**, American Soybean Association, National Corn Growers Association, USA Rice, National Cotton Council, National Associati…"
+              },
+              {
+                "client": "NATIONAL MILK PRODUCERS FEDERATION",
+                "date": "2026-01-05",
+                "member_name": "Michael F. Bennet",
+                "party": "Democrat",
+                "state": "CO",
+                "chamber": "Senate",
+                "title": "Bennet, Hyde-Smith, Colleagues Introduce Bill to Protect Farmers Through Improving Tractor Safety",
+                "url": "https://www.bennet.senate.gov/2026/01/05/bennet-hyde-smith-colleagues-introduce-bill-to-protect-farmers-through-improving-tractor-safety/",
+                "snippet": "…ional Farmers Union, John Deere, Kubota, CoBank, Farm Credit, National Association of State Departments of Agriculture, **National Milk Producers Federation**, American Soybean Association, National Corn Growers Association, USA Rice, National Cotton Council, National Associati…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 25,
@@ -1297,7 +3599,33 @@
       "sample_uuid": "fccdb092-e372-4428-bdfb-fb5c1b264cba",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fccdb092-e372-4428-bdfb-fb5c1b264cba/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-26",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.492941+00:00",
+        "n_clients_with_matches": 1,
+        "n_matches_total": 1,
+        "by_client": [
+          {
+            "client": "NATIONAL ALLIANCE TO IMPACT THE SOCIAL DETERMINANTS OF HEALTH",
+            "n_matches": 1,
+            "matches": [
+              {
+                "client": "NATIONAL ALLIANCE TO IMPACT THE SOCIAL DETERMINANTS OF HEALTH",
+                "date": "2024-09-26",
+                "member_name": "Dan Sullivan",
+                "party": "Republican",
+                "state": "AK",
+                "chamber": "Senate",
+                "title": "Sullivan, Cortez Masto Introduce Legislation to Identify Factors Influencing Health Outcomes",
+                "url": "https://www.sullivan.senate.gov/newsroom/press-releases/sullivan-cortez-masto-introduce-legislation-to-identify-factors-influencing-health-outcomes",
+                "snippet": "…a Children’s Trust, and the Alaska Hospital & Healthcare Association, this bill is endorsed by Aligning for Health, the **National Alliance to Impact the Social Determinants of Health** (NASDOH), American Art Therapy Association, American Association for Geriatric Psychiatry, American Association for Psy…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 27,
@@ -1317,7 +3645,44 @@
       "sample_uuid": "fecae134-69ad-43c9-aa67-faee2e3b2759",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fecae134-69ad-43c9-aa67-faee2e3b2759/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-27",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.530276+00:00",
+        "n_clients_with_matches": 1,
+        "n_matches_total": 2,
+        "by_client": [
+          {
+            "client": "ALYESKA PIPELINE SERVICE COMPANY",
+            "n_matches": 2,
+            "matches": [
+              {
+                "client": "ALYESKA PIPELINE SERVICE COMPANY",
+                "date": "2023-09-19",
+                "member_name": "Dan Sullivan",
+                "party": "Republican",
+                "state": "AK",
+                "chamber": "Senate",
+                "title": "Sullivan Announces New Council of Alaskans to Improve Federal Judicial Selection",
+                "url": "https://www.sullivan.senate.gov/newsroom/press-releases/sullivan-announces-new-council-of-alaskans-to-improve-federal-judicial-selection",
+                "snippet": "…d a Sun’aq Tribe of Kodiak member. Prior to joining ARA in 2011, Reitmeier served as Chief of Staff to the President of **Alyeska Pipeline Service Company** and Director of Alaska Heritage Tours, where she oversaw tour package operations for CIRI Alaska Tourism. A University…"
+              },
+              {
+                "client": "ALYESKA PIPELINE SERVICE COMPANY",
+                "date": "2022-06-24",
+                "member_name": "Dan Sullivan",
+                "party": "Republican",
+                "state": "AK",
+                "chamber": "Senate",
+                "title": "Sullivan Recognizes Jeff Streit as “Alaskan of the Week”",
+                "url": "https://www.sullivan.senate.gov/newsroom/press-releases/sullivan-recognizes-jeff-streit-as-alaskan-of-the-week",
+                "snippet": "…te yesterday, Senator Dan Sullivan (R-Alaska) recognized Jeff Streit, of Fairbanks, the longest-serving employee of the **Alyeska Pipeline Service Company**, which operates and maintains the 800-mile-long Trans Alaska Pipeline System (TAPS). This week, Alyeska celebrates the…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 28,
@@ -1357,7 +3722,77 @@
       "sample_uuid": "f629f4ea-db74-47d1-be07-252f987ccff9",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/f629f4ea-db74-47d1-be07-252f987ccff9/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-29",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.546764+00:00",
+        "n_clients_with_matches": 1,
+        "n_matches_total": 7,
+        "by_client": [
+          {
+            "client": "INTERNATIONAL TRADEMARK ASSOCIATION",
+            "n_matches": 7,
+            "matches": [
+              {
+                "client": "INTERNATIONAL TRADEMARK ASSOCIATION",
+                "date": "2026-03-25",
+                "member_name": "Chuck Grassley",
+                "party": "Republican",
+                "state": "IA",
+                "chamber": "Senate",
+                "title": "Grassley Raises Awareness of Sports Knockoffs at Congressional Trademark Caucus Event",
+                "url": "https://www.grassley.senate.gov/news/news-releases/03/25/2026/grassley-raises-awareness-of-sports-knockoffs-at-congressional-trademark-caucus-event",
+                "snippet": "…o-Chair of the Congressional Trademark Caucus, delivered remarks this week at a congressional briefing organized by the **International Trademark Association**, the International Anti-Counterfeiting Coalition and the U.S. Chamber of Commerce’s Global Innovation Policy Center. Th…"
+              },
+              {
+                "client": "INTERNATIONAL TRADEMARK ASSOCIATION",
+                "date": "2025-12-12",
+                "member_name": "Chuck Grassley",
+                "party": "Republican",
+                "state": "IA",
+                "chamber": "Senate",
+                "title": "Q&A: Shoppers Beware of Online Scrooges",
+                "url": "https://www.grassley.senate.gov/news/news-releases/qanda-shoppers-beware-of-online-scrooges",
+                "snippet": "…san trademark caucus, and I use our policy platform to put fraudsters on notice. This year, we were again joined by the **International Trademark Association** and the U.S. Chamber of Commerce’s Global Innovation Policy Center to help spread the word and arm consumers with helpf…"
+              },
+              {
+                "client": "INTERNATIONAL TRADEMARK ASSOCIATION",
+                "date": "2025-12-10",
+                "member_name": "Bradley Scott Schneider",
+                "party": "Democrat",
+                "state": "IL",
+                "chamber": "House",
+                "title": "SCHNEIDER BIPARTISAN LEGISLATION TO HALT COUNTERFEIT IMPORTS ADVANCES IN US HOUSE",
+                "url": "https://schneider.house.gov/media/press-releases/schneider-bipartisan-legislation-halt-counterfeit-imports-advances-us-house",
+                "snippet": "…Association, Automotive Anti-Counterfeiting Council, Baby Safety Alliance, International AntiCounterfeiting Coalition, **International Trademark Association**, Partnership for Safe Medicines, Pharmaceutical Security Institute, and Transnational Alliance to Combat Illicit Trade.…"
+              },
+              {
+                "client": "INTERNATIONAL TRADEMARK ASSOCIATION",
+                "date": "2025-12-10",
+                "member_name": "Blake D. Moore",
+                "party": "Republican",
+                "state": "UT",
+                "chamber": "House",
+                "title": "Congressman Blake Moore's Bipartisan Legislation to Halt Counterfeit Imports Passes Committee",
+                "url": "https://blakemoore.house.gov/media/press-releases/congressman-blake-moores-bipartisan-legislation-to-halt-counterfeit-imports-passes-committee",
+                "snippet": "…Association, Automotive Anti-Counterfeiting Council, Baby Safety Alliance, International AntiCounterfeiting Coalition, **International Trademark Association**, Partnership for Safe Medicines, Pharmaceutical Security Institute, and Transnational Alliance to Combat Illicit Trade.…"
+              },
+              {
+                "client": "INTERNATIONAL TRADEMARK ASSOCIATION",
+                "date": "2025-08-12",
+                "member_name": "Bradley Scott Schneider",
+                "party": "Democrat",
+                "state": "IL",
+                "chamber": "House",
+                "title": "REPRESENTATIVES SCHNEIDER, MOORE INTRODUCE BIPARTISAIN BILL TARGETING COUNTERFEIT IMPORTS",
+                "url": "https://schneider.house.gov/media/press-releases/representatives-schneider-moore-introduce-bipartisain-bill-targeting",
+                "snippet": "…Association, Automotive Anti-Counterfeiting Council, Baby Safety Alliance, International AntiCounterfeiting Coalition, **International Trademark Association**, Partnership for Safe Medicines, Pharmaceutical Security Institute, and Transnational Alliance to Combat Illicit Trade.…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 30,
@@ -1377,7 +3812,66 @@
       "sample_uuid": "fcd47a96-cef1-4693-a253-5386b750f433",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fcd47a96-cef1-4693-a253-5386b750f433/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-30",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.554772+00:00",
+        "n_clients_with_matches": 1,
+        "n_matches_total": 4,
+        "by_client": [
+          {
+            "client": "MARSHFIELD CLINIC HEALTH SYSTEM",
+            "n_matches": 4,
+            "matches": [
+              {
+                "client": "MARSHFIELD CLINIC HEALTH SYSTEM",
+                "date": "2024-03-08",
+                "member_name": "Nanette Diaz Barragán",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Reps. Barragán and Burgess Introduce National Patient Safety Board Act",
+                "url": "https://barragan.house.gov/2024/03/08/reps-barragan-and-burgess-introduce-national-patient-safety-board-act/",
+                "snippet": "…ory Louise H. Batz Patient Safety Foundation Louisiana Business Group on Health Louisiana Health Care Quality Forum **Marshfield Clinic Health System** Maryland Patient Safety Center Maternal Alloimmunization Foundation MD Anderson Cancer Center Medical Malpractice I…"
+              },
+              {
+                "client": "MARSHFIELD CLINIC HEALTH SYSTEM",
+                "date": "2023-03-22",
+                "member_name": "Tammy Baldwin",
+                "party": "Democrat",
+                "state": "WI",
+                "chamber": "Senate",
+                "title": "Baldwin, Braun Lead Bill to Require Transparency for Skyrocketing Drug Prices",
+                "url": "https://www.baldwin.senate.gov/news/press-releases/baldwin-braun-lead-bill-to-require-transparency-for-skyrocketing-drug-prices",
+                "snippet": "…the FAIR Drug Pricing Act is also co-sponsored by Senator Tina Smith (D-MN). The FAIR Drug Pricing Act is supported by **Marshfield Clinic Health System**, Blue Shield of California, the Campaign for Sustainable Rx Pricing, the Alliance of Community Health Plans, AARP, Secu…"
+              },
+              {
+                "client": "MARSHFIELD CLINIC HEALTH SYSTEM",
+                "date": "2022-12-07",
+                "member_name": "Nanette Diaz Barragán",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Barragán Introduces the National Patient Safety Board Act",
+                "url": "https://barragan.house.gov/2022/12/07/barragan-introduces-the-national-patient-safety-board-act/",
+                "snippet": "…up, Network for Excellence in Health Innovation, Patient Safety Movement, MedStar Institute for Quality and Safety, and **Marshfield Clinic Health System** A fact sheet on the National Patient Safety Board Act can be found here. ### Nanette Diaz Barragán is proud to repre…"
+              },
+              {
+                "client": "MARSHFIELD CLINIC HEALTH SYSTEM",
+                "date": "2022-03-10",
+                "member_name": "Tim Scott",
+                "party": "Republican",
+                "state": "SC",
+                "chamber": "Senate",
+                "title": "Senators Scott, Carper Introduce Bill to Extend Hospital at Home Waiver Program",
+                "url": "https://www.scott.senate.gov/media-center/press-releases/senators-scott-carper-introduce-bill-to-extend-hospital-at-home-waiver-program/",
+                "snippet": "…System; Adventist Health; Kaiser Permanente; Contessa; DispatchHealth; Moving Health Home; Compassus; BrightStar Care; **Marshfield Clinic Health System**; Omnicell; UNC Health & UNC School of Medicine; Novant Health; University Hospitals; Riverside Health System; AMGA; VCU…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 31,
@@ -1517,7 +4011,77 @@
       "sample_uuid": "ee440a7a-c4e1-44c3-af6d-5324c93a3923",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ee440a7a-c4e1-44c3-af6d-5324c93a3923/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-37",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.660693+00:00",
+        "n_clients_with_matches": 1,
+        "n_matches_total": 21,
+        "by_client": [
+          {
+            "client": "ATA ACTION",
+            "n_matches": 21,
+            "matches": [
+              {
+                "client": "ATA ACTION",
+                "date": "2026-03-30",
+                "member_name": "Mike Crapo",
+                "party": "Republican",
+                "state": "ID",
+                "chamber": "Senate",
+                "title": "Working Families Tax Cuts Deliver More Health Care Choices",
+                "url": "https://www.crapo.senate.gov/media/newsreleases/working-families-tax-cuts-deliver-more-health-care-choices",
+                "snippet": "…ealth flexibility was introduced under President Trump’s first administration in 2020, this has been a top priority for **ATA Action**. Making this permanent will provide certainty for healthcare providers and employers, improve health outcomes, strength…"
+              },
+              {
+                "client": "ATA ACTION",
+                "date": "2025-11-18",
+                "member_name": "Blake D. Moore",
+                "party": "Republican",
+                "state": "UT",
+                "chamber": "House",
+                "title": "Representatives Moore, Schneider Introduce Bipartisan Legislation to Increase Access to Health Care",
+                "url": "https://blakemoore.house.gov/media/press-releases/representatives-moore-schneider-introduce-bipartisan-legislation-to-increase-access-to-health-care",
+                "snippet": "…ty for digital health tools, aiming to improve access to care while safeguarding patients’ personal health information. **ATA Action** expresses strong support for this legislation and commends Representatives Blake Moore and Brad Schneider for re-introd…"
+              },
+              {
+                "client": "ATA ACTION",
+                "date": "2025-09-18",
+                "member_name": "Glenn Thompson",
+                "party": "Republican",
+                "state": "PA",
+                "chamber": "House",
+                "title": "Thompson, Tokuda Introduce Legislation Promoting Telehealth Services",
+                "url": "https://thompson.house.gov/media-center/press-releases/thompson-tokuda-introduce-legislation-promoting-telehealth-services",
+                "snippet": "…r Medicare beneficiaries, especially those in rural and underserved communities,\" said Kyle Zebley, Executive Director, **ATA Action** and Senior Vice President, Public Policy, the American Telemedicine Association (ATA). \"The Helping Ensure Access to Lo…"
+              },
+              {
+                "client": "ATA ACTION",
+                "date": "2025-09-02",
+                "member_name": "Earl L. \"Buddy\" Carter",
+                "party": "Republican",
+                "state": "GA",
+                "chamber": "House",
+                "title": "Carter Introduces Bill Extending Telehealth Access for Patients",
+                "url": "https://buddycarter.house.gov/news/documentsingle.aspx?DocumentID=15890",
+                "snippet": "…bill is being led by Sens. Tim Scott (R-SC) and Brian Schatz (D-HI). “This comprehensive legislation advances many of **ATA Action**’s top priorities including an extension of Medicare telehealth flexibilities, the Acute Hospital Care at Home Program,…"
+              },
+              {
+                "client": "ATA ACTION",
+                "date": "2025-06-16",
+                "member_name": "Bill Cassidy",
+                "party": "Republican",
+                "state": "LA",
+                "chamber": "Senate",
+                "title": "Cassidy Introduces Bill to Remove Barriers to Telemental Health Care",
+                "url": "https://www.cassidy.senate.gov/newsroom/press-releases/cassidy-introduces-bill-to-remove-barriers-to-telemental-health-care/",
+                "snippet": "…al Association, American Psychiatric Association,American Psychological Association, American Telemedicine Association, **ATA Action**,Association for Behavioral Health & Wellness, Association of American Medical Colleges, California Medical Association,…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 38,
@@ -1537,7 +4101,33 @@
       "sample_uuid": "f99d755c-b21a-442b-b173-cbba96b083dc",
       "sample_source": "data\\data\\senate\\2024\\filings\\filings_2024.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/f99d755c-b21a-442b-b173-cbba96b083dc/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-38",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.695177+00:00",
+        "n_clients_with_matches": 1,
+        "n_matches_total": 1,
+        "by_client": [
+          {
+            "client": "GLOBAL MEDICAL RESPONSE",
+            "n_matches": 1,
+            "matches": [
+              {
+                "client": "GLOBAL MEDICAL RESPONSE",
+                "date": "2024-03-14",
+                "member_name": "Beth Van Duyne",
+                "party": "Republican",
+                "state": "TX",
+                "chamber": "House",
+                "title": "Rep. Van Duyne, Chairman Smith Announce Field Hearing on Access to Health Care in America: Ensuring Resilient Emergency Medical Care - Denton, Texas",
+                "url": "https://vanduyne.house.gov/2024/3/rep-van-duyne-chairman-smith-announce-field-hearing-on-access-to-health-care-in-america-ensuring-resilient-emergency-medical-care-denton-texas",
+                "snippet": "…ca: Ensuring Resilient Emergency Medical Care.\" The hearing will take place at 2:00 PM CT on Monday, March 18, 2024, at **Global Medical Response** in Denton, Texas. Members will hear from a panel about improving the quality and availably of health care in rural and…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 39,
@@ -1557,7 +4147,77 @@
       "sample_uuid": "ff51842c-6875-4f86-8c65-ff367cee6c81",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff51842c-6875-4f86-8c65-ff367cee6c81/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-39",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-07T03:10:52.716177+00:00",
+        "n_clients_with_matches": 1,
+        "n_matches_total": 6,
+        "by_client": [
+          {
+            "client": "COW CREEK BAND OF UMPQUA TRIBE OF INDIANS",
+            "n_matches": 6,
+            "matches": [
+              {
+                "client": "COW CREEK BAND OF UMPQUA TRIBE OF INDIANS",
+                "date": "2024-12-10",
+                "member_name": "Jared Huffman",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Tribes from Across the U.S. Announce Support for Congressman Huffman as House Natural Resources Committee Ranking Member",
+                "url": "https://huffman.house.gov/media-center/press-releases/tribes-from-across-the-us-announce-support-for-congressman-huffman-as-house-natural-resources-committee-ranking-member",
+                "snippet": "…ort for Congressman Jared Huffman (CA-02) as Ranking Member of the House Natural Resources Committee. Additionally, the **Cow Creek Band of Umpqua Tribe of Indians**, Greenville Rancheria Tribal Council, and Mooretown Rancheria, sent individual statements supporting Rep. Huffman. Thes…"
+              },
+              {
+                "client": "COW CREEK BAND OF UMPQUA TRIBE OF INDIANS",
+                "date": "2024-10-30",
+                "member_name": "Ron Wyden",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Wyden, Merkley, Blumenauer, Hoyle: State of Oregon & Four Tribes Earn More Than $12 Million in Federal Funds for Grid Resilience",
+                "url": "https://www.wyden.senate.gov/news/press-releases/wyden-merkley-blumenauer-hoyle-state-of-oregon-and-four-tribes-earn-more-than-12-million-in-federal-funds-for-grid-resilience",
+                "snippet": "Tribes with Oregon presence to receive federal investments are the Confederated Tribes of the Warm Springs, **Cow Creek Band of Umpqua Tribe of Indians**, Burns Paiute and Nez Perce Washington, D.C. – U.S. Sens. Ron Wyden and Jeff Merkley as well as U.S. Reps. Earl Blumen…"
+              },
+              {
+                "client": "COW CREEK BAND OF UMPQUA TRIBE OF INDIANS",
+                "date": "2024-09-11",
+                "member_name": "Ron Wyden",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Merkley, Wyden Announce $9.4 Million Federal Investment to Confront Wildfire Threats in Oregon",
+                "url": "https://www.wyden.senate.gov/news/press-releases/merkley-wyden-announce-94-million-federal-investment-to-confront-wildfire-threats-in-oregon",
+                "snippet": "…private, Tribal, and federal lands with several underserved communities. Building on existing collaboration between the **Cow Creek Band of Umpqua Tribe of Indians** and the Forest Service, this project will continue ecosystem restoration efforts while expanding collaboration with the…"
+              },
+              {
+                "client": "COW CREEK BAND OF UMPQUA TRIBE OF INDIANS",
+                "date": "2024-05-08",
+                "member_name": "Ron Wyden",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Merkley, Wyden Announce Nearly $1.7 Million for State and Tribal Historical Preservation in Oregon",
+                "url": "https://www.wyden.senate.gov/news/press-releases/merkley-wyden-announce-nearly-17-million-for-state-and-tribal-historical-preservation-in-oregon",
+                "snippet": "…40 – Confederated Tribes of Warm Springs $118,119 – Confederated Tribes of the Umatilla Indian Reservation $102,393 – **Cow Creek Band of Umpqua Tribe of Indians** $100,491 – Confederated Tribes of Coos, Lower Umpqua and Siuslaw Indians $99,117 – Confederated Tribes of Grand Ronde…"
+              },
+              {
+                "client": "COW CREEK BAND OF UMPQUA TRIBE OF INDIANS",
+                "date": "2024-02-22",
+                "member_name": "Ron Wyden",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Wyden, Merkley Announce $27 Million to Support Pacific Salmon Recovery in Oregon",
+                "url": "https://www.wyden.senate.gov/news/press-releases/wyden-merkley-announce-27-million-to-support-pacific-salmon-recovery-in-oregon",
+                "snippet": "…,319,000 to study ocean conditions modeling, measure marine predation, and assess climate impacts on marine food webs. **Cow Creek Band of Umpqua Tribe of Indians**: $2.7 Million for Pacific Coastal Salmon Recovery Fund to help support habitat restoration, research, and monitoring of…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 40,
