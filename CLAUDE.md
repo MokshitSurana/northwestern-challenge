@@ -286,7 +286,7 @@ are weighted over formulaic program payments.
 
 ## Priority Order (remaining work as of June 5, 2026)
 
-All five skills ship with tests/reproducible cases; cross-platform CI is green; the
+All six skills ship with tests/reproducible cases; cross-platform CI is green; the
 findings report, external verification, and money trail are done. **All four
 per-case reportability gates are now closed** (role, money trail → `notes/08`;
 §207 cooling-off + request-for-comment → `notes/09`).
