@@ -25,8 +25,9 @@ The anchor finding: **The Artemis Group** — a lobbying firm founded by former 
 | Agent Skill 3 — `entity-resolver` (`resolve`) | `skill/entity-resolver/` | ✅ Shipped (F1 = 0.963 on held-out eval) |
 | Agent Skill 4 — `revolving-door-detector` (`scan`) | `skill/revolving-door-detector/` | ✅ Shipped (139 candidates, 22 agencies) |
 | Agent Skill 5 — `federal-award-tracer` (`trace`) | `skill/federal-award-tracer/` | ✅ Shipped (USAspending money trail; 3 reproducible case files) |
-| Agent Skill 6 — `press-release-cross-ref` (`pressrel`) | `skill/press-release-cross-ref/` | ✅ Shipped (Congressional press-release cross-ref over 141K rows; 2 reproducible case files) |
-| Test suite (pytest) | `tests/` | ✅ 174 tests passing |
+| Agent Skill 6 — `press-release-cross-ref` (`pressrel`) | `skill/press-release-cross-ref/` | ✅ Shipped (Congressional press-release cross-ref over 141K rows; 3 reproducible case files) |
+| Agent Skill 7 — `coi-graph` (`coi`) | `skill/coi-graph/` | ✅ Shipped (composes scan + trace + pressrel into a force-directed conflict-of-interest graph; surfaces triangles, hubs, bridges; renders to JSON + SVG + DOT + interactive `/graph` route) |
+| Test suite (pytest) | `tests/` | ✅ 200 tests passing |
 | Findings report (PDF) | `findings/findings_report.md` → PDF | ✅ Builds via pandoc + typst (see report header) |
 | Interaction traces | `traces/` | ✅ 4 per-skill traces + 2 narrative traces |
 | Anchor finding | `notes/05_finding_bridenstine.md` | ✅ Draft complete |
@@ -235,7 +236,7 @@ docker compose up
 
 ## Agent Skills
 
-All six skills are shipped. The `/fair-guard` dispatcher routes between them
+All seven skills are shipped. The `/fair-guard` dispatcher routes between them
 and enforces prerequisites deterministically before reading any mode file.
 
 ### Skill 1 — `doctor` (setup-validator)
@@ -316,6 +317,41 @@ to their matching scan-finding rows.
 
 Implementation: `scripts/05_pressrel_search.py` (DuckDB `press_releases` table;
 no network access required). See `skill/press-release-cross-ref/SKILL.md`.
+
+### Skill 7 — `coi-graph` (`coi`)
+
+The **composition skill**. The other six skills each produce a list; this one
+joins their outputs into one investigable network so the **connections across
+them** become visible. Inputs are entirely on-disk JSON (no DB or network); the
+graph is built from `web/public/findings.json` after scan + trace + pressrel
+have run.
+
+Five typed node types (lobbyist, firm, agency, client, legislator) and five
+typed edges (works_at, former_official_of, lobbies_for, funded_by, mentions)
+encode the relationships. Three structural patterns are detected and surfaced
+in the report header:
+
+- **Triangles** — `(legislator, client, agency)` cycles where the member's
+  press release praises a client whose lobbyist used to staff that client's
+  funding agency. The headline structural finding.
+- **Hubs** — clients receiving both agency dollars AND legislator mentions
+  (score = `log10(dollars+1) × mentions`).
+- **Bridges** — clients shared by two or more lobbyists in the top-N scan.
+
+Renders four ways: a markdown summary (terminal / report PDF), a d3-force
+JSON adjacency for the Reporter UI's `/graph` route (interactive force-
+directed graph with zoom, pan, drag-to-pin, click-to-inspect), a static SVG
+(pure-Python, no Graphviz dependency), and a Graphviz DOT source for users
+who want to compile their own layouts.
+
+Client-name canonicalization is what makes this work: scan's `AMSTED
+INDUSTRIES`, pressrel's `Amsted Industries`, and trace's `Cargill (operating
+entities)` all collapse onto the same `client:CARGILL` node, so the
+triangles actually form.
+
+Implementation: `scripts/06_coi_graph.py` (NetworkX for the graph + layout;
+pure-Python SVG renderer; no system Graphviz dependency). See
+`skill/coi-graph/SKILL.md`.
 
 ---
 
