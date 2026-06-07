@@ -25,11 +25,80 @@
   }
 }
 
+/* ─────────────────────────────────────────────────────────────────────────
+   Print stylesheet — Save-as-PDF discipline
+
+   The kebab menu's "Print this card" / "Print this trail" / "Print this entry"
+   actions trigger window.print(). The browser's "Save as PDF" option in the
+   print dialog produces a single-page brief when these rules apply:
+
+   1. Interactive chrome (sticky header, nav tabs, refresh strip, filter
+      chips, pagination, kebab buttons) is hidden so the printed page is
+      content-only.
+   2. The page background is white and main width is unconstrained so the
+      print fills the paper margin-to-margin.
+   3. Card spacing is tightened (smaller font, less padding, no shadows) so a
+      single finding/trail/entry card fits on one US Letter / A4 page.
+   4. URLs are inlined after every <a> so a printed page still shows where
+      each link goes (essential for citations / fact-checker review).
+   5. Tables shrink one notch and avoid mid-row page breaks. Card containers
+      avoid being split across pages.
+   6. The Money trail collapsible panel is forced open so the full table
+      makes it onto the printed page.
+
+   To save a one-page PDF: open the kebab on the card you want, click the
+   relevant "Print" action, choose "Save as PDF" in the browser dialog. */
 @media print {
-  /* Strip interactive chrome so prints look like a tidy briefing doc */
-  header[class*="sticky"], nav, button { display: none !important; }
+  /* Hide interactive chrome */
+  header[class*="sticky"], nav, button, [role="tab"] {
+    display: none !important;
+  }
+  /* Hide refresh strips and filter strips (any rounded white bar containing buttons) */
+  div.print\:hidden { display: none !important; }
+
   body { background: #fff !important; }
   main { max-width: none !important; padding: 0 !important; }
-  article { break-inside: avoid; box-shadow: none !important; border-color: #cbd5e1 !important; }
-  a { color: inherit !important; text-decoration: none !important; }
+
+  /* Slightly smaller base font and tighter line-height so one card fits one page */
+  html { font-size: 11pt; }
+  body { line-height: 1.4 !important; }
+  h1 { font-size: 22pt !important; }
+  h2 { font-size: 14pt !important; }
+  h3 { font-size: 11pt !important; }
+
+  /* Each card prints as a self-contained page */
+  article {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none !important;
+    border-color: #94a3b8 !important;
+    padding: 0.6rem !important;
+    margin-bottom: 0.4rem !important;
+  }
+  /* Force-open any expandable trail/timeline panels for the print */
+  details[open] > summary { display: none; }
+  div[aria-expanded="false"] + div { display: block !important; }
+
+  /* Tables: tighter, with no mid-row page breaks */
+  table { font-size: 9pt !important; page-break-inside: auto; }
+  tr { page-break-inside: avoid; }
+  th, td { padding: 0.25rem 0.4rem !important; }
+  thead { display: table-header-group; }
+
+  /* Links: black with the URL inline so a printed citation is auditable */
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #475569;
+    word-break: break-all;
+  }
+  /* Don't append the URL on internal anchors or javascript: links */
+  a[href^="#"]::after, a[href^="javascript:"]::after { content: ""; }
+
+  /* Hide editorial-aside-callouts on print (one-pager scope: facts only) */
+  aside { display: none !important; }
 }
