@@ -331,6 +331,37 @@ Reporter UI: `web/` — run `cd web && npm install && npm run dev` → http://lo
 
 ---
 
+## Outside data used
+
+Per the challenge guidance, all outside data used in the findings is disclosed here.
+
+| Source | Used by | How it affects findings about named individuals/organizations |
+|--------|---------|----------------------------------------------------------------|
+| **USAspending.gov** (live HTTPS API, `api.usaspending.gov/api/v2/search/spending_by_award/`) | `trace` skill (`scripts/04_award_tracer.py`) | All money-trail dollar figures attributed to named firms and their clients (Steinberg/DOE $1.08B, Limbaugh/Interior $161.7M, USDA cases $1.40B) come from this source. Recipient names are verified against the API's returned `Recipient Name` field; the fuzzy `recipient_search_text` is treated as untrusted and filtered against caller-supplied `name_tokens`. |
+| **CFTC.gov, FCC.gov, USDA.gov, Senate committee press releases** (manual look-ups during external verification) | `notes/08_external_verification_top_candidates.md` | Used to independently confirm the prior senior-agency role of 8 of the top 10 scan candidates. Specific URLs are cited under "Source URLs" in `notes/08`. |
+| **Public agency bios and historical news archives** (manual, case-by-case) | `notes/09_reportability_gates_207_and_comment.md` — §207 analysis | Used to estimate the departure month/year for each top candidate. Four cases (Sherman/FCC, Newsome/CFTC, Bailey/USDA, Johnson/USDA) are flagged with † because the departure date is not yet pinned to the month — the §207 timed-ban conclusion is robust to that uncertainty (gaps exceed 2 years in every examined case), but the precise date should be confirmed against the official record before any publication. |
+
+**Not used:** FEC contribution data, OpenSecrets aggregations, LinkedIn employment histories, or any non-public source. The corpus (Senate LDA + House LDA + Congressional press releases) and USAspending.gov are the entirety of the data underlying the findings.
+
+---
+
+## Conflicts of interest
+
+Neither team member is a registered federal lobbyist, has been an employee of any U.S. federal agency named in the findings, has equity in or compensated relationships with any firm named in the findings (Venn Strategies, The Ferguson Group, Delta Strategy Group, The Russell Group, FGS Global, Torrey Advisory Group, Invariant LLC, Waneta Strategies, Spirit Rock Consulting), or has personal relationships with any of the named lobbyists. Neither team member has received funding from any party with an interest in this corpus or these findings beyond the GAIN challenge itself. We will declare in writing if that changes before submission.
+
+---
+
+## Legal-risk flags for the evaluation panel
+
+The structural findings name specific living individuals and active lobbying firms. Per the Code of Conduct, we flag the following to the evaluation panel:
+
+1. **No DOJ-referrable findings.** Our §207 cooling-off analysis (`notes/09_reportability_gates_207_and_comment.md`) found that **every examined top case clears the timed §207(c)/(d) bans by more than two years**. The structure we surface is the *legal* revolving door operating within current rules; we do not assert any violation of 18 USC §207 against any named individual.
+2. **The permanent §207(a)(1) particular-matter bar is a live question, not a finding.** §207(a)(1) is matter-specific and cannot be established from the corpus alone — it requires matching a current lobbying matter to a specific matter the official personally and substantially worked on in government. We treat this as a question to put to each firm in the request-for-comment process (see `notes/comment_requests/`), not as a claim we make.
+3. **Two residual timing questions** before any of the named cases are publication-ready: (a) pin the four †-flagged departure dates (Sherman/FCC, Newsome/CFTC, Bailey/USDA, Johnson/USDA) to the month against the official record; (b) confirm Kenneth Barbic had no USDA contact in 2021 (Barbic's case has the tightest §207 window in our top 10, with a ~3-year gap to first observed lobbying).
+4. **Defamation guardrails.** All claims in the findings report cite a specific Senate LDA UUID, USAspending award ID, or named public source. Money-trail figures are characterized as **conflict-of-interest structure**, not proven wrongdoing; routine program participation (e.g., AMS commodity purchases, FAS food aid, RUS financing) is separated from discretionary, competitively-awarded grants in every table. Request-for-comment drafts for all seven firms are ready in `notes/comment_requests/`.
+
+---
+
 ## Environment variables
 
 | Variable | Default | Description |
