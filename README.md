@@ -27,7 +27,9 @@ The anchor finding: **The Artemis Group** — a lobbying firm founded by former 
 | Agent Skill 5 — `federal-award-tracer` (`trace`) | `skill/federal-award-tracer/` | ✅ Shipped (USAspending money trail; 3 reproducible case files) |
 | Agent Skill 6 — `press-release-cross-ref` (`pressrel`) | `skill/press-release-cross-ref/` | ✅ Shipped (Congressional press-release cross-ref over 141K rows; 3 reproducible case files) |
 | Agent Skill 7 — `coi-graph` (`coi`) | `skill/coi-graph/` | ✅ Shipped (composes scan + trace + pressrel into a force-directed conflict-of-interest graph; surfaces triangles, hubs, bridges; renders to JSON + SVG + DOT + interactive `/graph` route) |
-| Test suite (pytest) | `tests/` | ✅ 200 tests passing |
+| Agent Skill 8 — `comment-tracker` (`comment`) | `skill/comment-tracker/` | ✅ Shipped (turns the per-firm comment-request drafts into an auditable status system; six event kinds, ten derived statuses with deadline pressure rules; CLI + `/comments` UI route) |
+| Agent Skill 9 — `archive-on-cite` (`archive`) | `skill/archive-on-cite/` | ✅ Shipped (snapshots every cited URL to Wayback + Archive.today with retry/backoff; output/archive_registry.json + UI mirror) |
+| Test suite (pytest) | `tests/` | ✅ 261 tests passing |
 | Findings report (PDF) | `findings/findings_report.md` → PDF | ✅ Builds via pandoc + typst (see report header) |
 | Interaction traces | `traces/` | ✅ 4 per-skill traces + 2 narrative traces |
 | Anchor finding | `notes/05_finding_bridenstine.md` | ✅ Draft complete |
@@ -236,8 +238,12 @@ docker compose up
 
 ## Agent Skills
 
-All seven skills are shipped. The `/fair-guard` dispatcher routes between them
+All nine skills are shipped. The `/fair-guard` dispatcher routes between them
 and enforces prerequisites deterministically before reading any mode file.
+A tenth tool (`scripts/09_ap_style_lint.py`) provides AP-style markdown
+linting for the findings report and notes; it runs directly without going
+through the dispatcher and has 22 unit tests covering each rule plus
+false-positive controls.
 
 ### Skill 1 — `doctor` (setup-validator)
 
@@ -352,6 +358,51 @@ triangles actually form.
 Implementation: `scripts/06_coi_graph.py` (NetworkX for the graph + layout;
 pure-Python SVG renderer; no system Graphviz dependency). See
 `skill/coi-graph/SKILL.md`.
+
+### Skill 8 — `comment-tracker` (`comment`)
+
+The drafts in `notes/comment_requests/` are ready to send — this skill
+turns those drafts into a *workflow*. Six event kinds (sent, acknowledged,
+substantive_reply, followup_sent, closed, legal_threat), ten derived
+statuses with deadline-pressure rules, one-line CLI for logging events, and
+a Reporter UI `/comments` route that surfaces the status table with
+color-coded chips (⚠ urgent, ⏳ active, ✓ replied, ❌ no reply, ⬜ not sent).
+The source of truth is the committed `notes/comment_requests/comment_log.json`;
+the script mirrors a slimmer derived view to `web/public/comment_log.json`
+on every event log. A documented request for comment is a publication gate,
+not a courtesy — this skill makes that gate auditable.
+
+Implementation: `scripts/07_comment_tracker.py`. See
+`skill/comment-tracker/SKILL.md`.
+
+### Skill 9 — `archive-on-cite` (`archive`)
+
+Snapshots every cited URL to **both** Wayback Machine and Archive.today
+before publication. Walks the on-disk output of every other skill
+(`findings.json`, `trails.json`, `press_releases.json`) for cited URLs,
+submits each to both services with retry/backoff on 429s and timeouts, and
+writes `output/archive_registry.json` mapping cited URL → snapshot URLs.
+Two-service redundancy is the journalism standard — Wayback for static
+pages, Archive.today for paywalled / dynamic content. Incremental
+re-runnable: a `--skip-recent N` flag skips URLs successfully archived
+within the last N days, so the script is cheap to run periodically right
+up to publication.
+
+Implementation: `scripts/08_archive_cite.py`. See
+`skill/archive-on-cite/SKILL.md`.
+
+### Tool — AP-style lint (`scripts/09_ap_style_lint.py`)
+
+Not a `/fair-guard` mode (intentionally — it runs across many files at once
+rather than as a single-shot mode). A focused, false-positive-controlled
+AP-style checker for the findings report and notes: numbers under 10
+(spelled out vs. numeral), `percent` vs. `%`, smart-quote / ASCII-quote
+mixing, Oxford commas, `over` vs `more than` with numbers, postal-code
+abbreviations outside table cells, and AP month abbreviations. Output is
+grep-able (`PATH:LINE:COL message`); exit code 1 on findings so it works
+as a pre-commit gate or PostToolUse hook (`--hook` mode reads Claude Code
+hook context from stdin). 22 unit tests pin each rule plus its
+false-positive counter-cases.
 
 ---
 
