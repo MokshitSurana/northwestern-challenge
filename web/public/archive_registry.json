@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-06-07T07:33:56.380937+00:00",
+  "n_urls": 1,
+  "entries": {
+    "https://www.gain-agent-challenge.northwestern.edu/": {
+      "url": "https://www.gain-agent-challenge.northwestern.edu/",
+      "snapshotted_at": "2026-06-07T07:33:23.323459+00:00",
+      "wayback_url": null,
+      "wayback_error": "network error: The read operation timed out",
+      "archive_today_url": null,
+      "archive_today_error": "HTTP 429 (rate limited or transient)"
+    }
+  }
+}
