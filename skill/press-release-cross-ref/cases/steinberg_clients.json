@@ -1,0 +1,34 @@
+{
+  "case_id": "steinberg_clients",
+  "label": "Steinberg DOE clients — Congressional press-release cross-ref",
+  "_notes": [
+    "Companion to skill/federal-award-tracer/cases/steinberg_doe.json.",
+    "Aliases use the shortest distinctive form a press release would likely use.",
+    "The Battery Materials and Technology Coalition + 'critical minerals' lines",
+    "are thematic — they catch press releases that name the policy area without",
+    "naming a specific company, so a reporter can scope the legislative climate",
+    "around the Steinberg client roster."
+  ],
+  "clients": [
+    {"name": "Anovion",                          "aliases": ["Anovion"]},
+    {"name": "Talon Nickel",                     "aliases": ["Talon Nickel", "Talon Metals"]},
+    {"name": "Forge Battery",                    "aliases": ["Forge Battery", "Forge Nano"]},
+    {"name": "Cabot Corporation",                "aliases": ["Cabot Corporation", "Cabot Corp"]},
+    {"name": "Wabtec",                           "aliases": ["Wabtec"]},
+    {"name": "Amsted Industries",                "aliases": ["Amsted"]},
+    {"name": "Burns & McDonnell",                "aliases": ["Burns & McDonnell"]},
+    {"name": "Battery Materials & Tech Coalition", "aliases": ["Battery Materials and Technology Coalition"]},
+    {"name": "Critical minerals (thematic)",     "aliases": ["critical minerals"]}
+  ],
+  "filters": {
+    "since": "2022-01-01",
+    "until": "2026-04-01",
+    "party": null,
+    "state": null,
+    "chamber": null,
+    "domain_contains": null
+  },
+  "match": [
+    {"lobbyist_name": "Benjamin Steinberg", "agency_short": "energy"}
+  ]
+}
