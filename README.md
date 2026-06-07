@@ -80,9 +80,10 @@ The anchor finding: **The Artemis Group** — a lobbying firm founded by former 
 │   ├── _archive/                         #   superseded scripts (see _archive/README.md)
 │   └── _diagnose_*.py                    #   one-shot data-quality probes
 │
-├── tests/                                 # ── pytest suite (144 tests)
+├── tests/                                 # ── pytest suite (174 tests)
 │   ├── test_agency_registry.py           #   scan registry + regex coverage (111 tests)
-│   └── test_entity_resolver.py           #   resolver unit + F1 eval (33 tests)
+│   ├── test_entity_resolver.py           #   resolver unit + F1 eval (33 tests)
+│   └── test_pressrel.py                  #   pressrel regex + snippet + DB integration (30 tests)
 │
 ├── notebooks/                             # ── Exploratory notebooks (verification runs)
 │   ├── 04_revolving_door_leads.ipynb
@@ -186,12 +187,13 @@ uv run scripts/03_agency_concentration.py
 uv run scripts/03_agency_concentration.py --agency nasa
 ```
 
-### 7. Run the test suite (144 tests)
+### 7. Run the test suite (174 tests)
 
 ```bash
 uv run pytest
 uv run pytest tests/test_agency_registry.py -v    # scan regex coverage
 uv run pytest tests/test_entity_resolver.py -v    # resolver F1 eval
+uv run pytest tests/test_pressrel.py -v           # pressrel regex + DB integration
 ```
 
 ### 8. Start the reporter verification UI (optional)
