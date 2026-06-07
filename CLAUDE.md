@@ -24,11 +24,12 @@ All scripts run with `uv`. Install dependencies first: `uv sync`
 /fair-guard scan                    # run Bridenstine-pattern scan (revolving-door-detector)
 /fair-guard scan --agency nasa      # filter to one agency
 /fair-guard trace                   # follow the money (federal-award-tracer; USAspending.gov)
+/fair-guard pressrel                # cross-ref Congressional press releases (press-release-cross-ref)
 ```
 
-`argument-hint` shows `[mode: doctor | index | scan | resolve | trace]` in CLI autocomplete. The dispatcher reads `skill/<full-name>/SKILL.md` at runtime and executes its instructions. `allowed-tools: Read Bash` is pre-approved — no permission prompts during execution.
+`argument-hint` shows `[mode: doctor | index | scan | resolve | trace | pressrel]` in CLI autocomplete. The dispatcher reads `skill/<full-name>/SKILL.md` at runtime and executes its instructions. `allowed-tools: Read Bash` is pre-approved — no permission prompts during execution.
 
-**Prerequisite guard (enforced by dispatcher):** `scan` and `resolve` require `output/investigation.duckdb`. If it doesn't exist, the dispatcher stops and shows two recovery options before attempting anything. `trace` is the exception — it does **not** need the DuckDB; it makes live calls to api.usaspending.gov and takes a case file.
+**Prerequisite guard (enforced by dispatcher):** `scan`, `resolve`, and `pressrel` require `output/investigation.duckdb`. If it doesn't exist, the dispatcher stops and shows two recovery options before attempting anything. `trace` is the exception — it does **not** need the DuckDB; it makes live calls to api.usaspending.gov and takes a case file.
 
 **Two ways to get `output/investigation.duckdb`:**
 - **Fast (~10 min):** Download pre-built `output/` from Google Drive → unzip → place at project root:
@@ -70,6 +71,14 @@ uv run scripts/04_award_tracer.py --print-template            # show case-file s
 uv run scripts/04_award_tracer.py --case skill/federal-award-tracer/cases/steinberg_doe.json
 uv run scripts/04_award_tracer.py --case skill/federal-award-tracer/cases/usda_cases.json --out notes/usda_trail.md --json output/usda_awards.json
 uv run scripts/04_award_tracer.py --case <case.json> --no-web # skip web/public writes
+
+# pressrel — Congressional press-release cross-ref (no network; uses press_releases table)
+uv run scripts/05_pressrel_search.py --print-template         # show case-file schema
+uv run scripts/05_pressrel_search.py --mention "Cargill" --since 2024-01-01
+uv run scripts/05_pressrel_search.py --case skill/press-release-cross-ref/cases/steinberg_clients.json
+uv run scripts/05_pressrel_search.py --case skill/press-release-cross-ref/cases/limbaugh_clients.json --out notes/pressrel_limbaugh.md --json output/pressrel_limbaugh.json
+uv run scripts/05_pressrel_search.py --enrich-findings        # auto-attach matches to every scan finding row
+uv run scripts/05_pressrel_search.py --mention "X" --no-web   # skip web writes
 ```
 
 ### Tests
@@ -79,10 +88,11 @@ once, then invoke via `python -m pytest` (the bare `pytest` entrypoint is not on
 
 ```bash
 uv sync --extra dev                                      # one-time: install pytest + ruff
-uv run python -m pytest                                  # full suite (144 tests)
+uv run python -m pytest                                  # full suite (174 tests)
 uv run python -m pytest tests/test_agency_registry.py -v # scan regex coverage (111 tests)
 uv run python -m pytest tests/test_entity_resolver.py -v # resolver unit + F1 (33 tests)
 uv run python -m pytest tests/test_entity_resolver.py::test_f1_on_db -s  # show F1 eval output
+uv run python -m pytest tests/test_pressrel.py -v        # pressrel regex + DB integration (30 tests)
 ```
 
 The single F1-on-DB test is `@pytest.mark.skipif(not DB_PATH.exists())`, so the suite
@@ -168,6 +178,8 @@ scripts/03_agency_concentration.py → output/agency_concentration.{md,csv}
                                    → web/public/findings.json
 scripts/04_award_tracer.py        → web/public/trails.json (upserts per case_id)
                                    → web/public/findings.json (enriches matching rows with `trail`)
+scripts/05_pressrel_search.py     → web/public/press_releases.json (upserts per case_id)
+                                   → web/public/findings.json (enriches matching rows with `press_releases`)
     │
     ▼
 web/src/app/page.tsx             (reporter UI — findings + inline Money trail panels)
@@ -190,7 +202,7 @@ web/src/app/trails/page.tsx      (reporter UI — full money-trail index, refres
 
 Convenience views: `revolving_door` (senate lobbyists with non-empty `covered_position`), `senate_spend_by_issue`.
 
-### Five Agent Skills
+### Six Agent Skills
 
 | Short name | Full name | Status | Implementation | Tests |
 |-----------|-----------|--------|---------------|-------|
@@ -199,6 +211,7 @@ Convenience views: `revolving_door` (senate lobbyists with non-empty `covered_po
 | `resolve` | entity-resolver | Shipped | `scripts/02_entity_resolver.py` + `skill/entity-resolver/` | `tests/test_entity_resolver.py` — 33 tests, F1 = 0.963 |
 | `scan` | revolving-door-detector | Shipped | `scripts/03_agency_concentration.py` + `skill/revolving-door-detector/` | `tests/test_agency_registry.py` — 111 tests |
 | `trace` | federal-award-tracer (v1.1.0) | Shipped | `scripts/04_award_tracer.py` + `skill/federal-award-tracer/` | 3 reproducible case files (Steinberg DOE $1.08B, USDA $1.40B exact) + a no-case-file generalization eval; `evals/evals.json` |
+| `pressrel` | press-release-cross-ref (v1.0.0) | Shipped | `scripts/05_pressrel_search.py` + `skill/press-release-cross-ref/` | `tests/test_pressrel.py` — 30 tests (regex discipline, snippet extraction, schema validation, DB integration); 2 reproducible case files (Steinberg, Limbaugh) |
 
 ### Agent Skills architecture (three layers)
 
@@ -338,6 +351,8 @@ skill/revolving-door-detector/SKILL.md     # Skill: scan — submission artifact
 skill/entity-resolver/SKILL.md             # Skill: resolve — shipped, F1 = 0.963
 skill/federal-award-tracer/SKILL.md        # Skill: trace — submission artifact
 skill/federal-award-tracer/cases/          # 3 reproducible USAspending case files
+skill/press-release-cross-ref/SKILL.md     # Skill: pressrel — submission artifact
+skill/press-release-cross-ref/cases/       # 2 reproducible press-release case files
 
 .agents/skills/fair-guard/SKILL.md         # agentskills.io master skill
 .agents/skills/fair-guard/modes/
@@ -346,6 +361,7 @@ skill/federal-award-tracer/cases/          # 3 reproducible USAspending case fil
     resolve/SKILL.md
     scan/SKILL.md
     trace/SKILL.md
+    pressrel/SKILL.md
 
 .claude/skills/fair-guard/SKILL.md         # Claude Code dispatcher (/fair-guard)
 
@@ -354,6 +370,7 @@ scripts/01_build_index.py                  # Skill: index implementation (ETL)
 scripts/02_entity_resolver.py              # Skill: resolve implementation
 scripts/03_agency_concentration.py         # Skill: scan implementation
 scripts/04_award_tracer.py                 # Skill: trace implementation (USAspending)
+scripts/05_pressrel_search.py              # Skill: pressrel implementation (DuckDB press_releases)
 scripts/verify_build.py                    # post-index invariants (34 checks)
 scripts/_probe_usaspending.py              # original money-trail probe (trace's ancestor)
 scripts/_archive/                          # superseded scripts kept for history
@@ -362,6 +379,7 @@ scripts/_diagnose_*.py                     # one-shot data-quality probes
 evals/evals.json                           # trace skill test prompts + assertions (incl. eval #4 generalization, no shipped case file)
 tests/test_agency_registry.py              # 111 tests for scan registry
 tests/test_entity_resolver.py              # 33 tests for resolver (incl. F1 eval)
+tests/test_pressrel.py                     # 30 tests for pressrel (regex, snippet, schema, DB integration)
 
 findings/findings_report.md               # final findings (→ PDF via pandoc + typst)
 notes/05_finding_bridenstine.md           # anchor finding (verified)
