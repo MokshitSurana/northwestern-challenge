@@ -182,3 +182,58 @@ export interface CoiGraphPayload {
   nodes: CoiNode[]
   links: CoiLink[]
 }
+
+// ── Comment tracker (drives /comments route) ──────────────────────────────────
+
+export interface CommentEvent {
+  at: string
+  kind: "sent" | "acknowledged" | "substantive_reply" | "followup_sent" | "closed" | "legal_threat"
+  by?: string
+  addresses?: string[]
+  summary?: string
+  pointer?: string
+  response_kind?: "response" | "no_response"
+}
+
+export interface CommentMetrics {
+  days_since_send: number | null
+  days_until_deadline: number | null
+  n_events: number
+  has_substantive: boolean
+}
+
+export type CommentStatus =
+  | "not_drafted"
+  | "not_sent"
+  | "sent"
+  | "acknowledged"
+  | "awaiting_substantive"
+  | "responded"
+  | "no_response_by_deadline"
+  | "closed_response"
+  | "closed_no_response"
+  | "escalated_to_counsel"
+
+export interface CommentEntry {
+  key: string
+  firm: string
+  case: string
+  scan_rank?: number | number[] | null
+  trail_case_id?: string | null
+  draft_path: string
+  status: CommentStatus
+  status_label: string
+  deadline?: string | null
+  addresses_used?: string[]
+  metrics: CommentMetrics
+  events: CommentEvent[]
+}
+
+export interface CommentLogPayload {
+  generated_at: string
+  n_entries: number
+  n_warnings: number
+  warnings: string[]
+  status_legend: { status: CommentStatus; label: string }[]
+  entries: CommentEntry[]
+}
