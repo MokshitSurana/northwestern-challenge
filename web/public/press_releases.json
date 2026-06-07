@@ -1,7 +1,705 @@
 {
-  "generated_at": "2026-06-07T03:10:46.846986+00:00",
-  "total_reports": 2,
+  "generated_at": "2026-06-07T03:34:48.058957+00:00",
+  "total_reports": 3,
   "reports": [
+    {
+      "case_id": "usda_clients",
+      "label": "USDA revolving-door clients — Congressional press-release cross-ref",
+      "generated_at": "2026-06-07T03:34:47.897101+00:00",
+      "filters": {
+        "since": "2022-01-01",
+        "until": "2026-04-01",
+        "party": null,
+        "state": null,
+        "chamber": null,
+        "domain_contains": null
+      },
+      "match": [
+        {
+          "lobbyist_name": "Ashlee Johnson",
+          "agency_short": "usda"
+        },
+        {
+          "lobbyist_name": "Kevin Bailey",
+          "agency_short": "usda"
+        },
+        {
+          "lobbyist_name": "Michael Torrey",
+          "agency_short": "usda"
+        },
+        {
+          "lobbyist_name": "Kenneth Barbic",
+          "agency_short": "usda"
+        }
+      ],
+      "n_clients": 11,
+      "n_matches": 123,
+      "n_distinct_members": 72,
+      "per_client": [
+        {
+          "client": "Cargill",
+          "aliases": [
+            "Cargill"
+          ],
+          "n_matches": 23,
+          "n_distinct_members": 21,
+          "first_date": "2022-01-26",
+          "last_date": "2025-07-29"
+        },
+        {
+          "client": "National Rural Water Assn",
+          "aliases": [
+            "National Rural Water"
+          ],
+          "n_matches": 25,
+          "n_distinct_members": 19,
+          "first_date": "2022-03-29",
+          "last_date": "2026-03-24"
+        },
+        {
+          "client": "Tri-State Generation",
+          "aliases": [
+            "Tri-State Generation"
+          ],
+          "n_matches": 8,
+          "n_distinct_members": 4,
+          "first_date": "2024-06-28",
+          "last_date": "2026-01-22"
+        },
+        {
+          "client": "Land O'Lakes",
+          "aliases": [
+            "Land O'Lakes"
+          ],
+          "n_matches": 7,
+          "n_distinct_members": 7,
+          "first_date": "2023-12-01",
+          "last_date": "2025-02-21"
+        },
+        {
+          "client": "McCain Foods",
+          "aliases": [
+            "McCain Foods"
+          ],
+          "n_matches": 0,
+          "n_distinct_members": 0,
+          "first_date": null,
+          "last_date": null
+        },
+        {
+          "client": "Global Clean Energy",
+          "aliases": [
+            "Global Clean Energy"
+          ],
+          "n_matches": 25,
+          "n_distinct_members": 20,
+          "first_date": "2022-03-09",
+          "last_date": "2026-03-13"
+        },
+        {
+          "client": "Louis Dreyfus",
+          "aliases": [
+            "Louis Dreyfus"
+          ],
+          "n_matches": 8,
+          "n_distinct_members": 6,
+          "first_date": "2024-01-23",
+          "last_date": "2026-03-10"
+        },
+        {
+          "client": "Ardent Mills",
+          "aliases": [
+            "Ardent Mills"
+          ],
+          "n_matches": 2,
+          "n_distinct_members": 2,
+          "first_date": "2024-09-11",
+          "last_date": "2025-08-21"
+        },
+        {
+          "client": "California Prune Board",
+          "aliases": [
+            "California Prune"
+          ],
+          "n_matches": 1,
+          "n_distinct_members": 1,
+          "first_date": "2025-02-06",
+          "last_date": "2025-02-06"
+        },
+        {
+          "client": "Illinois Soybean Board",
+          "aliases": [
+            "Illinois Soybean"
+          ],
+          "n_matches": 23,
+          "n_distinct_members": 8,
+          "first_date": "2022-08-11",
+          "last_date": "2026-03-11"
+        },
+        {
+          "client": "California Rice Commission",
+          "aliases": [
+            "California Rice"
+          ],
+          "n_matches": 1,
+          "n_distinct_members": 1,
+          "first_date": "2022-06-16",
+          "last_date": "2022-06-16"
+        }
+      ],
+      "matches": [
+        {
+          "client": "National Rural Water Assn",
+          "date": "2026-03-24",
+          "member_name": "Jeff Merkley",
+          "party": "Democrat",
+          "state": "OR",
+          "chamber": "Senate",
+          "title": "Merkley Celebrates Senate Passage of His Bipartisan Bill to Wipe Out Non-Flushables from Wastewater Infrastructure",
+          "url": "https://www.merkley.senate.gov/merkley-celebrates-senate-passage-of-his-bipartisan-bill-to-wipe-out-non-flushables-from-wastewater-infrastructure/",
+          "snippet": "…Products Association, ISSA (the Worldwide Cleaning Industry Association), National Association of Clean Water Agencies, **National Rural Water** Association, National Stewardship Action Council, Oak Lodge Water Services, Oregon Association of Clean Water Agencies,…"
+        },
+        {
+          "client": "Global Clean Energy",
+          "date": "2026-03-13",
+          "member_name": "John B. Larson",
+          "party": "Democrat",
+          "state": "CT",
+          "chamber": "House",
+          "title": "Larson Announces $350,000 in New Federal Funding to Grow Connecticut’s Hydrogen and Fuel Cell Industry and Invest in American-Made, Affordable Clean Energy",
+          "url": "https://larson.house.gov/media-center/press-releases/larson-announces-350000-new-federal-funding-grow-connecticuts-hydrogen",
+          "snippet": "…CONNSTEP to support Connecticut manufacturers, like Infinity Fuel Cell, and to ensure our state remains a national and **global clean energy** leader. I will continue to work with my colleagues in Congress to extend tax credits that support this growing industry…"
+        },
+        {
+          "client": "Illinois Soybean Board",
+          "date": "2026-03-11",
+          "member_name": "Richard J. Durbin",
+          "party": "Democrat",
+          "state": "IL",
+          "chamber": "Senate",
+          "title": "Durbin Sits Down With Illinois Soybean Association",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-sits-down-with-illinois-soybean-association",
+          "snippet": "…Durbin (D-IL), a member of the Senate Committee on Agriculture, Nutrition, and Forestry, today met with members of the **Illinois Soybean** Association and the American Soybean Association to discuss the severe downturn in the farm economy. Topics ranged from…"
+        },
+        {
+          "client": "Louis Dreyfus",
+          "date": "2026-03-10",
+          "member_name": "Cindy Hyde-Smith",
+          "party": "Republican",
+          "state": "MS",
+          "chamber": "Senate",
+          "title": "Buying American Cotton Act hopes to foster inelastic cotton demand",
+          "url": "https://www.hydesmith.senate.gov/buying-american-cotton-act-hopes-foster-inelastic-cotton-demand",
+          "snippet": "**Louis Dreyfus** Co. executive Joe Nicosia says the U.S. cotton industry is in jeopardy, but he has faith in a bill working its way thro…"
+        },
+        {
+          "client": "National Rural Water Assn",
+          "date": "2026-03-05",
+          "member_name": "Mark Kelly",
+          "party": "Democrat",
+          "state": "AZ",
+          "chamber": "Senate",
+          "title": "Kelly, Boozman Champion Support for Maintenance and Security of Rural Water Systems",
+          "url": "https://www.kelly.senate.gov/newsroom/press-releases/kelly-boozman-champion-support-for-maintenance-and-security-of-rural-water-systems/",
+          "snippet": "…r Boozman’s leadership in ensuring rural clean water systems have the support they need to modernize and thrive.” “The **National Rural Water** Association supports the Futureproofing Local Operations for Water Systems Act of 2026, or FLOWS Act. This legislation…"
+        },
+        {
+          "client": "National Rural Water Assn",
+          "date": "2026-03-04",
+          "member_name": null,
+          "party": null,
+          "state": null,
+          "chamber": null,
+          "title": "Boozman, Kelly Champion Proactive Support for Maintenance and Security of Rural Water Systems",
+          "url": "https://www.boozman.senate.gov/public/index.cfm/press-releases?ID=04FD3685-8138-4A01-93A3-F54633D20717",
+          "snippet": "…ay also be used for workforce training and ongoing cybersecurity assistance. The measure has garnered support from the **National Rural Water** Association, National Association of Clean Water Agencies (NACWA), Bentley, Autodesk, Grundfos, Xylem, American Society…"
+        },
+        {
+          "client": "National Rural Water Assn",
+          "date": "2026-02-18",
+          "member_name": "Donald G. Davis",
+          "party": "Democrat",
+          "state": "NC",
+          "chamber": "House",
+          "title": "Congressmen Davis, Johnson Introduce Legislation Improve Support for Rural Water Systems",
+          "url": "https://dondavis.house.gov/media/press-releases/congressmen-davis-johnson-introduce-legislation-improve-support-rural-water",
+          "snippet": "…d loan refinancing to certain rural water, wastewater, or waste-disposal facilities. The legislation is endorsed by the **National Rural Water** Association. “Every eastern North Carolinian deserves access to reliable water infrastructure. Water systems are the b…"
+        },
+        {
+          "client": "Illinois Soybean Board",
+          "date": "2026-02-13",
+          "member_name": "Richard J. Durbin",
+          "party": "Democrat",
+          "state": "IL",
+          "chamber": "Senate",
+          "title": "Durbin Talks With Illinois Soybean Association",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-talks-with-illinois-soybean-association",
+          "snippet": "…Dick Durbin (D-IL), a member of the Senate Committee on Agriculture, Nutrition, and Forestry, today met members of the **Illinois Soybean** Association. During their meeting, they discussed the expensive costs of farming, the high price of losing Illinois soy…"
+        },
+        {
+          "client": "Illinois Soybean Board",
+          "date": "2026-02-06",
+          "member_name": "Richard J. Durbin",
+          "party": "Democrat",
+          "state": "IL",
+          "chamber": "Senate",
+          "title": "Durbin Secures Support For Illinois Priorities In Recently Passed Package Of Five Government Funding Bills",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-secures-support-for-illinois-priorities-in-recently-passed-package-of-five-government-funding-bills",
+          "snippet": "…upport partnerships between U.S. universities and developing country research institutions, including the University of **Illinois Soybean** Innovations Lab. Abducted Ukrainian Children: $15 million to help track and return Ukrainian children abducted to Russ…"
+        },
+        {
+          "client": "National Rural Water Assn",
+          "date": "2026-01-22",
+          "member_name": "Tom Cole",
+          "party": "Republican",
+          "state": "OK",
+          "chamber": "House",
+          "title": "Cole Votes in Favor of Defense; Labor, Health and Human Services, Education; Transportation, Housing, and Urban Development; and Homeland Security Appropriations Packages",
+          "url": "https://cole.house.gov/media/press-releases/cole-votes-favor-defense-labor-health-and-human-services-education",
+          "snippet": "…th programs. $6 million for Tribal minority HIV/AIDS Prevention and Treatment program. Includes language supporting a **National Rural Water** Apprenticeship Program to promote workforce development and opportunities. $116.8 million for Native American Caregive…"
+        },
+        {
+          "client": "Tri-State Generation",
+          "date": "2026-01-22",
+          "member_name": "Gabe Evans",
+          "party": "Republican",
+          "state": "CO",
+          "chamber": "House",
+          "title": "What They Are Saying... Rep Evans' FIRE Act",
+          "url": "https://gabeevans.house.gov/media/press-releases/what-they-are-saying-rep-evans-fire-act",
+          "snippet": "…leadership in advancing practical reforms that protect the environment and strengthen America’s energy advantage.” ➡️ **Tri-State Generation**: “The FIRE Act offers an important step toward balancing clean air protections with proactive wildfire mitigation while…"
+        },
+        {
+          "client": "Global Clean Energy",
+          "date": "2025-10-29",
+          "member_name": "Mike Thompson",
+          "party": "Democrat",
+          "state": "CA",
+          "chamber": "House",
+          "title": "THOMPSON, NEAL, WAYS & MEANS DEMOCRATS INTRODUCE BILL TO RESTORE HISTORIC RENEWABLE ENERGY INVESTMENTS",
+          "url": "https://mikethompson.house.gov/newsroom/press-releases/thompson-neal-ways-means-democrats-introduce-bill-restore-historic",
+          "snippet": "…hese investments were fully paid for, they lowered costs, they created jobs, and they positioned America to lead in the **global clean energy** economy. We can’t afford to fall behind—not to China, and not on the fight against climate change. That’s why I’m leadi…"
+        },
+        {
+          "client": "Illinois Soybean Board",
+          "date": "2025-10-29",
+          "member_name": "Eric Sorensen",
+          "party": "Democrat",
+          "state": "IL",
+          "chamber": "House",
+          "title": "Congressman Sorensen Leads Members of Illinois Congressional Delegation in Urging President Trump to Stop Hurting IL Soybean and Corn Farmers",
+          "url": "https://sorensen.house.gov/media/press-releases/congressman-sorensen-leads-members-illinois-congressional-delegation-urging",
+          "snippet": "…e China, that are critical for farmers’ livelihoods. You can read the full letter here. The letter is endorsed by the **Illinois Soybean** Association and the Illinois Farm Bureau."
+        },
+        {
+          "client": "Illinois Soybean Board",
+          "date": "2025-10-28",
+          "member_name": "Richard J. Durbin",
+          "party": "Democrat",
+          "state": "IL",
+          "chamber": "Senate",
+          "title": "In Senate Judiciary Committee Hearing, Durbin Questions Fertilizer And Seed Companies About High Costs For Illinois Farmers",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/in-senate-judiciary-committee-hearing-durbin-questions-fertilizer-and-seed-companies-about-high-costs-for-illinois-farmers",
+          "snippet": "…ally as the Trump Administration has threatened critical seed and genetic research, like that done at the University of **Illinois Soybean** Germplasm Bank. “Since the 1930s, U.S. government-funded agriculture research has directly helped to boost our farm ou…"
+        },
+        {
+          "client": "Illinois Soybean Board",
+          "date": "2025-10-22",
+          "member_name": "Raja Krishnamoorthi",
+          "party": "Democrat",
+          "state": "IL",
+          "chamber": "House",
+          "title": "Congressman Krishnamoorthi Renews Demand for Administration Action as Trump’s Trade War Hammers Illinois Soybean Farmers",
+          "url": "https://krishnamoorthi.house.gov/media/press-releases/congressman-krishnamoorthi-renews-demand-administration-action-trumps-trade",
+          "snippet": "…egic action to protect Illinois agriculture from “the profound damage that President Trump’s trade war is inflicting on **Illinois soybean** farmers.” In the letter, he also called for urgent steps to mitigate PRC retaliation, stabilize farm income, and rebuil…"
+        },
+        {
+          "client": "Tri-State Generation",
+          "date": "2025-10-21",
+          "member_name": "John W. Hickenlooper",
+          "party": "Democrat",
+          "state": "CO",
+          "chamber": "Senate",
+          "title": "Hickenlooper Cheers Committee Passage of Bipartisan Fix Our Forests Act",
+          "url": "https://www.hickenlooper.senate.gov/press_releases/hickenlooper-cheers-committee-passage-of-bipartisan-fix-our-forests-act/",
+          "snippet": "…ities; Colorado River District; Northern Colorado Water Conservancy District; Southwestern Water Conservation District, **Tri-State Generation** and Transmission, Inc; and the National Rural Electric Co-Op Association. For a full list of all quotes from supportiv…"
+        },
+        {
+          "client": "Tri-State Generation",
+          "date": "2025-10-20",
+          "member_name": "John W. Hickenlooper",
+          "party": "Democrat",
+          "state": "CO",
+          "chamber": "Senate",
+          "title": "Western Governors, Water Managers, More Join to Applaud Hickenlooper’s Bipartisan Wildfire Mitigation Bill",
+          "url": "https://www.hickenlooper.senate.gov/press_releases/western-governors-water-managers-more-join-to-applaud-hickenloopers-bipartisan-wildfire-mitigation-bill/",
+          "snippet": "…nities we serve, all while facing high liability risks and an inability to acquire necessary insurance coverage,” wrote **Tri-State Generation** and Transmission, Inc. in a letter of support for the Fix Our Forests Act. “This bill is a key step towards finding sol…"
+        },
+        {
+          "client": "Global Clean Energy",
+          "date": "2025-09-03",
+          "member_name": "Daniel S. Goldman",
+          "party": "Democrat",
+          "state": "NY",
+          "chamber": "House",
+          "title": "Congressman Goldman Introduces Amendment to Transfer Research Funding From Fossil Fuels to Renewable Energy",
+          "url": "https://goldman.house.gov/media/press-releases/congressman-goldman-introduces-amendment-transfer-research-funding-fossil",
+          "snippet": "…more affordable for families, support domestic energy production, and ensure American leadership in the transition to a **global clean energy** economy. Goldman’s amendment would compensate for some of that lost funding by removing $93 million from the section of…"
+        },
+        {
+          "client": "Ardent Mills",
+          "date": "2025-08-21",
+          "member_name": "Eugene Simon Vindman",
+          "party": "Democrat",
+          "state": "VA",
+          "chamber": "House",
+          "title": "Vindman Meets with Farmers & Producers, Highlights Virginia Agriculture During Five-Stop Farm Tour",
+          "url": "https://vindman.house.gov/2025/08/21/vindman-meets-with-farmers-producers-highlights-virginia-agriculture-during-five-stop-farm-tour/",
+          "snippet": "…m Credit of the Virginias and Virginia Farm Bureau for joining me throughout an incredible day.” Vindman first visited **Ardent Mills** in Culpeper County. Since 1970, this flour mill has supported Virginia agriculture by producing blends used in everythi…"
+        },
+        {
+          "client": "Illinois Soybean Board",
+          "date": "2025-08-04",
+          "member_name": "Eric Sorensen",
+          "party": "Democrat",
+          "state": "IL",
+          "chamber": "House",
+          "title": "Congressman Sorensen Introduces Bipartisan Bill to Ensure Farmers Are Rewarded for Improving Soil Health",
+          "url": "https://sorensen.house.gov/media/press-releases/congressman-sorensen-introduces-bipartisan-bill-ensure-farmers-are-rewarded",
+          "snippet": "…clear, science-based ways to track soil carbon and make sure farmers are recognized and rewarded for their efforts.” “**Illinois soybean** farmers, along with those across the country, are leading the way on soil health,” said Bryan Severs, Illinois Soybean…"
+        },
+        {
+          "client": "Global Clean Energy",
+          "date": "2025-07-31",
+          "member_name": "Marcy Kaptur",
+          "party": "Democrat",
+          "state": "OH",
+          "chamber": "House",
+          "title": "Non-Partisan Watchdog: President Trump and Russ Vought Continue to Steal from America’s Students and Schools",
+          "url": "https://kaptur.house.gov/media-center/press-releases/non-partisan-watchdog-president-trump-and-russ-vought-continue-steal",
+          "snippet": "…t and Related Agencies Appropriations Subcommittee Ranking Member Marcy Kaptur (OH-09). “These program freezes cede our **global clean energy** leadership to Communist China and force Americans to pay higher energy bills. DOE’s partisan overreach must end now. Th…"
+        },
+        {
+          "client": "Cargill",
+          "date": "2025-07-29",
+          "member_name": "Cindy Hyde-Smith",
+          "party": "Republican",
+          "state": "MS",
+          "chamber": "Senate",
+          "title": "Senate Ag holds hearing on US Grain Standards Act",
+          "url": "https://www.hydesmith.senate.gov/senate-ag-holds-hearing-us-grain-standards-act",
+          "snippet": "…ds.” Testifying on behalf of the National Grain and Feed Association, Nick Friant, director of raw material quality at **Cargill** and chairman of NGFA’s Grain Grades and Weights Committee, said there are two industry priorities for reauthorization:…"
+        },
+        {
+          "client": "Global Clean Energy",
+          "date": "2025-07-17",
+          "member_name": "Jared Huffman",
+          "party": "Democrat",
+          "state": "CA",
+          "chamber": "House",
+          "title": "Huffman Statement on Interior Memo Targeting Clean Energy on Federal Lands",
+          "url": "https://huffman.house.gov/media-center/press-releases/huffman-statement-on-interior-memo-targeting-clean-energy-on-federal-lands",
+          "snippet": "…communities that need them the most, in red and blue districts alike. Blocking wind and solar while China dominates the **global clean energy** market is nothing short of a surrender. “Republicans talk a big game about cutting red tape, but when clean energy thr…"
+        },
+        {
+          "client": "Illinois Soybean Board",
+          "date": "2025-07-17",
+          "member_name": "Tammy Duckworth",
+          "party": "Democrat",
+          "state": "IL",
+          "chamber": "Senate",
+          "title": "As Trump’s Chaos Jeopardizes America’s Farmers, Duckworth Discusses Agriculture Priorities with Illinois Corn Growers and Illinois Soybean Association",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/as-trumps-chaos-jeopardizes-americas-farmers-duckworth-discusses-agriculture-priorities-with-illinois-corn-growers-and-illinois-soybean-association",
+          "snippet": "…C.] – U.S. Senator Tammy Duckworth (D-IL) yesterday met with leaders and members from the Illinois Corn Growers and the **Illinois Soybean** Producers to discuss their shared priorities to grow Illinois’s agriculture industry and support our farmers. Duckworth…"
+        },
+        {
+          "client": "Illinois Soybean Board",
+          "date": "2025-07-17",
+          "member_name": "Richard J. Durbin",
+          "party": "Democrat",
+          "state": "IL",
+          "chamber": "Senate",
+          "title": "Durbin Meets With Illinois Soybean Association",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-meets-with-illinois-soybean-association",
+          "snippet": "…p Dick Durbin (D-IL), a member of the Senate Committee on Agriculture, Nutrition, and Forestry, met with members of the **Illinois Soybean** Association. The group discussed concerns with the federal Farm Bill process, the importance of federal policies that s…"
+        },
+        {
+          "client": "Global Clean Energy",
+          "date": "2025-06-30",
+          "member_name": "Sheila Cherfilus-McCormick",
+          "party": "Democrat",
+          "state": "FL",
+          "chamber": "House",
+          "title": "Congresswoman Cherfilus-McCormick Releases Statement on DRC-Rwanda Peace Agreement",
+          "url": "https://cherfilus-mccormick.house.gov/media/press-releases/congresswoman-cherfilus-mccormick-releases-statement-drc-rwanda-peace",
+          "snippet": "…to support U.S. investment in Africa’s critical mineral sector, recognizing the continent’s strategic importance in the **global clean energy** transition. This resolution underscores the importance of sustainable and inclusive partnerships with African nations.”…"
+        },
+        {
+          "client": "Illinois Soybean Board",
+          "date": "2025-05-20",
+          "member_name": "Raja Krishnamoorthi",
+          "party": "Democrat",
+          "state": "IL",
+          "chamber": "House",
+          "title": "ICYMI: Congressman Krishnamoorthi Speaks with Illinois Food Distributors and Farmers on Reckless Trump Tariffs",
+          "url": "https://krishnamoorthi.house.gov/media/press-releases/icymi-congressman-krishnamoorthi-speaks-illinois-food-distributors-and-farmers",
+          "snippet": "…ss confusion.” “We’re just out here, caught in the crossfire,” Ron Kindred, owner of Kindred Farms and chairman of the **Illinois Soybean** Association, said. “[Tariffs] drive the price of everything up.\" Illinois is the number one soybean-producing state in…"
+        },
+        {
+          "client": "Cargill",
+          "date": "2025-05-19",
+          "member_name": "Adrian Smith",
+          "party": "Republican",
+          "state": "NE",
+          "chamber": "House",
+          "title": "PHOTOS: Smith and Pillen Host Rollins for Visit with Nebraska Producers, Announce USDA Farmers First Initiative",
+          "url": "https://adriansmith.house.gov/media/press-releases/photos-smith-and-pillen-host-rollins-visit-nebraska-producers-announce-usda",
+          "snippet": "…Pillen hosted U.S. Department of Agriculture Secretary Brooke Rollins on a visit to Nebraska. The officials toured the **Cargill** Bioscience Complex in Blair, NE, the Wholestone Farms pork facility in Fremont, and Ohnoutka family farm in Valparaiso…"
+        },
+        {
+          "client": "National Rural Water Assn",
+          "date": "2025-03-27",
+          "member_name": "Mike Collins",
+          "party": "Republican",
+          "state": "GA",
+          "chamber": "House",
+          "title": "Senators Collins, Merkley Introduce Bipartisan Legislation to Protect Wastewater Systems from Non-Flushable Products",
+          "url": "https://www.collins.senate.gov/newsroom/senators-collins-merkley-introduce-bipartisan-legislation-to-protect-wastewater-systems-from-non-flushable-products",
+          "snippet": "…Products Association, ISSA (the Worldwide Cleaning Industry Association), National Association of Clean Water Agencies, **National Rural Water** Association, National Stewardship Action Council, the Coalition for Clean Water, and the Water Environment Federation.…"
+        },
+        {
+          "client": "National Rural Water Assn",
+          "date": "2025-03-25",
+          "member_name": "Kevin Mullin",
+          "party": "Democrat",
+          "state": "CA",
+          "chamber": "House",
+          "title": "Mullin, Merkley, Collins, McClain Reintroduce Bipartisan Legislation to Wipe Out Non-Flushable Products from Our Wastewater Infrastructure",
+          "url": "https://kevinmullin.house.gov/2025/03/25/mullin-merkley-collins-mcclain-reintroduce-bipartisan-legislation-to-wipe-out-non-flushable-products-from-our-wastewater-infrastructure/",
+          "snippet": "…Products Association, ISSA (the Worldwide Cleaning Industry Association), National Association of Clean Water Agencies, **National Rural Water** Association, National Stewardship Action Council, Oak Lodge Water Services, Oregon Association of Clean Water Agencies,…"
+        },
+        {
+          "client": "National Rural Water Assn",
+          "date": "2025-03-19",
+          "member_name": "Zachary Nunn",
+          "party": "Republican",
+          "state": "IA",
+          "chamber": "House",
+          "title": "Nunn Leads Bipartisan Legislation to Fortify Rural Water Systems Against Cyber Attacks",
+          "url": "https://nunn.house.gov/2025/03/19/nunn-leads-bipartisan-legislation-to-fortify-rural-water-systems-against-cyber-attacks/",
+          "snippet": "…ards. In 2024, the largest regulated water utility company in the U.S. fell victim to a cyber attack. The USDA and the **National Rural Water** Association (NRWA) started the Circuit Rider Program in 1980 to provide training and technical assistance for rural wat…"
+        },
+        {
+          "client": "National Rural Water Assn",
+          "date": "2025-03-17",
+          "member_name": "Donald G. Davis",
+          "party": "Democrat",
+          "state": "NC",
+          "chamber": "House",
+          "title": "Congressmen Davis and Nunn Introduce Cybersecurity for Rural Water Systems Act",
+          "url": "https://dondavis.house.gov/media/press-releases/congressmen-davis-and-nunn-introduce-cybersecurity-rural-water-systems-act",
+          "snippet": "…small and rural water systems, enhancing the ability to proactively protect these vulnerable utilities is needed,” said **National Rural Water** Association (NRWA) Chief Executive Officer Matt Holmes. “This legislation will provide ongoing education, training, and…"
+        },
+        {
+          "client": "National Rural Water Assn",
+          "date": "2025-03-15",
+          "member_name": "Cindy Hyde-Smith",
+          "party": "Republican",
+          "state": "MS",
+          "chamber": "Senate",
+          "title": "Bill to strengthen rural water system resilience, disaster response reintroduced",
+          "url": "https://www.hydesmith.senate.gov/bill-strengthen-rural-water-system-resilience-disaster-response-reintroduced",
+          "snippet": "…ations in responding to tornadoes that caused severe damage across the state. The Mississippi Rural Water Association, **National Rural Water** Association, and Rural Community Assistance Partnership have endorsed the bill."
+        },
+        {
+          "client": "National Rural Water Assn",
+          "date": "2025-03-13",
+          "member_name": "Cindy Hyde-Smith",
+          "party": "Republican",
+          "state": "MS",
+          "chamber": "Senate",
+          "title": "HYDE-SMITH LEAD REPUBLICAN ON BILL TO IMPROVE RURAL WATER SYSTEM RESILIENCE, DISASTER RESPONSE",
+          "url": "https://www.hydesmith.senate.gov/hyde-smith-lead-republican-bill-improve-rural-water-system-resilience-disaster-response",
+          "snippet": "…esponding to fatal tornado storms that caused severe damage across the state. The Mississippi Rural Water Association, **National Rural Water** Association, and Rural Community Assistance Partnership endorse S.1019, which has been referred to the Senate Agricultu…"
+        },
+        {
+          "client": "National Rural Water Assn",
+          "date": "2025-02-28",
+          "member_name": "Jeanne Shaheen",
+          "party": "Democrat",
+          "state": "NH",
+          "chamber": "Senate",
+          "title": "Shaheen, Tillis Reintroduce Bipartisan Bill to Improve Support for Rural Water Systems",
+          "url": "https://www.shaheen.senate.gov/news/press/shaheen-tillis-reintroduce-bipartisan-bill-to-improve-support-for-rural-water-systems",
+          "snippet": "…U.S. Senate Agriculture Committee’s proposal for reauthorization of the Farm Bill. The legislation is supported by the **National Rural Water** Association (NRWA) and the Rural Community Assistance Partnership (RCAP). “This legislation modernizes the USDA Rural…"
+        },
+        {
+          "client": "Land O'Lakes",
+          "date": "2025-02-21",
+          "member_name": "John Boozman",
+          "party": "Republican",
+          "state": "AR",
+          "chamber": "Senate",
+          "title": "Boozman, Ernst, Bennet Fight to Make Higher Education Accessible for Farm Families",
+          "url": "https://www.boozman.senate.gov/public/index.cfm/press-releases?ID=E6C40D73-D1E5-42D2-8F2C-90F18E572696",
+          "snippet": "…f Public and Land-Grant Universities, SchoolHouse Connection, National Milk Producers Federation, United Egg Producers, **Land O’Lakes** and Farm Credit Council."
+        },
+        {
+          "client": "Cargill",
+          "date": "2025-02-14",
+          "member_name": "Tammy Duckworth",
+          "party": "Democrat",
+          "state": "IL",
+          "chamber": "Senate",
+          "title": "Duckworth, Durbin Help Unveil Bill to Raise Minimum Age to Buy Assault Weapons",
+          "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-durbin-help-unveil-bill-to-raise-minimum-age-to-buy-assault-weapons",
+          "snippet": "…uphold a ban on firearm possession for domestic violence offenders; condemned the Supreme Court decision in Garland v. **Cargill**, which ruled a bump stock does not convert a rifle into a machine gun; and introduced legislation to curb firearms traf…"
+        },
+        {
+          "client": "Cargill",
+          "date": "2025-02-14",
+          "member_name": "Richard J. Durbin",
+          "party": "Democrat",
+          "state": "IL",
+          "chamber": "Senate",
+          "title": "Durbin, Duckworth Help Unveil Bill To Raise Minimum Age To Buy Assault Weapons",
+          "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-duckworth-help-unveil-bill-to-raise-minimum-age-to-buy-assault-weapons",
+          "snippet": "…uphold a ban on firearm possession for domestic violence offenders; condemned the Supreme Court decision in Garland v. **Cargill**, which ruled a bump stock does not convert a rifle into a machine gun; and introduced legislation to curb firearms traf…"
+        },
+        {
+          "client": "Land O'Lakes",
+          "date": "2025-02-13",
+          "member_name": "Ashley Hinson",
+          "party": "Republican",
+          "state": "IA",
+          "chamber": "House",
+          "title": "Hinson Helps Introduce Legislation Ensuring Access to Higher Education for Farmers, Small Business Owners’ Children",
+          "url": "https://hinson.house.gov/media/press-releases/hinson-helps-introduce-legislation-ensuring-access-higher-education-farmers",
+          "snippet": "…Washburn University, National Milk Producers Federation, United Egg Producers, Iowa Farm Bureau, American Farm Bureau, **Land O’Lakes**, Iowa Turkey Federation, and Farm Credit Council."
+        },
+        {
+          "client": "Land O'Lakes",
+          "date": "2025-02-10",
+          "member_name": "Jack Bergman",
+          "party": "Republican",
+          "state": "MI",
+          "chamber": "House",
+          "title": "Bergman Leads Effort to Restore FAFSA Exemptions for Farm and Small Business Families",
+          "url": "https://bergman.house.gov/news/documentsingle.aspx?DocumentID=1382",
+          "snippet": "…Washburn University, National Milk Producers Federation, United Egg Producers, Iowa Farm Bureau, American Farm Bureau, **Land O’Lakes**, Iowa Turkey Federation, and Farm Credit Council."
+        },
+        {
+          "client": "Land O'Lakes",
+          "date": "2025-02-07",
+          "member_name": "Tracey Mann",
+          "party": "Republican",
+          "state": "KS",
+          "chamber": "House",
+          "title": "Reps. Mann, Panetta, Thompson, Craig, Sens. Ernst, Bennet Lead Bicameral Effort to Restore FAFSA Exemptions for Farm and Small Business Families",
+          "url": "https://mann.house.gov/media/press-releases/reps-mann-panetta-thompson-craig-sens-ernst-bennet-lead-bicameral-effort",
+          "snippet": "…Washburn University, National Milk Producers Federation, United Egg Producers, Iowa Farm Bureau, American Farm Bureau, **Land O’Lakes**, Iowa Turkey Federation, and Farm Credit Council. “I applaud and support the legislation introduced by Rep. Tracey Man…"
+        },
+        {
+          "client": "California Prune Board",
+          "date": "2025-02-06",
+          "member_name": "Dan Newhouse",
+          "party": "Republican",
+          "state": "WA",
+          "chamber": "House",
+          "title": "Newhouse Strengthens Market Access for Farmers in Bipartisan Legislation",
+          "url": "https://newhouse.house.gov/media-center/press-releases/newhouse-strengthens-market-access-farmers-bipartisan-legislation",
+          "snippet": "…ouncil California Apple Commission California Association of Winegrape Growers California Canning Peach Association **California Prune** Board California Farm Bureau Federation California Fresh Fruit Association California Grain & Feed Association Cali…"
+        },
+        {
+          "client": "Tri-State Generation",
+          "date": "2025-01-06",
+          "member_name": "Michael F. Bennet",
+          "party": "Democrat",
+          "state": "CO",
+          "chamber": "Senate",
+          "title": "Bennet Celebrates Announcement of Over $530 Million from Inflation Reduction Act for Rural Electric Cooperatives in Colorado",
+          "url": "https://www.bennet.senate.gov/2025/01/06/bennet-celebrates-announcement-of-over-530-million-from-inflation-reduction-act-for-rural-electric-cooperatives-in-colorado/",
+          "snippet": "…October, Bennet welcomed more than $2.5 billion in low-cost financing and grants from USDA’s New ERA program to support **Tri-State Generation** and Transmission Association’s clean energy transition at an event at Tri-State’s headquarters in Westminster, Colorado…"
+        },
+        {
+          "client": "Cargill",
+          "date": "2024-11-01",
+          "member_name": "Jerry Moran",
+          "party": "Republican",
+          "state": "KS",
+          "chamber": "Senate",
+          "title": "Sen. Moran Announces 2024 Service Academy Selection Board",
+          "url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=48D9D303-F833-4D07-8987-BBBA32FF290E",
+          "snippet": "…Management Consultant, Burns & McDonnell; U.S. Army veteran Sean Ritchie of Wichita – North American Operations Lead, **Cargill**; U.S. Merchant Marine Academy graduate and parent of son at the U.S. Air Force Academy Halley Roberson of Beloit – Cit…"
+        },
+        {
+          "client": "Global Clean Energy",
+          "date": "2024-10-29",
+          "member_name": "Kirsten E. Gillibrand",
+          "party": "Democrat",
+          "state": "NY",
+          "chamber": "Senate",
+          "title": "Gillibrand, Schumer Announce Port Authority Of NY/NJ To Receive Over $347 Million From Program Gillibrand Helped Create, Including $344 Million To Deploy Zero-Emission Equipment And Upgrade Green Energy Infrastructure",
+          "url": "https://www.gillibrand.senate.gov/news/press/release/gillibrand-schumer-announce-port-authority-of-ny-nj-to-receive-over-347-million-from-program-gillibrand-helped-create-including-344-million-to-deploy-zero-emission-equipment-and-upgrade-green-ener/",
+          "snippet": "…g climate change, but we’re creating good-paying jobs and putting New York and the United States in position to lead in **global clean energy**.” The selection of the PANYNJ projects was announced as part of the Biden-Harris administration’s Investing in America…"
+        },
+        {
+          "client": "Tri-State Generation",
+          "date": "2024-10-28",
+          "member_name": "Michael F. Bennet",
+          "party": "Democrat",
+          "state": "CO",
+          "chamber": "Senate",
+          "title": "Bennet Celebrates Billions of Dollars from Inflation Reduction Act for Rural Clean Energy in Colorado",
+          "url": "https://www.bennet.senate.gov/2024/10/28/bennet-celebrates-billions-of-dollars-from-inflation-reduction-act-for-rural-clean-energy-in-colorado/",
+          "snippet": "…re than $2.5 billion in low-cost financing and grants from USDA’s New ERA (Empowering Rural America) program to support **Tri-State Generation** and Transmission Association’s clean energy transition. Bennet also welcomed the news that two additional Colorado co-o…"
+        },
+        {
+          "client": "Louis Dreyfus",
+          "date": "2024-09-24",
+          "member_name": "Marcy Kaptur",
+          "party": "Democrat",
+          "state": "OH",
+          "chamber": "House",
+          "title": "Kaptur, Mann, Brown, Marshall Lead Bipartisan and Bicameral Legislation Fighting For American Farmers",
+          "url": "https://kaptur.house.gov/media-center/press-releases/kaptur-mann-brown-marshall-lead-bipartisan-and-bicameral-legislation",
+          "snippet": "…an Association, Kansas Corn Growers Association, Kansas Soybean Association, Kentucky Soybean Association, Scoular, and **Louis Dreyfus** Company. Background: Prior to introducing this legislation, Congresswoman Kaptur joined Senators Brown and Marshall i…"
+        },
+        {
+          "client": "Louis Dreyfus",
+          "date": "2024-09-24",
+          "member_name": "Tracey Mann",
+          "party": "Republican",
+          "state": "KS",
+          "chamber": "House",
+          "title": "Reps. Mann, Kaptur and Sens. Marshall, Brown Introduce Bicameral Legislation to Put American Farmers First",
+          "url": "https://mann.house.gov/media/press-releases/reps-mann-kaptur-and-sens-marshall-brown-introduce-bicameral-legislation-put",
+          "snippet": "…an Association, Kansas Corn Growers Association, Kansas Soybean Association, Kentucky Soybean Association, Scoular, and **Louis Dreyfus** Company. \"Our farmers need policies that protect their ability to compete fairly as the United States strives to be a…"
+        },
+        {
+          "client": "Global Clean Energy",
+          "date": "2024-09-20",
+          "member_name": "Chris Van Hollen",
+          "party": "Democrat",
+          "state": "MD",
+          "chamber": "Senate",
+          "title": "Van Hollen Joins Schatz, Colleagues in Urging Regulators to Strengthen Climate-Related Financial Risk Management",
+          "url": "https://www.vanhollen.senate.gov/news/press-releases/van-hollen-joins-schatz-colleagues-in-urging-regulators-to-strengthen-climate-related-financial-risk-management",
+          "snippet": "…hreats to the United States’ economy as insurers face rising losses and leave climate-vulnerable markets. Additionally, **global clean energy** investment is far outpacing investment in fossil fuels. Banks will play an important role in financing clean energy tec…"
+        },
+        {
+          "client": "Ardent Mills",
+          "date": "2024-09-11",
+          "member_name": "Ron Estes",
+          "party": "Republican",
+          "state": "KS",
+          "chamber": "House",
+          "title": "Rep. Estes Wraps Up Kansas Innovation Visits, Announces Silicon Valley Visits",
+          "url": "https://estes.house.gov/news/documentsingle.aspx?DocumentID=5654",
+          "snippet": "…dworking oil and gas producers and highlighted the impact tax policy has on energy policy. During Rep. Estes’ visit to **Ardent Mills** in Wichita, staff explained how their Emerging Nutrition division uses R&D to work to provide more choice to consumers.…"
+        }
+      ]
+    },
     {
       "case_id": "limbaugh_clients",
       "label": "Limbaugh Interior/Reclamation clients — Congressional press-release cross-ref",
