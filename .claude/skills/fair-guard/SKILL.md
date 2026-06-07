@@ -8,11 +8,14 @@ description: >
   from an agency to a lobbyist's clients on USAspending.gov), pressrel
   (cross-reference Congressional press releases for mentions of a client / firm /
   topic — pairs with scan and trace to turn the structural pattern into a story
-  with named legislators in it), or coi (compose the outputs of scan, trace, and
+  with named legislators in it), coi (compose the outputs of scan, trace, and
   pressrel into a conflict-of-interest graph that surfaces triangles, hubs, and
-  bridges across all the other skills). Use when the user wants to run any part
-  of the FairGuard pipeline.
-argument-hint: "[mode: doctor | index | scan | resolve | trace | pressrel | coi]"
+  bridges across all the other skills), or comment (materialize the request-for-
+  comment workflow — log sends, acknowledgments, replies, follow-ups, and
+  closures against the per-firm drafts with derived status and deadline
+  pressure rules). Use when the user wants to run any part of the FairGuard
+  pipeline.
+argument-hint: "[mode: doctor | index | scan | resolve | trace | pressrel | coi | comment]"
 allowed-tools: Read Bash
 ---
 
@@ -29,6 +32,8 @@ allowed-tools: Read Bash
 | `trace` | federal-award-tracer | Follow the money: agency → lobbyist's clients on USAspending.gov | Network + a case file |
 | `pressrel` | press-release-cross-ref | Cross-reference Congressional press releases for mentions of a client / firm / topic | DuckDB built |
 | `coi` | coi-graph | Compose scan + trace + pressrel into a conflict-of-interest graph; surface triangles, hubs, bridges | findings.json (run scan first) |
+| `comment` | comment-tracker | Materialize the request-for-comment workflow (sends, replies, status, deadlines) | `notes/comment_requests/comment_log.json` (always present) |
+| `archive` | archive-on-cite | Snapshot every cited URL to Wayback + Archive.today before publication | Network access; web/public/*.json present |
 
 ## Invocation examples
 
@@ -41,6 +46,8 @@ allowed-tools: Read Bash
 /fair-guard trace                   # follow the money (lists bundled case files)
 /fair-guard pressrel                # cross-ref press releases (lists bundled case files)
 /fair-guard coi                     # build the conflict-of-interest graph from existing findings
+/fair-guard comment                 # show/log the request-for-comment status table
+/fair-guard archive                 # snapshot every cited URL to Wayback + Archive.today
 ```
 
 ## Prerequisite: output/investigation.duckdb
@@ -64,7 +71,7 @@ When invoked with `$ARGUMENTS`:
 
 1. **No argument:** Print the mode table above and ask which mode to run.
 
-2. **Valid mode name** (`doctor`, `index`, `resolve`, `scan`, `trace`, `pressrel`, `coi`):
+2. **Valid mode name** (`doctor`, `index`, `resolve`, `scan`, `trace`, `pressrel`, `coi`, `comment`, `archive`):
 
    First, check prerequisites deterministically:
    - `scan`, `resolve`, or `pressrel`: check whether `output/investigation.duckdb`
@@ -73,6 +80,9 @@ When invoked with `$ARGUMENTS`:
    - `coi`: check whether `web/public/findings.json` exists. If it does not,
      stop and tell the user to run `/fair-guard scan` first. coi reads only
      the on-disk JSON outputs of scan / trace / pressrel — no DB, no network.
+   - `comment`: no DB or network needed; the source log lives in
+     `notes/comment_requests/comment_log.json` (committed). If the user invoked
+     `comment` with no further arguments, default to `list` (the status table).
    - `index`: check whether `data/senate/`, `data/house/`, and
      `data/congress_press/` exist. If missing, print both options and stop.
    - `trace`: does **not** need the DuckDB — it makes live calls to
@@ -90,6 +100,8 @@ When invoked with `$ARGUMENTS`:
    - `trace`    → read `skill/federal-award-tracer/SKILL.md`     (runs `scripts/04_award_tracer.py`)
    - `pressrel` → read `skill/press-release-cross-ref/SKILL.md`  (runs `scripts/05_pressrel_search.py`)
    - `coi`      → read `skill/coi-graph/SKILL.md`                (runs `scripts/06_coi_graph.py`)
+   - `comment`  → read `skill/comment-tracker/SKILL.md`           (runs `scripts/07_comment_tracker.py`)
+   - `archive`  → read `skill/archive-on-cite/SKILL.md`            (runs `scripts/08_archive_cite.py`)
 
    For `pressrel` with no further arguments: point the user at the bundled cases
    in `skill/press-release-cross-ref/cases/` (steinberg_clients.json,
@@ -106,7 +118,7 @@ When invoked with `$ARGUMENTS`:
 After reading the mode's SKILL.md, execute its instructions in full.
 Do not summarize or skip steps.
 
-All seven modes are currently shipped; there is no `Status: Planned` skill to
+All nine modes are currently shipped; there is no `Status: Planned` skill to
 guard against. `trace` follows the money from an agency to a lobbyist's clients
 on USAspending.gov and reproduces the verified trails in
 `notes/08_external_verification_top_candidates.md`. `pressrel` closes the third
