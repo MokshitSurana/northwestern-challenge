@@ -1,0 +1,36 @@
+{
+  "case_id": "limbaugh_clients",
+  "label": "Limbaugh Interior/Reclamation clients — Congressional press-release cross-ref",
+  "_notes": [
+    "Companion to skill/federal-award-tracer/cases/limbaugh_interior.json.",
+    "Western water districts often get praise from California / Arizona / Oregon /",
+    "Washington delegations when a Bureau of Reclamation project is funded or",
+    "approved. The 'Bureau of Reclamation' line is the thematic anchor — it",
+    "catches the broader funding-announcement context even when a press release",
+    "doesn't name the specific district.",
+    "Klamath / Folsom / Yakima are place names with many unrelated uses; the per-",
+    "client tally will be honest about that and the snippet column lets a reporter",
+    "triage on sight."
+  ],
+  "clients": [
+    {"name": "Sites Project Authority",         "aliases": ["Sites Project Authority", "Sites Reservoir"]},
+    {"name": "Friant Water Authority",          "aliases": ["Friant Water"]},
+    {"name": "Turlock Irrigation District",     "aliases": ["Turlock Irrigation"]},
+    {"name": "The Freshwater Trust",            "aliases": ["Freshwater Trust"]},
+    {"name": "Klamath Water Users",             "aliases": ["Klamath Water Users", "Klamath Project"]},
+    {"name": "Yakima Basin",                    "aliases": ["Yakima Basin"]},
+    {"name": "City of Folsom",                  "aliases": ["City of Folsom"]},
+    {"name": "Bureau of Reclamation (thematic)", "aliases": ["Bureau of Reclamation"]}
+  ],
+  "filters": {
+    "since": "2022-01-01",
+    "until": "2026-04-01",
+    "party": null,
+    "state": null,
+    "chamber": null,
+    "domain_contains": null
+  },
+  "match": [
+    {"lobbyist_name": "Mark Limbaugh", "agency_short": "interior"}
+  ]
+}
