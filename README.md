@@ -25,7 +25,8 @@ The anchor finding: **The Artemis Group** — a lobbying firm founded by former 
 | Agent Skill 3 — `entity-resolver` (`resolve`) | `skill/entity-resolver/` | ✅ Shipped (F1 = 0.963 on held-out eval) |
 | Agent Skill 4 — `revolving-door-detector` (`scan`) | `skill/revolving-door-detector/` | ✅ Shipped (139 candidates, 22 agencies) |
 | Agent Skill 5 — `federal-award-tracer` (`trace`) | `skill/federal-award-tracer/` | ✅ Shipped (USAspending money trail; 3 reproducible case files) |
-| Test suite (pytest) | `tests/` | ✅ 144 tests passing |
+| Agent Skill 6 — `press-release-cross-ref` (`pressrel`) | `skill/press-release-cross-ref/` | ✅ Shipped (Congressional press-release cross-ref over 141K rows; 2 reproducible case files) |
+| Test suite (pytest) | `tests/` | ✅ 174 tests passing |
 | Findings report (PDF) | `findings/findings_report.md` → PDF | ✅ Builds via pandoc + typst (see report header) |
 | Interaction traces | `traces/` | ✅ 4 per-skill traces + 2 narrative traces |
 | Anchor finding | `notes/05_finding_bridenstine.md` | ✅ Draft complete |
@@ -288,6 +289,31 @@ USDA cases ($1,398,877,777) reproduce to the dollar.
 
 Implementation: `scripts/04_award_tracer.py` (live USAspending.gov API).
 See `skill/federal-award-tracer/SKILL.md`.
+
+### Skill 6 — `press-release-cross-ref` (`pressrel`)
+
+Closes the third side of the triangle: which **members of Congress** have
+publicly mentioned the companies surfaced by `scan` and the awards followed by
+`trace`. Searches 141,332 House + Senate press releases (2022–Q1 2026) for
+verified word-bounded mentions of a client / firm / topical name and returns a
+journalism-ready table of date · member (party-state-chamber) · title · URL ·
+snippet, plus per-client tallies, plus a framing note. Member-side filters
+(party, state, chamber, official-domain substring) let a reporter scope the
+question to "did Energy Committee Democrats talk about this in 2024?"
+
+Integrates with the Reporter UI: every press-release report upserts into
+`web/public/press_releases.json` (drives a planned `/pressrel` route), and
+case files with a `match` block enrich the corresponding scan-finding rows in
+`web/public/findings.json` so a Press-releases panel appears inline on the
+candidate's card. `--enrich-findings` runs a one-shot batched pass that
+attaches press-release evidence to every top-40 scan finding in ~10 seconds.
+
+Bundled cases reproduce against the committed corpus: Steinberg DOE clients
+(9 clients) and Limbaugh Interior/Reclamation clients (8 clients), both keyed
+to their matching scan-finding rows.
+
+Implementation: `scripts/05_pressrel_search.py` (DuckDB `press_releases` table;
+no network access required). See `skill/press-release-cross-ref/SKILL.md`.
 
 ---
 
