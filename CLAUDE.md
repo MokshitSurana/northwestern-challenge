@@ -25,11 +25,12 @@ All scripts run with `uv`. Install dependencies first: `uv sync`
 /fair-guard scan --agency nasa      # filter to one agency
 /fair-guard trace                   # follow the money (federal-award-tracer; USAspending.gov)
 /fair-guard pressrel                # cross-ref Congressional press releases (press-release-cross-ref)
+/fair-guard coi                     # build the conflict-of-interest graph (coi-graph)
 ```
 
-`argument-hint` shows `[mode: doctor | index | scan | resolve | trace | pressrel]` in CLI autocomplete. The dispatcher reads `skill/<full-name>/SKILL.md` at runtime and executes its instructions. `allowed-tools: Read Bash` is pre-approved — no permission prompts during execution.
+`argument-hint` shows `[mode: doctor | index | scan | resolve | trace | pressrel | coi]` in CLI autocomplete. The dispatcher reads `skill/<full-name>/SKILL.md` at runtime and executes its instructions. `allowed-tools: Read Bash` is pre-approved — no permission prompts during execution.
 
-**Prerequisite guard (enforced by dispatcher):** `scan`, `resolve`, and `pressrel` require `output/investigation.duckdb`. If it doesn't exist, the dispatcher stops and shows two recovery options before attempting anything. `trace` is the exception — it does **not** need the DuckDB; it makes live calls to api.usaspending.gov and takes a case file.
+**Prerequisite guard (enforced by dispatcher):** `scan`, `resolve`, and `pressrel` require `output/investigation.duckdb`. If it doesn't exist, the dispatcher stops and shows two recovery options before attempting anything. `trace` does **not** need the DuckDB; it makes live calls to api.usaspending.gov and takes a case file. `coi` does **not** need the DuckDB either — it reads `web/public/findings.json` (the on-disk output of scan, enriched by trace and pressrel) and produces a composed graph.
 
 **Two ways to get `output/investigation.duckdb`:**
 - **Fast (~10 min):** Download pre-built `output/` from Google Drive → unzip → place at project root:
@@ -79,6 +80,13 @@ uv run scripts/05_pressrel_search.py --case skill/press-release-cross-ref/cases/
 uv run scripts/05_pressrel_search.py --case skill/press-release-cross-ref/cases/limbaugh_clients.json --out notes/pressrel_limbaugh.md --json output/pressrel_limbaugh.json
 uv run scripts/05_pressrel_search.py --enrich-findings        # auto-attach matches to every scan finding row
 uv run scripts/05_pressrel_search.py --mention "X" --no-web   # skip web writes
+
+# coi — conflict-of-interest graph (composes scan + trace + pressrel outputs; no DB or network)
+uv run scripts/06_coi_graph.py                                # top-10 findings, all outputs (markdown + JSON + SVG + DOT)
+uv run scripts/06_coi_graph.py --top 5                        # narrower scope
+uv run scripts/06_coi_graph.py --finding-rank 1               # subgraph for one finding
+uv run scripts/06_coi_graph.py --out notes/coi_summary.md     # persist markdown
+uv run scripts/06_coi_graph.py --no-web --no-svg              # CI / offline mode
 ```
 
 ### Tests
@@ -93,6 +101,7 @@ uv run python -m pytest tests/test_agency_registry.py -v # scan regex coverage (
 uv run python -m pytest tests/test_entity_resolver.py -v # resolver unit + F1 (33 tests)
 uv run python -m pytest tests/test_entity_resolver.py::test_f1_on_db -s  # show F1 eval output
 uv run python -m pytest tests/test_pressrel.py -v        # pressrel regex + DB integration (30 tests)
+uv run python -m pytest tests/test_coi_graph.py -v       # coi-graph canonicalization + patterns + outputs (26 tests)
 ```
 
 The single F1-on-DB test is `@pytest.mark.skipif(not DB_PATH.exists())`, so the suite
@@ -101,7 +110,7 @@ runs green without `output/investigation.duckdb` (CI relies on this).
 ### Reporter UI (web/)
 
 ```bash
-cd web && npm ci && npm run dev   # http://localhost:3000  (also serves /trails)
+cd web && npm ci && npm run dev   # http://localhost:3000  (also serves /trails, /pressrel, /graph)
 cd web && npm run build           # production build (also gated in CI)
 cd web && npm run lint            # next lint
 cd web && npm run typecheck       # tsc --noEmit
@@ -180,10 +189,15 @@ scripts/04_award_tracer.py        → web/public/trails.json (upserts per case_i
                                    → web/public/findings.json (enriches matching rows with `trail`)
 scripts/05_pressrel_search.py     → web/public/press_releases.json (upserts per case_id)
                                    → web/public/findings.json (enriches matching rows with `press_releases`)
+scripts/06_coi_graph.py           → web/public/coi_graph.json (d3-force shape for /graph route)
+                                   → output/coi_graph.svg (static SVG, pure-Python, no Graphviz)
+                                   → output/coi_graph.dot (Graphviz DOT source)
     │
     ▼
-web/src/app/page.tsx             (reporter UI — findings + inline Money trail panels)
-web/src/app/trails/page.tsx      (reporter UI — full money-trail index, refresh button)
+web/src/app/page.tsx             (reporter UI — findings + inline Money trail / Press-release panels)
+web/src/app/trails/page.tsx      (reporter UI — money-trail index, refresh button)
+web/src/app/pressrel/page.tsx    (reporter UI — press-release report index, refresh button)
+web/src/app/graph/page.tsx       (reporter UI — interactive D3 force-directed CoI graph)
 ```
 
 ### DuckDB tables
@@ -202,7 +216,7 @@ web/src/app/trails/page.tsx      (reporter UI — full money-trail index, refres
 
 Convenience views: `revolving_door` (senate lobbyists with non-empty `covered_position`), `senate_spend_by_issue`.
 
-### Six Agent Skills
+### Seven Agent Skills
 
 | Short name | Full name | Status | Implementation | Tests |
 |-----------|-----------|--------|---------------|-------|
@@ -211,7 +225,8 @@ Convenience views: `revolving_door` (senate lobbyists with non-empty `covered_po
 | `resolve` | entity-resolver | Shipped | `scripts/02_entity_resolver.py` + `skill/entity-resolver/` | `tests/test_entity_resolver.py` — 33 tests, F1 = 0.963 |
 | `scan` | revolving-door-detector | Shipped | `scripts/03_agency_concentration.py` + `skill/revolving-door-detector/` | `tests/test_agency_registry.py` — 111 tests |
 | `trace` | federal-award-tracer (v1.1.0) | Shipped | `scripts/04_award_tracer.py` + `skill/federal-award-tracer/` | 3 reproducible case files (Steinberg DOE $1.08B, USDA $1.40B exact) + a no-case-file generalization eval; `evals/evals.json` |
-| `pressrel` | press-release-cross-ref (v1.0.0) | Shipped | `scripts/05_pressrel_search.py` + `skill/press-release-cross-ref/` | `tests/test_pressrel.py` — 30 tests (regex discipline, snippet extraction, schema validation, DB integration); 2 reproducible case files (Steinberg, Limbaugh) |
+| `pressrel` | press-release-cross-ref (v1.0.0) | Shipped | `scripts/05_pressrel_search.py` + `skill/press-release-cross-ref/` | `tests/test_pressrel.py` — 30 tests; 3 reproducible case files (Steinberg, Limbaugh, USDA) |
+| `coi` | coi-graph (v1.0.0) | Shipped | `scripts/06_coi_graph.py` + `skill/coi-graph/` | `tests/test_coi_graph.py` — 26 tests (canonicalization, build, triangle/hub/bridge detection, output renderers, determinism, real-DB integration) |
 
 ### Agent Skills architecture (three layers)
 
@@ -286,7 +301,7 @@ are weighted over formulaic program payments.
 
 ## Priority Order (remaining work as of June 5, 2026)
 
-All six skills ship with tests/reproducible cases; cross-platform CI is green; the
+All seven skills ship with tests/reproducible cases; cross-platform CI is green; the
 findings report, external verification, and money trail are done. **All four
 per-case reportability gates are now closed** (role, money trail → `notes/08`;
 §207 cooling-off + request-for-comment → `notes/09`).
@@ -323,7 +338,7 @@ skill layers + `evals/evals.json`.**
 - [x] `uv run scripts/03_agency_concentration.py` runs and produces output (139 candidates, 22 agencies)
 - [x] `uv run scripts/02_entity_resolver.py` runs and writes entity_map (F1 = 0.963)
 - [x] `uv run scripts/verify_build.py` runs and all 34 invariants pass
-- [x] `uv sync --extra dev && uv run python -m pytest` — 174 tests passing (111 registry + 33 resolver + 30 pressrel)
+- [x] `uv sync --extra dev && uv run python -m pytest` — 200 tests passing (111 registry + 33 resolver + 30 pressrel + 26 coi-graph)
 - [x] All SKILL.md files have valid YAML frontmatter + instructions
 - [x] `/fair-guard doctor` runs without errors and prints a correct checklist (CI-verified Linux/macOS/Windows)
 - [x] `/fair-guard scan` routes correctly and executes without permission prompts
@@ -352,7 +367,8 @@ skill/entity-resolver/SKILL.md             # Skill: resolve — shipped, F1 = 0.
 skill/federal-award-tracer/SKILL.md        # Skill: trace — submission artifact
 skill/federal-award-tracer/cases/          # 3 reproducible USAspending case files
 skill/press-release-cross-ref/SKILL.md     # Skill: pressrel — submission artifact
-skill/press-release-cross-ref/cases/       # 2 reproducible press-release case files
+skill/press-release-cross-ref/cases/       # 3 reproducible press-release case files
+skill/coi-graph/SKILL.md                   # Skill: coi — submission artifact (composes scan + trace + pressrel)
 
 .agents/skills/fair-guard/SKILL.md         # agentskills.io master skill
 .agents/skills/fair-guard/modes/
@@ -362,6 +378,7 @@ skill/press-release-cross-ref/cases/       # 2 reproducible press-release case f
     scan/SKILL.md
     trace/SKILL.md
     pressrel/SKILL.md
+    coi/SKILL.md
 
 .claude/skills/fair-guard/SKILL.md         # Claude Code dispatcher (/fair-guard)
 
@@ -371,6 +388,7 @@ scripts/02_entity_resolver.py              # Skill: resolve implementation
 scripts/03_agency_concentration.py         # Skill: scan implementation
 scripts/04_award_tracer.py                 # Skill: trace implementation (USAspending)
 scripts/05_pressrel_search.py              # Skill: pressrel implementation (DuckDB press_releases)
+scripts/06_coi_graph.py                    # Skill: coi implementation (NetworkX graph + pure-Python SVG)
 scripts/verify_build.py                    # post-index invariants (34 checks)
 scripts/_probe_usaspending.py              # original money-trail probe (trace's ancestor)
 scripts/_archive/                          # superseded scripts kept for history
@@ -380,6 +398,7 @@ evals/evals.json                           # trace skill test prompts + assertio
 tests/test_agency_registry.py              # 111 tests for scan registry
 tests/test_entity_resolver.py              # 33 tests for resolver (incl. F1 eval)
 tests/test_pressrel.py                     # 30 tests for pressrel (regex, snippet, schema, DB integration)
+tests/test_coi_graph.py                    # 26 tests for coi-graph (canonicalization, patterns, renderers, determinism)
 
 findings/findings_report.md               # final findings (→ PDF via pandoc + typst)
 notes/05_finding_bridenstine.md           # anchor finding (verified)
