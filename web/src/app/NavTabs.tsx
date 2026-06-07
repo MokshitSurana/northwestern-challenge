@@ -7,6 +7,8 @@ import { clsx } from "clsx"
 const TABS = [
   { href: "/", label: "Findings", description: "Former officials lobbying their old agency" },
   { href: "/trails", label: "Money trails", description: "USAspending awards to those clients" },
+  { href: "/pressrel", label: "Press releases", description: "Congressional press releases mentioning the clients" },
+  { href: "/graph", label: "Graph", description: "Conflict-of-interest network: composes scan + trace + pressrel" },
 ]
 
 export default function NavTabs() {
