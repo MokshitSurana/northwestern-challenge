@@ -26,9 +26,11 @@ All scripts run with `uv`. Install dependencies first: `uv sync`
 /fair-guard trace                   # follow the money (federal-award-tracer; USAspending.gov)
 /fair-guard pressrel                # cross-ref Congressional press releases (press-release-cross-ref)
 /fair-guard coi                     # build the conflict-of-interest graph (coi-graph)
+/fair-guard comment                 # request-for-comment tracker (comment-tracker)
+/fair-guard archive                 # snapshot cited URLs to Wayback + Archive.today (archive-on-cite)
 ```
 
-`argument-hint` shows `[mode: doctor | index | scan | resolve | trace | pressrel | coi]` in CLI autocomplete. The dispatcher reads `skill/<full-name>/SKILL.md` at runtime and executes its instructions. `allowed-tools: Read Bash` is pre-approved — no permission prompts during execution.
+`argument-hint` shows `[mode: doctor | index | scan | resolve | trace | pressrel | coi | comment | archive]` in CLI autocomplete. The dispatcher reads `skill/<full-name>/SKILL.md` at runtime and executes its instructions. `allowed-tools: Read Bash` is pre-approved — no permission prompts during execution.
 
 **Prerequisite guard (enforced by dispatcher):** `scan`, `resolve`, and `pressrel` require `output/investigation.duckdb`. If it doesn't exist, the dispatcher stops and shows two recovery options before attempting anything. `trace` does **not** need the DuckDB; it makes live calls to api.usaspending.gov and takes a case file. `coi` does **not** need the DuckDB either — it reads `web/public/findings.json` (the on-disk output of scan, enriched by trace and pressrel) and produces a composed graph.
 
@@ -87,6 +89,31 @@ uv run scripts/06_coi_graph.py --top 5                        # narrower scope
 uv run scripts/06_coi_graph.py --finding-rank 1               # subgraph for one finding
 uv run scripts/06_coi_graph.py --out notes/coi_summary.md     # persist markdown
 uv run scripts/06_coi_graph.py --no-web --no-svg              # CI / offline mode
+
+# comment — request-for-comment workflow tracker
+uv run scripts/07_comment_tracker.py list                      # all firms with derived status + deadlines
+uv run scripts/07_comment_tracker.py status venn_strategies    # one firm with full timeline
+uv run scripts/07_comment_tracker.py log venn_strategies sent --addresses "press@x.com,b@x.com" [--deadline DATE]
+uv run scripts/07_comment_tracker.py log <firm> acknowledged --by "Press Office" --summary "..."
+uv run scripts/07_comment_tracker.py log <firm> substantive_reply --pointer URL --summary "..."
+uv run scripts/07_comment_tracker.py log <firm> followup_sent --addresses press@firm
+uv run scripts/07_comment_tracker.py log <firm> closed --kind response|no_response [--summary "..."]
+uv run scripts/07_comment_tracker.py log <firm> legal_threat --by "Counsel" --summary "..."
+uv run scripts/07_comment_tracker.py export                    # only write web/public/comment_log.json
+
+# archive — snapshot every cited URL to Wayback + Archive.today (needs network)
+uv run scripts/08_archive_cite.py                              # archive every cited URL across the project
+uv run scripts/08_archive_cite.py --url <single-url>
+uv run scripts/08_archive_cite.py --urls notes/extra_urls.txt
+uv run scripts/08_archive_cite.py --service wayback            # or archive_today
+uv run scripts/08_archive_cite.py --skip-recent 7              # only re-archive URLs older than N days
+uv run scripts/08_archive_cite.py --dry-run                    # list URLs without submitting
+
+# AP-style lint (intentionally not a /fair-guard mode — runs directly on markdown)
+uv run scripts/09_ap_style_lint.py findings/findings_report.md
+uv run scripts/09_ap_style_lint.py findings/*.md notes/*.md
+uv run scripts/09_ap_style_lint.py --quiet findings/findings_report.md   # only print findings
+uv run scripts/09_ap_style_lint.py --json findings/findings_report.md    # machine-readable
 ```
 
 ### Tests
@@ -102,6 +129,9 @@ uv run python -m pytest tests/test_entity_resolver.py -v # resolver unit + F1 (3
 uv run python -m pytest tests/test_entity_resolver.py::test_f1_on_db -s  # show F1 eval output
 uv run python -m pytest tests/test_pressrel.py -v        # pressrel regex + DB integration (30 tests)
 uv run python -m pytest tests/test_coi_graph.py -v       # coi-graph canonicalization + patterns + outputs (26 tests)
+uv run python -m pytest tests/test_comment_tracker.py -v # comment-tracker schema + status + CLI (25 tests)
+uv run python -m pytest tests/test_archive_cite.py -v    # archive URL collection + registry (14 tests)
+uv run python -m pytest tests/test_ap_style_lint.py -v   # AP-style rules + false-positive control (22 tests)
 ```
 
 The single F1-on-DB test is `@pytest.mark.skipif(not DB_PATH.exists())`, so the suite
@@ -110,7 +140,7 @@ runs green without `output/investigation.duckdb` (CI relies on this).
 ### Reporter UI (web/)
 
 ```bash
-cd web && npm ci && npm run dev   # http://localhost:3000  (also serves /trails, /pressrel, /graph)
+cd web && npm ci && npm run dev   # http://localhost:3000  (also serves /trails, /pressrel, /graph, /comments)
 cd web && npm run build           # production build (also gated in CI)
 cd web && npm run lint            # next lint
 cd web && npm run typecheck       # tsc --noEmit
@@ -192,12 +222,18 @@ scripts/05_pressrel_search.py     → web/public/press_releases.json (upserts pe
 scripts/06_coi_graph.py           → web/public/coi_graph.json (d3-force shape for /graph route)
                                    → output/coi_graph.svg (static SVG, pure-Python, no Graphviz)
                                    → output/coi_graph.dot (Graphviz DOT source)
+scripts/07_comment_tracker.py     → notes/comment_requests/comment_log.json (source of truth)
+                                   → web/public/comment_log.json (slimmed mirror for /comments route)
+scripts/08_archive_cite.py        → output/archive_registry.json (per-URL Wayback + Archive.today snapshot URLs)
+                                   → web/public/archive_registry.json (mirror for UI badges)
+scripts/09_ap_style_lint.py       → stdout (one finding per line: PATH:LINE:COL message)
     │
     ▼
 web/src/app/page.tsx             (reporter UI — findings + inline Money trail / Press-release panels)
 web/src/app/trails/page.tsx      (reporter UI — money-trail index, refresh button)
 web/src/app/pressrel/page.tsx    (reporter UI — press-release report index, refresh button)
 web/src/app/graph/page.tsx       (reporter UI — interactive D3 force-directed CoI graph)
+web/src/app/comments/page.tsx    (reporter UI — request-for-comment status table, derived from event timelines)
 ```
 
 ### DuckDB tables
@@ -216,7 +252,7 @@ web/src/app/graph/page.tsx       (reporter UI — interactive D3 force-directed 
 
 Convenience views: `revolving_door` (senate lobbyists with non-empty `covered_position`), `senate_spend_by_issue`.
 
-### Seven Agent Skills
+### Nine Agent Skills
 
 | Short name | Full name | Status | Implementation | Tests |
 |-----------|-----------|--------|---------------|-------|
@@ -227,6 +263,13 @@ Convenience views: `revolving_door` (senate lobbyists with non-empty `covered_po
 | `trace` | federal-award-tracer (v1.1.0) | Shipped | `scripts/04_award_tracer.py` + `skill/federal-award-tracer/` | 3 reproducible case files (Steinberg DOE $1.08B, USDA $1.40B exact) + a no-case-file generalization eval; `evals/evals.json` |
 | `pressrel` | press-release-cross-ref (v1.0.0) | Shipped | `scripts/05_pressrel_search.py` + `skill/press-release-cross-ref/` | `tests/test_pressrel.py` — 30 tests; 3 reproducible case files (Steinberg, Limbaugh, USDA) |
 | `coi` | coi-graph (v1.0.0) | Shipped | `scripts/06_coi_graph.py` + `skill/coi-graph/` | `tests/test_coi_graph.py` — 26 tests (canonicalization, build, triangle/hub/bridge detection, output renderers, determinism, real-DB integration) |
+| `comment` | comment-tracker (v1.0.0) | Shipped | `scripts/07_comment_tracker.py` + `skill/comment-tracker/` | `tests/test_comment_tracker.py` — 25 tests (schema, status derivation with deadline pressure, CLI roundtrip) |
+| `archive` | archive-on-cite (v1.0.0) | Shipped | `scripts/08_archive_cite.py` + `skill/archive-on-cite/` | `tests/test_archive_cite.py` — 14 tests (URL collection, registry persistence, is_recent filter); network-touching paths intentionally not covered in CI |
+
+(Plus one *tool*, not a /fair-guard mode: `scripts/09_ap_style_lint.py` —
+the AP-style markdown linter, covered by `tests/test_ap_style_lint.py` (22
+tests). Runs directly on findings/*.md and notes/*.md; suitable for a
+PostToolUse hook on Edit/Write via `--hook` mode.)
 
 ### Agent Skills architecture (three layers)
 
@@ -301,7 +344,7 @@ are weighted over formulaic program payments.
 
 ## Priority Order (remaining work as of June 5, 2026)
 
-All seven skills ship with tests/reproducible cases; cross-platform CI is green; the
+All nine skills ship with tests/reproducible cases; cross-platform CI is green; the
 findings report, external verification, and money trail are done. **All four
 per-case reportability gates are now closed** (role, money trail → `notes/08`;
 §207 cooling-off + request-for-comment → `notes/09`).
@@ -338,7 +381,7 @@ skill layers + `evals/evals.json`.**
 - [x] `uv run scripts/03_agency_concentration.py` runs and produces output (139 candidates, 22 agencies)
 - [x] `uv run scripts/02_entity_resolver.py` runs and writes entity_map (F1 = 0.963)
 - [x] `uv run scripts/verify_build.py` runs and all 34 invariants pass
-- [x] `uv sync --extra dev && uv run python -m pytest` — 200 tests passing (111 registry + 33 resolver + 30 pressrel + 26 coi-graph)
+- [x] `uv sync --extra dev && uv run python -m pytest` — 261 tests passing (111 registry + 33 resolver + 30 pressrel + 26 coi-graph + 25 comment-tracker + 14 archive + 22 AP-style)
 - [x] All SKILL.md files have valid YAML frontmatter + instructions
 - [x] `/fair-guard doctor` runs without errors and prints a correct checklist (CI-verified Linux/macOS/Windows)
 - [x] `/fair-guard scan` routes correctly and executes without permission prompts
@@ -369,6 +412,8 @@ skill/federal-award-tracer/cases/          # 3 reproducible USAspending case fil
 skill/press-release-cross-ref/SKILL.md     # Skill: pressrel — submission artifact
 skill/press-release-cross-ref/cases/       # 3 reproducible press-release case files
 skill/coi-graph/SKILL.md                   # Skill: coi — submission artifact (composes scan + trace + pressrel)
+skill/comment-tracker/SKILL.md             # Skill: comment — request-for-comment workflow
+skill/archive-on-cite/SKILL.md             # Skill: archive — Wayback + Archive.today snapshots
 
 .agents/skills/fair-guard/SKILL.md         # agentskills.io master skill
 .agents/skills/fair-guard/modes/
@@ -379,6 +424,8 @@ skill/coi-graph/SKILL.md                   # Skill: coi — submission artifact 
     trace/SKILL.md
     pressrel/SKILL.md
     coi/SKILL.md
+    comment/SKILL.md
+    archive/SKILL.md
 
 .claude/skills/fair-guard/SKILL.md         # Claude Code dispatcher (/fair-guard)
 
@@ -389,6 +436,9 @@ scripts/03_agency_concentration.py         # Skill: scan implementation
 scripts/04_award_tracer.py                 # Skill: trace implementation (USAspending)
 scripts/05_pressrel_search.py              # Skill: pressrel implementation (DuckDB press_releases)
 scripts/06_coi_graph.py                    # Skill: coi implementation (NetworkX graph + pure-Python SVG)
+scripts/07_comment_tracker.py              # Skill: comment implementation (CLI + JSON state machine)
+scripts/08_archive_cite.py                 # Skill: archive implementation (Wayback + Archive.today)
+scripts/09_ap_style_lint.py                # AP-style markdown linter (not a /fair-guard mode)
 scripts/verify_build.py                    # post-index invariants (34 checks)
 scripts/_probe_usaspending.py              # original money-trail probe (trace's ancestor)
 scripts/_archive/                          # superseded scripts kept for history
@@ -399,6 +449,9 @@ tests/test_agency_registry.py              # 111 tests for scan registry
 tests/test_entity_resolver.py              # 33 tests for resolver (incl. F1 eval)
 tests/test_pressrel.py                     # 30 tests for pressrel (regex, snippet, schema, DB integration)
 tests/test_coi_graph.py                    # 26 tests for coi-graph (canonicalization, patterns, renderers, determinism)
+tests/test_comment_tracker.py              # 25 tests for comment-tracker (schema, status derivation, CLI roundtrip)
+tests/test_archive_cite.py                 # 14 tests for archive (URL collection, registry, is_recent)
+tests/test_ap_style_lint.py                # 22 tests for AP-style lint (per-rule + false-positive control)
 
 findings/findings_report.md               # final findings (→ PDF via pandoc + typst)
 notes/05_finding_bridenstine.md           # anchor finding (verified)
