@@ -249,7 +249,7 @@ def load_case(path: Path) -> dict:
     to [name] if absent. Filters default to the corpus window."""
     case = json.loads(path.read_text(encoding="utf-8"))
     if "label" not in case:
-        sys.exit(f"case file missing required key: 'label'")
+        sys.exit("case file missing required key: 'label'")
     if not isinstance(case.get("clients"), list) or not case["clients"]:
         sys.exit("case file requires a non-empty 'clients' list")
     for i, c in enumerate(case["clients"]):
@@ -563,7 +563,7 @@ def enrich_all_findings(
         total = sum(g["n_matches"] for g in grouped)
         findings[idx]["press_releases"] = {
             "case_id": f"auto-enrich-{findings[idx].get('rank')}",
-            "label": f"Auto-enriched from scan top clients",
+            "label": "Auto-enriched from scan top clients",
             "generated_at": datetime.now(UTC).isoformat(),
             "n_clients_with_matches": len([g for g in grouped if g["n_matches"] > 0]),
             "n_matches_total": total,
