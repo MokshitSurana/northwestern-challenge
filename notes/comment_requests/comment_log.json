@@ -27,7 +27,10 @@
     "delta_strategy_group": {
       "firm": "Delta Strategy Group",
       "case": "Jim Newsome and Scott Parsons → CFTC",
-      "scan_rank": [4, 6],
+      "scan_rank": [
+        4,
+        6
+      ],
       "trail_case_id": null,
       "draft_path": "notes/comment_requests/delta_strategy_group.md",
       "status": "not_sent",
@@ -85,7 +88,9 @@
     "at": "ISO-8601 datetime (UTC preferred)",
     "kind": "sent | acknowledged | substantive_reply | followup_sent | legal_threat | closed",
     "by": "person on the firm side, if known",
-    "addresses": ["who it went to / came from"],
+    "addresses": [
+      "who it went to / came from"
+    ],
     "summary": "one-line description; for substantive content store a pointer, not the body"
   },
   "status_vocabulary": [
