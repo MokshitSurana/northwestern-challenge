@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "description": "Tracking log for request-for-comment outreach to firms named in FairGuard's structural finding. Update after every send, acknowledgment, follow-up, and close. See notes/comment_requests/README.md for the workflow.",
+  "entries": {
+    "venn_strategies": {
+      "firm": "Venn Strategies",
+      "case": "Benjamin Steinberg → Department of Energy",
+      "scan_rank": 1,
+      "trail_case_id": "steinberg_doe",
+      "draft_path": "notes/comment_requests/venn_strategies.md",
+      "status": "not_sent",
+      "addresses_used": [],
+      "deadline": null,
+      "events": []
+    },
+    "ferguson_group": {
+      "firm": "The Ferguson Group, LLC",
+      "case": "Mark Limbaugh → Department of the Interior",
+      "scan_rank": 2,
+      "trail_case_id": "limbaugh_interior",
+      "draft_path": "notes/comment_requests/ferguson_group.md",
+      "status": "not_sent",
+      "addresses_used": [],
+      "deadline": null,
+      "events": []
+    },
+    "delta_strategy_group": {
+      "firm": "Delta Strategy Group",
+      "case": "Jim Newsome and Scott Parsons → CFTC",
+      "scan_rank": [4, 6],
+      "trail_case_id": null,
+      "draft_path": "notes/comment_requests/delta_strategy_group.md",
+      "status": "not_sent",
+      "addresses_used": [],
+      "deadline": null,
+      "events": []
+    },
+    "torrey_advisory_group": {
+      "firm": "Torrey Advisory Group",
+      "case": "Michael Torrey → USDA",
+      "scan_rank": 7,
+      "trail_case_id": "usda_cases",
+      "draft_path": "notes/comment_requests/torrey_advisory_group.md",
+      "status": "not_sent",
+      "addresses_used": [],
+      "deadline": null,
+      "events": []
+    },
+    "invariant_llc": {
+      "firm": "Invariant LLC",
+      "case": "Kenneth Barbic → USDA",
+      "scan_rank": 8,
+      "trail_case_id": "usda_cases",
+      "draft_path": "notes/comment_requests/invariant_llc.md",
+      "status": "not_sent",
+      "addresses_used": [],
+      "deadline": null,
+      "events": []
+    },
+    "waneta_strategies": {
+      "firm": "Waneta Strategies, LLC",
+      "case": "Roger Sherman → FCC",
+      "scan_rank": 9,
+      "trail_case_id": null,
+      "draft_path": "notes/comment_requests/waneta_strategies.md",
+      "status": "not_sent",
+      "addresses_used": [],
+      "deadline": null,
+      "events": []
+    },
+    "spirit_rock_consulting": {
+      "firm": "Spirit Rock Consulting",
+      "case": "Aurene Martin → Department of the Interior",
+      "scan_rank": 10,
+      "trail_case_id": null,
+      "draft_path": "notes/comment_requests/spirit_rock_consulting.md",
+      "status": "not_sent",
+      "addresses_used": [],
+      "deadline": null,
+      "events": []
+    }
+  },
+  "event_schema": {
+    "_comment": "Each event in entries.<firm>.events should follow this shape.",
+    "at": "ISO-8601 datetime (UTC preferred)",
+    "kind": "sent | acknowledged | substantive_reply | followup_sent | legal_threat | closed",
+    "by": "person on the firm side, if known",
+    "addresses": ["who it went to / came from"],
+    "summary": "one-line description; for substantive content store a pointer, not the body"
+  },
+  "status_vocabulary": [
+    "not_sent",
+    "sent",
+    "acknowledged",
+    "awaiting_substantive",
+    "responded",
+    "no_response_by_deadline",
+    "closed_response",
+    "closed_no_response",
+    "escalated_to_counsel"
+  ]
+}
