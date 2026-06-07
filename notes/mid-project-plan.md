@@ -1,14 +1,16 @@
 # Mid-project plan
 
-**Status check (2026-06-06, post Day 2).** Six Agent Skills shipped (`doctor`,
-`index`, `resolve`, `scan`, `trace`, `pressrel`), 174 tests green on Linux +
-macOS + Windows, F1 = 0.963 on the resolver, 34 invariants on the indexer,
-anchor finding verified, structural finding generated, money trail
-recipient-name-verified, press-release evidence attached to 29 of 40 scan
-findings, §207 + comment-request packets staged in `notes/comment_requests/`,
-Reporter UI shipped at `/` + `/trails` with kebab menus and per-card exports.
-The press-release-half-of-the-corpus gap is now closed by `pressrel`. The
-remaining work is editorial, packaging, and the Day 3–5 backlog below.
+**Status check (2026-06-06, post Day 3).** Seven Agent Skills shipped
+(`doctor`, `index`, `resolve`, `scan`, `trace`, `pressrel`, `coi`), 200 tests
+green on Linux + macOS + Windows, F1 = 0.963 on the resolver, 34 invariants on
+the indexer, anchor finding verified, structural finding generated, money
+trail recipient-name-verified, press-release evidence attached to 29 of 40
+scan findings, §207 + comment-request packets staged in
+`notes/comment_requests/`, Reporter UI shipped at `/` + `/trails` + `/pressrel`
++ `/graph` with kebab menus, per-card exports, and an interactive D3
+force-directed conflict-of-interest graph. The coi-graph surfaces 6 triangles
+and 11 hubs out-of-the-box on the bundled corpus. Remaining work is editorial,
+packaging, and the Day 4–5 backlog below.
 
 This file is a working brief for the rest of the submission window. Two parts:
 
@@ -271,8 +273,8 @@ forward.
 |-----|--------|-------|--------|
 | 1 | Gates | Add `LICENSE`. Capture `trace` interaction log. Add README sections (outside data / COI / legal-risk). Send the comment requests (calendar starts now). | ✅ Done 2026-06-06 — 4/4 gates closed; comment-request packets staged in `notes/comment_requests/` ready to send |
 | 2 | Corpus completeness | Ship `pressrel` (A.1). This is the single biggest perception gain. | ✅ Done 2026-06-06 — 6th skill shipped end-to-end with 30 tests + 2 reproducible case files; 675 matches attached to 29/40 scan findings |
-| 3 | Capability story | Pick **one** of `coi-graph` (B.1) or `fact-check` (A.2) and ship it cleanly rather than half-shipping both. Recommended: `coi-graph` — more differentiated. | ⬜ next |
-| 4 | Polish | `comment-tracker` (A.3) + per-card one-pager PDF (A.4) + AP-style hook (C.1) + archive-on-cite (A.5) + Reporter UI route for `/pressrel`. | ⬜ |
+| 3 | Capability story | Pick **one** of `coi-graph` (B.1) or `fact-check` (A.2) and ship it cleanly rather than half-shipping both. Recommended: `coi-graph` — more differentiated. | ✅ Done 2026-06-06 — coi-graph shipped (script + 3 skill layers + 26 tests + interactive /graph route + static SVG + DOT), USDA pressrel case added (3rd case file), Day-4 /pressrel UI route pulled forward as bonus. 6 triangles + 11 hubs detected on bundled corpus. |
+| 4 | Polish | `comment-tracker` (A.3) + per-card one-pager PDF (A.4) + AP-style hook (C.1) + archive-on-cite (A.5). | ⬜ (`/pressrel` already shipped on Day 3) |
 | 5 | Proof | Re-run everything end-to-end on a clean clone. Recapture traces. Regenerate the PDF. Pin the four departure dates. Final README pass. | ⬜ |
 
 ---
