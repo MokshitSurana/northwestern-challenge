@@ -323,7 +323,7 @@ skill layers + `evals/evals.json`.**
 - [x] `uv run scripts/03_agency_concentration.py` runs and produces output (139 candidates, 22 agencies)
 - [x] `uv run scripts/02_entity_resolver.py` runs and writes entity_map (F1 = 0.963)
 - [x] `uv run scripts/verify_build.py` runs and all 34 invariants pass
-- [x] `uv sync --extra dev && uv run python -m pytest` — 144 tests passing (111 registry + 33 resolver)
+- [x] `uv sync --extra dev && uv run python -m pytest` — 174 tests passing (111 registry + 33 resolver + 30 pressrel)
 - [x] All SKILL.md files have valid YAML frontmatter + instructions
 - [x] `/fair-guard doctor` runs without errors and prints a correct checklist (CI-verified Linux/macOS/Windows)
 - [x] `/fair-guard scan` routes correctly and executes without permission prompts
