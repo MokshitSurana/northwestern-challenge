@@ -1,12 +1,14 @@
 # Mid-project plan
 
-**Status check (2026-06-06).** Five Agent Skills shipped (`doctor`, `index`,
-`resolve`, `scan`, `trace`), 144 tests green on Linux + macOS + Windows, F1 =
-0.963 on the resolver, 34 invariants on the indexer, anchor finding verified,
-structural finding generated, money trail recipient-name-verified, §207 +
-comment-request drafts ready, Reporter UI shipped at `/` + `/trails` with
-kebab menus and per-card exports. The remaining work is editorial, packaging,
-and one structural gap (we haven't used the press-release half of the corpus).
+**Status check (2026-06-06, post Day 2).** Six Agent Skills shipped (`doctor`,
+`index`, `resolve`, `scan`, `trace`, `pressrel`), 174 tests green on Linux +
+macOS + Windows, F1 = 0.963 on the resolver, 34 invariants on the indexer,
+anchor finding verified, structural finding generated, money trail
+recipient-name-verified, press-release evidence attached to 29 of 40 scan
+findings, §207 + comment-request packets staged in `notes/comment_requests/`,
+Reporter UI shipped at `/` + `/trails` with kebab menus and per-card exports.
+The press-release-half-of-the-corpus gap is now closed by `pressrel`. The
+remaining work is editorial, packaging, and the Day 3–5 backlog below.
 
 This file is a working brief for the rest of the submission window. Two parts:
 
