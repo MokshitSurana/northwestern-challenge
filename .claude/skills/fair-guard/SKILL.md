@@ -4,10 +4,13 @@ description: >
   FairGuard investigative journalism toolkit for federal lobbying analysis.
   Routes to: doctor (validate setup and guided onboarding), index (build DuckDB
   from raw LDA dumps), resolve (normalize org/person names), scan (find former
-  officials lobbying their old agency), or trace (follow the money — federal awards
-  from an agency to a lobbyist's clients on USAspending.gov). Use when the user wants
-  to run any part of the FairGuard pipeline.
-argument-hint: "[mode: doctor | index | scan | resolve | trace]"
+  officials lobbying their old agency), trace (follow the money — federal awards
+  from an agency to a lobbyist's clients on USAspending.gov), or pressrel
+  (cross-reference Congressional press releases for mentions of a client / firm /
+  topic — pairs with scan and trace to turn the structural pattern into a story
+  with named legislators in it). Use when the user wants to run any part of the
+  FairGuard pipeline.
+argument-hint: "[mode: doctor | index | scan | resolve | trace | pressrel]"
 allowed-tools: Read Bash
 ---
 
@@ -22,6 +25,7 @@ allowed-tools: Read Bash
 | `resolve` | entity-resolver | Normalize org/person name strings; write `entity_map` (F1 = 0.963) | DuckDB built |
 | `scan` | revolving-door-detector | Rank former officials by agency concentration ratio | DuckDB built |
 | `trace` | federal-award-tracer | Follow the money: agency → lobbyist's clients on USAspending.gov | Network + a case file |
+| `pressrel` | press-release-cross-ref | Cross-reference Congressional press releases for mentions of a client / firm / topic | DuckDB built |
 
 ## Invocation examples
 
@@ -32,11 +36,12 @@ allowed-tools: Read Bash
 /fair-guard scan --agency nasa      # filter to NASA only
 /fair-guard resolve                 # normalize entity names
 /fair-guard trace                   # follow the money (lists bundled case files)
+/fair-guard pressrel                # cross-ref press releases (lists bundled case files)
 ```
 
 ## Prerequisite: output/investigation.duckdb
 
-`scan` and `resolve` both require `output/investigation.duckdb`.
+`scan`, `resolve`, and `pressrel` all require `output/investigation.duckdb`.
 
 **Two ways to get it — choose one:**
 
@@ -55,12 +60,12 @@ When invoked with `$ARGUMENTS`:
 
 1. **No argument:** Print the mode table above and ask which mode to run.
 
-2. **Valid mode name** (`doctor`, `index`, `resolve`, `scan`, `trace`):
+2. **Valid mode name** (`doctor`, `index`, `resolve`, `scan`, `trace`, `pressrel`):
 
    First, check prerequisites deterministically:
-   - `scan` or `resolve`: check whether `output/investigation.duckdb` exists.
-     If it does **not** exist, stop immediately and print both options above
-     (Drive download or run `/fair-guard index`). Do not proceed.
+   - `scan`, `resolve`, or `pressrel`: check whether `output/investigation.duckdb`
+     exists. If it does **not** exist, stop immediately and print both options
+     above (Drive download or run `/fair-guard index`). Do not proceed.
    - `index`: check whether `data/senate/`, `data/house/`, and
      `data/congress_press/` exist. If missing, print both options and stop.
    - `trace`: does **not** need the DuckDB — it makes live calls to
@@ -71,11 +76,18 @@ When invoked with `$ARGUMENTS`:
    - `doctor`: no prerequisites — always proceed.
 
    Then read the corresponding skill file and follow its instructions exactly:
-   - `doctor`  → read `skill/doctor/SKILL.md`                  (runs `scripts/doctor.py`)
-   - `index`   → read `skill/lda-corpus-indexer/SKILL.md`      (runs `scripts/01_build_index.py`; verify with `scripts/verify_build.py`)
-   - `resolve` → read `skill/entity-resolver/SKILL.md`         (runs `scripts/02_entity_resolver.py`)
-   - `scan`    → read `skill/revolving-door-detector/SKILL.md` (runs `scripts/03_agency_concentration.py`)
-   - `trace`   → read `skill/federal-award-tracer/SKILL.md`    (runs `scripts/04_award_tracer.py`)
+   - `doctor`   → read `skill/doctor/SKILL.md`                   (runs `scripts/doctor.py`)
+   - `index`    → read `skill/lda-corpus-indexer/SKILL.md`       (runs `scripts/01_build_index.py`; verify with `scripts/verify_build.py`)
+   - `resolve`  → read `skill/entity-resolver/SKILL.md`          (runs `scripts/02_entity_resolver.py`)
+   - `scan`     → read `skill/revolving-door-detector/SKILL.md`  (runs `scripts/03_agency_concentration.py`)
+   - `trace`    → read `skill/federal-award-tracer/SKILL.md`     (runs `scripts/04_award_tracer.py`)
+   - `pressrel` → read `skill/press-release-cross-ref/SKILL.md`  (runs `scripts/05_pressrel_search.py`)
+
+   For `pressrel` with no further arguments: point the user at the bundled cases
+   in `skill/press-release-cross-ref/cases/` (steinberg_clients.json,
+   limbaugh_clients.json), at `--mention "<term>"` for ad-hoc search, and at
+   `--enrich-findings` for the one-shot pass that attaches press-release
+   evidence to every top scan finding.
 
 3. **Invalid mode name:** Suggest the closest valid mode and ask for confirmation
    before proceeding.
@@ -86,9 +98,9 @@ When invoked with `$ARGUMENTS`:
 After reading the mode's SKILL.md, execute its instructions in full.
 Do not summarize or skip steps.
 
-All five modes are currently shipped; there is no `Status: Planned` skill to
-guard against. (Previously `resolve` was a design doc — it now has a full
-implementation with F1 = 0.963 verified by `tests/test_entity_resolver.py`.)
-`trace` is the newest mode: it follows the money from an agency to a lobbyist's
-clients on USAspending.gov and reproduces the verified trails in
-`notes/08_external_verification_top_candidates.md`.
+All six modes are currently shipped; there is no `Status: Planned` skill to
+guard against. `trace` follows the money from an agency to a lobbyist's clients
+on USAspending.gov and reproduces the verified trails in
+`notes/08_external_verification_top_candidates.md`. `pressrel` closes the third
+side of the triangle: which members of Congress have publicly mentioned the
+companies surfaced by `scan` and `trace`.
