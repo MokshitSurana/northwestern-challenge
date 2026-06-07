@@ -1,0 +1,1333 @@
+{
+  "generated_at": "2026-06-07T03:10:46.846986+00:00",
+  "total_reports": 2,
+  "reports": [
+    {
+      "case_id": "limbaugh_clients",
+      "label": "Limbaugh Interior/Reclamation clients — Congressional press-release cross-ref",
+      "generated_at": "2026-06-07T03:10:46.590178+00:00",
+      "filters": {
+        "since": "2022-01-01",
+        "until": "2026-04-01",
+        "party": null,
+        "state": null,
+        "chamber": null,
+        "domain_contains": null
+      },
+      "match": [
+        {
+          "lobbyist_name": "Mark Limbaugh",
+          "agency_short": "interior"
+        }
+      ],
+      "n_clients": 8,
+      "n_matches": 78,
+      "n_distinct_members": 33,
+      "per_client": [
+        {
+          "client": "Sites Project Authority",
+          "aliases": [
+            "Sites Project Authority",
+            "Sites Reservoir"
+          ],
+          "n_matches": 14,
+          "n_distinct_members": 4,
+          "first_date": "2022-01-12",
+          "last_date": "2025-02-26"
+        },
+        {
+          "client": "Friant Water Authority",
+          "aliases": [
+            "Friant Water"
+          ],
+          "n_matches": 17,
+          "n_distinct_members": 5,
+          "first_date": "2022-06-16",
+          "last_date": "2026-03-17"
+        },
+        {
+          "client": "Turlock Irrigation District",
+          "aliases": [
+            "Turlock Irrigation"
+          ],
+          "n_matches": 2,
+          "n_distinct_members": 2,
+          "first_date": "2022-05-12",
+          "last_date": "2025-06-11"
+        },
+        {
+          "client": "The Freshwater Trust",
+          "aliases": [
+            "Freshwater Trust"
+          ],
+          "n_matches": 6,
+          "n_distinct_members": 4,
+          "first_date": "2023-11-16",
+          "last_date": "2025-07-23"
+        },
+        {
+          "client": "Klamath Water Users",
+          "aliases": [
+            "Klamath Water Users",
+            "Klamath Project"
+          ],
+          "n_matches": 8,
+          "n_distinct_members": 3,
+          "first_date": "2024-02-14",
+          "last_date": "2025-01-17"
+        },
+        {
+          "client": "Yakima Basin",
+          "aliases": [
+            "Yakima Basin"
+          ],
+          "n_matches": 4,
+          "n_distinct_members": 2,
+          "first_date": "2022-06-16",
+          "last_date": "2026-02-02"
+        },
+        {
+          "client": "City of Folsom",
+          "aliases": [
+            "City of Folsom"
+          ],
+          "n_matches": 2,
+          "n_distinct_members": 1,
+          "first_date": "2023-02-10",
+          "last_date": "2023-02-10"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "aliases": [
+            "Bureau of Reclamation"
+          ],
+          "n_matches": 25,
+          "n_distinct_members": 18,
+          "first_date": "2026-02-04",
+          "last_date": "2026-03-31"
+        }
+      ],
+      "matches": [
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-31",
+          "member_name": "Roger Marshall",
+          "party": "Republican",
+          "state": "KS",
+          "chamber": "Senate",
+          "title": "Senator Marshall Meets with Leaders Across Northwest Kansas",
+          "url": "https://www.marshall.senate.gov/newsroom/press-releases/senator-marshall-meets-with-leaders-across-northwest-kansas/",
+          "snippet": "…chery Sight Click here for more photos. Senator Marshall also visited the Cedar Bluff Reservoir and Damn, part of the **Bureau of Reclamation**’s flood management system in northwest Kansas. Originally constructed under the 1944 Flood Control Act as part of the P…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-19",
+          "member_name": "Juan Ciscomani",
+          "party": "Republican",
+          "state": "AZ",
+          "chamber": "House",
+          "title": "Ciscomani Leads Bipartisan Effort to Support Western Water Management and Combat Drought",
+          "url": "https://ciscomani.house.gov/media/press-releases/ciscomani-leads-bipartisan-effort-support-western-water-management-and-combat",
+          "snippet": "…atershed Management Program (CWMP) for four years, as it is set to expire at the end of 2026. The CWMP is a part of the **Bureau of Reclamation**’s WaterSMART program and provides funding for local non-regulatory watershed groups in the Western United States. These…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-18",
+          "member_name": "Adrian Smith",
+          "party": "Republican",
+          "state": "NE",
+          "chamber": "House",
+          "title": "Smith Celebrates $100 Million Investment for Fort Laramie Tunnel Rehabilitation Project",
+          "url": "https://adriansmith.house.gov/media/press-releases/smith-celebrates-100-million-investment-fort-laramie-tunnel-rehabilitation",
+          "snippet": "Congressman Adrian Smith (NE-03) issued the following statement in response to the **Bureau of Reclamation** (BoR) awarding $100 million to the Fort Laramie Tunnel Rehabilitation Project for repairs and enhancement of the ground…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-18",
+          "member_name": "Jared Huffman",
+          "party": "Democrat",
+          "state": "CA",
+          "chamber": "House",
+          "title": "Huffman Blasts $40 Million in Taxpayer Funds for Illegal Shasta Dam Raise",
+          "url": "https://huffman.house.gov/media-center/press-releases/huffman-blasts-40-million-in-taxpayer-funds-for-illegal-shasta-dam-raise",
+          "snippet": "…en part of the bill, and destroys ancestral lands and native salmon. I will keep fighting to stop it.\" Background The **Bureau of Reclamation**'s proposal would raise Shasta Dam by 18.5 feet at an estimated cost of $1.8 billion. The project is illegal under Calif…"
+        },
+        {
+          "client": "Friant Water Authority",
+          "date": "2026-03-17",
+          "member_name": "David G. Valadao",
+          "party": "Republican",
+          "state": "CA",
+          "chamber": "House",
+          "title": "Congressman Valadao Celebrates Critical Investments in California Water Infrastructure",
+          "url": "https://valadao.house.gov/news/documentsingle.aspx?DocumentID=3612",
+          "snippet": "…districts and communities that rely on the Friant-Kern Canal will forever be grateful,” said Johnny Amaral, CEO of the **Friant Water** Authority. “This investment marks an important step toward restoring the capacity and performance of the Delta-Mendota…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-17",
+          "member_name": "Kevin Cramer",
+          "party": "Republican",
+          "state": "ND",
+          "chamber": "Senate",
+          "title": "Bureau of Reclamation Announces $108 Million to Support North Dakota Water Supply",
+          "url": "https://www.cramer.senate.gov/news/press-releases/bureau-of-reclamation-announces-108-million-to-support-north-dakota-water-supply",
+          "snippet": "WASHINGTON, D.C. – The U.S. **Bureau of Reclamation** (BOR) announced an award of $100 million for work on the Eastern North Dakota Alternate Water Supply (ENDAWS) project,…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-17",
+          "member_name": "Steve Daines",
+          "party": "Republican",
+          "state": "MT",
+          "chamber": "Senate",
+          "title": "Daines Urges Colleagues to Support His Bills Protecting Montana’s Water Security and Infrastructure",
+          "url": "https://www.daines.senate.gov/2026/03/17/daines-urges-colleagues-to-support-his-bills-protecting-montanas-water-security-and-infrastructure/",
+          "snippet": "…y availability in Montana. The Fort Peck Water System Reauthorization Act extends authority to December of 2028 for the **Bureau of Reclamation** to finalize construction of essential water infrastructure. This project is designed to provide municipal, rural, and i…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-17",
+          "member_name": "Steve Daines",
+          "party": "Republican",
+          "state": "MT",
+          "chamber": "Senate",
+          "title": "Daines, Hickenlooper Introduce Bill to Protect Water Access, Reauthorize CWMP",
+          "url": "https://www.daines.senate.gov/2026/03/17/daines-hickenlooper-introduce-bill-to-protect-water-access-reauthorize-cwmp/",
+          "snippet": "…nservancy supports the bipartisan Cooperative Watershed Management Program Reauthorization Act. It’s essential that the **Bureau of Reclamation** continues to receive robust resources to support collaborative projects that will better manage Western waters. TNC wor…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-17",
+          "member_name": "John Hoeven",
+          "party": "Republican",
+          "state": "ND",
+          "chamber": "Senate",
+          "title": "Hoeven Secures $108 Million Award Supporting ENDAWS, Worked with Interior Department & OMB to Advance Funding",
+          "url": "https://www.hoeven.senate.gov/news/news-releases/hoeven-secures-108-million-award-supporting-endaws-worked-with-interior-department-and-omb-to-advance-funding",
+          "snippet": "…anal and Snake Creek Pumping Plant, which will be utilized for the project. The OB3 included $1 billion in funding for **Bureau of Reclamation** (BOR) water conveyance and storage projects. Hoeven crafted and secured language in the bill to make ENDAWS eligible f…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-17",
+          "member_name": "John W. Hickenlooper",
+          "party": "Democrat",
+          "state": "CO",
+          "chamber": "Senate",
+          "title": "Hickenlooper, Bennet, Boebert, Hurd Push for AVC Completion",
+          "url": "https://www.hickenlooper.senate.gov/press_releases/hickenlooper-bennet-boebert-hurd-push-for-avc-completion/",
+          "snippet": "…the AVC and will continue pushing to complete the project. Both senators helped deliver $500 million in funding for the **Bureau of Reclamation** (BOR) from the Bipartisan Infrastructure Law for the AVC, including $250 million, $90 million, $100 million in 2023 and…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-17",
+          "member_name": "John W. Hickenlooper",
+          "party": "Democrat",
+          "state": "CO",
+          "chamber": "Senate",
+          "title": "Hickenlooper, Daines Introduce Bipartisan Bill to Improve Water Access, Protect Clean Water",
+          "url": "https://www.hickenlooper.senate.gov/press_releases/hickenlooper-daines-introduce-bipartisan-bill-to-improve-water-access-protect-clean-water/",
+          "snippet": "…ties are equipped to face drought, wildfires, or other natural disasters,” said Daines. The CWMP, which is part of the **Bureau of Reclamation**’s WaterSMART program, expires at the end of 2026. The Cooperative Watershed Management Program Reauthorization Act woul…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-16",
+          "member_name": "Ben Ray Luján",
+          "party": "Democrat",
+          "state": "NM",
+          "chamber": "Senate",
+          "title": "Luján, Heinrich, Leger Fernández Announce Release of $120 Million in Funding for the Navajo-Gallup Water Supply Project",
+          "url": "https://www.lujan.senate.gov/newsroom/press-releases/lujan-heinrich-leger-fernandez-announce-release-of-120-million-in-funding-for-the-navajo-gallup-water-supply-project/",
+          "snippet": "…er Fernández (D-N.M.), Ranking Member of the House Natural Resources Subcommittee on Indian Affairs, announced that the **Bureau of Reclamation** has expedited the release of $120 million in funding for the Navajo-Gallup Water Supply Project from its Reclamation Wa…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-12",
+          "member_name": "Ben Ray Luján",
+          "party": "Democrat",
+          "state": "NM",
+          "chamber": "Senate",
+          "title": "Luján Presses Bureau of Reclamation to Fully Fund and Complete the Navajo-Gallup Water Supply Project",
+          "url": "https://www.lujan.senate.gov/newsroom/press-releases/lujan-presses-bureau-of-reclamation-to-fully-fund-and-complete-the-navajo-gallup-water-supply-project/",
+          "snippet": "**Bureau of Reclamation** Commits to Review Hold Up in Funding Following Luján Questioning Washington, D.C. – U.S. Senator Ben Ray Luján (D-N.M.…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-11",
+          "member_name": "John Hoeven",
+          "party": "Republican",
+          "state": "ND",
+          "chamber": "Senate",
+          "title": "Hoeven Reintroduces Legislation to Increase Funding Authorizations for Water Supply Projects in North Dakota",
+          "url": "https://www.hoeven.senate.gov/news/news-releases/hoeven-reintroduces-legislation-to-increase-funding-authorizations-for-water-supply-projects-in-north-dakota",
+          "snippet": "…reimbursable costs related to BWT facilities, no authorization ceiling was outlined. As a result, North Dakota and the **Bureau of Reclamation** (BOR) have been forced to allocate significant MR&I resources to cover federal responsibilities under the Boundary Wate…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-04",
+          "member_name": "Mark Kelly",
+          "party": "Democrat",
+          "state": "AZ",
+          "chamber": "Senate",
+          "title": "Kelly, Gallego, Stanton, Ansari, Grijalva Demand Equitable Colorado River Protections",
+          "url": "https://www.kelly.senate.gov/newsroom/press-releases/kelly-gallego-stanton-ansari-grijalva-demand-equitable-colorado-river-protections/",
+          "snippet": "Arizona Democratic delegation calls **Bureau of Reclamation**’s draft EIS unworkable for Arizona, underscores impact on tribes, semiconductor and agriculture Industries Today, Ariz…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-04",
+          "member_name": "Yassamin Ansari",
+          "party": "Democrat",
+          "state": "AZ",
+          "chamber": "House",
+          "title": "Ansari, Stanton, Grijalva, Kelly, Gallego, Demand Equitable Colorado River Protections",
+          "url": "https://ansari.house.gov/media/press-releases/ansari-stanton-grijalva-kelly-gallego-demand-equitable-colorado-river-protections",
+          "snippet": "Arizona Democratic delegation calls **Bureau of Reclamation**'s draft EIS unworkable for Arizona, underscores impact on tribes, semiconductor and agriculture Industries Today, Repr…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-04",
+          "member_name": "Greg Stanton",
+          "party": "Democrat",
+          "state": "AZ",
+          "chamber": "House",
+          "title": "Arizona Democratic Congressional Delegation Demand Equitable Colorado River Protections",
+          "url": "https://stanton.house.gov/2026/3/arizona-democratic-congressional-delegation-demand-equitable-colorado-river-protections",
+          "snippet": "Delegation Calls **Bureau of Reclamation**'s Draft EIS Unworkable for Arizona, Underscore Impact on Tribes, Semiconductor and Agriculture Industries WASHINGTON,…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-03-04",
+          "member_name": "Ruben Gallego",
+          "party": "Democrat",
+          "state": "AZ",
+          "chamber": "Senate",
+          "title": "Gallego, Kelly Stanton, Ansari, Grijalva Demand Equitable Colorado River Protections",
+          "url": "https://www.gallego.senate.gov/news/press-releases/gallego-kelly-stanton-ansari-grijalva-demand-equitable-colorado-river-protections/",
+          "snippet": "Arizona Democratic Delegation Calls **Bureau of Reclamation**’s Draft EIS Unworkable for Arizona, Underscore Impact on Tribes, Semiconductor and Agriculture Industries WASHINGTON —…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-02-27",
+          "member_name": "Susie Lee",
+          "party": "Democrat",
+          "state": "NV",
+          "chamber": "House",
+          "title": "ICYMI: “A Big Win for Southern Nevada’s Infrastructure”: Congresswoman Lee Celebrates Help Hoover Dam Act Being Signed into Law",
+          "url": "https://susielee.house.gov/media/press-releases/icymi-big-win-southern-nevadas-infrastructure-congresswoman-lee-celebrates",
+          "snippet": "…an engineering need maintenance — $200 million of it over the next decade, to be exact, according to estimates from the **Bureau of Reclamation**, the federal agency in charge of water and dams in the West. “Sadly, even a structural achievement like the Hoover Dam…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-02-25",
+          "member_name": "Eleanor Holmes Norton",
+          "party": "Democrat",
+          "state": "DC",
+          "chamber": "House",
+          "title": "Norton Announces Community Project Funding Application Process",
+          "url": "https://norton.house.gov/media/press-releases/norton-announces-community-project-funding-application-process-2",
+          "snippet": "…Investigations Construction Mississippi River and Tributaries Operation and Maintenance Department of the Interior/**Bureau of Reclamation** Water and Related Resources Homeland Security Federal Emergency Management Agency Federal Assistance – Emergency Op…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-02-20",
+          "member_name": "Susie Lee",
+          "party": "Democrat",
+          "state": "NV",
+          "chamber": "House",
+          "title": "Congresswoman Lee, Senator Cortez Masto, Colorado River Commission Celebrate Help Hoover Dam Act Being Signed Into Law",
+          "url": "https://susielee.house.gov/media/press-releases/congresswoman-lee-senator-cortez-masto-colorado-river-commission-celebrate",
+          "snippet": "…elay, strengthens our infrastructure, and supports strong stewardship of a national asset.” The legislation allows the **Bureau of Reclamation** (Reclamation) — which testified in support of the bill during the 118th Congress — to access about $50 million in long-…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-02-13",
+          "member_name": "Juan Ciscomani",
+          "party": "Republican",
+          "state": "AZ",
+          "chamber": "House",
+          "title": "Ciscomani Joins Effort to Reintroduce Water Conservation Bill",
+          "url": "https://ciscomani.house.gov/media/press-releases/ciscomani-joins-effort-reintroduce-water-conservation-bill",
+          "snippet": "…n for water conservation. The Water Project Navigators Act (H.R. 7408), is a bipartisan bill that would establish a new **Bureau of Reclamation** (BOR) program to fund the work of grant navigators who would aid states, Tribes, and rural communities in efforts to se…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-02-11",
+          "member_name": "Angus S. King, Jr.",
+          "party": "Independent",
+          "state": "ME",
+          "chamber": "Senate",
+          "title": "King Blasts Administration’s Attempt to Whitewash American History at National Parks",
+          "url": "https://www.king.senate.gov/newsroom/press-releases/king-blasts-administrations-attempt-to-whitewash-american-history-at-national-parks",
+          "snippet": "…ncluding the National Park Service, Fish and Wildlife Service, Bureau of Land Management, Bureau of Indian Affairs, and **Bureau of Reclamation**, to conduct a review and to identify properties to be removed or altered. In the months following the issuance of SO 3…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-02-06",
+          "member_name": "Brittany Pettersen",
+          "party": "Democrat",
+          "state": "CO",
+          "chamber": "House",
+          "title": "Pettersen, Hickenlooper, Moran, Ciscomani Re-Intro Bipartisan Bill to Help Tribes, Rural Communities Access Funding for Water Conservation",
+          "url": "https://pettersen.house.gov/news/documentsingle.aspx?DocumentID=1613",
+          "snippet": "…and Jerry Moran reintroduced the bipartisan Water Project Navigators Act. The bill would establish a new program at the **Bureau of Reclamation** (BOR) to fund grant navigators who would help states, Tribes, and rural communities secure resources for projects that…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-02-06",
+          "member_name": "John W. Hickenlooper",
+          "party": "Democrat",
+          "state": "CO",
+          "chamber": "Senate",
+          "title": "Hickenlooper, Moran, Pettersen, Ciscomani Re-Intro Bipartisan Bill to Help Tribes, Rural Communities Access Funding for Water Conservation",
+          "url": "https://www.hickenlooper.senate.gov/press_releases/hickenlooper-moran-pettersen-ciscomani-re-intro-bipartisan-bill-to-help-tribes-rural-communities-access-funding-for-water-conservation/",
+          "snippet": "…Juan Ciscomani reintroduced the bipartisan Water Project Navigators Act. The bill would establish a new program at the **Bureau of Reclamation** (BOR) to fund grant navigators who would help states, Tribes, and rural communities secure resources for projects that…"
+        },
+        {
+          "client": "Bureau of Reclamation (thematic)",
+          "date": "2026-02-04",
+          "member_name": "Alex Padilla",
+          "party": "Democrat",
+          "state": "CA",
+          "chamber": "Senate",
+          "title": "Padilla Bipartisan Bill to Support the Lower Colorado River Multi-Species Conservation Program Advances in Senate Committee",
+          "url": "https://www.padilla.senate.gov/newsroom/press-releases/padilla-bipartisan-bill-to-support-the-lower-colorado-river-multi-species-conservation-program-advances-in-senate-committee/",
+          "snippet": "…funds that the Colorado River Lower Basin states and the federal government contribute to the LCR MSCP. Currently, the **Bureau of Reclamation** holds the funding that states, including California, Arizona, and Nevada, contribute in an account that does not collec…"
+        },
+        {
+          "client": "Yakima Basin",
+          "date": "2026-02-02",
+          "member_name": "Dan Newhouse",
+          "party": "Republican",
+          "state": "WA",
+          "chamber": "House",
+          "title": "Newhouse Requests Emergency Status for Yakima-Tieton Canal",
+          "url": "https://newhouse.house.gov/media-center/press-releases/newhouse-requests-emergency-status-yakima-tieton-canal",
+          "snippet": "…t to minimize the risk of imminent harm to public health and safety and economic viability for those that reside in the **Yakima Basin**.\" Language was included in the conference report of H.R. 6938, the Commerce, Justice, Science; Energy and Water Develo…"
+        },
+        {
+          "client": "Friant Water Authority",
+          "date": "2025-12-11",
+          "member_name": "Jim Costa",
+          "party": "Democrat",
+          "state": "CA",
+          "chamber": "House",
+          "title": "Costa, Gray Push New Water Infrastructure Package to Expand Storage and Address California's Water Crisis",
+          "url": "https://costa.house.gov/media/press-releases/costa-gray-push-new-water-infrastructure-package-expand-storage-and-address",
+          "snippet": "…ency coordination and cut through the permitting obstacles that hinder vital water projects,” said Jason Phillips, CEO, **Friant Water** Authority. “By codifying the provisions of Executive Order 14181, our communities and farms can improve their access to…"
+        },
+        {
+          "client": "Friant Water Authority",
+          "date": "2025-12-11",
+          "member_name": "Adam Gray",
+          "party": "Democrat",
+          "state": "CA",
+          "chamber": "House",
+          "title": "REP. GRAY INTRODUCES LEGISLATION TO EXPAND CALIFORNIA WATER INFRASTRUCTURE",
+          "url": "https://gray.house.gov/media/press-releases/rep-gray-introduces-legislation-expand-california-water-infrastructure",
+          "snippet": "…ency coordination and cut through the permitting obstacles that hinder vital water projects,” said Jason Phillips, CEO, **Friant Water** Authority. “By codifying the provisions of Executive Order 14181, our communities and farms can improve their access to…"
+        },
+        {
+          "client": "The Freshwater Trust",
+          "date": "2025-07-23",
+          "member_name": "Val T. Hoyle",
+          "party": "Democrat",
+          "state": "OR",
+          "chamber": "House",
+          "title": "Merkley and Hoyle Introduce Columbia River Clean-Up Act to Reauthorize Columbia River Basin Restoration Program",
+          "url": "https://hoyle.house.gov/media/press-releases/merkley-and-hoyle-introduce-columbia-river-clean-up-act-to-reauthorize-columbia-river-basin-restoration-program",
+          "snippet": "…lean-Up Act is endorsed by the Affiliated Tribes of Northwest Indians, Columbia River Inter-Tribal Fish Commission, The **Freshwater Trust**, Lower Columbia Estuary Partnership, National Wildlife Federation, The Nature Conservancy, Oregon Association of Clean…"
+        },
+        {
+          "client": "Friant Water Authority",
+          "date": "2025-06-11",
+          "member_name": "Adam Gray",
+          "party": "Democrat",
+          "state": "CA",
+          "chamber": "House",
+          "title": "CONGRESSMAN GRAY INTRODUCES VALLEY WATER PROTECTION ACT",
+          "url": "https://gray.house.gov/media/press-releases/congressman-gray-introduces-valley-water-protection-act",
+          "snippet": "…r nation’s security and protection of our nation’s species, and we applaud his introduction of this legislation.” “The **Friant Water** Authority applauds Rep. Adam Gray for introducing his bill to help modernize the implementation of the Endangered Speci…"
+        },
+        {
+          "client": "Turlock Irrigation District",
+          "date": "2025-06-11",
+          "member_name": "Adam Gray",
+          "party": "Democrat",
+          "state": "CA",
+          "chamber": "House",
+          "title": "CONGRESSMAN GRAY INTRODUCES VALLEY WATER PROTECTION ACT",
+          "url": "https://gray.house.gov/media/press-releases/congressman-gray-introduces-valley-water-protection-act",
+          "snippet": "…onomic impacts of Endangered Species Act regulation are understood and considered,” said Brad Koehn, General Manager of **Turlock Irrigation** District. “We appreciate Congressman Gray for introducing this bill, which recognizes that improving conditions for spe…"
+        },
+        {
+          "client": "Friant Water Authority",
+          "date": "2025-04-28",
+          "member_name": "Jim Costa",
+          "party": "Democrat",
+          "state": "CA",
+          "chamber": "House",
+          "title": "Costa, Newhouse, Curtis Push to Unlock Federal Funding for Western Water Infrastructure",
+          "url": "https://costa.house.gov/media/press-releases/costa-newhouse-curtis-push-unlock-federal-funding-western-water-infrastructure",
+          "snippet": "…hat supports agriculture, the environment, and the needs of our growing population,\" said Rick Borges, President of the **Friant Water** Authority. “The Restoring WIFIA Eligibility Act provides much-needed reforms related to technical issues that substant…"
+        },
+        {
+          "client": "The Freshwater Trust",
+          "date": "2025-04-03",
+          "member_name": "Ron Wyden",
+          "party": "Democrat",
+          "state": "OR",
+          "chamber": "Senate",
+          "title": "Wyden Reintroduces Legislation to Improve Watershed Resilience and Health",
+          "url": "https://www.wyden.senate.gov/news/press-releases/wyden-reintroduces-legislation-to-improve-watershed-resilience-and-health",
+          "snippet": "…d provides a scalable model for getting real outcomes for taxpayer dollars,” said Joe Whitworth, President & CEO of The **Freshwater Trust**. “We commend Senator Wyden for his introduction of this legislation. With recurring drought, it is important that we h…"
+        },
+        {
+          "client": "Sites Project Authority",
+          "date": "2025-02-26",
+          "member_name": "Vince Fong",
+          "party": "Republican",
+          "state": "CA",
+          "chamber": "House",
+          "title": "Rep. Fong Applauds Needed Federal Investment to Boost California Water Storage",
+          "url": "https://fong.house.gov/media/press-releases/rep-fong-applauds-needed-federal-investment-boost-california-water-storage",
+          "snippet": "…hich Fong supported. As part of this effort, $315.5 million will be invested to develop new water storage at the future **Sites Reservoir** and expand capacity at the existing San Luis Reservoir. “Investing in California’s surface water storage is paramount…"
+        },
+        {
+          "client": "The Freshwater Trust",
+          "date": "2025-02-21",
+          "member_name": "Ron Wyden",
+          "party": "Democrat",
+          "state": "OR",
+          "chamber": "Senate",
+          "title": "Wyden, Colleagues Reintroduce Bill to Combat Intensifying Wildfires and Drought Across the American West",
+          "url": "https://www.wyden.senate.gov/news/press-releases/wyden-colleagues-reintroduce-bill-to-combat-intensifying-wildfires-and-drought-across-the-american-west",
+          "snippet": "…ported by The National Wildlife Federation, the Southern Ute Indian Tribe, National Association of State Foresters, The **Freshwater Trust**, American Forests, National Wild Turkey Federation, National Audubon Society, Family Farm Alliance, Theodore Roosevelt…"
+        },
+        {
+          "client": "The Freshwater Trust",
+          "date": "2025-02-20",
+          "member_name": "Michael F. Bennet",
+          "party": "Democrat",
+          "state": "CO",
+          "chamber": "Senate",
+          "title": "Bennet, Hickenlooper, Crow, Wyden, Gallego, Rosen Reintroduce Bill to Combat Intensifying Wildfires and Drought Across the American West",
+          "url": "https://www.bennet.senate.gov/2025/02/20/bennet-hickenlooper-crow-wyden-gallego-rosen-reintroduce-bill-to-combat-intensifying-wildfires-and-drought-across-the-american-west/",
+          "snippet": "…orted by: The National Wildlife Federation, the Southern Ute Indian Tribe, National Association of State Foresters, The **Freshwater Trust**, American Forests, National Audubon Society, Family Farm Alliance, Theodore Roosevelt Conservation Partnership, Western…"
+        },
+        {
+          "client": "Klamath Water Users",
+          "date": "2025-01-17",
+          "member_name": "Ron Wyden",
+          "party": "Democrat",
+          "state": "OR",
+          "chamber": "Senate",
+          "title": "Merkley, Wyden Announce $50 Million to Support Drought Resilience in the Klamath Basin",
+          "url": "https://www.wyden.senate.gov/news/press-releases/merkley-wyden-announce-50-million-to-support-drought-resilience-in-the-klamath-basin",
+          "snippet": "…e region’s farmers and ranchers under a new Memorandum of Understanding (MOU) between the Bureau of Reclamation and the **Klamath Water Users** Association (KWUA), as well as the Klamath Project Drought Response Agency (KPDRA)—which was created by Merkley. The ag…"
+        },
+        {
+          "client": "Friant Water Authority",
+          "date": "2025-01-16",
+          "member_name": "David G. Valadao",
+          "party": "Republican",
+          "state": "CA",
+          "chamber": "House",
+          "title": "Congressman Valadao Introduces Key Water Infrastructure Legislation to Address California’s Water Crisis",
+          "url": "https://valadao.house.gov/news/documentsingle.aspx?DocumentID=1685",
+          "snippet": "…avo Water Storage District, and Self-Help Enterprises. Supporting organizations for the Every Drop Counts Act include: **Friant Water** Authority, Kern Fan Groundwater Storage Project (Irvine Ranch Water District and Rosedale-Bravo Water Storage District)…"
+        },
+        {
+          "client": "Friant Water Authority",
+          "date": "2025-01-16",
+          "member_name": "Jim Costa",
+          "party": "Democrat",
+          "state": "CA",
+          "chamber": "House",
+          "title": "Costa, Valley Leaders Introduce Bipartisan Bills to Boost Groundwater Recharge Efforts in the San Joaquin Valley",
+          "url": "https://costa.house.gov/media/press-releases/costa-valley-leaders-introduce-bipartisan-bills-boost-groundwater-recharge",
+          "snippet": "…upply that supports agriculture, the environment, and the needs of our growing population.\" said Jason Phillips, CEO of **Friant Water** Authority. \"Diminished water supplies have severely impacted agriculture in the San Joaquin Valley. Farmers can’t prod…"
+        },
+        {
+          "client": "Sites Project Authority",
+          "date": "2025-01-10",
+          "member_name": "Vince Fong",
+          "party": "Republican",
+          "state": "CA",
+          "chamber": "House",
+          "title": "Statement from Rep. Vince Fong and Rep. David Valadao on Water Infrastructure Projects",
+          "url": "https://fong.house.gov/media/press-releases/statement-rep-vince-fong-and-rep-david-valadao-water-infrastructure-projects",
+          "snippet": "The B.F. Sisk Dam Raise and Reservoir Expansion Project and the **Sites Reservoir** Project received federal funding for enhanced storage capacity, which will provide greater reliability to California’s…"
+        },
+        {
+          "client": "Sites Project Authority",
+          "date": "2025-01-08",
+          "member_name": "Jim Costa",
+          "party": "Democrat",
+          "state": "CA",
+          "chamber": "House",
+          "title": "Costa Announces $254 Million for BF Sisk Dam and Sites Reservoir",
+          "url": "https://costa.house.gov/media/press-releases/costa-announces-254-million-bf-sisk-dam-and-sites-reservoir",
+          "snippet": "…nking water to the San Joaquin Valley and California, including $125 million for B.F. Sisk Dam and $129 million for the **Sites Reservoir** Project. “These federal investments are a game-changer for the San Joaquin Valley and California’s water future,” said…"
+        },
+        {
+          "client": "Klamath Water Users",
+          "date": "2025-01-07",
+          "member_name": "Cliff Bentz",
+          "party": "Republican",
+          "state": "OR",
+          "chamber": "House",
+          "title": "President Biden signs Congressman Bentz and Senator Wyden Bill Protecting Klamath Basin Water Users",
+          "url": "https://bentz.house.gov/media/press-releases/president-biden-signs-congressman-bentz-and-senator-wyden-bill-protecting",
+          "snippet": "…especially burdened by costly need for fish passage and dam maintenance. The legislation ensures that promises made to **Klamath Project** irrigators during the dam removal process are upheld, particularly regarding the Bureau of Reclamation’s complete assum…"
+        },
+        {
+          "client": "Klamath Water Users",
+          "date": "2024-12-20",
+          "member_name": "Ron Wyden",
+          "party": "Democrat",
+          "state": "OR",
+          "chamber": "Senate",
+          "title": "Wyden, Merkley Celebrate Passage of Bipartisan Bill to Support Farmers and Ranchers Facing Severe Drought in Klamath Basin",
+          "url": "https://www.wyden.senate.gov/news/press-releases/wyden-merkley-celebrate-passage-of-bipartisan-bill-to-support-farmers-and-ranchers-facing-severe-drought-in-klamath-basin",
+          "snippet": "…of the four lower Klamath River dams this year, this bill honors the pledge we made to the farmers and ranchers on the **Klamath Project** as part of the historic Klamath Basin Power and Facilities Agreement.” “Senators Wyden and Merkley have been laser foc…"
+        },
+        {
+          "client": "Klamath Water Users",
+          "date": "2024-10-30",
+          "member_name": "Ron Wyden",
+          "party": "Democrat",
+          "state": "OR",
+          "chamber": "Senate",
+          "title": "Merkley, Wyden Announce $46 Million to Boost the Klamath Basin",
+          "url": "https://www.wyden.senate.gov/news/press-releases/merkley-wyden-announce-46-million-to-boost-the-klamath-basin",
+          "snippet": "…ture modernization in the Basin, as well as a historic agreement with the Klamath Tribes, Yurok Tribe, Karuk Tribe, and **Klamath Water Users** Association (KWUA). This Memorandum of Understanding (MOU) cemented their commitment to working together to drive long-…"
+        },
+        {
+          "client": "Sites Project Authority",
+          "date": "2024-05-31",
+          "member_name": "Mike Thompson",
+          "party": "Democrat",
+          "state": "CA",
+          "chamber": "House",
+          "title": "THOMPSON HELPS SECURE $67.5 MILLION FOR SITES RESERVOIR PROJECT EXPANDING LOCAL WATER STORAGE",
+          "url": "https://mikethompson.house.gov/newsroom/press-releases/thompson-helps-secure-675-million-sites-reservoir-project-expanding-local",
+          "snippet": "…ngton – Today, Rep. Mike Thompson (CA-04) applauded the U.S. Bureau of Reclamation’s award of $67.5 million to fund the **Sites Reservoir** Project. Rep. Thompson helped secure this funding through his support of the Bipartisan Infrastructure law. “The Sites…"
+        },
+        {
+          "client": "Klamath Water Users",
+          "date": "2024-04-17",
+          "member_name": "Ron Wyden",
+          "party": "Democrat",
+          "state": "OR",
+          "chamber": "Senate",
+          "title": "Merkley, Wyden: Immediate Drought Relief Headed to the Klamath Basin, Pushing for Long-Term Recovery Solutions",
+          "url": "https://www.wyden.senate.gov/news/press-releases/merkley-wyden-immediate-drought-relief-headed-to-the-klamath-basin-pushing-for-long-term-recovery-solutions",
+          "snippet": "…eleased the following statement today following the Bureau of Reclamation’s recently announced water allocation for the **Klamath Project**, as well as $8.5 million in immediate drought relief aid for Klamath Basin communities and $5 million in technical assi…"
+        },
+        {
+          "client": "Klamath Water Users",
+          "date": "2024-04-15",
+          "member_name": "Cliff Bentz",
+          "party": "Republican",
+          "state": "OR",
+          "chamber": "House",
+          "title": "Bentz Introduces Bill to Protect Ag Producers in Klamath Basin",
+          "url": "https://bentz.house.gov/media/press-releases/bentz-introduces-bill-protect-ag-producers-klamath-basin",
+          "snippet": "…ducing this legislation to protect farmers and ranchers in the Klamath Basin,” said Paul Simmons, Executive Director of **Klamath Water Users** Association. “It’s proof positive of his leadership and that things can in fact happen in Washington. We look forward t…"
+        },
+        {
+          "client": "Sites Project Authority",
+          "date": "2024-03-06",
+          "member_name": "Jim Costa",
+          "party": "Democrat",
+          "state": "CA",
+          "chamber": "House",
+          "title": "Costa Secures $12.2 Million for Local Projects in the San Joaquin Valley",
+          "url": "https://costa.house.gov/media/press-releases/costa-secures-122-million-local-projects-san-joaquin-valley",
+          "snippet": "…mprovements for the Nation (WIIN) Act water storage projects, which have benefitted Valley projects like B.F. Sisk Dam, **Sites Reservoir**, and the Friant-Kern Canal in the past. Secured $14 million for the Water Operations Technical Support (WOTS) to impro…"
+        },
+        {
+          "client": "Klamath Water Users",
+          "date": "2024-02-14",
+          "member_name": "Jared Huffman",
+          "party": "Democrat",
+          "state": "CA",
+          "chamber": "House",
+          "title": "Huffman Celebrates Landmark Agreement with Klamath Basin Tribes, Project Irrigators to Collaborate on Ecosystem Restoration and Water Reliability in Klamath Basin",
+          "url": "https://huffman.house.gov/media-center/press-releases/huffman-celebrates-landmark-agreement-with-klamath-basin-tribes-project-irrigators-to-collaborate-on-ecosystem-restoration-and-water-reliability-in-klamath-basin",
+          "snippet": "…he Department of the Interior has announced a historic agreement with the Klamath Tribes, Yurok Tribe, Karuk Tribe, and **Klamath Water Users** Association to advance collaborative efforts to restore the Klamath Basin ecosystem and improve water supply reliabilit…"
+        }
+      ]
+    },
+    {
+      "case_id": "steinberg_clients",
+      "label": "Steinberg DOE clients — Congressional press-release cross-ref",
+      "generated_at": "2026-06-07T03:10:26.763097+00:00",
+      "filters": {
+        "since": "2022-01-01",
+        "until": "2026-04-01",
+        "party": null,
+        "state": null,
+        "chamber": null,
+        "domain_contains": null
+      },
+      "match": [
+        {
+          "lobbyist_name": "Benjamin Steinberg",
+          "agency_short": "energy"
+        }
+      ],
+      "n_clients": 9,
+      "n_matches": 59,
+      "n_distinct_members": 37,
+      "per_client": [
+        {
+          "client": "Anovion",
+          "aliases": [
+            "Anovion"
+          ],
+          "n_matches": 3,
+          "n_distinct_members": 3,
+          "first_date": "2022-10-20",
+          "last_date": "2025-07-10"
+        },
+        {
+          "client": "Talon Nickel",
+          "aliases": [
+            "Talon Nickel",
+            "Talon Metals"
+          ],
+          "n_matches": 8,
+          "n_distinct_members": 4,
+          "first_date": "2023-11-02",
+          "last_date": "2026-02-04"
+        },
+        {
+          "client": "Forge Battery",
+          "aliases": [
+            "Forge Battery",
+            "Forge Nano"
+          ],
+          "n_matches": 1,
+          "n_distinct_members": 1,
+          "first_date": "2024-09-20",
+          "last_date": "2024-09-20"
+        },
+        {
+          "client": "Cabot Corporation",
+          "aliases": [
+            "Cabot Corporation",
+            "Cabot Corp"
+          ],
+          "n_matches": 2,
+          "n_distinct_members": 2,
+          "first_date": "2024-03-13",
+          "last_date": "2024-09-20"
+        },
+        {
+          "client": "Wabtec",
+          "aliases": [
+            "Wabtec"
+          ],
+          "n_matches": 16,
+          "n_distinct_members": 5,
+          "first_date": "2022-07-26",
+          "last_date": "2025-09-23"
+        },
+        {
+          "client": "Amsted Industries",
+          "aliases": [
+            "Amsted"
+          ],
+          "n_matches": 0,
+          "n_distinct_members": 0,
+          "first_date": null,
+          "last_date": null
+        },
+        {
+          "client": "Burns & McDonnell",
+          "aliases": [
+            "Burns & McDonnell"
+          ],
+          "n_matches": 3,
+          "n_distinct_members": 1,
+          "first_date": "2022-09-12",
+          "last_date": "2025-09-12"
+        },
+        {
+          "client": "Battery Materials & Tech Coalition",
+          "aliases": [
+            "Battery Materials and Technology Coalition"
+          ],
+          "n_matches": 1,
+          "n_distinct_members": 1,
+          "first_date": "2024-05-01",
+          "last_date": "2024-05-01"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "aliases": [
+            "critical minerals"
+          ],
+          "n_matches": 25,
+          "n_distinct_members": 20,
+          "first_date": "2026-02-11",
+          "last_date": "2026-03-27"
+        }
+      ],
+      "matches": [
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-03-27",
+          "member_name": "Joaquin Castro",
+          "party": "Democrat",
+          "state": "TX",
+          "chamber": "House",
+          "title": "Reps. Castro, Kim Advance Bill Out of Committee to Counter China’s Growing Influence",
+          "url": "https://castro.house.gov/media-center/press-releases/reps-castro-kim-advance-bill-out-of-committee-to-counter-chinas-growing-influence",
+          "snippet": "…on Foreign Investment Screening to protect partners and allies from China’s growing interest in strategic sectors like **critical minerals**, energy, and telecommunications."
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-03-25",
+          "member_name": "Jared Huffman",
+          "party": "Democrat",
+          "state": "CA",
+          "chamber": "House",
+          "title": "Natural Resources Democrats Force Vote to Subpoena Donald Trump Jr. Over $670 Million Taxpayer-Funded Deal",
+          "url": "https://huffman.house.gov/media-center/press-releases/natural-resources-democrats-force-vote-to-subpoena-donald-trump-jr-over-670-million-taxpayer-funded-deal",
+          "snippet": "Washington, D.C. – At today's Oversight and Investigations Subcommittee hearing on the **critical minerals** supply chain, Subcommittee Ranking Member Maxine Dexter (D-Ore.) forced a vote to subpoena Donald Trump Jr. to testify…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-03-25",
+          "member_name": "Aumua Amata Coleman Radewagen",
+          "party": "Republican",
+          "state": "AS",
+          "chamber": "House",
+          "title": "Amata Shares Concerns Over Chinese Vessels Surveying for Critical Minerals and Fishing",
+          "url": "https://radewagen.house.gov/media-center/press-releases/amata-shares-concerns-over-chinese-vessels-surveying-critical-minerals",
+          "snippet": ""
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-03-10",
+          "member_name": "Steve Daines",
+          "party": "Republican",
+          "state": "MT",
+          "chamber": "Senate",
+          "title": "ICYMI: Daines Op-Ed in the Bozeman Daily Chronicle: “Thanks to President Trump, We’re Protecting Montana’s Mines”",
+          "url": "https://www.daines.senate.gov/2026/03/10/icymi-daines-op-ed-in-the-bozeman-daily-chronicle-thanks-to-president-trump-were-protecting-montanas-mines/",
+          "snippet": "…th, 2026 Montana’s mining industry is critically important to not only our state but the country. Hard rock mining for **critical minerals** like copper, platinum, palladium, and silver provides more than 18,000 good-paying jobs for Montanans, adds nearly $430…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-03-05",
+          "member_name": "Pete Ricketts",
+          "party": "Republican",
+          "state": "NE",
+          "chamber": "Senate",
+          "title": "VIDEO: Ricketts on Philippines: One of the Most Consequential Diplomatic Assignments in the Indo Pacific",
+          "url": "https://www.ricketts.senate.gov/news/press-releases/video-ricketts-on-philippines-one-of-the-most-consequential-diplomatic-assignments-in-the-indo-pacific/",
+          "snippet": "…rs and supply chain security, boosting US investment in semiconductors and infrastructure, and advancing cooperation in **critical minerals**.” Watch the video HERE"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-03-05",
+          "member_name": "Roger F. Wicker",
+          "party": "Republican",
+          "state": "MS",
+          "chamber": "Senate",
+          "title": "Chairman Wicker Leads SASC Hearing on the American Small Drone Industrial Base",
+          "url": "https://www.wicker.senate.gov/2026/3/chairman-wicker-leads-sasc-hearing-on-the-american-small-drone-industrial-base",
+          "snippet": "…nes but cannot buy from Chinese companies for fear of supply chain or software vulnerabilities. As we have seen in the **critical minerals** and rare earths industry, fighting back against 21st century economic warfare like this requires creative solutions and…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-03-03",
+          "member_name": "Susie Lee",
+          "party": "Democrat",
+          "state": "NV",
+          "chamber": "House",
+          "title": "PASSED UNANIMOUSLY: Congresswoman Lee’s Bipartisan Bill to Strengthen the Domestic Supply of Critical Minerals Passes House",
+          "url": "https://susielee.house.gov/media/press-releases/passed-unanimously-congresswoman-lees-bipartisan-bill-strengthen-domestic",
+          "snippet": "…H.R. 755) passed the U.S. House of Representatives unanimously. This legislation will strengthen the domestic supply of **critical minerals** and related resources by cutting government red tape and providing clarity to both industry and federal agencies. The l…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-03-03",
+          "member_name": "Juan Ciscomani",
+          "party": "Republican",
+          "state": "AZ",
+          "chamber": "House",
+          "title": "Congressman Ciscomani’s Critical Mineral Legislation Passes the House",
+          "url": "https://ciscomani.house.gov/media/press-releases/congressman-ciscomanis-critical-mineral-legislation-passes-house",
+          "snippet": "…e Departments of Energy and Interior ’s lists of materials and minerals considered to be critical. By standardizing how **critical minerals** are defined and recognized, the legislation will help streamline permitting, attract investment, and accelerate the dev…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-03-02",
+          "member_name": "Elissa Slotkin",
+          "party": "Democrat",
+          "state": "MI",
+          "chamber": "Senate",
+          "title": "Slotkin Announces Support for New Bipartisan Bill to Create a Strategic Critical Minerals Reserve",
+          "url": "https://www.slotkin.senate.gov/2026/03/02/slotkin-announces-support-for-new-bipartisan-bill-to-create-a-strategic-critical-minerals-reserve/",
+          "snippet": "…MI) announced her support for a new bipartisan, bicameral piece of legislation that supports domestic supply chains for **critical minerals** to meet national and economic security needs through the creation of a new Strategic Resilience Reserve (SRR). “Everyt…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-02-27",
+          "member_name": "Steve Daines",
+          "party": "Republican",
+          "state": "MT",
+          "chamber": "Senate",
+          "title": "Daines Visits Stillwater Mine: “Thanks to President Trump, Montana Mining is Back”",
+          "url": "https://www.daines.senate.gov/2026/02/27/daines-visits-stillwater-mine-thanks-to-president-trump-montana-mining-is-back/",
+          "snippet": "…we can’t commend you enough for your hard work,” said Daines. “We at Sibanye-Stillwater are proud to mine and recycle **critical minerals** in Montana for the USA. We believe the US can and must continue to responsibly produce domestic critical minerals, like…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-02-26",
+          "member_name": "Elizabeth Warren",
+          "party": "Democrat",
+          "state": "MA",
+          "chamber": "Senate",
+          "title": "Warren, Wyden, Van Hollen Sound Alarm on Lutnick Family’s Conflicts of Interest Involving New Commerce Rare Earth Deal",
+          "url": "https://www.warren.senate.gov/newsroom/press-releases/warren-wyden-van-hollen-sound-alarm-on-lutnick-familys-conflicts-of-interest-involving-new-commerce-rare-earth-deal",
+          "snippet": "…at could stand to enrich your immediate family and former company,” wrote the lawmakers. Securing a domestic supply of **critical minerals** — including rare earths — is essential to U.S. national security and economic competitiveness, making it especially imp…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-02-26",
+          "member_name": "Chris Van Hollen",
+          "party": "Democrat",
+          "state": "MD",
+          "chamber": "Senate",
+          "title": "Van Hollen, Warren, Wyden, Sound Alarm on Lutnick Family’s Conflicts of Interest Involving New Commerce Rare Earth Deal",
+          "url": "https://www.vanhollen.senate.gov/news/press-releases/van-hollen-warren-wyden-sound-alarm-on-lutnick-familys-conflicts-of-interest-involving-new-commerce-rare-earth-deal",
+          "snippet": "…at could stand to enrich your immediate family and former company,” wrote the lawmakers. Securing a domestic supply of **critical minerals** — including rare earths — is essential to U.S. national security and economic competitiveness, making it especially imp…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-02-26",
+          "member_name": "Mark Kelly",
+          "party": "Democrat",
+          "state": "AZ",
+          "chamber": "Senate",
+          "title": "WATCH: In SASC Hearing, Kelly Presses Pentagon on Using Outdated Chips in U.S. Weapons Systems",
+          "url": "https://www.kelly.senate.gov/newsroom/press-releases/watch-in-sasc-hearing-kelly-presses-pentagon-on-using-outdated-chips-in-u-s-weapons-systems/",
+          "snippet": "…e-of-the-art technology.” This week, during a Senate Armed Services Committee hearing on our nation’s supply chains of **critical minerals** and semiconductor chips, Arizona Senator and Navy combat veteran Mark Kelly questioned Department of Defense officials…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-02-26",
+          "member_name": "Ron Wyden",
+          "party": "Democrat",
+          "state": "OR",
+          "chamber": "Senate",
+          "title": "Wyden Presses Trump’s Commerce Secretary on Conflict of Interest After Family’s Firm Brokers Investment in Critical Minerals",
+          "url": "https://www.wyden.senate.gov/news/press-releases/wyden-presses-trumps-commerce-secretary-on-conflict-of-interest-after-familys-firm-brokers-investment-in-critical-minerals",
+          "snippet": ""
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-02-24",
+          "member_name": "Chris Pappas",
+          "party": "Democrat",
+          "state": "NH",
+          "chamber": "House",
+          "title": "Pappas Becomes First Democrat to Back SECURE Minerals Act in the House",
+          "url": "https://pappas.house.gov/media/press-releases/pappas-becomes-first-democrat-to-back-secure-minerals-act-in-the-house",
+          "snippet": "…(R-IN), and U.S. Representatives Rob Wittman (VA-01) and John Moolenaar (MI-02) introduced the legislation last month. **Critical minerals** have emerged as a key chokepoint in the global economy, giving the People’s Republic of China enormous leverage, as it'…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-02-24",
+          "member_name": "Elizabeth Warren",
+          "party": "Democrat",
+          "state": "MA",
+          "chamber": "Senate",
+          "title": "At Hearing, Trump’s Department of Defense Agrees with Warren That Holding Defense Contractors Accountable Is Vital for National Security",
+          "url": "https://www.warren.senate.gov/newsroom/press-releases/at-hearing-trumps-department-of-defense-agrees-with-warren-that-holding-defense-contractors-accountable-is-vital-for-national-security",
+          "snippet": "…mit stock buybacks and increase research and development spending. Transcript: Hearings to examine rebuilding American **critical minerals** supply chains.Senate Armed Services CommitteeFebruary 24, 2026 Senator Elizabeth Warren: So, when you sign a contract,…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-02-24",
+          "member_name": "Roger F. Wicker",
+          "party": "Republican",
+          "state": "MS",
+          "chamber": "Senate",
+          "title": "Chairman Wicker Leads SASC Hearing on Rebuilding American Critical Minerals Supply Chains",
+          "url": "https://www.wicker.senate.gov/2026/2/chairman-wicker-leads-sasc-hearing-on-rebuilding-american-critical-minerals-supply-chains",
+          "snippet": "…Miss., Chairman of the Senate Armed Services Committee, today led a hearing to receive testimony on rebuilding American **critical minerals** supply chains. The Honorable Michael P. Cadenazzi, Jr., Assistant Secretary of Defense for Industrial Base Policy, Dep…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-02-23",
+          "member_name": "Tim Kaine",
+          "party": "Democrat",
+          "state": "VA",
+          "chamber": "Senate",
+          "title": "Photos: Kaine Completes Week of Official Meetings in Australia in Support of Aukus Agreement & Shared National Security Priorities",
+          "url": "https://www.kaine.senate.gov/press-releases/photos-kaine-completes-week-of-official-meetings-in-australia-in-support-of-aukus-agreement-and-shared-national-security-priorities",
+          "snippet": "…merce forums in Adelaide, Perth, and Sydney to discuss the importance of various industries, including shipbuilding and **critical minerals**, to America and Australia‘s shared national security needs. Since the AUKUS agreement was announced in 2021, Kaine has…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-02-18",
+          "member_name": "Dan Sullivan",
+          "party": "Republican",
+          "state": "AK",
+          "chamber": "Senate",
+          "title": "Sullivan Touts “Alaska Comeback,” Historic Opportunities, in Annual Address to Legislature",
+          "url": "https://www.sullivan.senate.gov/newsroom/press-releases/sullivan-touts-alaska-comeback-historic-opportunities-in-annual-address-to-legislature",
+          "snippet": "…2034. That's a big deal. This law also dramatically incentivizes the development of our nation's timber resources and **critical minerals**, all very important for our state. By the way, the 70-30 split is a generational achievement, something we've been try…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-02-17",
+          "member_name": "Harold Rogers",
+          "party": "Republican",
+          "state": "KY",
+          "chamber": "House",
+          "title": "Congressman Rogers Joins ACPT and ExxonMobil for Ribbon-Cutting Ceremony in Ashland",
+          "url": "https://halrogers.house.gov/press-releases?ID=8F09AC96-40A7-4E3B-9136-65BBFAC2099E",
+          "snippet": "…erials that ExxonMobil plans to use as a precursor for battery grade graphite, strengthening the nation’s production of **critical minerals** for lithium-ion batteries, which can be used in electric vehicles, data centers, aerospace and defense. “Eastern Kentu…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-02-13",
+          "member_name": "Tim Kaine",
+          "party": "Democrat",
+          "state": "VA",
+          "chamber": "Senate",
+          "title": "Kaine & Ricketts Encourage Quad Dialogue",
+          "url": "https://www.kaine.senate.gov/press-releases/kaine-and-ricketts-encourage-quad-dialogue",
+          "snippet": "…ater leverage.” “All four Quad partners face shared challenges including supply chain vulnerabilities, restrictions on **critical minerals**, threats to a free and open Indo-Pacific, and intensifying competition over emerging technologies,” the senators contin…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-02-13",
+          "member_name": "Ruben Gallego",
+          "party": "Democrat",
+          "state": "AZ",
+          "chamber": "Senate",
+          "title": "Gallego in MeidasTouch: “A New Marshall Plan”",
+          "url": "https://www.gallego.senate.gov/news/press-releases/gallego-in-meidastouch-a-new-marshall-plan/",
+          "snippet": "…re, we should be offering them technology that protects their data. And instead of letting China dominate the space for **critical minerals** for batteries, AI, and clean energy, we should be investing to create U.S. company capacity and building those supply c…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-02-12",
+          "member_name": "Steve Daines",
+          "party": "Republican",
+          "state": "MT",
+          "chamber": "Senate",
+          "title": "Daines Hails Trump Administration Action to Counter Russia’s Predatory Palladium Trade Practices",
+          "url": "https://www.daines.senate.gov/2026/02/12/daines-hails-trump-administration-action-to-counter-russias-predatory-palladium-trade-practices/",
+          "snippet": "…a win all around for Montana and America,” said Daines. Background: Addressing Russia’s malign action with regards to **critical minerals** has been a Daines priority. The Sibanye-Stillwater mine laid off 700 workers in November 2024 as a result of Biden admi…"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-02-12",
+          "member_name": "Katie Boyd Britt",
+          "party": "Republican",
+          "state": "AL",
+          "chamber": "Senate",
+          "title": "U.S. Senators Katie Britt, Tammy Baldwin, Colleagues Introduce Bipartisan Legislation to Strengthen U.S. Trade Law Enforcement Against Bad Actors",
+          "url": "https://www.britt.senate.gov/news/press-releases/u-s-senators-katie-britt-tammy-baldwin-colleagues-introduce-bipartisan-legislation-to-strengthen-u-s-trade-law-enforcement-against-bad-actors/",
+          "snippet": "…ncludes the Not One More Inch or Acre Act, the Cutting-off Communist Profiteers Act, theRevitalizing America’s Offshore **Critical Minerals** Dominance Act of 2025, and more. ###"
+        },
+        {
+          "client": "Critical minerals (thematic)",
+          "date": "2026-02-11",
+          "member_name": "John James",
+          "party": "Republican",
+          "state": "MI",
+          "chamber": "House",
+          "title": "John James’ Securing America’s Critical Minerals Supply Act Passes House",
+          "url": "https://james.house.gov/news/documentsingle.aspx?DocumentID=1287",
+          "snippet": "WASHINGTON, D.C. – Today, the House of Representatives passed Congressman John James’ (MI-10) Securing America’s **Critical Minerals** Supply Act. The bill is aimed at strengthening U.S. energy supply chains, ensuring Americans have access to reliable an…"
+        },
+        {
+          "client": "Talon Nickel",
+          "date": "2026-02-04",
+          "member_name": "Julie Fedorchak",
+          "party": "Republican",
+          "state": "ND",
+          "chamber": "House",
+          "title": "Fedorchak votes to speed up domestic mining and strengthen America’s mineral independence",
+          "url": "https://fedorchak.house.gov/media/press-releases/fedorchak-votes-speed-domestic-mining-and-strengthen-americas-mineral",
+          "snippet": "…to recover critical minerals from existing mine sites and byproducts. ICYMI: Earlier this year, Fedorchak attended the **Talon Metals** ribbon cutting ceremony marking the launch of the Beulah Minerals Processing Facility near Beulah, ND. This effort, bac…"
+        },
+        {
+          "client": "Talon Nickel",
+          "date": "2025-12-19",
+          "member_name": "Pete Stauber",
+          "party": "Republican",
+          "state": "MN",
+          "chamber": "House",
+          "title": "SPEED Act Clears House with Stauber's Support, Boosting U.S. Infrastructure",
+          "url": "https://stauber.house.gov/media/press-releases/speed-act-clears-house-staubers-support-boosting-us-infrastructure",
+          "snippet": "…orthern Minnesota, our broken permitting system is preventing important mining projects like Twin Metals, NewRange, and **Talon Metals** from getting online, and forcing basic road, transportation, and water infrastructure projects to face massive delays a…"
+        },
+        {
+          "client": "Talon Nickel",
+          "date": "2025-11-20",
+          "member_name": "Pete Stauber",
+          "party": "Republican",
+          "state": "MN",
+          "chamber": "House",
+          "title": "Stauber Applauds Advancement of the SPEED Act (H.R. 4776) Through Committee",
+          "url": "https://stauber.house.gov/media/press-releases/stauber-applauds-advancement-speed-act-hr-4776-through-committee",
+          "snippet": "…tion and red tape. “In Northern Minnesota, we face some of the worst impacts. Projects like Twin Metals, NewRange, and **Talon Metals** are stalled, costing us the chance to mine the critical minerals the world needs for batteries and national security. E…"
+        },
+        {
+          "client": "Wabtec",
+          "date": "2025-09-23",
+          "member_name": "Mike Kelly",
+          "party": "Republican",
+          "state": "PA",
+          "chamber": "House",
+          "title": "Rep. Kelly statement on historic Wabtec locomotive deal",
+          "url": "https://kelly.house.gov/media/press-releases/rep-kelly-statement-historic-wabtec-locomotive-deal",
+          "snippet": "WASHINGTON, D.C. -- Today, U.S. Rep. Mike Kelly (R-PA) released the following statement after **Wabtec** Corporation announced Monday a historic agreement with National Company Kazakhstan Temir Zholy (KTZ), the national rail…"
+        },
+        {
+          "client": "Burns & McDonnell",
+          "date": "2025-09-12",
+          "member_name": "Jerry Moran",
+          "party": "Republican",
+          "state": "KS",
+          "chamber": "Senate",
+          "title": "Sen. Moran Announces 2025 Service Academy Selection Board",
+          "url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=7E0A3D7C-7778-4830-A636-95038A8D40CF",
+          "snippet": "…d member; parent of two sons in U.S. Service Academies Col. (RET) Dean Mitchell of Tonganoxie – Management Consultant, **Burns & McDonnell**; U.S. Army veteran Major (RET) Cortney Neblett, RN of McCune – Education and Risk Management Director, Labette Health;…"
+        },
+        {
+          "client": "Anovion",
+          "date": "2025-07-10",
+          "member_name": "Haley M. Stevens",
+          "party": "Democrat",
+          "state": "MI",
+          "chamber": "House",
+          "title": "What They’re Saying: Michigan Congresswoman Haley Stevens Introduces the ‘Unearth America’s Future Act’",
+          "url": "https://stevens.house.gov/media/press-releases/what-theyre-saying-michigan-congresswoman-haley-stevens-introduces-unearth",
+          "snippet": "…h industry in mitigating project risks and supporting market stability.” Patrick Donnelly, Chief Commercial Officer of **Anovion** Technologies: \"Anovion Technologies considers this bill a vital step in strengthening the domestic battery materials i…"
+        },
+        {
+          "client": "Talon Nickel",
+          "date": "2025-06-13",
+          "member_name": "John Hoeven",
+          "party": "Republican",
+          "state": "ND",
+          "chamber": "Senate",
+          "title": "Hoeven, Burgum Discuss Need for Oil, Gas, Coal & Critical Mineral Production to Support U.S. Energy Dominance",
+          "url": "https://www.hoeven.senate.gov/news/news-releases/hoeven-burgum-discuss-need-for-oil-gas-coal-and-critical-mineral-production-to-support-us-energy-dominance",
+          "snippet": "…gas and coal reserves. Increasing critical mineral production on federal lands. Hoeven pointed to the development of **Talon Metals**’ minerals processing facility, which is being developed in North Dakota and will support a secure, fully-domestic suppl…"
+        },
+        {
+          "client": "Talon Nickel",
+          "date": "2025-05-28",
+          "member_name": "Kevin Cramer",
+          "party": "Republican",
+          "state": "ND",
+          "chamber": "Senate",
+          "title": "Cramer, Talon Metals Celebrate Advanced Nickel, Copper Minerals Processing Facility in Beulah",
+          "url": "https://www.cramer.senate.gov/news/press-releases/cramer-talon-metals-celebrate-advanced-nickel-copper-minerals-processing-facility-in-beulah",
+          "snippet": "Project to advance American mineral production BEULAH, N.D. – U.S. Senator Kevin Cramer (R-ND) joined **Talon Metals** leadership to celebrate securing a former Westmoreland Mining site where the company will develop its Beulah Minerals P…"
+        },
+        {
+          "client": "Talon Nickel",
+          "date": "2025-05-28",
+          "member_name": "John Hoeven",
+          "party": "Republican",
+          "state": "ND",
+          "chamber": "Senate",
+          "title": "Hoeven: Minerals Processing Facility in Beulah a Game-Changer, Helping Secure U.S. Domestic Battery Supply Chain",
+          "url": "https://www.hoeven.senate.gov/news/news-releases/hoeven-minerals-processing-facility-in-beulah-a-game-changer-helping-secure-us-domestic-battery-supply-chain",
+          "snippet": "…ulah a Game-Changer, Helping Secure U.S. Domestic Battery Supply Chain Senator Worked to Secure $115 Million Grant for **Talon Metals** Facility, Supporting 150 Jobs in Mercer County & Reducing U.S. Reliance on Foreign Critical Minerals BEULAH, N.D. – Se…"
+        },
+        {
+          "client": "Burns & McDonnell",
+          "date": "2024-11-01",
+          "member_name": "Jerry Moran",
+          "party": "Republican",
+          "state": "KS",
+          "chamber": "Senate",
+          "title": "Sen. Moran Announces 2024 Service Academy Selection Board",
+          "url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=48D9D303-F833-4D07-8987-BBBA32FF290E",
+          "snippet": "…d member; parent of two sons in U.S. Service Academies Col. (RET) Dean Mitchell of Tonganoxie – Management Consultant, **Burns & McDonnell**; U.S. Army veteran Sean Ritchie of Wichita – North American Operations Lead, Cargill; U.S. Merchant Marine Academy gra…"
+        },
+        {
+          "client": "Forge Battery",
+          "date": "2024-09-20",
+          "member_name": "Deborah K. Ross",
+          "party": "Democrat",
+          "state": "NC",
+          "chamber": "House",
+          "title": "Congresswoman Ross Announces $100 Million in Federal Funding for Forge Battery Manufacturing from Bipartisan Infrastructure Law",
+          "url": "https://ross.house.gov/2024/9/congresswoman-ross-announces-100-million-in-federal-funding-for-forge-battery-manufacturing-from-bipartisan-infrastructure-law",
+          "snippet": "…orah Ross (NC-02) announced a $100 million grant from the Department of Energy (DOE) to increase production capacity at **Forge Battery**’s lithium-ion battery manufacturing facility in Morrisville. Forge Battery will use this federal funding for a new faci…"
+        },
+        {
+          "client": "Cabot Corporation",
+          "date": "2024-09-20",
+          "member_name": "Gary C. Peters",
+          "party": "Democrat",
+          "state": "MI",
+          "chamber": "Senate",
+          "title": "Senators Peters and Stabenow Announce $355 Million in Funding for Michigan’s Battery Manufacturing Sector",
+          "url": "https://www.peters.senate.gov/newsroom/press-releases/senators-peters-and-stabenow-announce-355-million-in-funding-for-michigans-battery-manufacturing-sector",
+          "snippet": "…engthen our domestic battery supply chain, support the transition to electric vehicles, and enhance national security. **Cabot Corporation**: Cabot Corporation will receive $50 million to build and operate a plant to support the domestic lithium-ion battery su…"
+        },
+        {
+          "client": "Battery Materials & Tech Coalition",
+          "date": "2024-05-01",
+          "member_name": "Paul Tonko",
+          "party": "Democrat",
+          "state": "NY",
+          "chamber": "House",
+          "title": "Tonko, Graves Introduce Critical Material TRACE Act",
+          "url": "https://tonko.house.gov/news/documentsingle.aspx?DocumentID=4115",
+          "snippet": "…ct energy security. The Representatives’ Critical Material TRACE Act has been endorsed by: the Advanced Energy United, **Battery Materials and Technology Coalition**, Circulor, Earthjustice, Earthworks, the Global Battery Alliance, Optel, SAFE, Sierra Club, Umicore, and the Union of C…"
+        },
+        {
+          "client": "Cabot Corporation",
+          "date": "2024-03-13",
+          "member_name": "Lori Trahan",
+          "party": "Democrat",
+          "state": "MA",
+          "chamber": "House",
+          "title": "Trahan, Warren, Moulton Announce $94.5 Million Federal Investment in Massachusetts-Based Hydrogen Facilities",
+          "url": "https://trahan.house.gov/news/documentsingle.aspx?DocumentID=3149",
+          "snippet": "…se as they grow and expand.\" In total, five companies received $94.5 million, including: AvCarb, Lowell: $10,000,000 **Cabot Corporation**, Billerica: $5,022,943 Electric Hydrogen, Devens: $46,289,194 Nuvera Fuel Cells, Billerica: $30,000,000 Plug Power,…"
+        },
+        {
+          "client": "Wabtec",
+          "date": "2023-11-16",
+          "member_name": "John Fetterman",
+          "party": "Democrat",
+          "state": "PA",
+          "chamber": "Senate",
+          "title": "Fetterman Joins Union Leaders Sara Nelson, Shawn Fain to Support Union Flight Attendants at DCA",
+          "url": "https://www.fetterman.senate.gov/fetterman-joins-union-leaders-sara-nelson-shawn-fain-to-support-union-flight-attendants-at-dca/",
+          "snippet": "…n a vocal advocate for the union way of life and against corporate greed. In addition to joining striking UE workers at **Wabtec** in Erie and five different UAW picket lines, he has consistently expressed support for workers fighting for recognition…"
+        },
+        {
+          "client": "Talon Nickel",
+          "date": "2023-11-02",
+          "member_name": "Kevin Cramer",
+          "party": "Republican",
+          "state": "ND",
+          "chamber": "Senate",
+          "title": "Sen. Cramer: DOE Awards Nearly $115 Million to Talon Metals’ Battery Mineral Processing Facility",
+          "url": "https://www.cramer.senate.gov/news/press-releases/sen-cramer-doe-awards-nearly-115-million-to-talon-metals-battery-mineral-processing-facility",
+          "snippet": "…ement after the U.S. Department of Energy (DOE) awarded $114,846,344 from the Infrastructure Investment and Jobs Act to **Talon Nickel** (USA) LLC for the construction of a battery minerals processing facility in Mercer County, North Dakota. This facility…"
+        },
+        {
+          "client": "Talon Nickel",
+          "date": "2023-11-02",
+          "member_name": "John Hoeven",
+          "party": "Republican",
+          "state": "ND",
+          "chamber": "Senate",
+          "title": "Hoeven Helps Secure Nearly $115 Million for Talon Metals to Establish Battery Minerals Facility in Mercer County",
+          "url": "https://www.hoeven.senate.gov/news/news-releases/hoeven-helps-secure-nearly-115-million-for-talon-metals-to-establish-battery-minerals-facility-in-mercer-county",
+          "snippet": "Hoeven Helps Secure Nearly $115 Million for **Talon Metals** to Establish Battery Minerals Facility in Mercer County Western North Dakota Facility Will Help Reduce Reliance on For…"
+        },
+        {
+          "client": "Anovion",
+          "date": "2023-10-26",
+          "member_name": "Sanford D. Bishop, Jr.",
+          "party": "Democrat",
+          "state": "GA",
+          "chamber": "House",
+          "title": "CONGRESSMAN BISHOP ANNOUNCES $40,000 AWARD TO ALBANY STATE UNIVERSITY TO HELP STUDENTS EXCEL IN STEM TO GROW GEORGIA’S ECONOMY",
+          "url": "https://bishop.house.gov/media-center/press-releases/congressman-bishop-announces-40000-award-to-albany-state-university-to-help-students-excel-in-stem-to-grow-georgia-s-economy",
+          "snippet": "…us Program which was created by the Infrastructure Investment and Jobs Act which Congressman Bishop supported. In May, **Anovion** Technologies broke ground on a plant in Bainbridge, GA, which will create more than 400 jobs and manufacture electric v…"
+        },
+        {
+          "client": "Wabtec",
+          "date": "2023-10-04",
+          "member_name": "Summer L. Lee",
+          "party": "Democrat",
+          "state": "PA",
+          "chamber": "House",
+          "title": "FACT SHEET: Rep. Summer Lee Announces Over $800 Million Federal Dollars Delivered to Western PA",
+          "url": "https://summerlee.house.gov/newsroom/press-releases/fact-sheet-rep-summer-lee-announces-over-800-million-federal-dollars-delivered-to-western-pa",
+          "snippet": "…ndtables, and meetings including over a dozen events with UPMC health workers and hospital workers rising, rallied with **Wabtec** United Electrical Workers, AFLCIO's annual lawyers conference, attended multiple rallies with striking Pittsburgh Post…"
+        },
+        {
+          "client": "Wabtec",
+          "date": "2023-09-29",
+          "member_name": "John Fetterman",
+          "party": "Democrat",
+          "state": "PA",
+          "chamber": "Senate",
+          "title": "Fetterman Writes Op-Ed on UAW Strike, Calls on Big 3 to Reach Fair Deal with Workers",
+          "url": "https://www.fetterman.senate.gov/fetterman-writes-op-ed-on-uaw-strike-calls-on-big-3-to-reach-fair-deal-with-workers/",
+          "snippet": "…strike, his support for the striking workers, and his experience pushing for a fair deal between the locomotive company **Wabtec** and striking United Electrical, Radio, and Machine workers in Erie earlier this year. “Put simply, union workers built…"
+        },
+        {
+          "client": "Wabtec",
+          "date": "2023-09-29",
+          "member_name": "Christopher R. Deluzio",
+          "party": "Democrat",
+          "state": "PA",
+          "chamber": "House",
+          "title": "Deluzio, Kelly Celebrate $10 Million for Neighborhood 91 at PIT Innovation Campus",
+          "url": "https://deluzio.house.gov/media/press-releases/deluzio-kelly-celebrate-10-million-neighborhood-91-pit-innovation-campus",
+          "snippet": "…s, advanced coatings, material characterization, mechanical testing, and workforce development. Current tenants include **Wabtec** Corporation, Cumberland Additive, Metal Powder Works, HAMR, RJ Lee, The Future of Jewelry, and Westmoreland Mechanical…"
+        },
+        {
+          "client": "Wabtec",
+          "date": "2023-09-22",
+          "member_name": "Ted Cruz",
+          "party": "Republican",
+          "state": "TX",
+          "chamber": "Senate",
+          "title": "e-Newsletter - Week of September 22nd",
+          "url": "https://www.cruz.senate.gov/newsroom/blogs/e-newsletter_-week-of-september-22nd",
+          "snippet": "…Ron Nirenberg Wounded Warriors Project President of Abilene Christian University, Dr. Phil Schubert Commerce Corner **Wabtec**’s CEO, Rafael Santana American Bureau of Shipping"
+        },
+        {
+          "client": "Wabtec",
+          "date": "2023-09-19",
+          "member_name": "John Fetterman",
+          "party": "Democrat",
+          "state": "PA",
+          "chamber": "Senate",
+          "title": "Fetterman Spends Weekend Standing In Solidarity, Supporting The Union Way Of Life",
+          "url": "https://www.fetterman.senate.gov/fetterman-spends-weekend-standing-in-solidarity-supporting-the-union-way-of-life/",
+          "snippet": "…first time as junior Senator joining union members on strike. Just a few weeks ago, he headlined a rally with striking **Wabtec** workers in Erie. The UE Union and Wabtec reached a deal at the beginning of September."
+        },
+        {
+          "client": "Wabtec",
+          "date": "2023-09-01",
+          "member_name": "John Fetterman",
+          "party": "Democrat",
+          "state": "PA",
+          "chamber": "Senate",
+          "title": "Fetterman Statement on Deal Between UE Union and Wabtec, Ending Strike After Over 70 Days",
+          "url": "https://www.fetterman.senate.gov/fetterman-statement-on-deal-between-ue-union-and-wabtec-ending-strike-after-over-70-days/",
+          "snippet": "…on Friday released the following statement after the UE Local 506 and 618 workers in Erie who have been on strike from **Wabtec** for over two months ratified a new labor agreement with the company, ending the strike: “I am very glad that the UE wo…"
+        },
+        {
+          "client": "Wabtec",
+          "date": "2023-08-23",
+          "member_name": "John Fetterman",
+          "party": "Democrat",
+          "state": "PA",
+          "chamber": "Senate",
+          "title": "Fetterman Swings Through Erie, Shows Support for Seniors and Striking Workers",
+          "url": "https://www.fetterman.senate.gov/fetterman-swings-through-erie-shows-support-for-seniors-and-striking-workers/",
+          "snippet": "…Monday, where he stopped by the county’s annual Senior Fair and headlined a rally to stand in solidarity with striking **Wabtec** workers. Sen. Fetterman first visited State Representative Ryan Bizzarro’s annual Senior Fair & Older Living Expo, whe…"
+        }
+      ]
+    }
+  ]
+}
