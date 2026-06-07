@@ -235,7 +235,7 @@ docker compose up
 
 ## Agent Skills
 
-All five skills are shipped. The `/fair-guard` dispatcher routes between them
+All six skills are shipped. The `/fair-guard` dispatcher routes between them
 and enforces prerequisites deterministically before reading any mode file.
 
 ### Skill 1 — `doctor` (setup-validator)
