@@ -9,6 +9,7 @@ const TABS = [
   { href: "/trails", label: "Money trails", description: "USAspending awards to those clients" },
   { href: "/pressrel", label: "Press releases", description: "Congressional press releases mentioning the clients" },
   { href: "/graph", label: "Graph", description: "Conflict-of-interest network: composes scan + trace + pressrel" },
+  { href: "/comments", label: "Comments", description: "Request-for-comment outreach status (who's sent, who's overdue, who replied)" },
 ]
 
 export default function NavTabs() {
