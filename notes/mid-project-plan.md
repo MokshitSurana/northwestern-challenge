@@ -83,25 +83,36 @@ process/polish. Each item names the skill/file path so it's actionable.
 
 ### Tier A — Quick wins (1 day each)
 
-#### A.1 `pressrel` — search Congressional press releases tied to a candidate
+#### A.1 `pressrel` — search Congressional press releases tied to a candidate ✅ SHIPPED (Day 2, 2026-06-06)
 
-**Why it's #1:** closes the "you only used half the corpus" hole. The
-`press_releases` table has `bioguide_id`, `filing_quarter`, `text` — enough to
-support: *"given lobbyist X or client Y, surface every press release from
-members on the relevant committee that names them or their issue area."*
+**Why it was #1:** closed the "you only used half the corpus" hole. The
+`press_releases` table has 141,332 rows with `bioguide_id`, `member_name`,
+`party`, `state`, `chamber`, `date`, `title`, `url`, `text` — far richer than
+the original assumption — which supports member-side filters out of the box.
 
-**Concrete payoff:** opens a new story angle that none of our current skills
-hits — *did the member who issued the press release praising this earmark
-have a former staffer now lobbying for the beneficiary?* That's a Pulitzer-
-shaped lead.
+**Concrete payoff (verified on the real DB):** `--enrich-findings` attached
+675 verified press-release matches across 29 of the top 40 scan findings in
+~10 seconds. The case-file pass for Steinberg DOE clients alone surfaced 59
+matches across 37 distinct members; Limbaugh's water-district clients
+surfaced a dense Bureau of Reclamation funding-announcement cluster.
 
-**Files:**
-- `scripts/05_pressrel_search.py` — DuckDB queries with regex + entity-map
-  join
+**Shipped artifacts:**
+- `scripts/05_pressrel_search.py` — DuckDB regex with per-alias smart word
+  boundaries (RE2-compatible so it works in DuckDB *and* Python), snippet
+  extraction, de-dup on `(bioguide_id, date, title)`, smart-quote tolerance,
+  case-file mode + ad-hoc `--mention` mode + batched `--enrich-findings` mode
 - `skill/press-release-cross-ref/SKILL.md` — submission artifact
-- `.claude/skills/fair-guard/SKILL.md` — add `pressrel` mode to dispatcher
+- `skill/press-release-cross-ref/cases/steinberg_clients.json` + `limbaugh_clients.json` — reproducible
 - `.agents/skills/fair-guard/modes/pressrel/SKILL.md` — agentskills.io copy
-- Tests: `tests/test_pressrel.py`
+- `.claude/skills/fair-guard/SKILL.md` — dispatcher routes `pressrel` with the
+  DuckDB prerequisite guard
+- `tests/test_pressrel.py` — 30 tests (unit: regex discipline, snippet
+  extraction, schema validation, render shape; integration: real-DB queries
+  with the `@skipif(not DB_PATH.exists())` pattern). Total project test count
+  now 174.
+- Web integration: `web/public/press_releases.json` feed + per-finding
+  `press_releases` field on matching rows in `findings.json`. UI route for
+  `/pressrel` is queued for the polish day.
 
 #### A.2 `fact-check` — drop in a claim, get back evidence rows
 
@@ -254,13 +265,13 @@ not the whole table re-served. Implement as `scripts/scan_diff.py` + a small
 Adjust if comment-request replies arrive — that bumps "send + log responses"
 forward.
 
-| Day | Bucket | Tasks |
-|-----|--------|-------|
-| 1 | Gates | Add `LICENSE`. Capture `trace` interaction log. Add README sections (outside data / COI / legal-risk). Send the comment requests (calendar starts now). |
-| 2 | Corpus completeness | Ship `pressrel` (A.1). This is the single biggest perception gain. |
-| 3 | Capability story | Pick **one** of `coi-graph` (B.1) or `fact-check` (A.2) and ship it cleanly rather than half-shipping both. Recommended: `coi-graph` — more differentiated. |
-| 4 | Polish | `comment-tracker` (A.3) + per-card one-pager PDF (A.4) + AP-style hook (C.1) + archive-on-cite (A.5). |
-| 5 | Proof | Re-run everything end-to-end on a clean clone. Recapture traces. Regenerate the PDF. Pin the four departure dates. Final README pass. |
+| Day | Bucket | Tasks | Status |
+|-----|--------|-------|--------|
+| 1 | Gates | Add `LICENSE`. Capture `trace` interaction log. Add README sections (outside data / COI / legal-risk). Send the comment requests (calendar starts now). | ✅ Done 2026-06-06 — 4/4 gates closed; comment-request packets staged in `notes/comment_requests/` ready to send |
+| 2 | Corpus completeness | Ship `pressrel` (A.1). This is the single biggest perception gain. | ✅ Done 2026-06-06 — 6th skill shipped end-to-end with 30 tests + 2 reproducible case files; 675 matches attached to 29/40 scan findings |
+| 3 | Capability story | Pick **one** of `coi-graph` (B.1) or `fact-check` (A.2) and ship it cleanly rather than half-shipping both. Recommended: `coi-graph` — more differentiated. | ⬜ next |
+| 4 | Polish | `comment-tracker` (A.3) + per-card one-pager PDF (A.4) + AP-style hook (C.1) + archive-on-cite (A.5) + Reporter UI route for `/pressrel`. | ⬜ |
+| 5 | Proof | Re-run everything end-to-end on a clean clone. Recapture traces. Regenerate the PDF. Pin the four departure dates. Final README pass. | ⬜ |
 
 ---
 
