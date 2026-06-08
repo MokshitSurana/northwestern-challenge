@@ -14,6 +14,106 @@ A set of reusable Agent Skills for investigative journalism, plus the findings t
 
 The anchor finding: **The Artemis Group** — a lobbying firm founded by former NASA Administrator Jim Bridenstine that directs 39% of its filings at NASA, staffed by four former Bridenstine officials. The structural finding: a ranked list of comparable revolving-door patterns across 23 federal agencies.
 
+### 60-second tour
+
+<!-- Drop the recorded MP4 / GIF at docs/fairguard_60s.mp4 (or .gif) and the line below renders. -->
+<!-- Use the storyboard in docs/video_storyboard.md to capture the clips. -->
+
+![FairGuard 60-second tour](docs/fairguard_60s.gif)
+
+If the GIF is missing, see [docs/video_storyboard.md](docs/video_storyboard.md) for the recording brief.
+
+---
+
+## For journalists — three ways in
+
+Three paths, ordered fastest → most powerful. You only need the first one to read every finding the project has produced.
+
+### Path A — Just browse the findings (≈ 3 minutes, only needs Node.js)
+
+Everything a reporter needs to *read* — the 139 ranked candidates, the $1.24B money trail, the press-release cross-references, the conflict-of-interest graph, the request-for-comment status — is already baked into JSON files committed to this repo. You don't need Python, DuckDB, or the 8.6 GB corpus to look at any of it.
+
+1. Install [Node.js 20+](https://nodejs.org/) (Mac / Windows installers; on Linux: `sudo apt install nodejs npm` or use `nvm`).
+2. Open a terminal and run:
+   ```bash
+   git clone https://github.com/MokshitSurana/northwestern-challenge.git
+   cd northwestern-challenge/web
+   npm install
+   npm run dev
+   ```
+3. Open **<http://localhost:3000>** in your browser.
+
+Then start at the **landing page** (`/`), or skip straight to:
+- `/findings` — the 139 ranked candidates, filterable by agency
+- `/findings/[id]` — click any candidate to open a single-screen "four gates" view
+- `/search` — type a name (lobbyist, firm, client, agency, legislator)
+- `/methods` — pipeline diagram + what each step claims
+- `/glossary` — plain-English definitions (§207, LDA, ALI code, discretionary)
+
+### Path B — Pre-built DuckDB (≈ 30 minutes, lets you run new queries / new scans)
+
+If you want to run your own queries or kick off a fresh scan against a different agency, download the pre-built database instead of rebuilding from raw filings:
+
+1. Do Path A first (the web UI is the front door for most workflows).
+2. Install [`uv`](https://docs.astral.sh/uv/getting-started/installation/) — one-line installer on every OS.
+3. Download `output.zip` (≈ 3 GB DuckDB) from the team Drive:
+   <https://drive.google.com/drive/folders/1O_qsxmFitgRfyjPXsgyDSjrbX3L-1Vlf>
+4. Unzip so the file lives at `output/investigation.duckdb`.
+5. From the repo root: `uv sync` (one-time Python install).
+6. Run any of the skills below.
+
+### Path C — Full rebuild from raw LDA dumps (≈ 2.5 hours, fully reproducible)
+
+For judges and engineers verifying that nothing is hand-curated:
+
+1. Do Path B steps 1–5, *but* skip the Drive download — instead place the raw LDA dump at `data/` (download link in the GAIN registration email).
+2. `uv run scripts/01_build_index.py`  → builds `output/investigation.duckdb` from scratch.
+3. `uv run scripts/verify_build.py` → 34 post-build invariants must all pass.
+
+This is the path CI runs on every push (cross-platform: Linux, macOS, Windows — see [`.github/workflows/ci.yml`](.github/workflows/ci.yml)).
+
+---
+
+## How to run a skill — `/fair-guard <mode>` vs. `scripts/`
+
+The nine FairGuard skills (`doctor`, `index`, `resolve`, `scan`, `trace`, `pressrel`, `coi`, `comment`, `archive`) can be invoked **two ways**, depending on whether you have an agent CLI available:
+
+### With an agent CLI (recommended — Claude Code, Codex, Gemini CLI, etc.)
+
+The `/fair-guard` dispatcher reads `skill/<full-name>/SKILL.md` at runtime and runs the right script with prerequisite checks. Inside the Claude Code CLI:
+
+```
+/fair-guard                  # dispatcher menu
+/fair-guard doctor           # validate setup
+/fair-guard scan             # rank candidates
+/fair-guard scan --agency nasa
+/fair-guard trace            # follow the money
+/fair-guard pressrel         # cross-ref press releases
+/fair-guard coi              # build the conflict-of-interest graph
+/fair-guard comment          # request-for-comment workflow
+/fair-guard archive          # snapshot cited URLs
+```
+
+The dispatcher guards prerequisites — e.g. `scan` and `resolve` refuse to run without `output/investigation.duckdb` and tell you exactly how to get it.
+
+### Without an agent CLI — call the scripts directly
+
+If you don't have Claude Code (or any other agent CLI), every skill ships an underlying script you can run by hand. The CLI flags match the skill's options:
+
+| Skill | Direct script |
+|-------|---------------|
+| `doctor` | `uv run scripts/doctor.py` |
+| `index` | `uv run scripts/01_build_index.py` (`--sample` for fast validation) |
+| `resolve` | `uv run scripts/02_entity_resolver.py` |
+| `scan` | `uv run scripts/03_agency_concentration.py [--agency nasa]` |
+| `trace` | `uv run scripts/04_award_tracer.py --case skill/federal-award-tracer/cases/steinberg_doe.json` |
+| `pressrel` | `uv run scripts/05_pressrel_search.py --enrich-findings` |
+| `coi` | `uv run scripts/06_coi_graph.py` |
+| `comment` | `uv run scripts/07_comment_tracker.py list` |
+| `archive` | `uv run scripts/08_archive_cite.py` |
+
+The agent-mediated and direct-script paths produce **identical artifacts** — the dispatcher is a routing layer, not a code path of its own. Pick whichever you have at hand.
+
 ---
 
 ## Submission map
@@ -146,7 +246,9 @@ The anchor finding: **The Artemis Group** — a lobbying firm founded by former 
 
 ---
 
-## Quick start
+## Full engineering quickstart (verification / reproducibility)
+
+This section is the **detailed step-by-step** behind Path C above (and the dependencies needed if you arrived from Path B). For the journalist-friendly entry points, see [For journalists — three ways in](#for-journalists--three-ways-in) at the top of this file.
 
 ### Prerequisites
 
