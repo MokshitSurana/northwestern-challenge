@@ -47,6 +47,14 @@ const slug = (s: string) =>
 export const findingAnchorId = (f: Finding) =>
   `finding-${slug(f.lobbyist_name)}-${slug(f.agency_short)}`
 
+/**
+ * Stable URL slug for a finding — same shape as the anchor id minus the
+ * "finding-" prefix, so /findings/{slug} and #{anchorId} resolve to the
+ * same candidate.
+ */
+export const findingSlug = (f: Pick<Finding, "lobbyist_name" | "agency_short">) =>
+  `${slug(f.lobbyist_name)}-${slug(f.agency_short)}`
+
 export const trailAnchorId = (t: Trail) => `trail-${slug(t.case_id)}`
 
 // CSV: standard RFC 4180 quoting — wrap in "…" only when needed, escape "" inside.
