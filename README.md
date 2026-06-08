@@ -117,16 +117,29 @@ The anchor finding: **The Artemis Group** — a lobbying firm founded by former 
 │   ├── trace_skill_resolve.md
 │   └── trace_skill_scan.md
 │
-└── web/                                   # ── Reporter verification UI (Next.js)
+└── web/                                   # ── Reporter verification UI (Next.js — 11 routes)
     ├── Dockerfile
     ├── package.json
     ├── next.config.js
     ├── tailwind.config.ts
     └── src/app/
         ├── layout.tsx
-        ├── page.tsx                       #   server component — data loading
-        ├── FindingsClient.tsx             #   interactive findings list (client)
-        └── types.ts                       #   shared TypeScript interfaces
+        ├── NavTabs.tsx                    #   nav (10 entries: Home, Findings, Search, …)
+        ├── types.ts                       #   shared TypeScript interfaces
+        ├── lib/exports.ts                 #   CSV/Markdown export helpers + findingSlug()
+        ├── page.tsx                       #   /          — landing (hero, stats, tiles, top-3)
+        ├── findings/page.tsx              #   /findings  — ranked candidate list (was / pre-2026-06-08)
+        ├── findings/[id]/page.tsx         #   /findings/[id] — four-gate permalink (SSG one per candidate)
+        ├── findings/[id]/DetailButtons.tsx
+        ├── FindingsClient.tsx             #   interactive findings list (used by /findings)
+        ├── search/page.tsx                #   /search    — name-first inverse lookup (server)
+        ├── search/SearchClient.tsx        #   search filter + URL sync + type chips
+        ├── trails/page.tsx                #   /trails    — money-trail index
+        ├── pressrel/page.tsx              #   /pressrel  — press-release report index
+        ├── graph/page.tsx                 #   /graph     — interactive D3 force-directed CoI graph
+        ├── comments/page.tsx              #   /comments  — request-for-comment status table
+        ├── methods/page.tsx               #   /methods   — pipeline diagram, four gates, skill walkthrough
+        └── glossary/page.tsx              #   /glossary  — plain-English term reference (LDA, §207, ALI, …)
 ```
 
 **Gitignored:** `data/` (8.6 GB corpus), `output/` (2.92 GB DuckDB), `web/node_modules/`, `web/.next/`, `.venv/`.
@@ -450,7 +463,10 @@ financing), a weaker conflict signal than discretionary grants. Details and
 conflict-of-interest framing: `notes/08_external_verification_top_candidates.md`.
 
 Output: `notes/06_structural_pattern_findings.md` (auto-generated)
-Reporter UI: `web/` — run `cd web && npm install && npm run dev` → http://localhost:3000
+Reporter UI: `web/` — run `cd web && npm install && npm run dev` → http://localhost:3000.
+The UI ships 11 routes: `/` (landing), `/findings` (ranked list), `/findings/[id]`
+(four-gate permalink per candidate, SSG), `/search` (name-first inverse lookup),
+`/trails`, `/pressrel`, `/graph`, `/comments`, `/methods`, `/glossary`.
 
 ---
 
