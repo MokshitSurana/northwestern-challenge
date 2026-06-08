@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-07T03:34:48.058957+00:00",
+  "generated_at": "2026-06-08T16:11:08.903555+00:00",
   "total_reports": 3,
   "reports": [
     {
       "case_id": "usda_clients",
       "label": "USDA revolving-door clients — Congressional press-release cross-ref",
-      "generated_at": "2026-06-07T03:34:47.897101+00:00",
+      "generated_at": "2026-06-08T16:11:08.833100+00:00",
       "filters": {
         "since": "2022-01-01",
         "until": "2026-04-01",
@@ -703,7 +703,7 @@
     {
       "case_id": "limbaugh_clients",
       "label": "Limbaugh Interior/Reclamation clients — Congressional press-release cross-ref",
-      "generated_at": "2026-06-07T03:10:46.590178+00:00",
+      "generated_at": "2026-06-08T16:10:54.709597+00:00",
       "filters": {
         "since": "2022-01-01",
         "until": "2026-04-01",
@@ -1361,7 +1361,7 @@
     {
       "case_id": "steinberg_clients",
       "label": "Steinberg DOE clients — Congressional press-release cross-ref",
-      "generated_at": "2026-06-07T03:10:26.763097+00:00",
+      "generated_at": "2026-06-08T16:10:44.484421+00:00",
       "filters": {
         "since": "2022-01-01",
         "until": "2026-04-01",
