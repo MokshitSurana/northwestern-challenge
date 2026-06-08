@@ -66,7 +66,7 @@ The top cases, ranked by Bridenstine-style interestingness score
 
 **Firm:** VENN STRATEGIES
 **Filings targeting former agency:** 213 of 236 total (90.2%)
-**Clients (agency-targeting):** AMSTED INDUSTRIES | TALON NICKEL (USA) LLC | BURNS & MCDONNELL ENGINEERING COMPANY INC | WABTEC CORPORATION | BATTERY MATERIALS AND TECHNOLOGY COALITION
+**Clients (agency-targeting):** BURNS & MCDONNELL ENGINEERING COMPANY INC | WABTEC CORPORATION | BATTERY MATERIALS AND TECHNOLOGY COALITION | TALON NICKEL (USA) LLC | AMSTED INDUSTRIES
 **Disclosed firm income:** $44.77M across 26 clients, 2022–2026
 
 **Verification status:** LDA figures are sourced directly from the corpus.
@@ -89,7 +89,7 @@ verified against agency staff directories. See §2.5 of Finding 01 for precedent
 
 **Firm:** THE FERGUSON GROUP, LLC
 **Filings targeting former agency:** 527 of 726 total (72.6%)
-**Clients (agency-targeting):** SUTTER MUTUAL WATER COMPANY AND RECLAMATION DISTRICT 1500 | GLENN-COLUSA IRRIGATION DISTRICT-CA | TURLOCK IRRIGATION DISTRICT | IDAHO WATER RESOURCE BOARD | YAKIMA BASIN JOINT BOARD
+**Clients (agency-targeting):** SUTTER MUTUAL WATER COMPANY AND RECLAMATION DISTRICT 1500 | GLENN-COLUSA IRRIGATION DISTRICT-CA | TURLOCK IRRIGATION DISTRICT | IDAHO WATER RESOURCE BOARD | MARICOPA STANFIELD IRRIGATION & DRAINAGE DISTRICT
 **Disclosed firm income:** $30.21M across 50 clients, 2022–2026
 
 **Verification status:** LDA figures are sourced directly from the corpus.
@@ -112,7 +112,7 @@ verified against agency staff directories. See §2.5 of Finding 01 for precedent
 
 **Firm:** THE RUSSELL GROUP, INC.
 **Filings targeting former agency:** 230 of 278 total (82.7%)
-**Clients (agency-targeting):** GROWTH ENERGY | CARGILL INC | WHOLESTONE PRESTAGE LLC (FORMERLY KNOW AS WHOLESTONE FARMS) | MUSKET CORPORATION | BAYER CORPORATION
+**Clients (agency-targeting):** CARGILL INC | GROWTH ENERGY | WHOLESTONE PRESTAGE LLC (FORMERLY KNOW AS WHOLESTONE FARMS) | MUSKET CORPORATION | BAYER CORPORATION
 **Disclosed firm income:** $17.37M across 33 clients, 2022–2026
 
 **Verification status:** LDA figures are sourced directly from the corpus.
@@ -135,7 +135,7 @@ verified against agency staff directories. See §2.5 of Finding 01 for precedent
 
 **Firm:** DELTA STRATEGY GROUP
 **Filings targeting former agency:** 149 of 166 total (89.8%)
-**Clients (agency-targeting):** DIGITAL CHAMBER OF COMMERCE | CITADEL INVESTMENT GROUP | AMERICAN COTTON SHIPPERS ASSOCIATION | FIA / PTG | COMMODITY MARKETS COUNCIL
+**Clients (agency-targeting):** CITADEL INVESTMENT GROUP | DIGITAL CHAMBER OF COMMERCE | FIA / PTG | AMERICAN COTTON SHIPPERS ASSOCIATION | COMMODITY MARKETS COUNCIL
 **Disclosed firm income:** $4.75M across 13 clients, 2022–2026
 
 **Verification status:** LDA figures are sourced directly from the corpus.
@@ -181,7 +181,7 @@ verified against agency staff directories. See §2.5 of Finding 01 for precedent
 
 **Firm:** DELTA STRATEGY GROUP
 **Filings targeting former agency:** 95 of 99 total (96.0%)
-**Clients (agency-targeting):** DIGITAL CHAMBER OF COMMERCE | CITADEL INVESTMENT GROUP | FIA / PTG | COMMODITY MARKETS COUNCIL | AMERICAN COTTON SHIPPERS ASSOCIATION
+**Clients (agency-targeting):** DIGITAL CHAMBER OF COMMERCE | CITADEL INVESTMENT GROUP | AMERICAN COTTON SHIPPERS ASSOCIATION | FIA / PTG | COMMODITY MARKETS COUNCIL
 **Disclosed firm income:** $0.94M across 10 clients, 2022–2026
 
 **Verification status:** LDA figures are sourced directly from the corpus.
@@ -204,7 +204,7 @@ verified against agency staff directories. See §2.5 of Finding 01 for precedent
 
 **Firm:** TORREY ADVISORY GROUP (FORMERLY MICHAEL TORREY ASSOCIATES, LLC)
 **Filings targeting former agency:** 180 of 228 total (79.0%)
-**Clients (agency-targeting):** CROP INSURANCE AND REINSURANCE BUREAU | ANIMAL HEALTH INSTITUTE | EDGE DAIRY FARMER COOPERATIVE (FORMERLY EDGE) | AMERICAN BEVERAGE ASSOCIATION | GRUPO NAVIS, LLC
+**Clients (agency-targeting):** CROP INSURANCE AND REINSURANCE BUREAU | EDGE DAIRY FARMER COOPERATIVE (FORMERLY EDGE) | ANIMAL HEALTH INSTITUTE | AMERICAN BEVERAGE ASSOCIATION | AMERICAN SOC. OF AGRONOMY, CROP SCI. SOC. OF AMERICA & SOIL SCI. SOC. OF AMERICA
 **Disclosed firm income:** $30.43M across 16 clients, 2022–2026
 
 **Verification status:** LDA figures are sourced directly from the corpus.
@@ -227,7 +227,7 @@ verified against agency staff directories. See §2.5 of Finding 01 for precedent
 
 **Firm:** INVARIANT LLC
 **Filings targeting former agency:** 108 of 137 total (78.8%)
-**Clients (agency-targeting):** INTERNATIONAL FRESH PRODUCE ASSOCIATION | MCCAIN FOODS USA, INC. | CALIFORNIA DATE COMMISSION | PEPSICO, INC. | COALITION FOR CLIMATE SMART AGRICULTURE FKA SUSTAINABLE SUPPLY CHAIN COALITION
+**Clients (agency-targeting):** COALITION FOR CLIMATE SMART AGRICULTURE FKA SUSTAINABLE SUPPLY CHAIN COALITION | INTERNATIONAL FRESH PRODUCE ASSOCIATION | PEPSICO, INC. | MCCAIN FOODS USA, INC. | CALIFORNIA DATE COMMISSION
 **Disclosed firm income:** $12.13M across 28 clients, 2024–2026
 
 **Verification status:** LDA figures are sourced directly from the corpus.
@@ -250,7 +250,7 @@ verified against agency staff directories. See §2.5 of Finding 01 for precedent
 
 **Firm:** WANETA STRATEGIES, LLC
 **Filings targeting former agency:** 45 of 45 total (100.0%)
-**Clients (agency-targeting):** CROWN CASTLE | CTIA - THE WIRELESS ASSOCIATION | LYNK
+**Clients (agency-targeting):** CTIA - THE WIRELESS ASSOCIATION | CROWN CASTLE | LYNK
 **Disclosed firm income:** $0.85M across 3 clients, 2022–2026
 
 **Verification status:** LDA figures are sourced directly from the corpus.
@@ -273,7 +273,7 @@ verified against agency staff directories. See §2.5 of Finding 01 for precedent
 
 **Firm:** SPIRIT ROCK CONSULTING
 **Filings targeting former agency:** 180 of 264 total (68.2%)
-**Clients (agency-targeting):** VIDEO GAMING TECHNOLOGIES | SAGINAW CHIPPEWA INDIAN TRIBE OF MICHIGAN | PIT RIVER TRIBE | NATIVE AMERICAN FINANCE OFFICER'S ASSOCIATION | NATIONAL INDIAN GAMING ASSOCIATION
+**Clients (agency-targeting):** VIDEO GAMING TECHNOLOGIES | SAGINAW CHIPPEWA INDIAN TRIBE OF MICHIGAN | PIT RIVER TRIBE | COW CREEK BAND OF UMPQUA TRIBE OF INDIANS | MASHANTUCKET PEQUOT TRIBAL NATION
 **Disclosed firm income:** $24.12M across 22 clients, 2022–2026
 
 **Verification status:** LDA figures are sourced directly from the corpus.
