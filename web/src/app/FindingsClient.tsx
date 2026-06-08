@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useMemo, useState } from "react"
+import Link from "next/link"
 import { clsx } from "clsx"
 import Pagination from "./Pagination"
 import CardMenu, { type MenuItem } from "./CardMenu"
@@ -9,6 +10,7 @@ import {
   downloadBlob,
   findingAnchorId,
   findingCitation,
+  findingSlug,
   findingToMarkdown,
   findingsToCsv,
 } from "./lib/exports"
@@ -213,7 +215,14 @@ function FindingCard({ finding }: { finding: Finding }) {
     .toLowerCase()
     .replace(/\s+/g, "-")}`
 
+  const detailHref = `/findings/${findingSlug(finding)}`
   const menu: MenuItem[] = [
+    {
+      type: "link",
+      label: "Open full case →",
+      hint: "Single-screen view with all four gates",
+      href: detailHref,
+    },
     {
       type: "action",
       label: "Copy citation",
@@ -225,9 +234,9 @@ function FindingCard({ finding }: { finding: Finding }) {
     {
       type: "action",
       label: "Copy link to this finding",
-      hint: "Shareable URL with this card pre-scrolled",
+      hint: "Permalink to the full case view",
       onClick: () => {
-        const url = `${window.location.origin}${window.location.pathname}#${anchorId}`
+        const url = `${window.location.origin}${detailHref}`
         return copyToClipboard(url).then((ok) => {
           if (!ok) throw new Error("clipboard blocked")
         })
@@ -343,7 +352,18 @@ function FindingCard({ finding }: { finding: Finding }) {
         </section>
       )}
 
-      {/* Provenance footer */}
+      {/* Open full case + provenance footer */}
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-indigo-200 bg-indigo-50 px-5 py-3 print:hidden">
+        <span className="text-base text-indigo-900">
+          See all four gates (role, money, §207, comment) on one page.
+        </span>
+        <Link
+          href={detailHref}
+          className="inline-flex items-center gap-1 rounded-lg bg-indigo-600 px-4 py-2 text-base font-semibold text-white transition hover:bg-indigo-700"
+        >
+          Open full case →
+        </Link>
+      </div>
       <footer className="flex flex-wrap items-center gap-x-6 gap-y-2 rounded-lg bg-slate-900 px-5 py-3 text-sm">
         <span className="font-semibold text-slate-400">Source</span>
         <span className="text-slate-300">
