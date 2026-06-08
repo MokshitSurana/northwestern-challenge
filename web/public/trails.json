@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-06T21:32:52.180269+00:00",
-  "total_trails": 2,
+  "generated_at": "2026-06-08T16:09:16.075882+00:00",
+  "total_trails": 3,
   "trails": [
     {
       "case_id": "usda_cases",
@@ -33,7 +33,7 @@
           "agency_short": "usda"
         }
       ],
-      "generated_at": "2026-06-06T21:32:26.063093+00:00",
+      "generated_at": "2026-06-08T16:08:38.883522+00:00",
       "total": 1398877776.51,
       "routine_total": 1360845203.14,
       "discretionary_total": 38032573.369999886,
@@ -184,7 +184,7 @@
           "agency_short": "energy"
         }
       ],
-      "generated_at": "2026-06-06T21:32:52.179252+00:00",
+      "generated_at": "2026-06-08T16:09:00.544787+00:00",
       "total": 1080820046.02,
       "routine_total": 0,
       "discretionary_total": 1080820046.02,
@@ -279,6 +279,223 @@
           "discretionary_amount": 47528246.0,
           "recipients": [
             "NANORAMIC, INC."
+          ]
+        }
+      ],
+      "misses": []
+    },
+    {
+      "case_id": "limbaugh_interior",
+      "lobbyist_label": "Limbaugh (water-district clients)",
+      "agency": "Department of the Interior",
+      "award_groups": [
+        "grants"
+      ],
+      "time_period": {
+        "start": "2021-01-01",
+        "end": "2026-06-04"
+      },
+      "match": [
+        {
+          "lobbyist_name": "Mark Limbaugh",
+          "agency_short": "interior"
+        }
+      ],
+      "generated_at": "2026-06-08T16:09:16.057638+00:00",
+      "total": 161687512.01999998,
+      "routine_total": 0,
+      "discretionary_total": 161687512.01999998,
+      "n_clients_with_awards": 19,
+      "n_clients_total": 19,
+      "clients": [
+        {
+          "label": "Sites Project Authority",
+          "total": 43454921.99,
+          "n_awards": 3,
+          "routine_amount": 0,
+          "discretionary_amount": 43454921.99,
+          "recipients": [
+            "SITES PROJECT AUTHORITY"
+          ]
+        },
+        {
+          "label": "Glenn-Colusa Irrigation District",
+          "total": 25568099.86,
+          "n_awards": 1,
+          "routine_amount": 0,
+          "discretionary_amount": 25568099.86,
+          "recipients": [
+            "GLENN COLUSA IRRIGATION DIST"
+          ]
+        },
+        {
+          "label": "Friant Water Authority",
+          "total": 20513435.990000002,
+          "n_awards": 3,
+          "routine_amount": 0,
+          "discretionary_amount": 20513435.990000002,
+          "recipients": [
+            "FRIANT WATER AUTHORITY"
+          ]
+        },
+        {
+          "label": "Reclamation District 108",
+          "total": 13876350.0,
+          "n_awards": 5,
+          "routine_amount": 0,
+          "discretionary_amount": 13876350.0,
+          "recipients": [
+            "RECLAMATION DISTRICT 108"
+          ]
+        },
+        {
+          "label": "Turlock Irrigation District",
+          "total": 12057752.5,
+          "n_awards": 5,
+          "routine_amount": 0,
+          "discretionary_amount": 12057752.5,
+          "recipients": [
+            "TURLOCK IRRIGATION DISTRICT"
+          ]
+        },
+        {
+          "label": "The Freshwater Trust",
+          "total": 9361047.950000001,
+          "n_awards": 10,
+          "routine_amount": 0,
+          "discretionary_amount": 9361047.950000001,
+          "recipients": [
+            "THE FRESHWATER TRUST"
+          ]
+        },
+        {
+          "label": "North Unit Irrigation District",
+          "total": 8857471.97,
+          "n_awards": 7,
+          "routine_amount": 0,
+          "discretionary_amount": 8857471.97,
+          "recipients": [
+            "NORTH UNIT IRRIGATION DISTRICT"
+          ]
+        },
+        {
+          "label": "Western Municipal Water District",
+          "total": 8487633.28,
+          "n_awards": 12,
+          "routine_amount": 0,
+          "discretionary_amount": 8487633.28,
+          "recipients": [
+            "WESTERN MUNICIPAL WATER DISTRICT OF RIVERSIDE COUNTY"
+          ]
+        },
+        {
+          "label": "Sutter Mutual Water Company",
+          "total": 4787610.0,
+          "n_awards": 3,
+          "routine_amount": 0,
+          "discretionary_amount": 4787610.0,
+          "recipients": [
+            "SUTTER MUTUAL WATER CO"
+          ]
+        },
+        {
+          "label": "El Dorado County Water Agency",
+          "total": 3249800.0,
+          "n_awards": 6,
+          "routine_amount": 0,
+          "discretionary_amount": 3249800.0,
+          "recipients": [
+            "EL DORADO COUNTY WATER AGENCY"
+          ]
+        },
+        {
+          "label": "City of Woodland, CA",
+          "total": 3000000.0,
+          "n_awards": 1,
+          "routine_amount": 0,
+          "discretionary_amount": 3000000.0,
+          "recipients": [
+            "CITY OF WOODLAND"
+          ]
+        },
+        {
+          "label": "Merced Irrigation District",
+          "total": 2659156.23,
+          "n_awards": 4,
+          "routine_amount": 0,
+          "discretionary_amount": 2659156.23,
+          "recipients": [
+            "MERCED IRRIGATION DISTRICT"
+          ]
+        },
+        {
+          "label": "Klamath Water Users",
+          "total": 2133007.0,
+          "n_awards": 2,
+          "routine_amount": 0,
+          "discretionary_amount": 2133007.0,
+          "recipients": [
+            "KLAMATH WATER USERS ASSOCIATION"
+          ]
+        },
+        {
+          "label": "Maricopa-Stanfield Irr. & Drainage",
+          "total": 1159870.24,
+          "n_awards": 4,
+          "routine_amount": 0,
+          "discretionary_amount": 1159870.24,
+          "recipients": [
+            "MARICOPA STANFIELD IRRIGATION"
+          ]
+        },
+        {
+          "label": "Solano Irrigation District",
+          "total": 771488.64,
+          "n_awards": 1,
+          "routine_amount": 0,
+          "discretionary_amount": 771488.64,
+          "recipients": [
+            "SOLANO IRRIGATION DISTRICT"
+          ]
+        },
+        {
+          "label": "City of Folsom, CA",
+          "total": 750000.0,
+          "n_awards": 1,
+          "routine_amount": 0,
+          "discretionary_amount": 750000.0,
+          "recipients": [
+            "CITY OF FOLSOM"
+          ]
+        },
+        {
+          "label": "Yakima Basin",
+          "total": 515000.0,
+          "n_awards": 2,
+          "routine_amount": 0,
+          "discretionary_amount": 515000.0,
+          "recipients": [
+            "YAKIMA BASIN FISH AND WILDLIFE RECOVERY BOARD"
+          ]
+        },
+        {
+          "label": "San Juan Water District",
+          "total": 284866.37,
+          "n_awards": 1,
+          "routine_amount": 0,
+          "discretionary_amount": 284866.37,
+          "recipients": [
+            "SAN JUAN WATER DISTRICT"
+          ]
+        },
+        {
+          "label": "Central Arizona Irr. & Drainage",
+          "total": 200000.0,
+          "n_awards": 2,
+          "routine_amount": 0,
+          "discretionary_amount": 200000.0,
+          "recipients": [
+            "CENTRAL ARIZONA IRRIGATION & DRAINAGE DISTRICT"
           ]
         }
       ],
