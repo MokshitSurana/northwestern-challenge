@@ -15,7 +15,7 @@ description: >
   closures against the per-firm drafts with derived status and deadline
   pressure rules). Use when the user wants to run any part of the FairGuard
   pipeline.
-argument-hint: "[mode: doctor | index | scan | resolve | trace | pressrel | coi | comment]"
+argument-hint: "[mode: doctor | index | scan | resolve | trace | pressrel | coi | comment | archive]"
 allowed-tools: Read Bash
 ---
 
