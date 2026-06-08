@@ -326,11 +326,11 @@ no network access required). See `skill/press-release-cross-ref/SKILL.md`.
 
 ### Skill 7 — `coi-graph` (`coi`)
 
-The **composition skill**. The other six skills each produce a list; this one
-joins their outputs into one investigable network so the **connections across
-them** become visible. Inputs are entirely on-disk JSON (no DB or network); the
-graph is built from `web/public/findings.json` after scan + trace + pressrel
-have run.
+The **composition skill**. The other eight skills each produce a list (or a
+log); this one joins their outputs into one investigable network so the
+**connections across them** become visible. Inputs are entirely on-disk JSON
+(no DB or network); the graph is built from `web/public/findings.json` after
+scan + trace + pressrel have run.
 
 Five typed node types (lobbyist, firm, agency, client, legislator) and five
 typed edges (works_at, former_official_of, lobbies_for, funded_by, mentions)
