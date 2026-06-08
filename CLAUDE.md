@@ -123,7 +123,7 @@ once, then invoke via `python -m pytest` (the bare `pytest` entrypoint is not on
 
 ```bash
 uv sync --extra dev                                      # one-time: install pytest + ruff
-uv run python -m pytest                                  # full suite (174 tests)
+uv run python -m pytest                                  # full suite (261 tests)
 uv run python -m pytest tests/test_agency_registry.py -v # scan regex coverage (111 tests)
 uv run python -m pytest tests/test_entity_resolver.py -v # resolver unit + F1 (33 tests)
 uv run python -m pytest tests/test_entity_resolver.py::test_f1_on_db -s  # show F1 eval output
