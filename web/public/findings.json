@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T21:18:40.120726+00:00",
+  "generated_at": "2026-06-08T16:07:49.762243+00:00",
   "total_candidates": 139,
   "findings": [
     {
@@ -16,7 +16,7 @@
       "total_income": 44770000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "AMSTED INDUSTRIES | TALON NICKEL (USA) LLC | BURNS & MCDONNELL ENGINEERING COMPANY INC | WABTEC CORPORATION | BATTERY MATERIALS AND TECHNOLOGY COALITION",
+      "top_clients_str": "BURNS & MCDONNELL ENGINEERING COMPANY INC | WABTEC CORPORATION | BATTERY MATERIALS AND TECHNOLOGY COALITION | TALON NICKEL (USA) LLC | AMSTED INDUSTRIES",
       "sample_uuid": "fedf1282-ee62-4cd4-a04e-61501a367ed7",
       "sample_source": "data\\data\\senate\\2025\\filings\\filings_2025.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fedf1282-ee62-4cd4-a04e-61501a367ed7/print/",
@@ -38,7 +38,7 @@
             "agency_short": "energy"
           }
         ],
-        "generated_at": "2026-06-06T21:32:52.179252+00:00",
+        "generated_at": "2026-06-08T16:09:00.544787+00:00",
         "total": 1080820046.02,
         "routine_total": 0,
         "discretionary_total": 1080820046.02,
@@ -139,18 +139,79 @@
         "misses": []
       },
       "press_releases": {
-        "case_id": "auto-enrich-1",
-        "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:51.694382+00:00",
-        "n_clients_with_matches": 3,
-        "n_matches_total": 4,
+        "case_id": "steinberg_clients",
+        "label": "Steinberg DOE clients — Congressional press-release cross-ref",
+        "generated_at": "2026-06-08T16:10:44.484421+00:00",
+        "n_clients_with_matches": 8,
+        "n_matches_total": 59,
         "by_client": [
           {
-            "client": "WABTEC CORPORATION",
-            "n_matches": 2,
+            "client": "Critical minerals (thematic)",
+            "n_matches": 25,
             "matches": [
               {
-                "client": "WABTEC CORPORATION",
+                "client": "Critical minerals (thematic)",
+                "date": "2026-03-27",
+                "member_name": "Joaquin Castro",
+                "party": "Democrat",
+                "state": "TX",
+                "chamber": "House",
+                "title": "Reps. Castro, Kim Advance Bill Out of Committee to Counter China’s Growing Influence",
+                "url": "https://castro.house.gov/media-center/press-releases/reps-castro-kim-advance-bill-out-of-committee-to-counter-chinas-growing-influence",
+                "snippet": "…on Foreign Investment Screening to protect partners and allies from China’s growing interest in strategic sectors like **critical minerals**, energy, and telecommunications."
+              },
+              {
+                "client": "Critical minerals (thematic)",
+                "date": "2026-03-25",
+                "member_name": "Jared Huffman",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Natural Resources Democrats Force Vote to Subpoena Donald Trump Jr. Over $670 Million Taxpayer-Funded Deal",
+                "url": "https://huffman.house.gov/media-center/press-releases/natural-resources-democrats-force-vote-to-subpoena-donald-trump-jr-over-670-million-taxpayer-funded-deal",
+                "snippet": "Washington, D.C. – At today's Oversight and Investigations Subcommittee hearing on the **critical minerals** supply chain, Subcommittee Ranking Member Maxine Dexter (D-Ore.) forced a vote to subpoena Donald Trump Jr. to testify…"
+              },
+              {
+                "client": "Critical minerals (thematic)",
+                "date": "2026-03-25",
+                "member_name": "Aumua Amata Coleman Radewagen",
+                "party": "Republican",
+                "state": "AS",
+                "chamber": "House",
+                "title": "Amata Shares Concerns Over Chinese Vessels Surveying for Critical Minerals and Fishing",
+                "url": "https://radewagen.house.gov/media-center/press-releases/amata-shares-concerns-over-chinese-vessels-surveying-critical-minerals",
+                "snippet": ""
+              },
+              {
+                "client": "Critical minerals (thematic)",
+                "date": "2026-03-10",
+                "member_name": "Steve Daines",
+                "party": "Republican",
+                "state": "MT",
+                "chamber": "Senate",
+                "title": "ICYMI: Daines Op-Ed in the Bozeman Daily Chronicle: “Thanks to President Trump, We’re Protecting Montana’s Mines”",
+                "url": "https://www.daines.senate.gov/2026/03/10/icymi-daines-op-ed-in-the-bozeman-daily-chronicle-thanks-to-president-trump-were-protecting-montanas-mines/",
+                "snippet": "…th, 2026 Montana’s mining industry is critically important to not only our state but the country. Hard rock mining for **critical minerals** like copper, platinum, palladium, and silver provides more than 18,000 good-paying jobs for Montanans, adds nearly $430…"
+              },
+              {
+                "client": "Critical minerals (thematic)",
+                "date": "2026-03-05",
+                "member_name": "Pete Ricketts",
+                "party": "Republican",
+                "state": "NE",
+                "chamber": "Senate",
+                "title": "VIDEO: Ricketts on Philippines: One of the Most Consequential Diplomatic Assignments in the Indo Pacific",
+                "url": "https://www.ricketts.senate.gov/news/press-releases/video-ricketts-on-philippines-one-of-the-most-consequential-diplomatic-assignments-in-the-indo-pacific/",
+                "snippet": "…rs and supply chain security, boosting US investment in semiconductors and infrastructure, and advancing cooperation in **critical minerals**.” Watch the video HERE"
+              }
+            ]
+          },
+          {
+            "client": "Wabtec",
+            "n_matches": 16,
+            "matches": [
+              {
+                "client": "Wabtec",
                 "date": "2025-09-23",
                 "member_name": "Mike Kelly",
                 "party": "Republican",
@@ -158,10 +219,43 @@
                 "chamber": "House",
                 "title": "Rep. Kelly statement on historic Wabtec locomotive deal",
                 "url": "https://kelly.house.gov/media/press-releases/rep-kelly-statement-historic-wabtec-locomotive-deal",
-                "snippet": "WASHINGTON, D.C. -- Today, U.S. Rep. Mike Kelly (R-PA) released the following statement after **Wabtec Corporation** announced Monday a historic agreement with National Company Kazakhstan Temir Zholy (KTZ), the national railway of Kazak…"
+                "snippet": "WASHINGTON, D.C. -- Today, U.S. Rep. Mike Kelly (R-PA) released the following statement after **Wabtec** Corporation announced Monday a historic agreement with National Company Kazakhstan Temir Zholy (KTZ), the national rail…"
               },
               {
-                "client": "WABTEC CORPORATION",
+                "client": "Wabtec",
+                "date": "2023-11-16",
+                "member_name": "John Fetterman",
+                "party": "Democrat",
+                "state": "PA",
+                "chamber": "Senate",
+                "title": "Fetterman Joins Union Leaders Sara Nelson, Shawn Fain to Support Union Flight Attendants at DCA",
+                "url": "https://www.fetterman.senate.gov/fetterman-joins-union-leaders-sara-nelson-shawn-fain-to-support-union-flight-attendants-at-dca/",
+                "snippet": "…n a vocal advocate for the union way of life and against corporate greed. In addition to joining striking UE workers at **Wabtec** in Erie and five different UAW picket lines, he has consistently expressed support for workers fighting for recognition…"
+              },
+              {
+                "client": "Wabtec",
+                "date": "2023-10-04",
+                "member_name": "Summer L. Lee",
+                "party": "Democrat",
+                "state": "PA",
+                "chamber": "House",
+                "title": "FACT SHEET: Rep. Summer Lee Announces Over $800 Million Federal Dollars Delivered to Western PA",
+                "url": "https://summerlee.house.gov/newsroom/press-releases/fact-sheet-rep-summer-lee-announces-over-800-million-federal-dollars-delivered-to-western-pa",
+                "snippet": "…ndtables, and meetings including over a dozen events with UPMC health workers and hospital workers rising, rallied with **Wabtec** United Electrical Workers, AFLCIO's annual lawyers conference, attended multiple rallies with striking Pittsburgh Post…"
+              },
+              {
+                "client": "Wabtec",
+                "date": "2023-09-29",
+                "member_name": "John Fetterman",
+                "party": "Democrat",
+                "state": "PA",
+                "chamber": "Senate",
+                "title": "Fetterman Writes Op-Ed on UAW Strike, Calls on Big 3 to Reach Fair Deal with Workers",
+                "url": "https://www.fetterman.senate.gov/fetterman-writes-op-ed-on-uaw-strike-calls-on-big-3-to-reach-fair-deal-with-workers/",
+                "snippet": "…strike, his support for the striking workers, and his experience pushing for a fair deal between the locomotive company **Wabtec** and striking United Electrical, Radio, and Machine workers in Erie earlier this year. “Put simply, union workers built…"
+              },
+              {
+                "client": "Wabtec",
                 "date": "2023-09-29",
                 "member_name": "Christopher R. Deluzio",
                 "party": "Democrat",
@@ -169,16 +263,200 @@
                 "chamber": "House",
                 "title": "Deluzio, Kelly Celebrate $10 Million for Neighborhood 91 at PIT Innovation Campus",
                 "url": "https://deluzio.house.gov/media/press-releases/deluzio-kelly-celebrate-10-million-neighborhood-91-pit-innovation-campus",
-                "snippet": "…s, advanced coatings, material characterization, mechanical testing, and workforce development. Current tenants include **Wabtec Corporation**, Cumberland Additive, Metal Powder Works, HAMR, RJ Lee, The Future of Jewelry, and Westmoreland Mechanical Testing Labo…"
+                "snippet": "…s, advanced coatings, material characterization, mechanical testing, and workforce development. Current tenants include **Wabtec** Corporation, Cumberland Additive, Metal Powder Works, HAMR, RJ Lee, The Future of Jewelry, and Westmoreland Mechanical…"
               }
             ]
           },
           {
-            "client": "BATTERY MATERIALS AND TECHNOLOGY COALITION",
+            "client": "Talon Nickel",
+            "n_matches": 8,
+            "matches": [
+              {
+                "client": "Talon Nickel",
+                "date": "2026-02-04",
+                "member_name": "Julie Fedorchak",
+                "party": "Republican",
+                "state": "ND",
+                "chamber": "House",
+                "title": "Fedorchak votes to speed up domestic mining and strengthen America’s mineral independence",
+                "url": "https://fedorchak.house.gov/media/press-releases/fedorchak-votes-speed-domestic-mining-and-strengthen-americas-mineral",
+                "snippet": "…to recover critical minerals from existing mine sites and byproducts. ICYMI: Earlier this year, Fedorchak attended the **Talon Metals** ribbon cutting ceremony marking the launch of the Beulah Minerals Processing Facility near Beulah, ND. This effort, bac…"
+              },
+              {
+                "client": "Talon Nickel",
+                "date": "2025-12-19",
+                "member_name": "Pete Stauber",
+                "party": "Republican",
+                "state": "MN",
+                "chamber": "House",
+                "title": "SPEED Act Clears House with Stauber's Support, Boosting U.S. Infrastructure",
+                "url": "https://stauber.house.gov/media/press-releases/speed-act-clears-house-staubers-support-boosting-us-infrastructure",
+                "snippet": "…orthern Minnesota, our broken permitting system is preventing important mining projects like Twin Metals, NewRange, and **Talon Metals** from getting online, and forcing basic road, transportation, and water infrastructure projects to face massive delays a…"
+              },
+              {
+                "client": "Talon Nickel",
+                "date": "2025-11-20",
+                "member_name": "Pete Stauber",
+                "party": "Republican",
+                "state": "MN",
+                "chamber": "House",
+                "title": "Stauber Applauds Advancement of the SPEED Act (H.R. 4776) Through Committee",
+                "url": "https://stauber.house.gov/media/press-releases/stauber-applauds-advancement-speed-act-hr-4776-through-committee",
+                "snippet": "…tion and red tape. “In Northern Minnesota, we face some of the worst impacts. Projects like Twin Metals, NewRange, and **Talon Metals** are stalled, costing us the chance to mine the critical minerals the world needs for batteries and national security. E…"
+              },
+              {
+                "client": "Talon Nickel",
+                "date": "2025-06-13",
+                "member_name": "John Hoeven",
+                "party": "Republican",
+                "state": "ND",
+                "chamber": "Senate",
+                "title": "Hoeven, Burgum Discuss Need for Oil, Gas, Coal & Critical Mineral Production to Support U.S. Energy Dominance",
+                "url": "https://www.hoeven.senate.gov/news/news-releases/hoeven-burgum-discuss-need-for-oil-gas-coal-and-critical-mineral-production-to-support-us-energy-dominance",
+                "snippet": "…gas and coal reserves. Increasing critical mineral production on federal lands. Hoeven pointed to the development of **Talon Metals**’ minerals processing facility, which is being developed in North Dakota and will support a secure, fully-domestic suppl…"
+              },
+              {
+                "client": "Talon Nickel",
+                "date": "2025-05-28",
+                "member_name": "Kevin Cramer",
+                "party": "Republican",
+                "state": "ND",
+                "chamber": "Senate",
+                "title": "Cramer, Talon Metals Celebrate Advanced Nickel, Copper Minerals Processing Facility in Beulah",
+                "url": "https://www.cramer.senate.gov/news/press-releases/cramer-talon-metals-celebrate-advanced-nickel-copper-minerals-processing-facility-in-beulah",
+                "snippet": "Project to advance American mineral production BEULAH, N.D. – U.S. Senator Kevin Cramer (R-ND) joined **Talon Metals** leadership to celebrate securing a former Westmoreland Mining site where the company will develop its Beulah Minerals P…"
+              }
+            ]
+          },
+          {
+            "client": "Burns & McDonnell",
+            "n_matches": 3,
+            "matches": [
+              {
+                "client": "Burns & McDonnell",
+                "date": "2025-09-12",
+                "member_name": "Jerry Moran",
+                "party": "Republican",
+                "state": "KS",
+                "chamber": "Senate",
+                "title": "Sen. Moran Announces 2025 Service Academy Selection Board",
+                "url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=7E0A3D7C-7778-4830-A636-95038A8D40CF",
+                "snippet": "…d member; parent of two sons in U.S. Service Academies Col. (RET) Dean Mitchell of Tonganoxie – Management Consultant, **Burns & McDonnell**; U.S. Army veteran Major (RET) Cortney Neblett, RN of McCune – Education and Risk Management Director, Labette Health;…"
+              },
+              {
+                "client": "Burns & McDonnell",
+                "date": "2024-11-01",
+                "member_name": "Jerry Moran",
+                "party": "Republican",
+                "state": "KS",
+                "chamber": "Senate",
+                "title": "Sen. Moran Announces 2024 Service Academy Selection Board",
+                "url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=48D9D303-F833-4D07-8987-BBBA32FF290E",
+                "snippet": "…d member; parent of two sons in U.S. Service Academies Col. (RET) Dean Mitchell of Tonganoxie – Management Consultant, **Burns & McDonnell**; U.S. Army veteran Sean Ritchie of Wichita – North American Operations Lead, Cargill; U.S. Merchant Marine Academy gra…"
+              },
+              {
+                "client": "Burns & McDonnell",
+                "date": "2022-09-12",
+                "member_name": "Jerry Moran",
+                "party": "Republican",
+                "state": "KS",
+                "chamber": "Senate",
+                "title": "Sen. Moran Announces 2022 Service Academy Selection Board",
+                "url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=32DB8C83-8564-43A9-B3BE-DB3F912E2AC5",
+                "snippet": "…end Municipal Airport, U.S. Air Force Academy graduate Col. (RET) Dean Mitchell of Tonganoxie – Management Consultant, **Burns & McDonnell**, U.S. Army veteran Halley Roberson of Oberlin – City Administrator, City of Oberlin, U.S. Army veteran Major (RET) Em…"
+              }
+            ]
+          },
+          {
+            "client": "Anovion",
+            "n_matches": 3,
+            "matches": [
+              {
+                "client": "Anovion",
+                "date": "2025-07-10",
+                "member_name": "Haley M. Stevens",
+                "party": "Democrat",
+                "state": "MI",
+                "chamber": "House",
+                "title": "What They’re Saying: Michigan Congresswoman Haley Stevens Introduces the ‘Unearth America’s Future Act’",
+                "url": "https://stevens.house.gov/media/press-releases/what-theyre-saying-michigan-congresswoman-haley-stevens-introduces-unearth",
+                "snippet": "…h industry in mitigating project risks and supporting market stability.” Patrick Donnelly, Chief Commercial Officer of **Anovion** Technologies: \"Anovion Technologies considers this bill a vital step in strengthening the domestic battery materials i…"
+              },
+              {
+                "client": "Anovion",
+                "date": "2023-10-26",
+                "member_name": "Sanford D. Bishop, Jr.",
+                "party": "Democrat",
+                "state": "GA",
+                "chamber": "House",
+                "title": "CONGRESSMAN BISHOP ANNOUNCES $40,000 AWARD TO ALBANY STATE UNIVERSITY TO HELP STUDENTS EXCEL IN STEM TO GROW GEORGIA’S ECONOMY",
+                "url": "https://bishop.house.gov/media-center/press-releases/congressman-bishop-announces-40000-award-to-albany-state-university-to-help-students-excel-in-stem-to-grow-georgia-s-economy",
+                "snippet": "…us Program which was created by the Infrastructure Investment and Jobs Act which Congressman Bishop supported. In May, **Anovion** Technologies broke ground on a plant in Bainbridge, GA, which will create more than 400 jobs and manufacture electric v…"
+              },
+              {
+                "client": "Anovion",
+                "date": "2022-10-20",
+                "member_name": "Charles E. Schumer",
+                "party": "Democrat",
+                "state": "NY",
+                "chamber": "Senate",
+                "title": "FOLLOWING HIS PERSONAL INVITATION & LONGSTANDING ADVOCACY TO MAKE BINGHAMTON A NATIONAL BATTERY HUB, SCHUMER BRINGS SENIOR U.S. DEPARTMENT OF COMMERCE OFFICIAL TO THE SOUTHERN TIER TO SHOW BIDEN...",
+                "url": "https://www.schumer.senate.gov/newsroom/press-releases/following-his-personal-invitation-and-longstanding-advocacy-to-make-binghamton-a-national-battery-hub-schumer-brings-senior-us-department-of-commerce-official-to-the-southern-tier-to-show-biden-administration-how-upstate-new-york-can-power-americas-clean-energy-future",
+                "snippet": "…to the revival of manufacturing in Western New York, including a recent $117 million Department of Energy investment in **Anovion** Battery Materials in Niagara Falls, and the potential National Semiconductor Center in Albany. We are seeing a renaissa…"
+              }
+            ]
+          },
+          {
+            "client": "Cabot Corporation",
+            "n_matches": 2,
+            "matches": [
+              {
+                "client": "Cabot Corporation",
+                "date": "2024-09-20",
+                "member_name": "Gary C. Peters",
+                "party": "Democrat",
+                "state": "MI",
+                "chamber": "Senate",
+                "title": "Senators Peters and Stabenow Announce $355 Million in Funding for Michigan’s Battery Manufacturing Sector",
+                "url": "https://www.peters.senate.gov/newsroom/press-releases/senators-peters-and-stabenow-announce-355-million-in-funding-for-michigans-battery-manufacturing-sector",
+                "snippet": "…engthen our domestic battery supply chain, support the transition to electric vehicles, and enhance national security. **Cabot Corporation**: Cabot Corporation will receive $50 million to build and operate a plant to support the domestic lithium-ion battery su…"
+              },
+              {
+                "client": "Cabot Corporation",
+                "date": "2024-03-13",
+                "member_name": "Lori Trahan",
+                "party": "Democrat",
+                "state": "MA",
+                "chamber": "House",
+                "title": "Trahan, Warren, Moulton Announce $94.5 Million Federal Investment in Massachusetts-Based Hydrogen Facilities",
+                "url": "https://trahan.house.gov/news/documentsingle.aspx?DocumentID=3149",
+                "snippet": "…se as they grow and expand.\" In total, five companies received $94.5 million, including: AvCarb, Lowell: $10,000,000 **Cabot Corporation**, Billerica: $5,022,943 Electric Hydrogen, Devens: $46,289,194 Nuvera Fuel Cells, Billerica: $30,000,000 Plug Power,…"
+              }
+            ]
+          },
+          {
+            "client": "Forge Battery",
             "n_matches": 1,
             "matches": [
               {
-                "client": "BATTERY MATERIALS AND TECHNOLOGY COALITION",
+                "client": "Forge Battery",
+                "date": "2024-09-20",
+                "member_name": "Deborah K. Ross",
+                "party": "Democrat",
+                "state": "NC",
+                "chamber": "House",
+                "title": "Congresswoman Ross Announces $100 Million in Federal Funding for Forge Battery Manufacturing from Bipartisan Infrastructure Law",
+                "url": "https://ross.house.gov/2024/9/congresswoman-ross-announces-100-million-in-federal-funding-for-forge-battery-manufacturing-from-bipartisan-infrastructure-law",
+                "snippet": "…orah Ross (NC-02) announced a $100 million grant from the Department of Energy (DOE) to increase production capacity at **Forge Battery**’s lithium-ion battery manufacturing facility in Morrisville. Forge Battery will use this federal funding for a new faci…"
+              }
+            ]
+          },
+          {
+            "client": "Battery Materials & Tech Coalition",
+            "n_matches": 1,
+            "matches": [
+              {
+                "client": "Battery Materials & Tech Coalition",
                 "date": "2024-05-01",
                 "member_name": "Paul Tonko",
                 "party": "Democrat",
@@ -187,23 +465,6 @@
                 "title": "Tonko, Graves Introduce Critical Material TRACE Act",
                 "url": "https://tonko.house.gov/news/documentsingle.aspx?DocumentID=4115",
                 "snippet": "…ct energy security. The Representatives’ Critical Material TRACE Act has been endorsed by: the Advanced Energy United, **Battery Materials and Technology Coalition**, Circulor, Earthjustice, Earthworks, the Global Battery Alliance, Optel, SAFE, Sierra Club, Umicore, and the Union of C…"
-              }
-            ]
-          },
-          {
-            "client": "TALON NICKEL (USA) LLC",
-            "n_matches": 1,
-            "matches": [
-              {
-                "client": "TALON NICKEL (USA) LLC",
-                "date": "2023-11-02",
-                "member_name": "Kevin Cramer",
-                "party": "Republican",
-                "state": "ND",
-                "chamber": "Senate",
-                "title": "Sen. Cramer: DOE Awards Nearly $115 Million to Talon Metals’ Battery Mineral Processing Facility",
-                "url": "https://www.cramer.senate.gov/news/press-releases/sen-cramer-doe-awards-nearly-115-million-to-talon-metals-battery-mineral-processing-facility",
-                "snippet": "…ement after the U.S. Department of Energy (DOE) awarded $114,846,344 from the Infrastructure Investment and Jobs Act to **Talon Nickel (USA) LLC** for the construction of a battery minerals processing facility in Mercer County, North Dakota. This facility will proce…"
               }
             ]
           }
@@ -224,24 +485,335 @@
       "total_income": 30215000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "SUTTER MUTUAL WATER COMPANY AND RECLAMATION DISTRICT 1500 | GLENN-COLUSA IRRIGATION DISTRICT-CA | TURLOCK IRRIGATION DISTRICT | IDAHO WATER RESOURCE BOARD | YAKIMA BASIN JOINT BOARD",
+      "top_clients_str": "SUTTER MUTUAL WATER COMPANY AND RECLAMATION DISTRICT 1500 | GLENN-COLUSA IRRIGATION DISTRICT-CA | TURLOCK IRRIGATION DISTRICT | IDAHO WATER RESOURCE BOARD | MARICOPA STANFIELD IRRIGATION & DRAINAGE DISTRICT",
       "sample_uuid": "ff8936a1-30eb-45bc-b240-d8555ac404f3",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff8936a1-30eb-45bc-b240-d8555ac404f3/print/",
       "verification_status": null,
+      "trail": {
+        "case_id": "limbaugh_interior",
+        "lobbyist_label": "Limbaugh (water-district clients)",
+        "agency": "Department of the Interior",
+        "award_groups": [
+          "grants"
+        ],
+        "time_period": {
+          "start": "2021-01-01",
+          "end": "2026-06-04"
+        },
+        "match": [
+          {
+            "lobbyist_name": "Mark Limbaugh",
+            "agency_short": "interior"
+          }
+        ],
+        "generated_at": "2026-06-08T16:09:16.057638+00:00",
+        "total": 161687512.01999998,
+        "routine_total": 0,
+        "discretionary_total": 161687512.01999998,
+        "n_clients_with_awards": 19,
+        "n_clients_total": 19,
+        "clients": [
+          {
+            "label": "Sites Project Authority",
+            "total": 43454921.99,
+            "n_awards": 3,
+            "routine_amount": 0,
+            "discretionary_amount": 43454921.99,
+            "recipients": [
+              "SITES PROJECT AUTHORITY"
+            ]
+          },
+          {
+            "label": "Glenn-Colusa Irrigation District",
+            "total": 25568099.86,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 25568099.86,
+            "recipients": [
+              "GLENN COLUSA IRRIGATION DIST"
+            ]
+          },
+          {
+            "label": "Friant Water Authority",
+            "total": 20513435.990000002,
+            "n_awards": 3,
+            "routine_amount": 0,
+            "discretionary_amount": 20513435.990000002,
+            "recipients": [
+              "FRIANT WATER AUTHORITY"
+            ]
+          },
+          {
+            "label": "Reclamation District 108",
+            "total": 13876350.0,
+            "n_awards": 5,
+            "routine_amount": 0,
+            "discretionary_amount": 13876350.0,
+            "recipients": [
+              "RECLAMATION DISTRICT 108"
+            ]
+          },
+          {
+            "label": "Turlock Irrigation District",
+            "total": 12057752.5,
+            "n_awards": 5,
+            "routine_amount": 0,
+            "discretionary_amount": 12057752.5,
+            "recipients": [
+              "TURLOCK IRRIGATION DISTRICT"
+            ]
+          },
+          {
+            "label": "The Freshwater Trust",
+            "total": 9361047.950000001,
+            "n_awards": 10,
+            "routine_amount": 0,
+            "discretionary_amount": 9361047.950000001,
+            "recipients": [
+              "THE FRESHWATER TRUST"
+            ]
+          },
+          {
+            "label": "North Unit Irrigation District",
+            "total": 8857471.97,
+            "n_awards": 7,
+            "routine_amount": 0,
+            "discretionary_amount": 8857471.97,
+            "recipients": [
+              "NORTH UNIT IRRIGATION DISTRICT"
+            ]
+          },
+          {
+            "label": "Western Municipal Water District",
+            "total": 8487633.28,
+            "n_awards": 12,
+            "routine_amount": 0,
+            "discretionary_amount": 8487633.28,
+            "recipients": [
+              "WESTERN MUNICIPAL WATER DISTRICT OF RIVERSIDE COUNTY"
+            ]
+          },
+          {
+            "label": "Sutter Mutual Water Company",
+            "total": 4787610.0,
+            "n_awards": 3,
+            "routine_amount": 0,
+            "discretionary_amount": 4787610.0,
+            "recipients": [
+              "SUTTER MUTUAL WATER CO"
+            ]
+          },
+          {
+            "label": "El Dorado County Water Agency",
+            "total": 3249800.0,
+            "n_awards": 6,
+            "routine_amount": 0,
+            "discretionary_amount": 3249800.0,
+            "recipients": [
+              "EL DORADO COUNTY WATER AGENCY"
+            ]
+          },
+          {
+            "label": "City of Woodland, CA",
+            "total": 3000000.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 3000000.0,
+            "recipients": [
+              "CITY OF WOODLAND"
+            ]
+          },
+          {
+            "label": "Merced Irrigation District",
+            "total": 2659156.23,
+            "n_awards": 4,
+            "routine_amount": 0,
+            "discretionary_amount": 2659156.23,
+            "recipients": [
+              "MERCED IRRIGATION DISTRICT"
+            ]
+          },
+          {
+            "label": "Klamath Water Users",
+            "total": 2133007.0,
+            "n_awards": 2,
+            "routine_amount": 0,
+            "discretionary_amount": 2133007.0,
+            "recipients": [
+              "KLAMATH WATER USERS ASSOCIATION"
+            ]
+          },
+          {
+            "label": "Maricopa-Stanfield Irr. & Drainage",
+            "total": 1159870.24,
+            "n_awards": 4,
+            "routine_amount": 0,
+            "discretionary_amount": 1159870.24,
+            "recipients": [
+              "MARICOPA STANFIELD IRRIGATION"
+            ]
+          },
+          {
+            "label": "Solano Irrigation District",
+            "total": 771488.64,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 771488.64,
+            "recipients": [
+              "SOLANO IRRIGATION DISTRICT"
+            ]
+          },
+          {
+            "label": "City of Folsom, CA",
+            "total": 750000.0,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 750000.0,
+            "recipients": [
+              "CITY OF FOLSOM"
+            ]
+          },
+          {
+            "label": "Yakima Basin",
+            "total": 515000.0,
+            "n_awards": 2,
+            "routine_amount": 0,
+            "discretionary_amount": 515000.0,
+            "recipients": [
+              "YAKIMA BASIN FISH AND WILDLIFE RECOVERY BOARD"
+            ]
+          },
+          {
+            "label": "San Juan Water District",
+            "total": 284866.37,
+            "n_awards": 1,
+            "routine_amount": 0,
+            "discretionary_amount": 284866.37,
+            "recipients": [
+              "SAN JUAN WATER DISTRICT"
+            ]
+          },
+          {
+            "label": "Central Arizona Irr. & Drainage",
+            "total": 200000.0,
+            "n_awards": 2,
+            "routine_amount": 0,
+            "discretionary_amount": 200000.0,
+            "recipients": [
+              "CENTRAL ARIZONA IRRIGATION & DRAINAGE DISTRICT"
+            ]
+          }
+        ],
+        "misses": []
+      },
       "press_releases": {
-        "case_id": "auto-enrich-2",
-        "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:51.734366+00:00",
-        "n_clients_with_matches": 3,
-        "n_matches_total": 5,
+        "case_id": "limbaugh_clients",
+        "label": "Limbaugh Interior/Reclamation clients — Congressional press-release cross-ref",
+        "generated_at": "2026-06-08T16:10:54.709597+00:00",
+        "n_clients_with_matches": 8,
+        "n_matches_total": 78,
         "by_client": [
           {
-            "client": "TURLOCK IRRIGATION DISTRICT",
-            "n_matches": 2,
+            "client": "Bureau of Reclamation (thematic)",
+            "n_matches": 25,
             "matches": [
               {
-                "client": "TURLOCK IRRIGATION DISTRICT",
+                "client": "Bureau of Reclamation (thematic)",
+                "date": "2026-03-31",
+                "member_name": "Roger Marshall",
+                "party": "Republican",
+                "state": "KS",
+                "chamber": "Senate",
+                "title": "Senator Marshall Meets with Leaders Across Northwest Kansas",
+                "url": "https://www.marshall.senate.gov/newsroom/press-releases/senator-marshall-meets-with-leaders-across-northwest-kansas/",
+                "snippet": "…chery Sight Click here for more photos. Senator Marshall also visited the Cedar Bluff Reservoir and Damn, part of the **Bureau of Reclamation**’s flood management system in northwest Kansas. Originally constructed under the 1944 Flood Control Act as part of the P…"
+              },
+              {
+                "client": "Bureau of Reclamation (thematic)",
+                "date": "2026-03-19",
+                "member_name": "Juan Ciscomani",
+                "party": "Republican",
+                "state": "AZ",
+                "chamber": "House",
+                "title": "Ciscomani Leads Bipartisan Effort to Support Western Water Management and Combat Drought",
+                "url": "https://ciscomani.house.gov/media/press-releases/ciscomani-leads-bipartisan-effort-support-western-water-management-and-combat",
+                "snippet": "…atershed Management Program (CWMP) for four years, as it is set to expire at the end of 2026. The CWMP is a part of the **Bureau of Reclamation**’s WaterSMART program and provides funding for local non-regulatory watershed groups in the Western United States. These…"
+              },
+              {
+                "client": "Bureau of Reclamation (thematic)",
+                "date": "2026-03-18",
+                "member_name": "Adrian Smith",
+                "party": "Republican",
+                "state": "NE",
+                "chamber": "House",
+                "title": "Smith Celebrates $100 Million Investment for Fort Laramie Tunnel Rehabilitation Project",
+                "url": "https://adriansmith.house.gov/media/press-releases/smith-celebrates-100-million-investment-fort-laramie-tunnel-rehabilitation",
+                "snippet": "Congressman Adrian Smith (NE-03) issued the following statement in response to the **Bureau of Reclamation** (BoR) awarding $100 million to the Fort Laramie Tunnel Rehabilitation Project for repairs and enhancement of the ground…"
+              },
+              {
+                "client": "Bureau of Reclamation (thematic)",
+                "date": "2026-03-18",
+                "member_name": "Jared Huffman",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Huffman Blasts $40 Million in Taxpayer Funds for Illegal Shasta Dam Raise",
+                "url": "https://huffman.house.gov/media-center/press-releases/huffman-blasts-40-million-in-taxpayer-funds-for-illegal-shasta-dam-raise",
+                "snippet": "…en part of the bill, and destroys ancestral lands and native salmon. I will keep fighting to stop it.\" Background The **Bureau of Reclamation**'s proposal would raise Shasta Dam by 18.5 feet at an estimated cost of $1.8 billion. The project is illegal under Calif…"
+              },
+              {
+                "client": "Bureau of Reclamation (thematic)",
+                "date": "2026-03-17",
+                "member_name": "Kevin Cramer",
+                "party": "Republican",
+                "state": "ND",
+                "chamber": "Senate",
+                "title": "Bureau of Reclamation Announces $108 Million to Support North Dakota Water Supply",
+                "url": "https://www.cramer.senate.gov/news/press-releases/bureau-of-reclamation-announces-108-million-to-support-north-dakota-water-supply",
+                "snippet": "WASHINGTON, D.C. – The U.S. **Bureau of Reclamation** (BOR) announced an award of $100 million for work on the Eastern North Dakota Alternate Water Supply (ENDAWS) project,…"
+              }
+            ]
+          },
+          {
+            "client": "Friant Water Authority",
+            "n_matches": 17,
+            "matches": [
+              {
+                "client": "Friant Water Authority",
+                "date": "2026-03-17",
+                "member_name": "David G. Valadao",
+                "party": "Republican",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Congressman Valadao Celebrates Critical Investments in California Water Infrastructure",
+                "url": "https://valadao.house.gov/news/documentsingle.aspx?DocumentID=3612",
+                "snippet": "…districts and communities that rely on the Friant-Kern Canal will forever be grateful,” said Johnny Amaral, CEO of the **Friant Water** Authority. “This investment marks an important step toward restoring the capacity and performance of the Delta-Mendota…"
+              },
+              {
+                "client": "Friant Water Authority",
+                "date": "2025-12-11",
+                "member_name": "Jim Costa",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Costa, Gray Push New Water Infrastructure Package to Expand Storage and Address California's Water Crisis",
+                "url": "https://costa.house.gov/media/press-releases/costa-gray-push-new-water-infrastructure-package-expand-storage-and-address",
+                "snippet": "…ency coordination and cut through the permitting obstacles that hinder vital water projects,” said Jason Phillips, CEO, **Friant Water** Authority. “By codifying the provisions of Executive Order 14181, our communities and farms can improve their access to…"
+              },
+              {
+                "client": "Friant Water Authority",
+                "date": "2025-12-11",
+                "member_name": "Adam Gray",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "REP. GRAY INTRODUCES LEGISLATION TO EXPAND CALIFORNIA WATER INFRASTRUCTURE",
+                "url": "https://gray.house.gov/media/press-releases/rep-gray-introduces-legislation-expand-california-water-infrastructure",
+                "snippet": "…ency coordination and cut through the permitting obstacles that hinder vital water projects,” said Jason Phillips, CEO, **Friant Water** Authority. “By codifying the provisions of Executive Order 14181, our communities and farms can improve their access to…"
+              },
+              {
+                "client": "Friant Water Authority",
                 "date": "2025-06-11",
                 "member_name": "Adam Gray",
                 "party": "Democrat",
@@ -249,27 +821,221 @@
                 "chamber": "House",
                 "title": "CONGRESSMAN GRAY INTRODUCES VALLEY WATER PROTECTION ACT",
                 "url": "https://gray.house.gov/media/press-releases/congressman-gray-introduces-valley-water-protection-act",
-                "snippet": "…onomic impacts of Endangered Species Act regulation are understood and considered,” said Brad Koehn, General Manager of **Turlock Irrigation District**. “We appreciate Congressman Gray for introducing this bill, which recognizes that improving conditions for species does…"
+                "snippet": "…r nation’s security and protection of our nation’s species, and we applaud his introduction of this legislation.” “The **Friant Water** Authority applauds Rep. Adam Gray for introducing his bill to help modernize the implementation of the Endangered Speci…"
               },
               {
-                "client": "TURLOCK IRRIGATION DISTRICT",
-                "date": "2022-05-12",
-                "member_name": "Josh Harder",
+                "client": "Friant Water Authority",
+                "date": "2025-04-28",
+                "member_name": "Jim Costa",
                 "party": "Democrat",
                 "state": "CA",
                 "chamber": "House",
-                "title": "Harder Announces $2 Million for Ceres Reservoir Project",
-                "url": "https://harder.house.gov/media/press-releases/harder-announces-2-million-for-ceres-reservoir-project",
-                "snippet": "WASHINGTON – Today, Representative Josh Harder announced that **Turlock Irrigation District** will receive $2 million from the United States Bureau of Reclamation toward their Ceres Main Regulation Reservoir Proje…"
+                "title": "Costa, Newhouse, Curtis Push to Unlock Federal Funding for Western Water Infrastructure",
+                "url": "https://costa.house.gov/media/press-releases/costa-newhouse-curtis-push-unlock-federal-funding-western-water-infrastructure",
+                "snippet": "…hat supports agriculture, the environment, and the needs of our growing population,\" said Rick Borges, President of the **Friant Water** Authority. “The Restoring WIFIA Eligibility Act provides much-needed reforms related to technical issues that substant…"
               }
             ]
           },
           {
-            "client": "YAKIMA BASIN JOINT BOARD",
-            "n_matches": 2,
+            "client": "Sites Project Authority",
+            "n_matches": 14,
             "matches": [
               {
-                "client": "YAKIMA BASIN JOINT BOARD",
+                "client": "Sites Project Authority",
+                "date": "2025-02-26",
+                "member_name": "Vince Fong",
+                "party": "Republican",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Rep. Fong Applauds Needed Federal Investment to Boost California Water Storage",
+                "url": "https://fong.house.gov/media/press-releases/rep-fong-applauds-needed-federal-investment-boost-california-water-storage",
+                "snippet": "…hich Fong supported. As part of this effort, $315.5 million will be invested to develop new water storage at the future **Sites Reservoir** and expand capacity at the existing San Luis Reservoir. “Investing in California’s surface water storage is paramount…"
+              },
+              {
+                "client": "Sites Project Authority",
+                "date": "2025-01-10",
+                "member_name": "Vince Fong",
+                "party": "Republican",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Statement from Rep. Vince Fong and Rep. David Valadao on Water Infrastructure Projects",
+                "url": "https://fong.house.gov/media/press-releases/statement-rep-vince-fong-and-rep-david-valadao-water-infrastructure-projects",
+                "snippet": "The B.F. Sisk Dam Raise and Reservoir Expansion Project and the **Sites Reservoir** Project received federal funding for enhanced storage capacity, which will provide greater reliability to California’s…"
+              },
+              {
+                "client": "Sites Project Authority",
+                "date": "2025-01-08",
+                "member_name": "Jim Costa",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Costa Announces $254 Million for BF Sisk Dam and Sites Reservoir",
+                "url": "https://costa.house.gov/media/press-releases/costa-announces-254-million-bf-sisk-dam-and-sites-reservoir",
+                "snippet": "…nking water to the San Joaquin Valley and California, including $125 million for B.F. Sisk Dam and $129 million for the **Sites Reservoir** Project. “These federal investments are a game-changer for the San Joaquin Valley and California’s water future,” said…"
+              },
+              {
+                "client": "Sites Project Authority",
+                "date": "2024-05-31",
+                "member_name": "Mike Thompson",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "THOMPSON HELPS SECURE $67.5 MILLION FOR SITES RESERVOIR PROJECT EXPANDING LOCAL WATER STORAGE",
+                "url": "https://mikethompson.house.gov/newsroom/press-releases/thompson-helps-secure-675-million-sites-reservoir-project-expanding-local",
+                "snippet": "…ngton – Today, Rep. Mike Thompson (CA-04) applauded the U.S. Bureau of Reclamation’s award of $67.5 million to fund the **Sites Reservoir** Project. Rep. Thompson helped secure this funding through his support of the Bipartisan Infrastructure law. “The Sites…"
+              },
+              {
+                "client": "Sites Project Authority",
+                "date": "2024-03-06",
+                "member_name": "Jim Costa",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Costa Secures $12.2 Million for Local Projects in the San Joaquin Valley",
+                "url": "https://costa.house.gov/media/press-releases/costa-secures-122-million-local-projects-san-joaquin-valley",
+                "snippet": "…mprovements for the Nation (WIIN) Act water storage projects, which have benefitted Valley projects like B.F. Sisk Dam, **Sites Reservoir**, and the Friant-Kern Canal in the past. Secured $14 million for the Water Operations Technical Support (WOTS) to impro…"
+              }
+            ]
+          },
+          {
+            "client": "Klamath Water Users",
+            "n_matches": 8,
+            "matches": [
+              {
+                "client": "Klamath Water Users",
+                "date": "2025-01-17",
+                "member_name": "Ron Wyden",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Merkley, Wyden Announce $50 Million to Support Drought Resilience in the Klamath Basin",
+                "url": "https://www.wyden.senate.gov/news/press-releases/merkley-wyden-announce-50-million-to-support-drought-resilience-in-the-klamath-basin",
+                "snippet": "…e region’s farmers and ranchers under a new Memorandum of Understanding (MOU) between the Bureau of Reclamation and the **Klamath Water Users** Association (KWUA), as well as the Klamath Project Drought Response Agency (KPDRA)—which was created by Merkley. The ag…"
+              },
+              {
+                "client": "Klamath Water Users",
+                "date": "2025-01-07",
+                "member_name": "Cliff Bentz",
+                "party": "Republican",
+                "state": "OR",
+                "chamber": "House",
+                "title": "President Biden signs Congressman Bentz and Senator Wyden Bill Protecting Klamath Basin Water Users",
+                "url": "https://bentz.house.gov/media/press-releases/president-biden-signs-congressman-bentz-and-senator-wyden-bill-protecting",
+                "snippet": "…especially burdened by costly need for fish passage and dam maintenance. The legislation ensures that promises made to **Klamath Project** irrigators during the dam removal process are upheld, particularly regarding the Bureau of Reclamation’s complete assum…"
+              },
+              {
+                "client": "Klamath Water Users",
+                "date": "2024-12-20",
+                "member_name": "Ron Wyden",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Wyden, Merkley Celebrate Passage of Bipartisan Bill to Support Farmers and Ranchers Facing Severe Drought in Klamath Basin",
+                "url": "https://www.wyden.senate.gov/news/press-releases/wyden-merkley-celebrate-passage-of-bipartisan-bill-to-support-farmers-and-ranchers-facing-severe-drought-in-klamath-basin",
+                "snippet": "…of the four lower Klamath River dams this year, this bill honors the pledge we made to the farmers and ranchers on the **Klamath Project** as part of the historic Klamath Basin Power and Facilities Agreement.” “Senators Wyden and Merkley have been laser foc…"
+              },
+              {
+                "client": "Klamath Water Users",
+                "date": "2024-10-30",
+                "member_name": "Ron Wyden",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Merkley, Wyden Announce $46 Million to Boost the Klamath Basin",
+                "url": "https://www.wyden.senate.gov/news/press-releases/merkley-wyden-announce-46-million-to-boost-the-klamath-basin",
+                "snippet": "…ture modernization in the Basin, as well as a historic agreement with the Klamath Tribes, Yurok Tribe, Karuk Tribe, and **Klamath Water Users** Association (KWUA). This Memorandum of Understanding (MOU) cemented their commitment to working together to drive long-…"
+              },
+              {
+                "client": "Klamath Water Users",
+                "date": "2024-04-17",
+                "member_name": "Ron Wyden",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Merkley, Wyden: Immediate Drought Relief Headed to the Klamath Basin, Pushing for Long-Term Recovery Solutions",
+                "url": "https://www.wyden.senate.gov/news/press-releases/merkley-wyden-immediate-drought-relief-headed-to-the-klamath-basin-pushing-for-long-term-recovery-solutions",
+                "snippet": "…eleased the following statement today following the Bureau of Reclamation’s recently announced water allocation for the **Klamath Project**, as well as $8.5 million in immediate drought relief aid for Klamath Basin communities and $5 million in technical assi…"
+              }
+            ]
+          },
+          {
+            "client": "The Freshwater Trust",
+            "n_matches": 6,
+            "matches": [
+              {
+                "client": "The Freshwater Trust",
+                "date": "2025-07-23",
+                "member_name": "Val T. Hoyle",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "House",
+                "title": "Merkley and Hoyle Introduce Columbia River Clean-Up Act to Reauthorize Columbia River Basin Restoration Program",
+                "url": "https://hoyle.house.gov/media/press-releases/merkley-and-hoyle-introduce-columbia-river-clean-up-act-to-reauthorize-columbia-river-basin-restoration-program",
+                "snippet": "…lean-Up Act is endorsed by the Affiliated Tribes of Northwest Indians, Columbia River Inter-Tribal Fish Commission, The **Freshwater Trust**, Lower Columbia Estuary Partnership, National Wildlife Federation, The Nature Conservancy, Oregon Association of Clean…"
+              },
+              {
+                "client": "The Freshwater Trust",
+                "date": "2025-04-03",
+                "member_name": "Ron Wyden",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Wyden Reintroduces Legislation to Improve Watershed Resilience and Health",
+                "url": "https://www.wyden.senate.gov/news/press-releases/wyden-reintroduces-legislation-to-improve-watershed-resilience-and-health",
+                "snippet": "…d provides a scalable model for getting real outcomes for taxpayer dollars,” said Joe Whitworth, President & CEO of The **Freshwater Trust**. “We commend Senator Wyden for his introduction of this legislation. With recurring drought, it is important that we h…"
+              },
+              {
+                "client": "The Freshwater Trust",
+                "date": "2025-02-21",
+                "member_name": "Ron Wyden",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Wyden, Colleagues Reintroduce Bill to Combat Intensifying Wildfires and Drought Across the American West",
+                "url": "https://www.wyden.senate.gov/news/press-releases/wyden-colleagues-reintroduce-bill-to-combat-intensifying-wildfires-and-drought-across-the-american-west",
+                "snippet": "…ported by The National Wildlife Federation, the Southern Ute Indian Tribe, National Association of State Foresters, The **Freshwater Trust**, American Forests, National Wild Turkey Federation, National Audubon Society, Family Farm Alliance, Theodore Roosevelt…"
+              },
+              {
+                "client": "The Freshwater Trust",
+                "date": "2025-02-20",
+                "member_name": "Michael F. Bennet",
+                "party": "Democrat",
+                "state": "CO",
+                "chamber": "Senate",
+                "title": "Bennet, Hickenlooper, Crow, Wyden, Gallego, Rosen Reintroduce Bill to Combat Intensifying Wildfires and Drought Across the American West",
+                "url": "https://www.bennet.senate.gov/2025/02/20/bennet-hickenlooper-crow-wyden-gallego-rosen-reintroduce-bill-to-combat-intensifying-wildfires-and-drought-across-the-american-west/",
+                "snippet": "…orted by: The National Wildlife Federation, the Southern Ute Indian Tribe, National Association of State Foresters, The **Freshwater Trust**, American Forests, National Audubon Society, Family Farm Alliance, Theodore Roosevelt Conservation Partnership, Western…"
+              },
+              {
+                "client": "The Freshwater Trust",
+                "date": "2023-11-30",
+                "member_name": "Juan Ciscomani",
+                "party": "Republican",
+                "state": "AZ",
+                "chamber": "House",
+                "title": "Ciscomani Leads Bipartisan Push to Improve Drought and Flood Resiliency Efforts",
+                "url": "https://ciscomani.house.gov/media/press-releases/ciscomani-leads-bipartisan-push-improve-drought-and-flood-resiliency-efforts",
+                "snippet": "…iance, Almond Alliance, Environmental Defense Fund, Farmers Conservation Alliance, Oregon Water Resources Congress, the **Freshwater Trust**, the Wyoming Stockgrowers Association, Western Growers, Trout Unlimited, the St. Vrain & Left Hand Water Conservancy Di…"
+              }
+            ]
+          },
+          {
+            "client": "Yakima Basin",
+            "n_matches": 4,
+            "matches": [
+              {
+                "client": "Yakima Basin",
+                "date": "2026-02-02",
+                "member_name": "Dan Newhouse",
+                "party": "Republican",
+                "state": "WA",
+                "chamber": "House",
+                "title": "Newhouse Requests Emergency Status for Yakima-Tieton Canal",
+                "url": "https://newhouse.house.gov/media-center/press-releases/newhouse-requests-emergency-status-yakima-tieton-canal",
+                "snippet": "…t to minimize the risk of imminent harm to public health and safety and economic viability for those that reside in the **Yakima Basin**.\" Language was included in the conference report of H.R. 6938, the Commerce, Justice, Science; Energy and Water Develo…"
+              },
+              {
+                "client": "Yakima Basin",
                 "date": "2023-09-22",
                 "member_name": "Kim Schrier",
                 "party": "Democrat",
@@ -277,10 +1043,21 @@
                 "chamber": "House",
                 "title": "Rep. Schrier Introduces Bipartisan Legislation to Fund Critical Local Water Infrastructure and Keep Customer Rates Affordable",
                 "url": "https://schrier.house.gov/media/press-releases/rep-schrier-introduces-bipartisan-legislation-fund-critical-local-water",
-                "snippet": "…mbia Basin Project,” said Sara Higgins, Executive Director of the Columbia Basin Development League. “On behalf of the **Yakima Basin Joint Board** (Joint Board), I write in full support of your amendment to the Water Resources Development Act of 2023 that, among oth…"
+                "snippet": "…rom the WIFIA program for much needed infrastructure improvement construction on water projects that are crucial to the **Yakima Basin** and the West. We need all the tools in the toolbox, especially this one to help solve our future water supply problems,…"
               },
               {
-                "client": "YAKIMA BASIN JOINT BOARD",
+                "client": "Yakima Basin",
+                "date": "2023-01-27",
+                "member_name": "Dan Newhouse",
+                "party": "Republican",
+                "state": "WA",
+                "chamber": "House",
+                "title": "Newhouse Announces Subcommittee Appointments on the Appropriations Committee",
+                "url": "https://newhouse.house.gov/media-center/press-releases/newhouse-announces-subcommittee-appointments-appropriations-committee",
+                "snippet": "…s of Engineers, the Department of Interior, and the Bureau of Reclamation, which are critical for the next phase of the **Yakima Basin** Integrated Plan and irrigation in the West."
+              },
+              {
+                "client": "Yakima Basin",
                 "date": "2022-06-16",
                 "member_name": "Kim Schrier",
                 "party": "Democrat",
@@ -288,24 +1065,63 @@
                 "chamber": "House",
                 "title": "Rep. Schrier Introduces Bipartisan Bill to Fund Critical Water Infrastructure, Keep Customer Rates Affordable",
                 "url": "https://schrier.house.gov/media/press-releases/rep-schrier-introduces-bipartisan-bill-fund-critical-water-infrastructure-keep",
-                "snippet": "…Columbia Basin Project.” – Sara Higgins, Executive Director of the Columbia Basin Development League “On behalf of the **Yakima Basin Joint Board** (Joint Board), I write in full support of your amendment to the Water Resources Development Act of 2022 that, among oth…"
+                "snippet": "…rom the WIFIA program for much needed infrastructure improvement construction on water projects that are crucial to the **Yakima Basin** and the West. We need all the tools in the toolbox, especially this one to help solve our future water supply problems.…"
               }
             ]
           },
           {
-            "client": "IDAHO WATER RESOURCE BOARD",
-            "n_matches": 1,
+            "client": "Turlock Irrigation District",
+            "n_matches": 2,
             "matches": [
               {
-                "client": "IDAHO WATER RESOURCE BOARD",
-                "date": "2025-01-16",
-                "member_name": "David G. Valadao",
-                "party": "Republican",
+                "client": "Turlock Irrigation District",
+                "date": "2025-06-11",
+                "member_name": "Adam Gray",
+                "party": "Democrat",
                 "state": "CA",
                 "chamber": "House",
-                "title": "Congressman Valadao Introduces Key Water Infrastructure Legislation to Address California’s Water Crisis",
-                "url": "https://valadao.house.gov/news/documentsingle.aspx?DocumentID=1685",
-                "snippet": "…uthority, Kern Fan Groundwater Storage Project (Irvine Ranch Water District and Rosedale-Bravo Water Storage District), **Idaho Water Resource Board**, San Joaquin River Exchange Contractors, Tulare Irrigation District, and Self-Help Enterprises. The Groundwater Techni…"
+                "title": "CONGRESSMAN GRAY INTRODUCES VALLEY WATER PROTECTION ACT",
+                "url": "https://gray.house.gov/media/press-releases/congressman-gray-introduces-valley-water-protection-act",
+                "snippet": "…onomic impacts of Endangered Species Act regulation are understood and considered,” said Brad Koehn, General Manager of **Turlock Irrigation** District. “We appreciate Congressman Gray for introducing this bill, which recognizes that improving conditions for spe…"
+              },
+              {
+                "client": "Turlock Irrigation District",
+                "date": "2022-05-12",
+                "member_name": "Josh Harder",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Harder Announces $2 Million for Ceres Reservoir Project",
+                "url": "https://harder.house.gov/media/press-releases/harder-announces-2-million-for-ceres-reservoir-project",
+                "snippet": "WASHINGTON – Today, Representative Josh Harder announced that **Turlock Irrigation** District will receive $2 million from the United States Bureau of Reclamation toward their Ceres Main Regulation Reserv…"
+              }
+            ]
+          },
+          {
+            "client": "City of Folsom",
+            "n_matches": 2,
+            "matches": [
+              {
+                "client": "City of Folsom",
+                "date": "2023-02-10",
+                "member_name": "Ami Bera",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Rep. Bera Secures $19.6 Million for Sacramento-area Transportation and Infrastructure Projects in House Appropriations Package",
+                "url": "https://bera.house.gov/news/press-releases/rep-bera-secures-196-million-for-sacramento-area-transportation-and-infrastructure-projects-in-house-appropriations-package",
+                "snippet": "…idents throughout the Historic Old Town District with safe and efficient alternative mobility access. Project Sponsor: **City of Folsom** Project Name: Riley Street Safety Improvements Project Location: Riley St, Folsom, CA 95630 Funding Amount: $4,000,0…"
+              },
+              {
+                "client": "City of Folsom",
+                "date": "2023-02-10",
+                "member_name": "Ami Bera",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Rep. Bera Secures $735,000 for Three Sacramento-area Water Projects in House Appropriations Package",
+                "url": "https://bera.house.gov/news/press-releases/rep-bera-secures-735000-for-three-sacramento-area-water-projects-in-house-appropriations-package",
+                "snippet": "…ods, leaving more water in the river for fish and wildlife. Project Sponsor: Army of Corps Engineers (on behalf of the **City of Folsom**) Project Name: Regional Water Reliability Project Project Location: 1325 J St, Sacramento, CA 95814 Funding Amount:…"
               }
             ]
           }
@@ -326,7 +1142,7 @@
       "total_income": 17370000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "GROWTH ENERGY | CARGILL INC | WHOLESTONE PRESTAGE LLC (FORMERLY KNOW AS WHOLESTONE FARMS) | MUSKET CORPORATION | BAYER CORPORATION",
+      "top_clients_str": "CARGILL INC | GROWTH ENERGY | WHOLESTONE PRESTAGE LLC (FORMERLY KNOW AS WHOLESTONE FARMS) | MUSKET CORPORATION | BAYER CORPORATION",
       "sample_uuid": "ffbfe8ac-5cf0-4c1e-82b7-bd7d305f9ba1",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ffbfe8ac-5cf0-4c1e-82b7-bd7d305f9ba1/print/",
@@ -362,7 +1178,7 @@
             "agency_short": "usda"
           }
         ],
-        "generated_at": "2026-06-06T21:32:26.063093+00:00",
+        "generated_at": "2026-06-08T16:08:38.883522+00:00",
         "total": 1398877776.51,
         "routine_total": 1360845203.14,
         "discretionary_total": 38032573.369999886,
@@ -499,7 +1315,7 @@
       "press_releases": {
         "case_id": "usda_clients",
         "label": "USDA revolving-door clients — Congressional press-release cross-ref",
-        "generated_at": "2026-06-07T03:34:47.897101+00:00",
+        "generated_at": "2026-06-08T16:11:08.833100+00:00",
         "n_clients_with_matches": 10,
         "n_matches_total": 123,
         "by_client": [
@@ -1009,7 +1825,7 @@
       "total_income": 4745000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "DIGITAL CHAMBER OF COMMERCE | CITADEL INVESTMENT GROUP | AMERICAN COTTON SHIPPERS ASSOCIATION | FIA / PTG | COMMODITY MARKETS COUNCIL",
+      "top_clients_str": "CITADEL INVESTMENT GROUP | DIGITAL CHAMBER OF COMMERCE | FIA / PTG | AMERICAN COTTON SHIPPERS ASSOCIATION | COMMODITY MARKETS COUNCIL",
       "sample_uuid": "ff78910b-4f40-4511-8c8d-a6aa93fb4c50",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff78910b-4f40-4511-8c8d-a6aa93fb4c50/print/",
@@ -1017,7 +1833,7 @@
       "press_releases": {
         "case_id": "auto-enrich-4",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:51.811368+00:00",
+        "generated_at": "2026-06-08T16:10:32.912114+00:00",
         "n_clients_with_matches": 1,
         "n_matches_total": 7,
         "by_client": [
@@ -1135,7 +1951,7 @@
             "agency_short": "usda"
           }
         ],
-        "generated_at": "2026-06-06T21:32:26.063093+00:00",
+        "generated_at": "2026-06-08T16:08:38.883522+00:00",
         "total": 1398877776.51,
         "routine_total": 1360845203.14,
         "discretionary_total": 38032573.369999886,
@@ -1272,7 +2088,7 @@
       "press_releases": {
         "case_id": "usda_clients",
         "label": "USDA revolving-door clients — Congressional press-release cross-ref",
-        "generated_at": "2026-06-07T03:34:47.897101+00:00",
+        "generated_at": "2026-06-08T16:11:08.833100+00:00",
         "n_clients_with_matches": 10,
         "n_matches_total": 123,
         "by_client": [
@@ -1782,7 +2598,7 @@
       "total_income": 935000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "DIGITAL CHAMBER OF COMMERCE | CITADEL INVESTMENT GROUP | FIA / PTG | COMMODITY MARKETS COUNCIL | AMERICAN COTTON SHIPPERS ASSOCIATION",
+      "top_clients_str": "DIGITAL CHAMBER OF COMMERCE | CITADEL INVESTMENT GROUP | AMERICAN COTTON SHIPPERS ASSOCIATION | FIA / PTG | COMMODITY MARKETS COUNCIL",
       "sample_uuid": "ff78910b-4f40-4511-8c8d-a6aa93fb4c50",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff78910b-4f40-4511-8c8d-a6aa93fb4c50/print/",
@@ -1790,13 +2606,13 @@
       "press_releases": {
         "case_id": "auto-enrich-6",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:51.895899+00:00",
-        "n_clients_with_matches": 2,
+        "generated_at": "2026-06-08T16:10:32.944637+00:00",
+        "n_clients_with_matches": 1,
         "n_matches_total": 7,
         "by_client": [
           {
             "client": "AMERICAN COTTON SHIPPERS ASSOCIATION",
-            "n_matches": 4,
+            "n_matches": 7,
             "matches": [
               {
                 "client": "AMERICAN COTTON SHIPPERS ASSOCIATION",
@@ -1841,15 +2657,9 @@
                 "title": "Arrington Urges Trump to Boost WTX Cotton Exports",
                 "url": "https://arrington.house.gov/news/documentsingle.aspx?DocumentID=2503",
                 "snippet": "…to intensify, establishing meaningful market access is critically important,” saidBuddy Allen, President and CEO of the **American Cotton Shippers Association**. “The American Cotton Shippers Association commends Congressman Arrington for recognizing this in his recent letter to…"
-              }
-            ]
-          },
-          {
-            "client": "COMMODITY MARKETS COUNCIL",
-            "n_matches": 3,
-            "matches": [
+              },
               {
-                "client": "COMMODITY MARKETS COUNCIL",
+                "client": "AMERICAN COTTON SHIPPERS ASSOCIATION",
                 "date": "2024-01-23",
                 "member_name": "Jerry Moran",
                 "party": "Republican",
@@ -1858,28 +2668,6 @@
                 "title": "Sen. Moran, Rep. Nunn Caution Federal Regulators on Harmful Impacts of Proposed Banking Regulations",
                 "url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=682C4164-C895-426F-A013-29F7845C2C24",
                 "snippet": "…Glenn Thompson (R-Pa.) and Roger Williams (R-Texas). This effort is supported by the American Farm Bureau Federation, **National Milk Producers Federation**, Louis Dreyfus Company, Commodity Markets Council, American Cotton Shippers Association, Futures Industry Association,…"
-              },
-              {
-                "client": "COMMODITY MARKETS COUNCIL",
-                "date": "2024-01-23",
-                "member_name": "Kevin Cramer",
-                "party": "Republican",
-                "state": "ND",
-                "chamber": "Senate",
-                "title": "Letters Call for Withdrawal of Basel III Endgame Proposal, Highlight Impact on Derivatives End Users",
-                "url": "https://www.cramer.senate.gov/news/press-releases/letters-call-for-withdrawal-of-basel-iii-endgame-proposal-highlight-impact-on-derivatives-end-users",
-                "snippet": "…hedge against instability.” The letter is endorsed by the Farm Bureau Foundation, National Grain and Feed Association, **National Milk Producers Federation**, Louis Dreyfus, Commodity Markets Council, American Cotton Shippers Association, Futures Industry Association, and Inte…"
-              },
-              {
-                "client": "COMMODITY MARKETS COUNCIL",
-                "date": "2024-01-23",
-                "member_name": "Zachary Nunn",
-                "party": "Republican",
-                "state": "IA",
-                "chamber": "House",
-                "title": "Nunn, Bipartisan Members Caution Federal Regulators on Harmful Impacts of Proposed Banking Regulations",
-                "url": "https://nunn.house.gov/2024/01/23/nunn-bipartisan-members-caution-federal-regulators-harmful-impacts-proposed/",
-                "snippet": "…s and risk management tools is a misguided approach.” This effort is supported by the American Farm Bureau Federation, **National Milk Producers Federation**, Louis Dreyfus Company, Commodity Markets Council, American Cotton Shippers Association, Futures Industry Association,…"
               }
             ]
           }
@@ -1900,7 +2688,7 @@
       "total_income": 30430000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "CROP INSURANCE AND REINSURANCE BUREAU | ANIMAL HEALTH INSTITUTE | EDGE DAIRY FARMER COOPERATIVE (FORMERLY EDGE) | AMERICAN BEVERAGE ASSOCIATION | GRUPO NAVIS, LLC",
+      "top_clients_str": "CROP INSURANCE AND REINSURANCE BUREAU | EDGE DAIRY FARMER COOPERATIVE (FORMERLY EDGE) | ANIMAL HEALTH INSTITUTE | AMERICAN BEVERAGE ASSOCIATION | AMERICAN SOC. OF AGRONOMY, CROP SCI. SOC. OF AMERICA & SOIL SCI. SOC. OF AMERICA",
       "sample_uuid": "eaca1218-a480-4989-bbcf-5a91ce705d12",
       "sample_source": "data\\data\\senate\\2023\\filings\\filings_2023.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/eaca1218-a480-4989-bbcf-5a91ce705d12/print/",
@@ -1936,7 +2724,7 @@
             "agency_short": "usda"
           }
         ],
-        "generated_at": "2026-06-06T21:32:26.063093+00:00",
+        "generated_at": "2026-06-08T16:08:38.883522+00:00",
         "total": 1398877776.51,
         "routine_total": 1360845203.14,
         "discretionary_total": 38032573.369999886,
@@ -2073,7 +2861,7 @@
       "press_releases": {
         "case_id": "usda_clients",
         "label": "USDA revolving-door clients — Congressional press-release cross-ref",
-        "generated_at": "2026-06-07T03:34:47.897101+00:00",
+        "generated_at": "2026-06-08T16:11:08.833100+00:00",
         "n_clients_with_matches": 10,
         "n_matches_total": 123,
         "by_client": [
@@ -2583,7 +3371,7 @@
       "total_income": 12130000.0,
       "first_year": 2024,
       "last_year": 2026,
-      "top_clients_str": "INTERNATIONAL FRESH PRODUCE ASSOCIATION | MCCAIN FOODS USA, INC. | CALIFORNIA DATE COMMISSION | PEPSICO, INC. | COALITION FOR CLIMATE SMART AGRICULTURE FKA SUSTAINABLE SUPPLY CHAIN COALITION",
+      "top_clients_str": "COALITION FOR CLIMATE SMART AGRICULTURE FKA SUSTAINABLE SUPPLY CHAIN COALITION | INTERNATIONAL FRESH PRODUCE ASSOCIATION | PEPSICO, INC. | MCCAIN FOODS USA, INC. | CALIFORNIA DATE COMMISSION",
       "sample_uuid": "ffd9bf73-2754-455f-bcdf-89d77cabb5eb",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ffd9bf73-2754-455f-bcdf-89d77cabb5eb/print/",
@@ -2619,7 +3407,7 @@
             "agency_short": "usda"
           }
         ],
-        "generated_at": "2026-06-06T21:32:26.063093+00:00",
+        "generated_at": "2026-06-08T16:08:38.883522+00:00",
         "total": 1398877776.51,
         "routine_total": 1360845203.14,
         "discretionary_total": 38032573.369999886,
@@ -2756,7 +3544,7 @@
       "press_releases": {
         "case_id": "usda_clients",
         "label": "USDA revolving-door clients — Congressional press-release cross-ref",
-        "generated_at": "2026-06-07T03:34:47.897101+00:00",
+        "generated_at": "2026-06-08T16:11:08.833100+00:00",
         "n_clients_with_matches": 10,
         "n_matches_total": 123,
         "by_client": [
@@ -3266,7 +4054,7 @@
       "total_income": 855000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "CROWN CASTLE | CTIA - THE WIRELESS ASSOCIATION | LYNK",
+      "top_clients_str": "CTIA - THE WIRELESS ASSOCIATION | CROWN CASTLE | LYNK",
       "sample_uuid": "feacc264-63b9-4af5-b29a-35702803b3ef",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/feacc264-63b9-4af5-b29a-35702803b3ef/print/",
@@ -3274,7 +4062,7 @@
       "press_releases": {
         "case_id": "auto-enrich-9",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:51.997272+00:00",
+        "generated_at": "2026-06-08T16:10:32.986694+00:00",
         "n_clients_with_matches": 2,
         "n_matches_total": 3,
         "by_client": [
@@ -3340,7 +4128,7 @@
       "total_income": 24125000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "VIDEO GAMING TECHNOLOGIES | SAGINAW CHIPPEWA INDIAN TRIBE OF MICHIGAN | PIT RIVER TRIBE | NATIVE AMERICAN FINANCE OFFICER'S ASSOCIATION | NATIONAL INDIAN GAMING ASSOCIATION",
+      "top_clients_str": "VIDEO GAMING TECHNOLOGIES | SAGINAW CHIPPEWA INDIAN TRIBE OF MICHIGAN | PIT RIVER TRIBE | COW CREEK BAND OF UMPQUA TRIBE OF INDIANS | MASHANTUCKET PEQUOT TRIBAL NATION",
       "sample_uuid": "ff6d6ea2-5f7e-45dd-b411-4b577d6d87d8",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff6d6ea2-5f7e-45dd-b411-4b577d6d87d8/print/",
@@ -3348,10 +4136,132 @@
       "press_releases": {
         "case_id": "auto-enrich-10",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.031360+00:00",
-        "n_clients_with_matches": 2,
-        "n_matches_total": 3,
+        "generated_at": "2026-06-08T16:10:33.002756+00:00",
+        "n_clients_with_matches": 4,
+        "n_matches_total": 18,
         "by_client": [
+          {
+            "client": "MASHANTUCKET PEQUOT TRIBAL NATION",
+            "n_matches": 9,
+            "matches": [
+              {
+                "client": "MASHANTUCKET PEQUOT TRIBAL NATION",
+                "date": "2026-02-26",
+                "member_name": "Gwen Moore",
+                "party": "Democrat",
+                "state": "WI",
+                "chamber": "House",
+                "title": "Representatives Gwen Moore and David Schweikert Introduce Bipartisan Bill to Support Tribal Communities",
+                "url": "https://gwenmoore.house.gov/news/documentsingle.aspx?DocumentID=5874",
+                "snippet": "…lso become important drivers of America’s economic progress,” said NAFOA Board President Rodney Butler, Chairman of the **Mashantucket Pequot Tribal Nation**. The Tribal Tax and Investment Reform Act This legislation amends the Internal Revenue Code to ensure that Indian tri…"
+              },
+              {
+                "client": "MASHANTUCKET PEQUOT TRIBAL NATION",
+                "date": "2024-09-11",
+                "member_name": "Christopher Murphy",
+                "party": "Democrat",
+                "state": "CT",
+                "chamber": "Senate",
+                "title": "Murphy, Blumenthal, Larson, Courtney, DeLauro & Himes Announce Nearly $17 Million For Traffic & Road Safety Improvements",
+                "url": "https://www.murphy.senate.gov/newsroom/press-releases/murphy-blumenthal-larson-courtney-delauro-and-himes-announce-nearly-17-million-for-traffic_road-safety-improvements",
+                "snippet": "…n efficient traffic system has become more prevalent. This new round of federal infrastructure funding will support the **Mashantucket Pequot Tribal Nation** and the University of Connecticut as they move to improve traffic and pedestrian safety, standing as another example of…"
+              },
+              {
+                "client": "MASHANTUCKET PEQUOT TRIBAL NATION",
+                "date": "2024-09-11",
+                "member_name": "Richard Blumenthal",
+                "party": "Democrat",
+                "state": "CT",
+                "chamber": "Senate",
+                "title": "Blumenthal, Murphy, Larson, Courtney, DeLauro, & Himes Announce Nearly $17 Million for Traffic & Road Safety Improvements",
+                "url": "https://www.blumenthal.senate.gov/newsroom/press/release/blumenthal-murphy-larson-courtney-delauro-and-himes-announce-nearly-17-million-for-traffic_road-safety-improvements",
+                "snippet": "…n efficient traffic system has become more prevalent. This new round of federal infrastructure funding will support the **Mashantucket Pequot Tribal Nation** and the University of Connecticut as they move to improve traffic and pedestrian safety, standing as another example of…"
+              },
+              {
+                "client": "MASHANTUCKET PEQUOT TRIBAL NATION",
+                "date": "2024-09-11",
+                "member_name": "John B. Larson",
+                "party": "Democrat",
+                "state": "CT",
+                "chamber": "House",
+                "title": "Larson, Courtney, DeLauro, Himes, Blumenthal, and Murphy Announce Nearly $17 Million for Traffic and Road Safety Improvements",
+                "url": "https://larson.house.gov/media-center/press-releases/larson-courtney-delauro-himes-blumenthal-and-murphy-announce-nearly-17",
+                "snippet": "…n efficient traffic system has become more prevalent. This new round of federal infrastructure funding will support the **Mashantucket Pequot Tribal Nation** and the University of Connecticut as they move to improve traffic and pedestrian safety, standing as another example of…"
+              },
+              {
+                "client": "MASHANTUCKET PEQUOT TRIBAL NATION",
+                "date": "2024-09-11",
+                "member_name": "Joe Courtney",
+                "party": "Democrat",
+                "state": "CT",
+                "chamber": "House",
+                "title": "COURTNEY, BLUMENTHAL, MURPHY, LARSON, DELAURO & HIMES ANNOUNCE NEARLY $17 MILLION FOR TRAFFIC & ROAD SAFETY IMPROVEMENTS",
+                "url": "https://courtney.house.gov/media-center/press-releases/courtney-blumenthal-murphy-larson-delauro-himes-announce-nearly-17",
+                "snippet": "…n efficient traffic system has become more prevalent. This new round of federal infrastructure funding will support the **Mashantucket Pequot Tribal Nation** and the University of Connecticut as they move to improve traffic and pedestrian safety, standing as another example of…"
+              }
+            ]
+          },
+          {
+            "client": "COW CREEK BAND OF UMPQUA TRIBE OF INDIANS",
+            "n_matches": 6,
+            "matches": [
+              {
+                "client": "COW CREEK BAND OF UMPQUA TRIBE OF INDIANS",
+                "date": "2024-12-10",
+                "member_name": "Jared Huffman",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Tribes from Across the U.S. Announce Support for Congressman Huffman as House Natural Resources Committee Ranking Member",
+                "url": "https://huffman.house.gov/media-center/press-releases/tribes-from-across-the-us-announce-support-for-congressman-huffman-as-house-natural-resources-committee-ranking-member",
+                "snippet": "…ort for Congressman Jared Huffman (CA-02) as Ranking Member of the House Natural Resources Committee. Additionally, the **Cow Creek Band of Umpqua Tribe of Indians**, Greenville Rancheria Tribal Council, and Mooretown Rancheria, sent individual statements supporting Rep. Huffman. Thes…"
+              },
+              {
+                "client": "COW CREEK BAND OF UMPQUA TRIBE OF INDIANS",
+                "date": "2024-10-30",
+                "member_name": "Ron Wyden",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Wyden, Merkley, Blumenauer, Hoyle: State of Oregon & Four Tribes Earn More Than $12 Million in Federal Funds for Grid Resilience",
+                "url": "https://www.wyden.senate.gov/news/press-releases/wyden-merkley-blumenauer-hoyle-state-of-oregon-and-four-tribes-earn-more-than-12-million-in-federal-funds-for-grid-resilience",
+                "snippet": "Tribes with Oregon presence to receive federal investments are the Confederated Tribes of the Warm Springs, **Cow Creek Band of Umpqua Tribe of Indians**, Burns Paiute and Nez Perce Washington, D.C. – U.S. Sens. Ron Wyden and Jeff Merkley as well as U.S. Reps. Earl Blumen…"
+              },
+              {
+                "client": "COW CREEK BAND OF UMPQUA TRIBE OF INDIANS",
+                "date": "2024-09-11",
+                "member_name": "Ron Wyden",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Merkley, Wyden Announce $9.4 Million Federal Investment to Confront Wildfire Threats in Oregon",
+                "url": "https://www.wyden.senate.gov/news/press-releases/merkley-wyden-announce-94-million-federal-investment-to-confront-wildfire-threats-in-oregon",
+                "snippet": "…private, Tribal, and federal lands with several underserved communities. Building on existing collaboration between the **Cow Creek Band of Umpqua Tribe of Indians** and the Forest Service, this project will continue ecosystem restoration efforts while expanding collaboration with the…"
+              },
+              {
+                "client": "COW CREEK BAND OF UMPQUA TRIBE OF INDIANS",
+                "date": "2024-05-08",
+                "member_name": "Ron Wyden",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Merkley, Wyden Announce Nearly $1.7 Million for State and Tribal Historical Preservation in Oregon",
+                "url": "https://www.wyden.senate.gov/news/press-releases/merkley-wyden-announce-nearly-17-million-for-state-and-tribal-historical-preservation-in-oregon",
+                "snippet": "…40 – Confederated Tribes of Warm Springs $118,119 – Confederated Tribes of the Umatilla Indian Reservation $102,393 – **Cow Creek Band of Umpqua Tribe of Indians** $100,491 – Confederated Tribes of Coos, Lower Umpqua and Siuslaw Indians $99,117 – Confederated Tribes of Grand Ronde…"
+              },
+              {
+                "client": "COW CREEK BAND OF UMPQUA TRIBE OF INDIANS",
+                "date": "2024-02-22",
+                "member_name": "Ron Wyden",
+                "party": "Democrat",
+                "state": "OR",
+                "chamber": "Senate",
+                "title": "Wyden, Merkley Announce $27 Million to Support Pacific Salmon Recovery in Oregon",
+                "url": "https://www.wyden.senate.gov/news/press-releases/wyden-merkley-announce-27-million-to-support-pacific-salmon-recovery-in-oregon",
+                "snippet": "…,319,000 to study ocean conditions modeling, measure marine predation, and assess climate impacts on marine food webs. **Cow Creek Band of Umpqua Tribe of Indians**: $2.7 Million for Pacific Coastal Salmon Recovery Fund to help support habitat restoration, research, and monitoring of…"
+              }
+            ]
+          },
           {
             "client": "PIT RIVER TRIBE",
             "n_matches": 2,
@@ -3414,7 +4324,7 @@
       "total_income": 9450000.0,
       "first_year": 2024,
       "last_year": 2026,
-      "top_clients_str": "SAGINAW CHIPPEWA INDIAN TRIBE OF MICHIGAN | PECHANGA BAND OF LUISENO MISSION INDIANS | YOCHA DEHE WINTUN NATION | PUEBLO OF LAGUNA | PIT RIVER TRIBE",
+      "top_clients_str": "SAGINAW CHIPPEWA INDIAN TRIBE OF MICHIGAN | NATIVE AMERICAN FINANCE OFFICER'S ASSOCIATION | YOCHA DEHE WINTUN NATION | NATIONAL INDIAN GAMING ASSOCIATION | PIT RIVER TRIBE",
       "sample_uuid": "ff0285fa-476a-45bb-8c58-2de01dd91393",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff0285fa-476a-45bb-8c58-2de01dd91393/print/",
@@ -3422,9 +4332,9 @@
       "press_releases": {
         "case_id": "auto-enrich-11",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.072198+00:00",
-        "n_clients_with_matches": 4,
-        "n_matches_total": 24,
+        "generated_at": "2026-06-08T16:10:33.021893+00:00",
+        "n_clients_with_matches": 3,
+        "n_matches_total": 14,
         "by_client": [
           {
             "client": "YOCHA DEHE WINTUN NATION",
@@ -3484,67 +4394,6 @@
                 "title": "Garamendi, Thompson Join President Biden to Announce Expansion of Berryessa Snow Mountain National Monument",
                 "url": "https://garamendi.house.gov/media/press-releases/garamendi-thompson-join-president-biden-announce-expansion-berryessa-snow",
                 "snippet": "…renaming the former Walker Ridge tract to Molok Luyuk, which translates as “Condor Ridge” in the Patwin language of the **Yocha Dehe Wintun Nation** and other Native American tribes indigenous to the area. This expansion follows yearslong advocacy from Reps. Garamend…"
-              }
-            ]
-          },
-          {
-            "client": "PUEBLO OF LAGUNA",
-            "n_matches": 10,
-            "matches": [
-              {
-                "client": "PUEBLO OF LAGUNA",
-                "date": "2026-03-06",
-                "member_name": "Gabe Vasquez",
-                "party": "Democrat",
-                "state": "NM",
-                "chamber": "House",
-                "title": "WATCH: Vasquez Stands Up to Protect New Mexico's Tribal Gaming Industry and Sovereignty",
-                "url": "https://vasquez.house.gov/media/press-releases/watch-vasquez-stands-protect-new-mexicos-tribal-gaming-industry-and",
-                "snippet": "…ing the integrity of regulated gaming by offering this critical amendment,” said Harry A. Antonio, Jr., Governor of the **Pueblo of Laguna**. “On behalf of the Pueblo of Laguna, I applaud his clear intent to shut the door on unregulated sports and casino-style…"
-              },
-              {
-                "client": "PUEBLO OF LAGUNA",
-                "date": "2026-01-15",
-                "member_name": "Ben Ray Luján",
-                "party": "Democrat",
-                "state": "NM",
-                "chamber": "Senate",
-                "title": "Luján Delivers Nearly $982 Million for Vital New Mexico Projects in Senate-Passed Appropriations Bills",
-                "url": "https://www.lujan.senate.gov/newsroom/press-releases/lujan-delivers-nearly-982-million-for-vital-new-mexico-projects-in-senate-passed-appropriations-bills/",
-                "snippet": "…elden Historic Site Water System Improvements project. Secured by Senator Luján and Senator Heinrich. $500,000 for the **Pueblo of Laguna**’s Saint Joseph’s Church building historic site. $250,000 for the Village of Mosquero’s water infrastructure. Strength…"
-              },
-              {
-                "client": "PUEBLO OF LAGUNA",
-                "date": "2025-07-29",
-                "member_name": "Ben Ray Luján",
-                "party": "Democrat",
-                "state": "NM",
-                "chamber": "Senate",
-                "title": "Luján Delivers Nearly $45 Million in Federal Investments to Strengthen Infrastructure, Support Housing Projects in New Mexico in Committee-Passed Appropriations Bills",
-                "url": "https://www.lujan.senate.gov/newsroom/press-releases/lujan-delivers-nearly-45-million-in-federal-investments-to-strengthen-infrastructure-support-housing-projects-in-new-mexico-in-committee-passed-appropriations-bills/",
-                "snippet": "…elden Historic Site Water System Improvements project. Secured by Senator Luján and Senator Heinrich. $500,000 for the **Pueblo of Laguna**’s Saint Joseph’s Church building historic site. $250,000 for the Village of Mosquero’s water infrastructure. ###"
-              },
-              {
-                "client": "PUEBLO OF LAGUNA",
-                "date": "2024-12-13",
-                "member_name": "Gabe Vasquez",
-                "party": "Democrat",
-                "state": "NM",
-                "chamber": "House",
-                "title": "Rep. Gabe Vasquez, Zuni Pueblo Call on Speaker Mike Johnson to Pass New Mexico Water Rights Settlements",
-                "url": "https://vasquez.house.gov/media/press-releases/rep-gabe-vasquez-zuni-pueblo-call-speaker-mike-johnson-pass-new-mexico-water",
-                "snippet": "…Rio Jemez Water Settlements Act, which would secure water rights and infrastructure funding for the Pueblo of Acoma and **Pueblo of Laguna**. This summer, Vasquez introduced the Zuni Indian Tribe Water Rights Settlement Act. U.S. Senator Martin Heinrich (D-N.…"
-              },
-              {
-                "client": "PUEBLO OF LAGUNA",
-                "date": "2024-07-25",
-                "member_name": "Martin Heinrich",
-                "party": "Democrat",
-                "state": "NM",
-                "chamber": "Senate",
-                "title": "Heinrich Announces Committee Passage of Over $169 Million for New Mexico",
-                "url": "https://www.heinrich.senate.gov/newsroom/press-releases/heinrich-announces-committee-passage-of-over-169-million-for-new-mexico",
-                "snippet": "…r the Ojo Caliente Mutual Domestic Water Consumers Association to construct a new water storage tank. $500,000 for the **Pueblo of Laguna** to rehabilitate the roof of the historic Saint Joseph’s Church. $200,000 for Eight Northern Indian Pueblos Council for…"
               }
             ]
           },
@@ -3610,7 +4459,7 @@
       "total_income": 5870000.0,
       "first_year": 2023,
       "last_year": 2026,
-      "top_clients_str": "EQUINOR US OPERATIONS LLC | EDISON INTERNATIONAL | STEM, INC. | GENERAL MATTER INC | ARBOR ENERGY AND RESOURCES CORPORATION",
+      "top_clients_str": "EDISON INTERNATIONAL | EQUINOR US OPERATIONS LLC | STEM, INC. | GENERAL MATTER INC | KANIN ENERGY",
       "sample_uuid": "ff4f9d69-7a12-4c4c-b048-2169592f95ef",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff4f9d69-7a12-4c4c-b048-2169592f95ef/print/",
@@ -3618,9 +4467,9 @@
       "press_releases": {
         "case_id": "auto-enrich-12",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.113203+00:00",
-        "n_clients_with_matches": 1,
-        "n_matches_total": 4,
+        "generated_at": "2026-06-08T16:10:33.038851+00:00",
+        "n_clients_with_matches": 2,
+        "n_matches_total": 5,
         "by_client": [
           {
             "client": "EDISON INTERNATIONAL",
@@ -3671,6 +4520,23 @@
                 "snippet": "…s líneas eléctricas esenciales para el futuro energético limpio del estado\", dijo Pedro J. Pizarro, Presidente y CEO de **Edison International**. \"La industria solar y de almacenamiento elogia al senador Padilla y al representante Ruiz por sus esfuerzos para gara…"
               }
             ]
+          },
+          {
+            "client": "KANIN ENERGY",
+            "n_matches": 1,
+            "matches": [
+              {
+                "client": "KANIN ENERGY",
+                "date": "2026-01-22",
+                "member_name": "Gabe Vasquez",
+                "party": "Democrat",
+                "state": "NM",
+                "chamber": "House",
+                "title": "Rep. Vasquez Introduces Bipartisan Waste Heat to Wattage Act to Lower Utility Bills for New Mexican Families and Businesses",
+                "url": "https://vasquez.house.gov/media/press-releases/rep-vasquez-introduces-bipartisan-waste-heat-wattage-act-lower-utility-bills",
+                "snippet": "…a Program (REAP) — is co-led by U.S. Representative Jim Baird (IN-04) and endorsed by the Heat is Power Association and **Kanin Energy**. By unlocking this technology for REAP and other USDA programs, the bill strengthens rural economies, reduces business’…"
+              }
+            ]
           }
         ]
       }
@@ -3697,7 +4563,7 @@
       "press_releases": {
         "case_id": "auto-enrich-13",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.153203+00:00",
+        "generated_at": "2026-06-08T16:10:33.055858+00:00",
         "n_clients_with_matches": 3,
         "n_matches_total": 35,
         "by_client": [
@@ -3879,7 +4745,7 @@
       "total_income": 30400000.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "AMERICAN INVESTMENT COUNCIL | FEDEX CORPORATION | GOLDMAN SACHS GROUP INC | DISCOVERY COMMUNICATIONS | QUALCOMM INCORPORATED",
+      "top_clients_str": "AMERICAN INVESTMENT COUNCIL | FEDEX CORPORATION | CITADEL LLC | AMAZON.COM | MOTION PICTURE ASSOCIATION",
       "sample_uuid": "fb3eecc8-282c-4ed3-8923-46135b8be6be",
       "sample_source": "data\\data\\senate\\2025\\filings\\filings_2025.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fb3eecc8-282c-4ed3-8923-46135b8be6be/print/",
@@ -3887,10 +4753,132 @@
       "press_releases": {
         "case_id": "auto-enrich-14",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.193560+00:00",
-        "n_clients_with_matches": 2,
-        "n_matches_total": 5,
+        "generated_at": "2026-06-08T16:10:33.071973+00:00",
+        "n_clients_with_matches": 4,
+        "n_matches_total": 34,
         "by_client": [
+          {
+            "client": "MOTION PICTURE ASSOCIATION",
+            "n_matches": 24,
+            "matches": [
+              {
+                "client": "MOTION PICTURE ASSOCIATION",
+                "date": "2025-08-20",
+                "member_name": "Marsha Blackburn",
+                "party": "Republican",
+                "state": "TN",
+                "chamber": "Senate",
+                "title": "Blackburn Joins Colleagues in Introducing Framework to Combat Foreign Online Piracy, Protect American Copyright Holders",
+                "url": "https://www.blackburn.senate.gov/2025/8/technology/blackburn-joins-colleagues-in-introducing-framework-to-combat-foreign-online-piracy-protect-american-copyright-holders",
+                "snippet": "…y theft, and fraud. ENDORSEMENTS The Block BEARD Act is endorsed by Recording Industry Association of America and the **Motion Picture Association**: “We are grateful to Senators Tillis, Coons, Blackburn, and Schiff for their leadership in crafting a carefully tailor…"
+              },
+              {
+                "client": "MOTION PICTURE ASSOCIATION",
+                "date": "2025-08-06",
+                "member_name": "Laura Friedman",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "RELEASE: Congresswoman Friedman Joins Roundtable With Directors Guild of America Leadership Council",
+                "url": "https://friedman.house.gov/media/press-releases/release-congresswoman-friedman-joins-roundtable-directors-guild-america",
+                "snippet": "…ional film tax credit, Representative Friedman rallied Hollywood labor unions earlier this year and led a letter to the **Motion Picture Association** to highlight the value of bringing productions back to Los Angeles. Representative Friedman also joined a roundtable of…"
+              },
+              {
+                "client": "MOTION PICTURE ASSOCIATION",
+                "date": "2025-08-04",
+                "member_name": "Nicole Malliotakis",
+                "party": "Republican",
+                "state": "NY",
+                "chamber": "House",
+                "title": "Malliotakis Leads Bipartisan Effort to Grow Film Production & Create Jobs in New York City",
+                "url": "https://malliotakis.house.gov/media/press-releases/malliotakis-leads-bipartisan-effort-grow-film-production-create-jobs-new-york",
+                "snippet": "…industry, which proudly supports more than 2.32 million jobs nationwide,” said Charles Rivkin, Chairman and CEO of the **Motion Picture Association** (MPA). \"Extending and strengthening Section 181 will lead to more domestic film and TV production, and more American jo…"
+              },
+              {
+                "client": "MOTION PICTURE ASSOCIATION",
+                "date": "2025-08-01",
+                "member_name": "Raphael G. Warnock",
+                "party": "Democrat",
+                "state": "GA",
+                "chamber": "Senate",
+                "title": "Y’ALLYWOOD: Warnock Co-Leads Bipartisan Legislation to Boost Georgia’s Growing Film, Music Industries",
+                "url": "https://www.warnock.senate.gov/newsroom/press-releases/yallywood-warnock-co-leads-bipartisan-legislation-to-boost-georgias-growing-film-music-industries/",
+                "snippet": "…7 to ensure that the dollar limits keep pace with rising production costs over time. The CREATE Act is endorsed by the **Motion Picture Association**, the Independent Film & Television Alliance, the Recording Industry Association of America, the American Association of…"
+              },
+              {
+                "client": "MOTION PICTURE ASSOCIATION",
+                "date": "2025-08-01",
+                "member_name": "Judy Chu",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "Rep. Judy Chu Introduces Bipartisan, Bicameral Bill to Support U.S. Film, TV, and Sound Recording Production",
+                "url": "https://chu.house.gov/media-center/press-releases/rep-judy-chu-introduces-bipartisan-bicameral-bill-support-us-film-tv",
+                "snippet": "…industry, which proudly supports more than 2.32 million jobs nationwide,” said Charles Rivkin, Chairman and CEO of the **Motion Picture Association** (MPA). \"Extending and strengthening Section 181 will lead to more domestic film and TV production, and more American jo…"
+              }
+            ]
+          },
+          {
+            "client": "AMAZON.COM",
+            "n_matches": 5,
+            "matches": [
+              {
+                "client": "AMAZON.COM",
+                "date": "2026-01-09",
+                "member_name": "Richard J. Durbin",
+                "party": "Democrat",
+                "state": "IL",
+                "chamber": "Senate",
+                "title": "Durbin Releases Data On How His INFORM Consumers Act Has Impacted Online Marketplaces",
+                "url": "https://www.durbin.senate.gov/newsroom/press-releases/durbin-releases-data-on-how-his-inform-consumers-act-has-impacted-online-marketplaces",
+                "snippet": "…The 46 companies that operate online marketplaces include 1stdibs.com, Inc., Alibris, Inc., Alibaba Group, U.S. Office, **Amazon.com**, Inc., Artsy, Belk Inc., bMarketplace (f/k/a Bonanza), LEGO Bricklink, Inc., Chewy, Inc., Depop, Discogs, eBay Inc., eB…"
+              },
+              {
+                "client": "AMAZON.COM",
+                "date": "2025-08-27",
+                "member_name": "Richard J. Durbin",
+                "party": "Democrat",
+                "state": "IL",
+                "chamber": "Senate",
+                "title": "Following Letter To The FTC, Durbin, Cassidy Send Letters To Online Marketplaces Requesting Information On The Senators' INFORM Consumers Act",
+                "url": "https://www.durbin.senate.gov/newsroom/press-releases/following-letter-to-the-ftc-durbin-cassidy-send-letters-to-online-marketplaces-requesting-information-on-the-senators-inform-consumers-act",
+                "snippet": "…The 46 companies that operate online marketplaces include 1stdibs.com, Inc., Alibris, Inc., Alibaba Group, U.S. Office, **Amazon.com**, Inc., Artsy, Belk Inc., bMarketplace (f/k/a Bonanza), LEGO Bricklink, Inc., Chewy, Inc., Depop, Discogs, eBay Inc., eB…"
+              },
+              {
+                "client": "AMAZON.COM",
+                "date": "2023-09-26",
+                "member_name": "J. Luis Correa",
+                "party": "Democrat",
+                "state": "CA",
+                "chamber": "House",
+                "title": "RANKING MEMBER CORREA STATEMENT ON FTC ANTITRUST COMPLAINT AGAINST AMAZON",
+                "url": "https://correa.house.gov/news/press-releases/ranking-member-correa-statement-on-ftc-antitrust-complaint-against-amazon",
+                "snippet": "…ASHINGTON, D.C. — Today, in response to The Federal Trade Commission and 17 state attorneys general filing suit against **Amazon.com**, Inc., Representative Lou Correa (CA-46), Ranking Member of the House Subcommittee on the Administrative State, Regulat…"
+              },
+              {
+                "client": "AMAZON.COM",
+                "date": "2023-08-02",
+                "member_name": "Janice D. Schakowsky",
+                "party": "Democrat",
+                "state": "IL",
+                "chamber": "House",
+                "title": "Schakowsky, Colleagues Seek Answers from Amazon on Use of Patient Data",
+                "url": "https://schakowsky.house.gov/media/press-releases/schakowsky-colleagues-seek-answers-amazon-use-patient-data",
+                "snippet": "…c, which will now be available in all 50 states and Washington, D.C. “Pursuant to HIPAA, absent patient authorization, **Amazon.com** Services LLC, and other Amazon affiliates are prohibited from accessing, using, and disclosing the patient health recor…"
+              },
+              {
+                "client": "AMAZON.COM",
+                "date": "2022-11-14",
+                "member_name": "Ted Cruz",
+                "party": "Republican",
+                "state": "TX",
+                "chamber": "Senate",
+                "title": "RELEASE: Sen. Cruz Calls for Release of FTC Privacy Report on Social Media and Streaming Services",
+                "url": "https://www.cruz.senate.gov/newsroom/press-releases/release-sen-cruz-calls-for-release-of-ftc-privacy-report-on-social-media-and-streaming-services",
+                "snippet": "…tes: “The social media and video streaming investigation was initiated in December 2020, when the FTC issued orders to **Amazon.com**, Inc., ByteDance Ltd. (operator of TikTok), Discord Inc., Facebook, Inc., Reddit, Inc., Snap Inc., Twitter, Inc., Whats…"
+              }
+            ]
+          },
           {
             "client": "AMERICAN INVESTMENT COUNCIL",
             "n_matches": 3,
@@ -3975,7 +4963,7 @@
       "total_income": 7320400.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "CINTRA US | NATIONAL AIR TRAFFIC CONTROLLERS ASSOCIATION | CENTER FOR TRANSPORTATION AND THE ENVIRONMENT | OREGON DEPARTMENT OF TRANSPORTATION | NORTHERN TECHNOLOGIES INTERNATIONAL CORPORATION",
+      "top_clients_str": "CINTRA US | OREGON DEPARTMENT OF TRANSPORTATION | NATIONAL AIR TRAFFIC CONTROLLERS ASSOCIATION | CENTER FOR TRANSPORTATION AND THE ENVIRONMENT | FETCHYFOX INC.",
       "sample_uuid": "ff5cc224-9cd4-4f7f-a382-23ede208c064",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ff5cc224-9cd4-4f7f-a382-23ede208c064/print/",
@@ -3983,7 +4971,7 @@
       "press_releases": {
         "case_id": "auto-enrich-15",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.231576+00:00",
+        "generated_at": "2026-06-08T16:10:33.087642+00:00",
         "n_clients_with_matches": 3,
         "n_matches_total": 89,
         "by_client": [
@@ -4162,7 +5150,7 @@
       "press_releases": {
         "case_id": "auto-enrich-16",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.271080+00:00",
+        "generated_at": "2026-06-08T16:10:33.100495+00:00",
         "n_clients_with_matches": 3,
         "n_matches_total": 45,
         "by_client": [
@@ -4344,7 +5332,7 @@
       "total_income": 39580000.0,
       "first_year": 2022,
       "last_year": 2025,
-      "top_clients_str": "BIODESIX, INC. | MCKESSON CORPORATION | SIEMENS HEALTHINEERS | AMGEN INC. | ADULT VACCINE ACCESS COALITION",
+      "top_clients_str": "MCKESSON CORPORATION | BIODESIX, INC. | AMGEN INC. | SIEMENS HEALTHINEERS | ADULT VACCINE ACCESS COALITION",
       "sample_uuid": "ffbda424-f583-46f3-8932-f43f1ee63779",
       "sample_source": "data\\data\\senate\\2025\\filings\\filings_2025.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ffbda424-f583-46f3-8932-f43f1ee63779/print/",
@@ -4352,7 +5340,7 @@
       "press_releases": {
         "case_id": "auto-enrich-17",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.314624+00:00",
+        "generated_at": "2026-06-08T16:10:33.122258+00:00",
         "n_clients_with_matches": 2,
         "n_matches_total": 3,
         "by_client": [
@@ -4426,7 +5414,7 @@
       "press_releases": {
         "case_id": "auto-enrich-18",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.356213+00:00",
+        "generated_at": "2026-06-08T16:10:33.136600+00:00",
         "n_clients_with_matches": 1,
         "n_matches_total": 40,
         "by_client": [
@@ -4516,7 +5504,7 @@
       "press_releases": {
         "case_id": "auto-enrich-19",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.397769+00:00",
+        "generated_at": "2026-06-08T16:10:33.161952+00:00",
         "n_clients_with_matches": 4,
         "n_matches_total": 13,
         "by_client": [
@@ -4693,26 +5681,6 @@
     {
       "rank": 20,
       "score": 15.223,
-      "agency_short": "state",
-      "lobbyist_name": "JESSICA MOORE",
-      "registrant_name": "GENERAL ELECTRIC COMPANY (INCLUDING SUBSIDIARIES)",
-      "covered_position": "Deputy Assistant Secretary, U.S. Department of State; Chief of Staff, U.S. House of Representatives",
-      "concentration": 1.0,
-      "agency_filings": 20,
-      "total_filings": 20,
-      "n_clients": 1,
-      "total_income": 0.0,
-      "first_year": 2022,
-      "last_year": 2026,
-      "top_clients_str": "GENERAL ELECTRIC COMPANY (INCLUDING SUBSIDIARIES)",
-      "sample_uuid": "63562531-7789-401c-b19a-2e73363c73e2",
-      "sample_source": "data\\data\\senate\\2022\\filings\\filings_2022.json",
-      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/63562531-7789-401c-b19a-2e73363c73e2/print/",
-      "verification_status": null
-    },
-    {
-      "rank": 21,
-      "score": 15.223,
       "agency_short": "energy",
       "lobbyist_name": "CHRISTOPHER SMITH",
       "registrant_name": "FORD MOTOR COMPANY",
@@ -4730,9 +5698,9 @@
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fc115de8-fab2-4f71-a75d-7fd0f4fb021a/print/",
       "verification_status": null,
       "press_releases": {
-        "case_id": "auto-enrich-21",
+        "case_id": "auto-enrich-20",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.413703+00:00",
+        "generated_at": "2026-06-08T16:10:33.168948+00:00",
         "n_clients_with_matches": 1,
         "n_matches_total": 20,
         "by_client": [
@@ -4801,6 +5769,26 @@
       }
     },
     {
+      "rank": 21,
+      "score": 15.223,
+      "agency_short": "state",
+      "lobbyist_name": "JESSICA MOORE",
+      "registrant_name": "GENERAL ELECTRIC COMPANY (INCLUDING SUBSIDIARIES)",
+      "covered_position": "Deputy Assistant Secretary, U.S. Department of State; Chief of Staff, U.S. House of Representatives",
+      "concentration": 1.0,
+      "agency_filings": 20,
+      "total_filings": 20,
+      "n_clients": 1,
+      "total_income": 0.0,
+      "first_year": 2022,
+      "last_year": 2026,
+      "top_clients_str": "GENERAL ELECTRIC COMPANY (INCLUDING SUBSIDIARIES)",
+      "sample_uuid": "63562531-7789-401c-b19a-2e73363c73e2",
+      "sample_source": "data\\data\\senate\\2022\\filings\\filings_2022.json",
+      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/63562531-7789-401c-b19a-2e73363c73e2/print/",
+      "verification_status": null
+    },
+    {
       "rank": 22,
       "score": 14.944,
       "agency_short": "interior",
@@ -4814,7 +5802,7 @@
       "total_income": 3980000.0,
       "first_year": 2025,
       "last_year": 2026,
-      "top_clients_str": "EQUINOR US OPERATIONS LLC FKA EQUINOR | DELAWARE NORTH COMPANIES, INCORPORATED | TWIN METALS MINNESOTA | AMERICAN EXPLORATION AND PRODUCTION COUNCIL | DEVON ENERGY",
+      "top_clients_str": "EQUINOR US OPERATIONS LLC FKA EQUINOR | DELAWARE NORTH COMPANIES, INCORPORATED | AMERICAN EXPLORATION AND PRODUCTION COUNCIL | DEVON ENERGY | TWIN METALS MINNESOTA",
       "sample_uuid": "fb505ec7-3185-496b-ade4-5a485534e5f0",
       "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fb505ec7-3185-496b-ade4-5a485534e5f0/print/",
@@ -4822,7 +5810,7 @@
       "press_releases": {
         "case_id": "auto-enrich-22",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.452405+00:00",
+        "generated_at": "2026-06-08T16:10:33.187247+00:00",
         "n_clients_with_matches": 3,
         "n_matches_total": 30,
         "by_client": [
@@ -5015,10 +6003,10 @@
     {
       "rank": 23,
       "score": 14.722,
-      "agency_short": "sec",
-      "lobbyist_name": "BRYAN WOOD",
-      "registrant_name": "BLACKROCK FUNDS SERVICES GROUP, LLC",
-      "covered_position": "SEC:6/17-6/21;Sr Policy Advisor/Counsel, Deputy Chief of Staff, Dir, Ofc of Legis/IG Affairs; House Fin Svcs.Committee: Sr. Advisor, Counsel 2/15-6/17;Rep.Robert Hurt: LD, Adv, 1/11-1/15; Rep. Brett Guthrie: 1/09-1/11; Rep. Virgil Goode:9/07-1/09",
+      "agency_short": "ustr",
+      "lobbyist_name": "TIFFANY SMITH",
+      "registrant_name": "NATIONAL FOREIGN TRADE COUNCIL, INC",
+      "covered_position": "Office of the US Trade Representative",
       "concentration": 1.0,
       "agency_filings": 18,
       "total_filings": 18,
@@ -5026,10 +6014,10 @@
       "total_income": 0.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "BLACKROCK FUNDS SERVICES GROUP LLC",
-      "sample_uuid": "f2b21782-3aef-4d5d-82aa-9dd5d8118934",
-      "sample_source": "data\\data\\senate\\2024\\filings\\filings_2024.json",
-      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/f2b21782-3aef-4d5d-82aa-9dd5d8118934/print/",
+      "top_clients_str": "NATIONAL FOREIGN TRADE COUNCIL INC",
+      "sample_uuid": "b362d65a-5286-4dc6-87fa-af5217cbae83",
+      "sample_source": "data\\data\\senate\\2023\\filings\\filings_2023.json",
+      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/b362d65a-5286-4dc6-87fa-af5217cbae83/print/",
       "verification_status": null
     },
     {
@@ -5054,7 +6042,7 @@
       "press_releases": {
         "case_id": "auto-enrich-24",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.468406+00:00",
+        "generated_at": "2026-06-08T16:10:33.192246+00:00",
         "n_clients_with_matches": 1,
         "n_matches_total": 153,
         "by_client": [
@@ -5125,10 +6113,10 @@
     {
       "rank": 25,
       "score": 14.722,
-      "agency_short": "ustr",
-      "lobbyist_name": "TIFFANY SMITH",
-      "registrant_name": "NATIONAL FOREIGN TRADE COUNCIL, INC",
-      "covered_position": "Office of the US Trade Representative",
+      "agency_short": "sec",
+      "lobbyist_name": "BRYAN WOOD",
+      "registrant_name": "BLACKROCK FUNDS SERVICES GROUP, LLC",
+      "covered_position": "SEC:6/17-6/21;Sr Policy Advisor/Counsel, Deputy Chief of Staff, Dir, Ofc of Legis/IG Affairs; House Fin Svcs.Committee: Sr. Advisor, Counsel 2/15-6/17;Rep.Robert Hurt: LD, Adv, 1/11-1/15; Rep. Brett Guthrie: 1/09-1/11; Rep. Virgil Goode:9/07-1/09",
       "concentration": 1.0,
       "agency_filings": 18,
       "total_filings": 18,
@@ -5136,10 +6124,10 @@
       "total_income": 0.0,
       "first_year": 2022,
       "last_year": 2026,
-      "top_clients_str": "NATIONAL FOREIGN TRADE COUNCIL INC",
-      "sample_uuid": "b362d65a-5286-4dc6-87fa-af5217cbae83",
-      "sample_source": "data\\data\\senate\\2023\\filings\\filings_2023.json",
-      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/b362d65a-5286-4dc6-87fa-af5217cbae83/print/",
+      "top_clients_str": "BLACKROCK FUNDS SERVICES GROUP LLC",
+      "sample_uuid": "f2b21782-3aef-4d5d-82aa-9dd5d8118934",
+      "sample_source": "data\\data\\senate\\2024\\filings\\filings_2024.json",
+      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/f2b21782-3aef-4d5d-82aa-9dd5d8118934/print/",
       "verification_status": null
     },
     {
@@ -5164,7 +6152,7 @@
       "press_releases": {
         "case_id": "auto-enrich-26",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.492941+00:00",
+        "generated_at": "2026-06-08T16:10:33.203472+00:00",
         "n_clients_with_matches": 1,
         "n_matches_total": 1,
         "by_client": [
@@ -5210,7 +6198,7 @@
       "press_releases": {
         "case_id": "auto-enrich-27",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.530276+00:00",
+        "generated_at": "2026-06-08T16:10:33.222001+00:00",
         "n_clients_with_matches": 1,
         "n_matches_total": 2,
         "by_client": [
@@ -5248,26 +6236,6 @@
     {
       "rank": 28,
       "score": 14.452,
-      "agency_short": "dot",
-      "lobbyist_name": "EDWARD O'MALLEY",
-      "registrant_name": "DIRECT CHASSISLINK, INC.",
-      "covered_position": "Deputy Assistant Secretary & others, US Department of Transportation (2002-2007)",
-      "concentration": 1.0,
-      "agency_filings": 17,
-      "total_filings": 17,
-      "n_clients": 1,
-      "total_income": 0.0,
-      "first_year": 2022,
-      "last_year": 2026,
-      "top_clients_str": "DIRECT CHASSISLINK, INC.",
-      "sample_uuid": "ee0f28dc-9388-4a06-9e84-96d77d39616e",
-      "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
-      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ee0f28dc-9388-4a06-9e84-96d77d39616e/print/",
-      "verification_status": null
-    },
-    {
-      "rank": 29,
-      "score": 14.452,
       "agency_short": "ustr",
       "lobbyist_name": "JENNIFER MCDOWELL",
       "registrant_name": "INTERNATIONAL TRADEMARK ASSOCIATION",
@@ -5285,9 +6253,9 @@
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/f629f4ea-db74-47d1-be07-252f987ccff9/print/",
       "verification_status": null,
       "press_releases": {
-        "case_id": "auto-enrich-29",
+        "case_id": "auto-enrich-28",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.546764+00:00",
+        "generated_at": "2026-06-08T16:10:33.227009+00:00",
         "n_clients_with_matches": 1,
         "n_matches_total": 7,
         "by_client": [
@@ -5356,7 +6324,7 @@
       }
     },
     {
-      "rank": 30,
+      "rank": 29,
       "score": 14.452,
       "agency_short": "hhs",
       "lobbyist_name": "BRADLEY WOLTERS",
@@ -5375,9 +6343,9 @@
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/fcd47a96-cef1-4693-a253-5386b750f433/print/",
       "verification_status": null,
       "press_releases": {
-        "case_id": "auto-enrich-30",
+        "case_id": "auto-enrich-29",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.554772+00:00",
+        "generated_at": "2026-06-08T16:10:33.230004+00:00",
         "n_clients_with_matches": 1,
         "n_matches_total": 4,
         "by_client": [
@@ -5435,7 +6403,7 @@
       }
     },
     {
-      "rank": 31,
+      "rank": 30,
       "score": 14.452,
       "agency_short": "usda",
       "lobbyist_name": "REBECKAH ADCOCK",
@@ -5452,6 +6420,26 @@
       "sample_uuid": "c6ec8b51-a142-4703-822c-d0654aa802d1",
       "sample_source": "data\\data\\senate\\2023\\filings\\filings_2023.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/c6ec8b51-a142-4703-822c-d0654aa802d1/print/",
+      "verification_status": null
+    },
+    {
+      "rank": 31,
+      "score": 14.452,
+      "agency_short": "dot",
+      "lobbyist_name": "EDWARD O'MALLEY",
+      "registrant_name": "DIRECT CHASSISLINK, INC.",
+      "covered_position": "Deputy Assistant Secretary & others, US Department of Transportation (2002-2007)",
+      "concentration": 1.0,
+      "agency_filings": 17,
+      "total_filings": 17,
+      "n_clients": 1,
+      "total_income": 0.0,
+      "first_year": 2022,
+      "last_year": 2026,
+      "top_clients_str": "DIRECT CHASSISLINK, INC.",
+      "sample_uuid": "ee0f28dc-9388-4a06-9e84-96d77d39616e",
+      "sample_source": "data\\data\\senate\\2026\\filings\\filings_2026.json",
+      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/ee0f28dc-9388-4a06-9e84-96d77d39616e/print/",
       "verification_status": null
     },
     {
@@ -5477,26 +6465,6 @@
     {
       "rank": 33,
       "score": 14.166,
-      "agency_short": "treasury",
-      "lobbyist_name": "JEB MASON",
-      "registrant_name": "MINDSET ADVOCACY, LLC",
-      "covered_position": "Deputy Assistant Secretary and Policy Advisory to the Secretary, Dept of Treasury",
-      "concentration": 1.0,
-      "agency_filings": 16,
-      "total_filings": 16,
-      "n_clients": 1,
-      "total_income": 960000.0,
-      "first_year": 2022,
-      "last_year": 2025,
-      "top_clients_str": "ARCH CAPITAL GROUP (U.S.) INC.",
-      "sample_uuid": "faf58e85-5be7-43f6-9872-a544f2976f03",
-      "sample_source": "data\\data\\senate\\2025\\filings\\filings_2025.json",
-      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/faf58e85-5be7-43f6-9872-a544f2976f03/print/",
-      "verification_status": null
-    },
-    {
-      "rank": 34,
-      "score": 14.166,
       "agency_short": "dod",
       "lobbyist_name": "MATTHEW HASKINS",
       "registrant_name": "ANDURIL INDUSTRIES, INC.",
@@ -5515,6 +6483,26 @@
       "verification_status": null
     },
     {
+      "rank": 34,
+      "score": 14.166,
+      "agency_short": "treasury",
+      "lobbyist_name": "JEB MASON",
+      "registrant_name": "MINDSET ADVOCACY, LLC",
+      "covered_position": "Deputy Assistant Secretary and Policy Advisory to the Secretary, Dept of Treasury",
+      "concentration": 1.0,
+      "agency_filings": 16,
+      "total_filings": 16,
+      "n_clients": 1,
+      "total_income": 960000.0,
+      "first_year": 2022,
+      "last_year": 2025,
+      "top_clients_str": "ARCH CAPITAL GROUP (U.S.) INC.",
+      "sample_uuid": "faf58e85-5be7-43f6-9872-a544f2976f03",
+      "sample_source": "data\\data\\senate\\2025\\filings\\filings_2025.json",
+      "senate_lda_url": "https://lda.senate.gov/filings/public/filing/faf58e85-5be7-43f6-9872-a544f2976f03/print/",
+      "verification_status": null
+    },
+    {
       "rank": 35,
       "score": 14.13,
       "agency_short": "ustr",
@@ -5528,11 +6516,81 @@
       "total_income": 7760000.0,
       "first_year": 2022,
       "last_year": 2025,
-      "top_clients_str": "VOLKSWAGEN GROUP OF AMERICA, INC. | EASTMAN CHEMICAL COMPANY | CENTRIENT PHARMACEUTICALS LLC | GILEAD SCIENCES INC | STANLEY BLACK & DECKER, INC.",
+      "top_clients_str": "VOLKSWAGEN GROUP OF AMERICA, INC. | EASTMAN CHEMICAL COMPANY | GILEAD SCIENCES INC | NIPPON STEEL CORPORATION | CENTRIENT PHARMACEUTICALS LLC",
       "sample_uuid": "cb502df2-12bb-43c0-a2f9-d1c5fb7241be",
       "sample_source": "data\\data\\senate\\2025\\filings\\filings_2025.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/cb502df2-12bb-43c0-a2f9-d1c5fb7241be/print/",
-      "verification_status": null
+      "verification_status": null,
+      "press_releases": {
+        "case_id": "auto-enrich-35",
+        "label": "Auto-enriched from scan top clients",
+        "generated_at": "2026-06-08T16:10:33.259081+00:00",
+        "n_clients_with_matches": 1,
+        "n_matches_total": 6,
+        "by_client": [
+          {
+            "client": "NIPPON STEEL CORPORATION",
+            "n_matches": 6,
+            "matches": [
+              {
+                "client": "NIPPON STEEL CORPORATION",
+                "date": "2024-05-10",
+                "member_name": "Josh Hawley",
+                "party": "Republican",
+                "state": "MO",
+                "chamber": "Senate",
+                "title": "Senators Hawley, Vance, and Rubio Urge Biden to Block U.S. Steel Sale to Foreign Company",
+                "url": "https://www.hawley.senate.gov/senators-hawley-vance-and-rubio-urge-biden-block-us-steel-sale-foreign-company/",
+                "snippet": "…e to express our frustration with your public statements regarding the sale of U.S. Steel Corporation (“U.S. Steel”) to **Nippon Steel Corporation** (“Nippon”). For weeks you have maintained that “it is vital for [U.S. Steel] to remain an American steel company that…"
+              },
+              {
+                "client": "NIPPON STEEL CORPORATION",
+                "date": "2023-12-22",
+                "member_name": "Tammy Duckworth",
+                "party": "Democrat",
+                "state": "IL",
+                "chamber": "Senate",
+                "title": "Duckworth, Durbin, Budzinski Demand Answers from Nippon Steel on Commitments to Granite City",
+                "url": "https://www.duckworth.senate.gov/news/press-releases/duckworth-durbin-budzinski-demand-answers-from-nippon-steel-on-commitments-to-granite-city",
+                "snippet": "…lawmakers. The full text of the letter can be found here and below: December 21, 2023 Mr. Eiji Hashimoto President **Nippon Steel Corporation** 6-1, Marunouchi 2-chome Chiyoda-ku, Tokyo, Japan We write today to express deep concerns with Nippon Steel’s plans t…"
+              },
+              {
+                "client": "NIPPON STEEL CORPORATION",
+                "date": "2023-12-20",
+                "member_name": "Josh Hawley",
+                "party": "Republican",
+                "state": "MO",
+                "chamber": "Senate",
+                "title": "Senators Hawley, Vance, Rubio Urge CFIUS to Block Sale of U.S. Steel & Protect America’s Industrial Base",
+                "url": "https://www.hawley.senate.gov/senators-hawley-vance-rubio-urge-cfius-block-sale-us-steel-protect-americas-industrial-base/",
+                "snippet": "…Committee on Foreign Investment in the United States (CFIUS), urging her to block the sale of U.S. Steel to Japan-based **Nippon Steel Corporation** (NSC). NSC announced plans to acquire U.S. Steel on Monday, a deal that raises national security concerns and threatens…"
+              },
+              {
+                "client": "NIPPON STEEL CORPORATION",
+                "date": "2023-12-19",
+                "member_name": "Summer L. Lee",
+                "party": "Democrat",
+                "state": "PA",
+                "chamber": "House",
+                "title": "Lee Calls for Labor, Community to be Centered in All Decisions – Joins in Demanding Answers from Nippon Steel on Commitments to Pennsylvania Workers",
+                "url": "https://summerlee.house.gov/newsroom/press-releases/lee-calls-for-labor-community-to-be-centered-in-all-decisions-joins-in-demanding-answers-from-nippon-steel-on-commitments-to-pennsylvania-workers",
+                "snippet": "…jobs in Pennsylvania. Full text of the letter below and the signed PDF can be found here. Eiji Hashimoto President **Nippon Steel Corporation** 2-6-1 Marunouchi, Chiyoda City Tokyo 100-8071, Japan Dear Mr. Hashimoto: We write today to express our deep concern…"
+              },
+              {
+                "client": "NIPPON STEEL CORPORATION",
+                "date": "2023-12-19",
+                "member_name": "Christopher R. Deluzio",
+                "party": "Democrat",
+                "state": "PA",
+                "chamber": "House",
+                "title": "Deluzio, Lee, Casey, Fetterman Demand Answers from Nippon Steel on Commitments to Pennsylvania",
+                "url": "https://deluzio.house.gov/media/press-releases/deluzio-lee-casey-fetterman-demand-answers-nippon-steel-commitments",
+                "snippet": "…the backbone of both.” Full text of the letter below and the signed PDF can be found here. Eiji Hashimoto President **Nippon Steel Corporation** 2-6-1 Marunouchi, Chiyoda City Tokyo 100-8071, Japan Dear Mr. Hashimoto: We write today to express our deep concern…"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "rank": 36,
@@ -5576,7 +6634,7 @@
       "press_releases": {
         "case_id": "auto-enrich-37",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.660693+00:00",
+        "generated_at": "2026-06-08T16:10:33.274615+00:00",
         "n_clients_with_matches": 1,
         "n_matches_total": 21,
         "by_client": [
@@ -5658,7 +6716,7 @@
       "total_income": 8580000.0,
       "first_year": 2022,
       "last_year": 2024,
-      "top_clients_str": "VIR BIOTECHNOLOGY, INC. | GLOBAL MEDICAL RESPONSE | TENNESSEE RURAL HEALTH IMPROVEMENT ASSOCIATION | ULTRAGENYX PHARMACEUTICAL | MOLINA HEALTHCARE, INC.",
+      "top_clients_str": "GLOBAL MEDICAL RESPONSE | VIR BIOTECHNOLOGY, INC. | TENNESSEE RURAL HEALTH IMPROVEMENT ASSOCIATION | ULTRAGENYX PHARMACEUTICAL | MOLINA HEALTHCARE, INC.",
       "sample_uuid": "f99d755c-b21a-442b-b173-cbba96b083dc",
       "sample_source": "data\\data\\senate\\2024\\filings\\filings_2024.json",
       "senate_lda_url": "https://lda.senate.gov/filings/public/filing/f99d755c-b21a-442b-b173-cbba96b083dc/print/",
@@ -5666,7 +6724,7 @@
       "press_releases": {
         "case_id": "auto-enrich-38",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.695177+00:00",
+        "generated_at": "2026-06-08T16:10:33.289847+00:00",
         "n_clients_with_matches": 1,
         "n_matches_total": 1,
         "by_client": [
@@ -5712,7 +6770,7 @@
       "press_releases": {
         "case_id": "auto-enrich-39",
         "label": "Auto-enriched from scan top clients",
-        "generated_at": "2026-06-07T03:10:52.716177+00:00",
+        "generated_at": "2026-06-08T16:10:33.303230+00:00",
         "n_clients_with_matches": 1,
         "n_matches_total": 6,
         "by_client": [
