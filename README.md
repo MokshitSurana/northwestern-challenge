@@ -14,14 +14,15 @@ A set of reusable Agent Skills for investigative journalism, plus the findings t
 
 The anchor finding: **The Artemis Group** — a lobbying firm founded by former NASA Administrator Jim Bridenstine that directs 39% of its filings at NASA, staffed by four former Bridenstine officials. The structural finding: a ranked list of comparable revolving-door patterns across 23 federal agencies.
 
-### 60-second tour
+### Demo
 
-<!-- Drop the recorded MP4 / GIF at docs/fairguard_60s.mp4 (or .gif) and the line below renders. -->
-<!-- Use the storyboard in docs/video_storyboard.md to capture the clips. -->
+A walkthrough of the reporter UI — landing, findings, money trails, the
+conflict-of-interest graph, and the request-for-comment tracker.
 
-![FairGuard 60-second tour](docs/fairguard_60s.gif)
+https://github.com/MokshitSurana/northwestern-challenge/raw/master/demo/FairGuard-demo.mp4
 
-If the GIF is missing, see [docs/video_storyboard.md](docs/video_storyboard.md) for the recording brief.
+If your client doesn't auto-play the embed, the file is at
+[`demo/FairGuard-demo.mp4`](demo/FairGuard-demo.mp4).
 
 ---
 
