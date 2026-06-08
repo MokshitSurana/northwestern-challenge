@@ -60,21 +60,31 @@ an official plausibly lobbied earlier, that is noted. Even so, in every case the
 departure pre-dates the observed lobbying by **more than two years** — clearing even the
 longest timed ban (§207(d)).
 
-| # | Official → Agency | Left agency (approx.) | §207 tier (timed) | Window expired | First lobbying observed (corpus) | Timed ban status |
-|---|-------------------|----------------------|-------------------|----------------|----------------------------------|------------------|
+| # | Official → Agency | Left agency | §207 tier (timed) | Window expired | First lobbying observed (corpus) | Timed ban status |
+|---|-------------------|-------------|-------------------|----------------|----------------------------------|------------------|
 | 1 | Benjamin Steinberg → DOE | ≤ ~2017 (Obama-era EPSA) † | senior — §207(c) 1yr | ≤ ~2018 | 2022-01 (Venn Strategies) | **Clear** |
 | 2 | Mark Limbaugh → Interior | 2007 | senior — §207(c) 1yr | 2008 | 2022-01 (Ferguson Group) | **Clear** |
 | 4 | Scott Parsons → CFTC | ~2005 † | senior — §207(c) 1yr | ~2006 | 2022-03 (Delta Strategy) | **Clear** |
-| 6 | Jim Newsome → CFTC | 2004 (Chairman 2001–04) | agency head — §207(c)/(d) | ≤ 2006 | 2022-04 (Delta Strategy) | **Clear** |
+| 6 | Jim Newsome → CFTC | **2004-07-23** (Chairman 2001 – Jul 2004; Commissioner Aug 1998 – Jul 2004) | agency head — §207(c)/(d) | ≤ Jul 2006 | 2022-04 (Delta Strategy) | **Clear** (18-yr gap) |
 | 7 | Michael Torrey → USDA | pre-2007 (founded firm 2007) † | senior — §207(c) 1yr | pre-2008 | 2022-07 (Torrey Advisory) | **Clear** |
 | 8 | Kenneth Barbic → USDA | ~Jan 2021 | senior — §207(c) 1yr (≤ §207(d) 2yr) | ≤ Jan 2023 | 2024-04 (Invariant LLC) | **Clear** (tightest case; 3+ yr gap) |
-| 9 | Roger Sherman → FCC | ~2015–16 † | senior — §207(c) 1yr | ~2016–17 | 2022-04 (Waneta Strategies) | **Clear** |
+| 9 | Roger Sherman → FCC | **Feb 2016** (Wireless Telecommunications Bureau Chief) | senior — §207(c) 1yr | Feb 2017 | 2022-04 (Waneta Strategies) | **Clear** (6-yr gap) |
 | 10 | Aurene Martin → Interior | ~2005 † | senior — §207(c) 1yr | ~2006 | 2022-04 (Spirit Rock Consulting) | **Clear** |
+| — | Ashlee Johnson → USDA | **on/before 2017-01** (Obama admin transition; subsequent Tyson + FMC roles before joining The Russell Group **2025-07**) | senior — §207(c) 1yr | ≤ Jan 2018 | 2024+ (The Russell Group) | **Clear** (7+ yr gap to first observed lobbying) |
+| — | Kevin Bailey → USDA | **on/before 2017-01** (Obama admin); intervening Senate Ag Committee staff for Ranking Member Stabenow through ~2019; **FGS Global from 2023-04** per LegiStorm | senior — §207(c) 1yr | ≤ Jan 2018 (executive); ≤ ~2020 (Senate cooling-off under §207(e)) | 2024-04 (FGS Global) | **Clear** (executive 7+ yr; Senate 4+ yr) |
 
-† **Departure date not yet independently pinned to the month** — confirm against the
-official record before print. In each flagged case the *latest plausible* departure still
-clears the timed window by a wide margin, so the conclusion is robust to the
-uncertainty; the exact date is a fact-checking nicety, not a load-bearing claim.
+**Departure-date pinning (Day 5 research pass, 2026-06-07).** Bold dates above are
+newly pinned this pass. Sources:
+- **Newsome** (Chairman 2001–2004): CFTC's "James E. Newsome Sworn In as CFTC Chairman" press release; Bloomberg / FIA "Newsome left his post on July 23 and became president of NYMEX on Aug. 2 in 2004." Day-level precision.
+- **Sherman** (FCC WTB Chief): Law360, "FCC's Top Wireless Chief To Step Down" — "Roger C. Sherman, chief of the FCC's Wireless Telecommunications Bureau, left at the end of February [2016]"; Jenner & Block press release announcing his June 7, 2017 hire (independent corroboration of departure year).
+- **Johnson**: Russell Group announcement (July 2025) confirms career timeline — joined Obama Admin 2011, USDA roles, then Tyson Foods + FMC Corporation, then Russell Group July 2025. USDA departure on or before Obama→Trump transition (January 2017).
+- **Bailey**: FGS Global bio + LegiStorm "FGS Global (April 2023–)" confirms April 2023 lobbying registration. Obama-administration USDA service ended ≤ January 2017; Senate Ag Committee staff for Ranking Member Stabenow through the 2018 Farm Bill cycle (≈ 2019). §207 status is governed by the most-recent federal role; the Senate cooling-off under §207(e) (one year for senior personal-office staff) had expired by 2020, well before 2024 first observed lobbying.
+
+† Remaining unpinned departures (Steinberg, Parsons, Torrey, Martin) all left **before
+2008**, so the timed §207 windows expired more than a decade before the lobbying we
+observe. The exact month is a fact-checker nicety, not a load-bearing claim — in every
+flagged case the *latest plausible* departure still clears the timed window by 5–17
+years.
 
 ### Case-by-case reading
 
