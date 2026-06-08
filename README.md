@@ -83,10 +83,14 @@ The anchor finding: **The Artemis Group** — a lobbying firm founded by former 
 │   ├── _archive/                         #   superseded scripts (see _archive/README.md)
 │   └── _diagnose_*.py                    #   one-shot data-quality probes
 │
-├── tests/                                 # ── pytest suite (174 tests)
+├── tests/                                 # ── pytest suite (261 tests)
 │   ├── test_agency_registry.py           #   scan registry + regex coverage (111 tests)
 │   ├── test_entity_resolver.py           #   resolver unit + F1 eval (33 tests)
-│   └── test_pressrel.py                  #   pressrel regex + snippet + DB integration (30 tests)
+│   ├── test_pressrel.py                  #   pressrel regex + snippet + DB integration (30 tests)
+│   ├── test_coi_graph.py                 #   coi canonicalization + patterns + renderers (26 tests)
+│   ├── test_comment_tracker.py           #   comment-tracker schema + status + CLI (25 tests)
+│   ├── test_archive_cite.py              #   archive URL collection + registry (14 tests)
+│   └── test_ap_style_lint.py             #   AP-style rules + false-positive controls (22 tests)
 │
 ├── notebooks/                             # ── Exploratory notebooks (verification runs)
 │   ├── 04_revolving_door_leads.ipynb
@@ -190,13 +194,17 @@ uv run scripts/03_agency_concentration.py
 uv run scripts/03_agency_concentration.py --agency nasa
 ```
 
-### 7. Run the test suite (174 tests)
+### 7. Run the test suite (261 tests)
 
 ```bash
 uv run pytest
 uv run pytest tests/test_agency_registry.py -v    # scan regex coverage
 uv run pytest tests/test_entity_resolver.py -v    # resolver F1 eval
 uv run pytest tests/test_pressrel.py -v           # pressrel regex + DB integration
+uv run pytest tests/test_coi_graph.py -v          # coi canonicalization + patterns
+uv run pytest tests/test_comment_tracker.py -v    # comment-tracker schema + status
+uv run pytest tests/test_archive_cite.py -v       # archive URL collection + registry
+uv run pytest tests/test_ap_style_lint.py -v      # AP-style rules
 ```
 
 ### 8. Start the reporter verification UI (optional)
