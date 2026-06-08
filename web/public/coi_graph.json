@@ -1,33 +1,25 @@
 {
-  "generated_at": "2026-06-07T03:34:49.382614+00:00",
+  "generated_at": "2026-06-08T16:11:10.177622+00:00",
   "n_findings_included": 10,
   "stats": {
-    "n_nodes": 127,
-    "n_edges": 140,
+    "n_nodes": 174,
+    "n_edges": 198,
     "nodes_by_type": {
       "lobbyist": 10,
       "firm": 9,
       "agency": 5,
-      "client": 61,
-      "legislator": 42
+      "client": 83,
+      "legislator": 67
     },
     "edges_by_type": {
       "works_at": 10,
       "former_official_of": 10,
       "lobbies_for": 48,
-      "funded_by": 21,
-      "mentions": 51
+      "funded_by": 40,
+      "mentions": 90
     }
   },
   "bridges": [
-    {
-      "client": "DIGITAL CHAMBER OF COMMERCE",
-      "n_lobbyists": 2,
-      "lobbyists": [
-        "SCOTT PARSONS",
-        "JIM NEWSOME"
-      ]
-    },
     {
       "client": "CITADEL INVESTMENT GROUP",
       "n_lobbyists": 2,
@@ -37,7 +29,7 @@
       ]
     },
     {
-      "client": "AMERICAN COTTON SHIPPERS ASSOCIATION",
+      "client": "DIGITAL CHAMBER OF COMMERCE",
       "n_lobbyists": 2,
       "lobbyists": [
         "SCOTT PARSONS",
@@ -46,6 +38,14 @@
     },
     {
       "client": "FIA / PTG",
+      "n_lobbyists": 2,
+      "lobbyists": [
+        "SCOTT PARSONS",
+        "JIM NEWSOME"
+      ]
+    },
+    {
+      "client": "AMERICAN COTTON SHIPPERS ASSOCIATION",
       "n_lobbyists": 2,
       "lobbyists": [
         "SCOTT PARSONS",
@@ -69,7 +69,7 @@
       "lobbyists": [
         "ASHLEE JOHNSON"
       ],
-      "n_mentions": 1,
+      "n_mentions": 4,
       "agency_to_client_dollars": 704852207.5899999
     },
     {
@@ -79,7 +79,7 @@
       "lobbyists": [
         "ASHLEE JOHNSON"
       ],
-      "n_mentions": 1,
+      "n_mentions": 4,
       "agency_to_client_dollars": 704852207.5899999
     },
     {
@@ -89,7 +89,7 @@
       "lobbyists": [
         "ASHLEE JOHNSON"
       ],
-      "n_mentions": 1,
+      "n_mentions": 4,
       "agency_to_client_dollars": 704852207.5899999
     },
     {
@@ -99,7 +99,7 @@
       "lobbyists": [
         "ASHLEE JOHNSON"
       ],
-      "n_mentions": 1,
+      "n_mentions": 4,
       "agency_to_client_dollars": 704852207.5899999
     },
     {
@@ -109,119 +109,250 @@
       "lobbyists": [
         "ASHLEE JOHNSON"
       ],
-      "n_mentions": 1,
+      "n_mentions": 4,
       "agency_to_client_dollars": 704852207.5899999
     },
     {
-      "legislator": "Kevin Cramer (R-ND-S)",
-      "client": "TALON NICKEL (USA) LLC",
+      "legislator": "Pete Stauber (R-MN-H)",
+      "client": "Talon Nickel",
+      "agency": "ENERGY",
+      "lobbyists": [
+        "BENJAMIN STEINBERG"
+      ],
+      "n_mentions": 2,
+      "agency_to_client_dollars": 114846344.0
+    },
+    {
+      "legislator": "Julie Fedorchak (R-ND-H)",
+      "client": "Talon Nickel",
       "agency": "ENERGY",
       "lobbyists": [
         "BENJAMIN STEINBERG"
       ],
       "n_mentions": 1,
       "agency_to_client_dollars": 114846344.0
+    },
+    {
+      "legislator": "John Hoeven (R-ND-S)",
+      "client": "Talon Nickel",
+      "agency": "ENERGY",
+      "lobbyists": [
+        "BENJAMIN STEINBERG"
+      ],
+      "n_mentions": 1,
+      "agency_to_client_dollars": 114846344.0
+    },
+    {
+      "legislator": "Kevin Cramer (R-ND-S)",
+      "client": "Talon Nickel",
+      "agency": "ENERGY",
+      "lobbyists": [
+        "BENJAMIN STEINBERG"
+      ],
+      "n_mentions": 1,
+      "agency_to_client_dollars": 114846344.0
+    },
+    {
+      "legislator": "Adam Gray (D-CA-H)",
+      "client": "Turlock Irrigation District",
+      "agency": "INTERIOR",
+      "lobbyists": [
+        "MARK LIMBAUGH"
+      ],
+      "n_mentions": 1,
+      "agency_to_client_dollars": 12057752.5
+    },
+    {
+      "legislator": "Josh Harder (D-CA-H)",
+      "client": "Turlock Irrigation District",
+      "agency": "INTERIOR",
+      "lobbyists": [
+        "MARK LIMBAUGH"
+      ],
+      "n_mentions": 1,
+      "agency_to_client_dollars": 12057752.5
     }
   ],
   "hubs": [
     {
       "client": "Cargill",
       "dollars": 704852207.5899999,
-      "n_mentions": 5,
+      "n_mentions": 20,
       "agencies": [
         "USDA"
       ],
-      "score": 44.24
-    },
-    {
-      "client": "Land O'Lakes",
-      "dollars": 104471391.41000003,
-      "n_mentions": 5,
-      "agencies": [
-        "USDA"
-      ],
-      "score": 40.09
-    },
-    {
-      "client": "Global Clean Energy",
-      "dollars": 32260500.0,
-      "n_mentions": 5,
-      "agencies": [
-        "USDA"
-      ],
-      "score": 37.54
-    },
-    {
-      "client": "National Rural Water Assn",
-      "dollars": 271949425.34999996,
-      "n_mentions": 4,
-      "agencies": [
-        "USDA"
-      ],
-      "score": 33.74
+      "score": 176.96
     },
     {
       "client": "Tri-State Generation",
       "dollars": 148344449.0,
-      "n_mentions": 3,
+      "n_mentions": 20,
       "agencies": [
         "USDA"
       ],
-      "score": 24.51
+      "score": 163.43
+    },
+    {
+      "client": "Land O'Lakes",
+      "dollars": 104471391.41000003,
+      "n_mentions": 20,
+      "agencies": [
+        "USDA"
+      ],
+      "score": 160.38
+    },
+    {
+      "client": "Global Clean Energy",
+      "dollars": 32260500.0,
+      "n_mentions": 20,
+      "agencies": [
+        "USDA"
+      ],
+      "score": 150.17
     },
     {
       "client": "Louis Dreyfus",
       "dollars": 21812751.630000003,
-      "n_mentions": 3,
+      "n_mentions": 20,
       "agencies": [
         "USDA"
       ],
-      "score": 22.02
+      "score": 146.77
     },
     {
-      "client": "Ardent Mills",
-      "dollars": 16927765.030000005,
-      "n_mentions": 2,
+      "client": "National Rural Water Assn",
+      "dollars": 271949425.34999996,
+      "n_mentions": 16,
       "agencies": [
         "USDA"
       ],
-      "score": 14.46
+      "score": 134.95
     },
     {
       "client": "Illinois Soybean Board",
       "dollars": 2157000.0,
-      "n_mentions": 2,
+      "n_mentions": 20,
       "agencies": [
         "USDA"
       ],
-      "score": 12.67
+      "score": 126.68
     },
     {
-      "client": "TALON NICKEL (USA) LLC",
+      "client": "Ardent Mills",
+      "dollars": 16927765.030000005,
+      "n_mentions": 8,
+      "agencies": [
+        "USDA"
+      ],
+      "score": 57.83
+    },
+    {
+      "client": "Talon Nickel",
       "dollars": 114846344.0,
-      "n_mentions": 1,
+      "n_mentions": 5,
       "agencies": [
         "ENERGY"
       ],
-      "score": 8.06
+      "score": 40.3
+    },
+    {
+      "client": "Sites Project Authority",
+      "dollars": 43454921.99,
+      "n_mentions": 5,
+      "agencies": [
+        "INTERIOR"
+      ],
+      "score": 38.19
+    },
+    {
+      "client": "Friant Water Authority",
+      "dollars": 20513435.990000002,
+      "n_mentions": 5,
+      "agencies": [
+        "INTERIOR"
+      ],
+      "score": 36.56
+    },
+    {
+      "client": "The Freshwater Trust",
+      "dollars": 9361047.950000001,
+      "n_mentions": 5,
+      "agencies": [
+        "INTERIOR"
+      ],
+      "score": 34.86
+    },
+    {
+      "client": "Klamath Water Users",
+      "dollars": 2133007.0,
+      "n_mentions": 5,
+      "agencies": [
+        "INTERIOR"
+      ],
+      "score": 31.64
     },
     {
       "client": "California Prune Board",
       "dollars": 9200000.0,
-      "n_mentions": 1,
+      "n_mentions": 4,
       "agencies": [
         "USDA"
       ],
-      "score": 6.96
+      "score": 27.86
+    },
+    {
+      "client": "Anovion",
+      "dollars": 117000000.0,
+      "n_mentions": 3,
+      "agencies": [
+        "ENERGY"
+      ],
+      "score": 24.2
     },
     {
       "client": "California Rice Commission",
       "dollars": 685000.0,
-      "n_mentions": 1,
+      "n_mentions": 4,
       "agencies": [
         "USDA"
       ],
-      "score": 5.84
+      "score": 23.34
+    },
+    {
+      "client": "Yakima Basin",
+      "dollars": 515000.0,
+      "n_mentions": 4,
+      "agencies": [
+        "INTERIOR"
+      ],
+      "score": 22.85
+    },
+    {
+      "client": "Cabot Corporation",
+      "dollars": 57336573.23,
+      "n_mentions": 2,
+      "agencies": [
+        "ENERGY"
+      ],
+      "score": 15.52
+    },
+    {
+      "client": "Turlock Irrigation District",
+      "dollars": 12057752.5,
+      "n_mentions": 2,
+      "agencies": [
+        "INTERIOR"
+      ],
+      "score": 14.16
+    },
+    {
+      "client": "Forge Battery",
+      "dollars": 100000000.0,
+      "n_mentions": 1,
+      "agencies": [
+        "ENERGY"
+      ],
+      "score": 8.0
     }
   ],
   "legend": [
@@ -251,8 +382,8 @@
       "id": "lobbyist:BENJAMIN STEINBERG",
       "label": "BENJAMIN STEINBERG",
       "type": "lobbyist",
-      "x": -318.1035291167802,
-      "y": 119.51668370192654,
+      "x": -129.67768443068022,
+      "y": 229.6316920855535,
       "color": "#4f46e5",
       "radius": 14,
       "rank": 1,
@@ -267,8 +398,8 @@
       "id": "firm:VENN STRATEGIES",
       "label": "VENN STRATEGIES",
       "type": "firm",
-      "x": -439.59732484393004,
-      "y": 246.7559269098685,
+      "x": -143.12887536287417,
+      "y": 357.03709631825154,
       "color": "#0f172a",
       "radius": 10,
       "rank": null,
@@ -283,42 +414,10 @@
       "id": "agency:ENERGY",
       "label": "ENERGY",
       "type": "agency",
-      "x": -72.70163929223635,
-      "y": -116.05704362863645,
+      "x": -50.58521732471272,
+      "y": -41.46315731669089,
       "color": "#dc2626",
       "radius": 16,
-      "rank": null,
-      "score": null,
-      "concentration": null,
-      "prior_role": null,
-      "party": null,
-      "state": null,
-      "chamber": null
-    },
-    {
-      "id": "client:AMSTED INDUSTRIES",
-      "label": "AMSTED INDUSTRIES",
-      "type": "client",
-      "x": -476.22428183776157,
-      "y": 172.40932712151607,
-      "color": "#059669",
-      "radius": 8,
-      "rank": null,
-      "score": null,
-      "concentration": null,
-      "prior_role": null,
-      "party": null,
-      "state": null,
-      "chamber": null
-    },
-    {
-      "id": "client:TALON NICKEL",
-      "label": "TALON NICKEL (USA) LLC",
-      "type": "client",
-      "x": -71.44183284525418,
-      "y": -113.88130093981319,
-      "color": "#059669",
-      "radius": 8,
       "rank": null,
       "score": null,
       "concentration": null,
@@ -331,8 +430,8 @@
       "id": "client:BURNS MCDONNELL ENGINEERING",
       "label": "BURNS & MCDONNELL ENGINEERING COMPANY INC",
       "type": "client",
-      "x": -469.8385233056398,
-      "y": 216.43610202716212,
+      "x": -197.10316095194182,
+      "y": 344.27528180908456,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -345,10 +444,10 @@
     },
     {
       "id": "client:WABTEC",
-      "label": "WABTEC CORPORATION",
+      "label": "Wabtec",
       "type": "client",
-      "x": -319.87670917004795,
-      "y": 402.0825245767478,
+      "x": -163.55193343848202,
+      "y": 485.27226178710964,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -363,8 +462,40 @@
       "id": "client:BATTERY MATERIALS TECHNOLOGY",
       "label": "BATTERY MATERIALS AND TECHNOLOGY COALITION",
       "type": "client",
-      "x": -554.4548540742301,
-      "y": 165.22490829943837,
+      "x": -172.00499592021433,
+      "y": 354.9619557728325,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:TALON NICKEL",
+      "label": "Talon Nickel",
+      "type": "client",
+      "x": -49.10315827584927,
+      "y": -40.15536660372794,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:AMSTED INDUSTRIES",
+      "label": "AMSTED INDUSTRIES",
+      "type": "client",
+      "x": -220.1257316570408,
+      "y": 327.374190942825,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -379,8 +510,8 @@
       "id": "client:CIRBA SOLUTIONS",
       "label": "Cirba Solutions",
       "type": "client",
-      "x": -72.3677541841147,
-      "y": -113.78822076906826,
+      "x": -50.037973357888895,
+      "y": -41.27600946291955,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -395,8 +526,8 @@
       "id": "client:ENERSYS",
       "label": "EnerSys",
       "type": "client",
-      "x": -71.4703452962702,
-      "y": -114.25672724389912,
+      "x": -48.65567608471667,
+      "y": -41.63158294914107,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -411,8 +542,8 @@
       "id": "client:SOUTH32 HERMOSA",
       "label": "South32 Hermosa",
       "type": "client",
-      "x": -72.14307844952157,
-      "y": -113.79438317835552,
+      "x": -49.909287448282996,
+      "y": -41.23562777142541,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -427,8 +558,8 @@
       "id": "client:SILA NANOTECHNOLOGIES",
       "label": "Sila Nanotechnologies",
       "type": "client",
-      "x": -72.56853849035753,
-      "y": -115.03758617705365,
+      "x": -51.31835204328469,
+      "y": -41.05490768898673,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -443,8 +574,8 @@
       "id": "client:ANOVION",
       "label": "Anovion",
       "type": "client",
-      "x": -71.31378981285373,
-      "y": -115.77458370214136,
+      "x": -51.04911878709603,
+      "y": -41.2973724978108,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -459,8 +590,8 @@
       "id": "client:FORGE BATTERY",
       "label": "Forge Battery",
       "type": "client",
-      "x": -71.65560061103852,
-      "y": -114.13120129887128,
+      "x": -49.98462048604648,
+      "y": -41.86706853082154,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -473,10 +604,10 @@
     },
     {
       "id": "client:CABOT",
-      "label": "Cabot Corp",
+      "label": "Cabot Corporation",
       "type": "client",
-      "x": -72.81579823618898,
-      "y": -115.92776921578691,
+      "x": -50.041587297935045,
+      "y": -41.88823075217083,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -491,8 +622,8 @@
       "id": "client:NANORAMIC",
       "label": "Nanoramic",
       "type": "client",
-      "x": -71.43643973077299,
-      "y": -114.54608349790905,
+      "x": -48.795755564258585,
+      "y": -40.598789149000616,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -504,11 +635,107 @@
       "chamber": null
     },
     {
+      "id": "client:CRITICAL MINERALS",
+      "label": "Critical minerals (thematic)",
+      "type": "client",
+      "x": -330.18365831428514,
+      "y": 232.6608708591939,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "legislator:Joaquin Castro (D-TX-H)",
+      "label": "Joaquin Castro (D-TX-H)",
+      "type": "legislator",
+      "x": -406.0221477525551,
+      "y": 341.94131658517637,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "TX",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:Jared Huffman (D-CA-H)",
+      "label": "Jared Huffman (D-CA-H)",
+      "type": "legislator",
+      "x": -108.57425709863041,
+      "y": 45.02702190271354,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "CA",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:Aumua Amata Coleman Radewagen (R-AS-H)",
+      "label": "Aumua Amata Coleman Radewagen (R-AS-H)",
+      "type": "legislator",
+      "x": -422.0153665250352,
+      "y": 318.9774362712581,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Republican",
+      "state": "AS",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:Steve Daines (R-MT-S)",
+      "label": "Steve Daines (R-MT-S)",
+      "type": "legislator",
+      "x": -452.2206925111159,
+      "y": 278.38539575622843,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Republican",
+      "state": "MT",
+      "chamber": "Senate"
+    },
+    {
+      "id": "legislator:Pete Ricketts (R-NE-S)",
+      "label": "Pete Ricketts (R-NE-S)",
+      "type": "legislator",
+      "x": -446.17690160452315,
+      "y": 308.16429170279235,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Republican",
+      "state": "NE",
+      "chamber": "Senate"
+    },
+    {
       "id": "legislator:Mike Kelly (R-PA-H)",
       "label": "Mike Kelly (R-PA-H)",
       "type": "legislator",
-      "x": -321.0614955450285,
-      "y": 571.7456178721342,
+      "x": -218.97985340021205,
+      "y": 597.8838388006849,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -520,11 +747,27 @@
       "chamber": "House"
     },
     {
-      "id": "legislator:Christopher R. Deluzio (D-PA-H)",
-      "label": "Christopher R. Deluzio (D-PA-H)",
+      "id": "legislator:John Fetterman (D-PA-S)",
+      "label": "John Fetterman (D-PA-S)",
       "type": "legislator",
-      "x": -234.6393696658654,
-      "y": 560.3334079414716,
+      "x": -189.81306384292898,
+      "y": 561.2291591554317,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "PA",
+      "chamber": "Senate"
+    },
+    {
+      "id": "legislator:Summer L. Lee (D-PA-H)",
+      "label": "Summer L. Lee (D-PA-H)",
+      "type": "legislator",
+      "x": -107.04234314576121,
+      "y": 584.1210257649282,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -536,11 +779,11 @@
       "chamber": "House"
     },
     {
-      "id": "legislator:Paul Tonko (D-NY-H)",
-      "label": "Paul Tonko (D-NY-H)",
+      "id": "legislator:Christopher R. Deluzio (D-PA-H)",
+      "label": "Christopher R. Deluzio (D-PA-H)",
       "type": "legislator",
-      "x": -716.8546713347722,
-      "y": 176.0956419922677,
+      "x": -180.07373219329529,
+      "y": 609.2981726403511,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -548,15 +791,47 @@
       "concentration": null,
       "prior_role": null,
       "party": "Democrat",
-      "state": "NY",
+      "state": "PA",
       "chamber": "House"
     },
     {
-      "id": "legislator:Kevin Cramer (R-ND-S)",
-      "label": "Kevin Cramer (R-ND-S)",
+      "id": "legislator:Julie Fedorchak (R-ND-H)",
+      "label": "Julie Fedorchak (R-ND-H)",
       "type": "legislator",
-      "x": -73.27862338885524,
-      "y": -356.5900459604151,
+      "x": -81.45855621978967,
+      "y": -194.33380525441683,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Republican",
+      "state": "ND",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:Pete Stauber (R-MN-H)",
+      "label": "Pete Stauber (R-MN-H)",
+      "type": "legislator",
+      "x": -67.31541595502944,
+      "y": -152.44661787308993,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Republican",
+      "state": "MN",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:John Hoeven (R-ND-S)",
+      "label": "John Hoeven (R-ND-S)",
+      "type": "legislator",
+      "x": -174.04567013890116,
+      "y": -153.82260892337484,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -568,11 +843,187 @@
       "chamber": "Senate"
     },
     {
+      "id": "legislator:Kevin Cramer (R-ND-S)",
+      "label": "Kevin Cramer (R-ND-S)",
+      "type": "legislator",
+      "x": -154.80278211149863,
+      "y": -148.31409037905166,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Republican",
+      "state": "ND",
+      "chamber": "Senate"
+    },
+    {
+      "id": "client:BURNS MCDONNELL",
+      "label": "Burns & McDonnell",
+      "type": "client",
+      "x": 156.81052234124581,
+      "y": 221.92256418231852,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "legislator:Jerry Moran (R-KS-S)",
+      "label": "Jerry Moran (R-KS-S)",
+      "type": "legislator",
+      "x": 111.85901539413614,
+      "y": 150.5286304720687,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Republican",
+      "state": "KS",
+      "chamber": "Senate"
+    },
+    {
+      "id": "legislator:Haley M. Stevens (D-MI-H)",
+      "label": "Haley M. Stevens (D-MI-H)",
+      "type": "legislator",
+      "x": -202.88566605863224,
+      "y": -234.09179393817888,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "MI",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:Sanford D. Bishop, Jr. (D-GA-H)",
+      "label": "Sanford D. Bishop, Jr. (D-GA-H)",
+      "type": "legislator",
+      "x": -211.6755777742026,
+      "y": -102.36457296987356,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "GA",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:Charles E. Schumer (D-NY-S)",
+      "label": "Charles E. Schumer (D-NY-S)",
+      "type": "legislator",
+      "x": -216.30848162556316,
+      "y": -71.03741146169396,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "NY",
+      "chamber": "Senate"
+    },
+    {
+      "id": "legislator:Gary C. Peters (D-MI-S)",
+      "label": "Gary C. Peters (D-MI-S)",
+      "type": "legislator",
+      "x": -128.77909042465598,
+      "y": -184.9930813295648,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "MI",
+      "chamber": "Senate"
+    },
+    {
+      "id": "legislator:Lori Trahan (D-MA-H)",
+      "label": "Lori Trahan (D-MA-H)",
+      "type": "legislator",
+      "x": -195.4501080097261,
+      "y": -132.28713813100177,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "MA",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:Deborah K. Ross (D-NC-H)",
+      "label": "Deborah K. Ross (D-NC-H)",
+      "type": "legislator",
+      "x": -217.27413345796447,
+      "y": -38.752430248359026,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "NC",
+      "chamber": "House"
+    },
+    {
+      "id": "client:BATTERY MATERIALS TECH",
+      "label": "Battery Materials & Tech Coalition",
+      "type": "client",
+      "x": 210.88140348969304,
+      "y": -1000.0,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "legislator:Paul Tonko (D-NY-H)",
+      "label": "Paul Tonko (D-NY-H)",
+      "type": "legislator",
+      "x": 187.17250794895372,
+      "y": -960.9157929333389,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "NY",
+      "chamber": "House"
+    },
+    {
       "id": "lobbyist:MARK LIMBAUGH",
       "label": "MARK LIMBAUGH",
       "type": "lobbyist",
-      "x": -15.328002026269376,
-      "y": 406.3152786553731,
+      "x": 158.83404908478434,
+      "y": -73.47295530791138,
       "color": "#4f46e5",
       "radius": 14,
       "rank": 2,
@@ -587,8 +1038,8 @@
       "id": "firm:THE FERGUSON GROUP, LLC",
       "label": "THE FERGUSON GROUP, LLC",
       "type": "firm",
-      "x": -89.03886313037161,
-      "y": 543.7888494070193,
+      "x": 273.92823119546546,
+      "y": -152.91701473123402,
       "color": "#0f172a",
       "radius": 10,
       "rank": null,
@@ -603,8 +1054,8 @@
       "id": "agency:INTERIOR",
       "label": "INTERIOR",
       "type": "agency",
-      "x": 146.98719017429508,
-      "y": -59.11080379548533,
+      "x": -31.784699516865132,
+      "y": -4.591331207606818,
       "color": "#dc2626",
       "radius": 16,
       "rank": null,
@@ -617,10 +1068,10 @@
     },
     {
       "id": "client:SUTTER MUTUAL WATER",
-      "label": "SUTTER MUTUAL WATER COMPANY AND RECLAMATION DISTRICT 1500",
+      "label": "Sutter Mutual Water Company",
       "type": "client",
-      "x": -31.302935972965443,
-      "y": 564.7467241433778,
+      "x": -31.284906832505442,
+      "y": -4.703304212261558,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -635,8 +1086,8 @@
       "id": "client:GLENN-COLUSA IRRIGATION DISTRICT-CA",
       "label": "GLENN-COLUSA IRRIGATION DISTRICT-CA",
       "type": "client",
-      "x": -178.54427342524855,
-      "y": 484.3578636074123,
+      "x": 302.32675294229995,
+      "y": -100.7785626355359,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -649,10 +1100,10 @@
     },
     {
       "id": "client:TURLOCK IRRIGATION DISTRICT",
-      "label": "TURLOCK IRRIGATION DISTRICT",
+      "label": "Turlock Irrigation District",
       "type": "client",
-      "x": 114.31839550760675,
-      "y": 383.3629488488662,
+      "x": -33.35494252939113,
+      "y": -3.8234129969411565,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -667,8 +1118,8 @@
       "id": "client:IDAHO WATER RESOURCE",
       "label": "IDAHO WATER RESOURCE BOARD",
       "type": "client",
-      "x": 42.859133804720976,
-      "y": 592.7639465242476,
+      "x": 303.1845697394535,
+      "y": -71.20232518221346,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -680,11 +1131,11 @@
       "chamber": null
     },
     {
-      "id": "client:YAKIMA BASIN JOINT",
-      "label": "YAKIMA BASIN JOINT BOARD",
+      "id": "client:MARICOPA STANFIELD IRRIGATION",
+      "label": "MARICOPA STANFIELD IRRIGATION & DRAINAGE DISTRICT",
       "type": "client",
-      "x": -155.61401621122403,
-      "y": 608.4372304182656,
+      "x": 290.6679554458878,
+      "y": -127.05450217814155,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -696,59 +1147,347 @@
       "chamber": null
     },
     {
-      "id": "legislator:Adam Gray (D-CA-H)",
-      "label": "Adam Gray (D-CA-H)",
+      "id": "client:SITES PROJECT AUTHORITY",
+      "label": "Sites Project Authority",
+      "type": "client",
+      "x": -33.62375691977967,
+      "y": -5.324246792260486,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:GLENN-COLUSA IRRIGATION DISTRICT",
+      "label": "Glenn-Colusa Irrigation District",
+      "type": "client",
+      "x": -33.91218186975677,
+      "y": -4.565907771754383,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:FRIANT WATER AUTHORITY",
+      "label": "Friant Water Authority",
+      "type": "client",
+      "x": -33.01268386755501,
+      "y": -4.717389828437264,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:RECLAMATION DISTRICT 108",
+      "label": "Reclamation District 108",
+      "type": "client",
+      "x": -31.63062932938579,
+      "y": -4.391309666761674,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:FRESHWATER TRUST",
+      "label": "The Freshwater Trust",
+      "type": "client",
+      "x": -32.34967176025596,
+      "y": -4.170781155616927,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:NORTH UNIT IRRIGATION",
+      "label": "North Unit Irrigation District",
+      "type": "client",
+      "x": -33.355766990930775,
+      "y": -3.8244833813388217,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:WESTERN MUNICIPAL WATER",
+      "label": "Western Municipal Water District",
+      "type": "client",
+      "x": -32.23392625070977,
+      "y": -4.720245826332949,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:EL DORADO COUNTY",
+      "label": "El Dorado County Water Agency",
+      "type": "client",
+      "x": -33.31072513574839,
+      "y": -3.911766980954668,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:CITY WOODLAND CA",
+      "label": "City of Woodland, CA",
+      "type": "client",
+      "x": -32.162794450727326,
+      "y": -4.717453981460028,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:MERCED IRRIGATION DISTRICT",
+      "label": "Merced Irrigation District",
+      "type": "client",
+      "x": -31.93111615177146,
+      "y": -4.704798968942438,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:KLAMATH WATER USERS",
+      "label": "Klamath Water Users",
+      "type": "client",
+      "x": -32.733488308750175,
+      "y": -4.726201022403212,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:MARICOPA-STANFIELD IRR DRAINAGE",
+      "label": "Maricopa-Stanfield Irr. & Drainage",
+      "type": "client",
+      "x": -31.72322959375093,
+      "y": -3.8496560402167437,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:SOLANO IRRIGATION DISTRICT",
+      "label": "Solano Irrigation District",
+      "type": "client",
+      "x": -32.4193656315346,
+      "y": -4.718177949631261,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:CITY FOLSOM CA",
+      "label": "City of Folsom, CA",
+      "type": "client",
+      "x": -33.37737847965824,
+      "y": -4.040180402624854,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:YAKIMA BASIN",
+      "label": "Yakima Basin",
+      "type": "client",
+      "x": -32.59818958775098,
+      "y": -4.693394513726003,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:SAN JUAN WATER",
+      "label": "San Juan Water District",
+      "type": "client",
+      "x": -33.169222871079306,
+      "y": -4.637776356379767,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:CENTRAL ARIZONA IRR",
+      "label": "Central Arizona Irr. & Drainage",
+      "type": "client",
+      "x": -33.036936110814636,
+      "y": -4.494376181241692,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:BUREAU RECLAMATION",
+      "label": "Bureau of Reclamation (thematic)",
+      "type": "client",
+      "x": -178.802862317853,
+      "y": -94.27760034675754,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "legislator:Roger Marshall (R-KS-S)",
+      "label": "Roger Marshall (R-KS-S)",
       "type": "legislator",
-      "x": 229.797374702281,
-      "y": 335.573215114129,
+      "x": -314.0073838110833,
+      "y": -162.00530656727133,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
       "score": null,
       "concentration": null,
       "prior_role": null,
-      "party": "Democrat",
-      "state": "CA",
+      "party": "Republican",
+      "state": "KS",
+      "chamber": "Senate"
+    },
+    {
+      "id": "legislator:Juan Ciscomani (R-AZ-H)",
+      "label": "Juan Ciscomani (R-AZ-H)",
+      "type": "legislator",
+      "x": -177.5818122592148,
+      "y": -57.432383637263314,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Republican",
+      "state": "AZ",
       "chamber": "House"
     },
     {
-      "id": "legislator:Josh Harder (D-CA-H)",
-      "label": "Josh Harder (D-CA-H)",
+      "id": "legislator:Adrian Smith (R-NE-H)",
+      "label": "Adrian Smith (R-NE-H)",
       "type": "legislator",
-      "x": 46.427280293882546,
-      "y": 246.07774785091615,
+      "x": -8.824042492243692,
+      "y": -83.75451020161373,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
       "score": null,
       "concentration": null,
       "prior_role": null,
-      "party": "Democrat",
-      "state": "CA",
-      "chamber": "House"
-    },
-    {
-      "id": "legislator:Kim Schrier (D-WA-H)",
-      "label": "Kim Schrier (D-WA-H)",
-      "type": "legislator",
-      "x": -241.57924512341066,
-      "y": 754.1963638589325,
-      "color": "#d97706",
-      "radius": 6,
-      "rank": null,
-      "score": null,
-      "concentration": null,
-      "prior_role": null,
-      "party": "Democrat",
-      "state": "WA",
+      "party": "Republican",
+      "state": "NE",
       "chamber": "House"
     },
     {
       "id": "legislator:David G. Valadao (R-CA-H)",
       "label": "David G. Valadao (R-CA-H)",
       "type": "legislator",
-      "x": 93.1063911752735,
-      "y": 692.0479225888646,
+      "x": -146.16450684880374,
+      "y": 105.32191021544,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -760,11 +1499,219 @@
       "chamber": "House"
     },
     {
+      "id": "legislator:Jim Costa (D-CA-H)",
+      "label": "Jim Costa (D-CA-H)",
+      "type": "legislator",
+      "x": -116.52572691685968,
+      "y": 15.86830249654463,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "CA",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:Adam Gray (D-CA-H)",
+      "label": "Adam Gray (D-CA-H)",
+      "type": "legislator",
+      "x": -88.19864119165372,
+      "y": 76.96912425124782,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "CA",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:Vince Fong (R-CA-H)",
+      "label": "Vince Fong (R-CA-H)",
+      "type": "legislator",
+      "x": -135.39400191032803,
+      "y": 58.170594079493945,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Republican",
+      "state": "CA",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:Mike Thompson (D-CA-H)",
+      "label": "Mike Thompson (D-CA-H)",
+      "type": "legislator",
+      "x": 44.19544665452333,
+      "y": 75.55915645818521,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "CA",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:Ron Wyden (D-OR-S)",
+      "label": "Ron Wyden (D-OR-S)",
+      "type": "legislator",
+      "x": -104.21237721708142,
+      "y": -53.37072793443093,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "OR",
+      "chamber": "Senate"
+    },
+    {
+      "id": "legislator:Cliff Bentz (R-OR-H)",
+      "label": "Cliff Bentz (R-OR-H)",
+      "type": "legislator",
+      "x": -107.44943509893344,
+      "y": -140.2728415474943,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Republican",
+      "state": "OR",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:Val T. Hoyle (D-OR-H)",
+      "label": "Val T. Hoyle (D-OR-H)",
+      "type": "legislator",
+      "x": -189.39690292779903,
+      "y": 41.73082422254581,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "OR",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:Michael F. Bennet (D-CO-S)",
+      "label": "Michael F. Bennet (D-CO-S)",
+      "type": "legislator",
+      "x": 61.44566341803129,
+      "y": -49.51783459569823,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "CO",
+      "chamber": "Senate"
+    },
+    {
+      "id": "legislator:Dan Newhouse (R-WA-H)",
+      "label": "Dan Newhouse (R-WA-H)",
+      "type": "legislator",
+      "x": 11.333739338492745,
+      "y": 67.04418350883053,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Republican",
+      "state": "WA",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:Kim Schrier (D-WA-H)",
+      "label": "Kim Schrier (D-WA-H)",
+      "type": "legislator",
+      "x": -73.88920775116594,
+      "y": 109.6825719309484,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "WA",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:Josh Harder (D-CA-H)",
+      "label": "Josh Harder (D-CA-H)",
+      "type": "legislator",
+      "x": 26.61705659527253,
+      "y": 82.02561888943615,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "CA",
+      "chamber": "House"
+    },
+    {
+      "id": "client:CITY FOLSOM",
+      "label": "City of Folsom",
+      "type": "client",
+      "x": -302.0657266075229,
+      "y": 848.5766157837784,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "legislator:Ami Bera (D-CA-H)",
+      "label": "Ami Bera (D-CA-H)",
+      "type": "legislator",
+      "x": -328.27205779982535,
+      "y": 917.5392483773436,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "CA",
+      "chamber": "House"
+    },
+    {
       "id": "lobbyist:ASHLEE JOHNSON",
       "label": "ASHLEE JOHNSON",
       "type": "lobbyist",
-      "x": -305.19279639234617,
-      "y": -162.6392304472018,
+      "x": 171.37670997496534,
+      "y": -210.95033092569608,
       "color": "#4f46e5",
       "radius": 14,
       "rank": 3,
@@ -779,8 +1726,8 @@
       "id": "firm:THE RUSSELL GROUP, INC.",
       "label": "THE RUSSELL GROUP, INC.",
       "type": "firm",
-      "x": -468.2596747517815,
-      "y": -204.56134754651663,
+      "x": 199.0707132973132,
+      "y": -343.12488980440617,
       "color": "#0f172a",
       "radius": 10,
       "rank": null,
@@ -795,26 +1742,10 @@
       "id": "agency:USDA",
       "label": "USDA",
       "type": "agency",
-      "x": -62.53768050873378,
-      "y": 30.540767823838635,
+      "x": 46.01295502852183,
+      "y": 2.7028815830869,
       "color": "#dc2626",
       "radius": 16,
-      "rank": null,
-      "score": null,
-      "concentration": null,
-      "prior_role": null,
-      "party": null,
-      "state": null,
-      "chamber": null
-    },
-    {
-      "id": "client:GROWTH ENERGY",
-      "label": "GROWTH ENERGY",
-      "type": "client",
-      "x": -420.6940948228235,
-      "y": -297.22522650353966,
-      "color": "#059669",
-      "radius": 8,
       "rank": null,
       "score": null,
       "concentration": null,
@@ -827,8 +1758,24 @@
       "id": "client:CARGILL",
       "label": "Cargill",
       "type": "client",
-      "x": -63.008930522168704,
-      "y": 29.80281313178032,
+      "x": 45.719893117753244,
+      "y": 2.6875195637611826,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:GROWTH ENERGY",
+      "label": "GROWTH ENERGY",
+      "type": "client",
+      "x": 235.22229656686622,
+      "y": -318.18999728443276,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -843,8 +1790,8 @@
       "id": "client:WHOLESTONE PRESTAGE",
       "label": "WHOLESTONE PRESTAGE LLC (FORMERLY KNOW AS WHOLESTONE FARMS)",
       "type": "client",
-      "x": -383.4924573721562,
-      "y": -308.4695861613165,
+      "x": 273.9517071685431,
+      "y": -297.1427660634656,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -859,8 +1806,8 @@
       "id": "client:MUSKET",
       "label": "MUSKET CORPORATION",
       "type": "client",
-      "x": -446.8557932069341,
-      "y": -273.1549063922449,
+      "x": 262.22921711187496,
+      "y": -325.8154261819273,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -875,8 +1822,8 @@
       "id": "client:BAYER",
       "label": "BAYER CORPORATION",
       "type": "client",
-      "x": -466.5219149959424,
-      "y": -243.31871487761228,
+      "x": 227.79475377153054,
+      "y": -346.87688099124085,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -891,8 +1838,8 @@
       "id": "client:NATIONAL RURAL WATER",
       "label": "National Rural Water Assn",
       "type": "client",
-      "x": -62.23280976210693,
-      "y": 31.24649266745385,
+      "x": 45.174936009221646,
+      "y": 2.5917254255958855,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -907,8 +1854,8 @@
       "id": "client:TRI-STATE GENERATION",
       "label": "Tri-State Generation",
       "type": "client",
-      "x": -63.915098481180486,
-      "y": 29.587027289318602,
+      "x": 44.53377543505773,
+      "y": 2.7025475010754176,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -923,8 +1870,8 @@
       "id": "client:LAND O LAKES",
       "label": "Land O'Lakes",
       "type": "client",
-      "x": -63.44432063808557,
-      "y": 30.343026942158673,
+      "x": 45.57336469770062,
+      "y": 2.6862968610811815,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -939,8 +1886,8 @@
       "id": "client:MCCAIN FOODS USA",
       "label": "McCain Foods USA",
       "type": "client",
-      "x": -63.131684894699866,
-      "y": 31.352892163851767,
+      "x": 45.914399269220944,
+      "y": 2.6900589119262674,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -955,8 +1902,8 @@
       "id": "client:GLOBAL CLEAN ENERGY",
       "label": "Global Clean Energy",
       "type": "client",
-      "x": -63.25949756536665,
-      "y": 31.04463124879428,
+      "x": 46.76727788030869,
+      "y": 2.585223825515029,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -971,8 +1918,8 @@
       "id": "client:LOUIS DREYFUS",
       "label": "Louis Dreyfus",
       "type": "client",
-      "x": -63.427972722801165,
-      "y": 30.39407469548509,
+      "x": 45.624773744535815,
+      "y": 3.169360228892384,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -987,8 +1934,8 @@
       "id": "client:ARDENT MILLS",
       "label": "Ardent Mills",
       "type": "client",
-      "x": -63.425824892169665,
-      "y": 30.401649689638784,
+      "x": 47.24812539207718,
+      "y": 2.7395500979047345,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1003,8 +1950,8 @@
       "id": "client:CALIFORNIA PRUNE BOARD",
       "label": "California Prune Board",
       "type": "client",
-      "x": -63.70038334264752,
-      "y": 29.55706278191714,
+      "x": 46.181458134857046,
+      "y": 2.6950175422589253,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1019,8 +1966,8 @@
       "id": "client:SHENANDOAH VALLEY ORGANIC",
       "label": "Shenandoah Valley Organic",
       "type": "client",
-      "x": -63.387724854153866,
-      "y": 30.530426285446584,
+      "x": 43.97447475288434,
+      "y": 2.7917452443191806,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1035,8 +1982,8 @@
       "id": "client:ILLINOIS SOYBEAN BOARD",
       "label": "Illinois Soybean Board",
       "type": "client",
-      "x": -62.06760739789601,
-      "y": 30.31800512259378,
+      "x": 44.31071373638164,
+      "y": 2.627942601928479,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1051,8 +1998,8 @@
       "id": "client:CALIFORNIA RICE COMMISSION",
       "label": "California Rice Commission",
       "type": "client",
-      "x": -63.32962407038055,
-      "y": 30.965425814962316,
+      "x": 43.88481659602201,
+      "y": 2.717661007880014,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1067,8 +2014,8 @@
       "id": "legislator:Jeff Merkley (D-OR-S)",
       "label": "Jeff Merkley (D-OR-S)",
       "type": "legislator",
-      "x": -31.64029254090744,
-      "y": 215.75047892234173,
+      "x": 133.29283357578666,
+      "y": 12.437973525140462,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1083,8 +2030,8 @@
       "id": "legislator:Mark Kelly (D-AZ-S)",
       "label": "Mark Kelly (D-AZ-S)",
       "type": "legislator",
-      "x": 90.69208409886777,
-      "y": 150.3453654089424,
+      "x": 109.38799452996629,
+      "y": 66.4931908607649,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1099,8 +2046,8 @@
       "id": "legislator:Donald G. Davis (D-NC-H)",
       "label": "Donald G. Davis (D-NC-H)",
       "type": "legislator",
-      "x": -111.74454338681315,
-      "y": 215.9403876618419,
+      "x": 127.19317304350588,
+      "y": 60.13524921467703,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1115,8 +2062,8 @@
       "id": "legislator:Tom Cole (R-OK-H)",
       "label": "Tom Cole (R-OK-H)",
       "type": "legislator",
-      "x": 91.32798207425485,
-      "y": 108.81766689960057,
+      "x": 131.29791187736856,
+      "y": 35.96856539860766,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1131,8 +2078,8 @@
       "id": "legislator:John B. Larson (D-CT-H)",
       "label": "John B. Larson (D-CT-H)",
       "type": "legislator",
-      "x": 80.3162438245426,
-      "y": -64.26591927647245,
+      "x": 19.388670530883687,
+      "y": -143.1954765139848,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1144,27 +2091,11 @@
       "chamber": "House"
     },
     {
-      "id": "legislator:Mike Thompson (D-CA-H)",
-      "label": "Mike Thompson (D-CA-H)",
-      "type": "legislator",
-      "x": 6.886652045698068,
-      "y": 192.66035885022333,
-      "color": "#d97706",
-      "radius": 6,
-      "rank": null,
-      "score": null,
-      "concentration": null,
-      "prior_role": null,
-      "party": "Democrat",
-      "state": "CA",
-      "chamber": "House"
-    },
-    {
       "id": "legislator:Daniel S. Goldman (D-NY-H)",
       "label": "Daniel S. Goldman (D-NY-H)",
       "type": "legislator",
-      "x": -72.70937314511555,
-      "y": 214.19920935071718,
+      "x": 101.24008036660386,
+      "y": 80.10055000126128,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1179,8 +2110,8 @@
       "id": "legislator:Marcy Kaptur (D-OH-H)",
       "label": "Marcy Kaptur (D-OH-H)",
       "type": "legislator",
-      "x": 23.016589377536995,
-      "y": 107.13459550071951,
+      "x": 88.0704822561095,
+      "y": 25.75060010309931,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1192,27 +2123,11 @@
       "chamber": "House"
     },
     {
-      "id": "legislator:Jared Huffman (D-CA-H)",
-      "label": "Jared Huffman (D-CA-H)",
-      "type": "legislator",
-      "x": 49.97336492485032,
-      "y": 170.81993740140234,
-      "color": "#d97706",
-      "radius": 6,
-      "rank": null,
-      "score": null,
-      "concentration": null,
-      "prior_role": null,
-      "party": "Democrat",
-      "state": "CA",
-      "chamber": "House"
-    },
-    {
       "id": "legislator:Richard J. Durbin (D-IL-S)",
       "label": "Richard J. Durbin (D-IL-S)",
       "type": "legislator",
-      "x": -69.35081379093339,
-      "y": 144.20842579054417,
+      "x": 84.36158717615821,
+      "y": 0.5827422265276574,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1227,8 +2142,8 @@
       "id": "legislator:Eric Sorensen (D-IL-H)",
       "label": "Eric Sorensen (D-IL-H)",
       "type": "legislator",
-      "x": -210.07211004029506,
-      "y": -74.36865677088888,
+      "x": 128.27643814393815,
+      "y": -28.725367853765047,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1243,8 +2158,8 @@
       "id": "legislator:Cindy Hyde-Smith (R-MS-S)",
       "label": "Cindy Hyde-Smith (R-MS-S)",
       "type": "legislator",
-      "x": -163.79487885355994,
-      "y": 83.52350568254145,
+      "x": 98.0015715900187,
+      "y": -24.946399254887886,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1256,27 +2171,11 @@
       "chamber": "Senate"
     },
     {
-      "id": "legislator:Adrian Smith (R-NE-H)",
-      "label": "Adrian Smith (R-NE-H)",
-      "type": "legislator",
-      "x": -157.18722227911567,
-      "y": 206.88950690092463,
-      "color": "#d97706",
-      "radius": 6,
-      "rank": null,
-      "score": null,
-      "concentration": null,
-      "prior_role": null,
-      "party": "Republican",
-      "state": "NE",
-      "chamber": "House"
-    },
-    {
       "id": "legislator:Tammy Duckworth (D-IL-S)",
       "label": "Tammy Duckworth (D-IL-S)",
       "type": "legislator",
-      "x": -214.87407067975784,
-      "y": 132.42692582596922,
+      "x": 96.79264768946727,
+      "y": -73.49587979214049,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1288,27 +2187,11 @@
       "chamber": "Senate"
     },
     {
-      "id": "legislator:Jerry Moran (R-KS-S)",
-      "label": "Jerry Moran (R-KS-S)",
-      "type": "legislator",
-      "x": -74.95150162845651,
-      "y": -309.2244487811375,
-      "color": "#d97706",
-      "radius": 6,
-      "rank": null,
-      "score": null,
-      "concentration": null,
-      "prior_role": null,
-      "party": "Republican",
-      "state": "KS",
-      "chamber": "Senate"
-    },
-    {
       "id": "legislator:Tracey Mann (R-KS-H)",
       "label": "Tracey Mann (R-KS-H)",
       "type": "legislator",
-      "x": -76.62839626869976,
-      "y": -217.33442132228652,
+      "x": 81.74937689511142,
+      "y": 100.9046731443368,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1323,8 +2206,8 @@
       "id": "legislator:Gabe Evans (R-CO-H)",
       "label": "Gabe Evans (R-CO-H)",
       "type": "legislator",
-      "x": 110.97704299116702,
-      "y": -18.879880508562994,
+      "x": 76.14430464541049,
+      "y": 84.20122383039435,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1339,24 +2222,8 @@
       "id": "legislator:John W. Hickenlooper (D-CO-S)",
       "label": "John W. Hickenlooper (D-CO-S)",
       "type": "legislator",
-      "x": -237.49130707967552,
-      "y": 7.818730252948096,
-      "color": "#d97706",
-      "radius": 6,
-      "rank": null,
-      "score": null,
-      "concentration": null,
-      "prior_role": null,
-      "party": "Democrat",
-      "state": "CO",
-      "chamber": "Senate"
-    },
-    {
-      "id": "legislator:Michael F. Bennet (D-CO-S)",
-      "label": "Michael F. Bennet (D-CO-S)",
-      "type": "legislator",
-      "x": -151.08121776816074,
-      "y": 170.16555831656402,
+      "x": 80.10477720439441,
+      "y": 50.99672419713852,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1371,8 +2238,8 @@
       "id": "legislator:John Boozman (R-AR-S)",
       "label": "John Boozman (R-AR-S)",
       "type": "legislator",
-      "x": 128.93763678375382,
-      "y": 40.94991834088697,
+      "x": 143.80606844322935,
+      "y": 25.222185774240902,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1387,8 +2254,8 @@
       "id": "legislator:Ashley Hinson (R-IA-H)",
       "label": "Ashley Hinson (R-IA-H)",
       "type": "legislator",
-      "x": -240.96298547088193,
-      "y": 49.319922888830256,
+      "x": 117.72109663939064,
+      "y": 44.59079769542755,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1403,8 +2270,8 @@
       "id": "legislator:Jack Bergman (R-MI-H)",
       "label": "Jack Bergman (R-MI-H)",
       "type": "legislator",
-      "x": -230.30215906947,
-      "y": -32.53507779804375,
+      "x": 109.44328513258726,
+      "y": -57.08866622383412,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1419,8 +2286,8 @@
       "id": "legislator:Gus M. Bilirakis (R-FL-H)",
       "label": "Gus M. Bilirakis (R-FL-H)",
       "type": "legislator",
-      "x": 95.82998781657193,
-      "y": 19.567823092480268,
+      "x": 142.93318791834793,
+      "y": -14.828158381885515,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1435,8 +2302,8 @@
       "id": "legislator:Eugene Simon Vindman (D-VA-H)",
       "label": "Eugene Simon Vindman (D-VA-H)",
       "type": "legislator",
-      "x": -231.0104780543466,
-      "y": 92.29769739122801,
+      "x": 132.73505853143521,
+      "y": -4.4453807062616875,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1451,8 +2318,8 @@
       "id": "legislator:Ron Estes (R-KS-H)",
       "label": "Ron Estes (R-KS-H)",
       "type": "legislator",
-      "x": 119.28484658526426,
-      "y": 84.54496352408408,
+      "x": 127.31745765231095,
+      "y": -46.95640131995649,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1464,27 +2331,11 @@
       "chamber": "House"
     },
     {
-      "id": "legislator:Dan Newhouse (R-WA-H)",
-      "label": "Dan Newhouse (R-WA-H)",
-      "type": "legislator",
-      "x": -195.36067367385198,
-      "y": 167.6444127844856,
-      "color": "#d97706",
-      "radius": 6,
-      "rank": null,
-      "score": null,
-      "concentration": null,
-      "prior_role": null,
-      "party": "Republican",
-      "state": "WA",
-      "chamber": "House"
-    },
-    {
       "id": "lobbyist:SCOTT PARSONS",
       "label": "SCOTT PARSONS",
       "type": "lobbyist",
-      "x": -47.18315881276883,
-      "y": -707.8799022557259,
+      "x": 242.18513817469585,
+      "y": 526.6829738848272,
       "color": "#4f46e5",
       "radius": 14,
       "rank": 4,
@@ -1499,8 +2350,8 @@
       "id": "firm:DELTA STRATEGY GROUP",
       "label": "DELTA STRATEGY GROUP",
       "type": "firm",
-      "x": -1.935570101061561,
-      "y": -813.4849071974627,
+      "x": 272.7275144848632,
+      "y": 594.7006369860712,
       "color": "#0f172a",
       "radius": 10,
       "rank": null,
@@ -1515,26 +2366,10 @@
       "id": "agency:CFTC",
       "label": "CFTC",
       "type": "agency",
-      "x": 57.766234605684545,
-      "y": -730.9823831373809,
+      "x": 289.6773997920394,
+      "y": 615.6012277179341,
       "color": "#dc2626",
       "radius": 16,
-      "rank": null,
-      "score": null,
-      "concentration": null,
-      "prior_role": null,
-      "party": null,
-      "state": null,
-      "chamber": null
-    },
-    {
-      "id": "client:DIGITAL CHAMBER COMMERCE",
-      "label": "DIGITAL CHAMBER OF COMMERCE",
-      "type": "client",
-      "x": 42.78714212127854,
-      "y": -766.7831359665283,
-      "color": "#059669",
-      "radius": 8,
       "rank": null,
       "score": null,
       "concentration": null,
@@ -1547,8 +2382,8 @@
       "id": "client:CITADEL INVESTMENT",
       "label": "CITADEL INVESTMENT GROUP",
       "type": "client",
-      "x": -42.948750219895764,
-      "y": -828.4717489396322,
+      "x": 234.62343094130486,
+      "y": 621.9617562306976,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1560,11 +2395,11 @@
       "chamber": null
     },
     {
-      "id": "client:AMERICAN COTTON SHIPPERS",
-      "label": "AMERICAN COTTON SHIPPERS ASSOCIATION",
+      "id": "client:DIGITAL CHAMBER COMMERCE",
+      "label": "DIGITAL CHAMBER OF COMMERCE",
       "type": "client",
-      "x": -96.50546548294248,
-      "y": -515.9846220212559,
+      "x": 302.5551425732089,
+      "y": 584.3562595439582,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1579,8 +2414,24 @@
       "id": "client:FIA PTG",
       "label": "FIA / PTG",
       "type": "client",
-      "x": -83.10616013776863,
-      "y": -819.6697075959984,
+      "x": 258.5691777212164,
+      "y": 618.5888288208807,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:AMERICAN COTTON SHIPPERS",
+      "label": "AMERICAN COTTON SHIPPERS ASSOCIATION",
+      "type": "client",
+      "x": 163.36801348400365,
+      "y": 307.61711470426303,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1595,8 +2446,8 @@
       "id": "client:COMMODITY MARKETS",
       "label": "COMMODITY MARKETS COUNCIL",
       "type": "client",
-      "x": -70.64442303513457,
-      "y": -532.7878782047926,
+      "x": 217.56884512596022,
+      "y": 607.0018330552248,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1611,8 +2462,8 @@
       "id": "legislator:Jodey C. Arrington (R-TX-H)",
       "label": "Jodey C. Arrington (R-TX-H)",
       "type": "legislator",
-      "x": -156.49773355926405,
-      "y": -657.8198714306152,
+      "x": 187.6009517812733,
+      "y": 364.9287609503747,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1627,8 +2478,8 @@
       "id": "legislator:Ronny Jackson (R-TX-H)",
       "label": "Ronny Jackson (R-TX-H)",
       "type": "legislator",
-      "x": -202.1807345546539,
-      "y": -644.6656793108596,
+      "x": 210.0238447676858,
+      "y": 389.0556917686245,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -1643,8 +2494,8 @@
       "id": "lobbyist:KEVIN BAILEY",
       "label": "KEVIN BAILEY",
       "type": "lobbyist",
-      "x": 340.4942604473392,
-      "y": -159.24055178360442,
+      "x": 376.49932306127886,
+      "y": 131.15316995699047,
       "color": "#4f46e5",
       "radius": 14,
       "rank": 5,
@@ -1659,8 +2510,8 @@
       "id": "firm:FGS GLOBAL (US) LLC (FKA FGH HOLDINGS LLC)",
       "label": "FGS GLOBAL (US) LLC (FKA FGH HOLDINGS LLC)",
       "type": "firm",
-      "x": 518.7866881199294,
-      "y": -207.20059189399743,
+      "x": 490.95125292044605,
+      "y": 211.04958621993487,
       "color": "#0f172a",
       "radius": 10,
       "rank": null,
@@ -1675,8 +2526,8 @@
       "id": "client:SUSTAINABLE FOOD POLICY",
       "label": "SUSTAINABLE FOOD POLICY ALLIANCE",
       "type": "client",
-      "x": 484.8850411363114,
-      "y": -237.52291753186228,
+      "x": 488.562553791503,
+      "y": 152.18234544180672,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1691,8 +2542,8 @@
       "id": "client:MICHIGAN SUGAR",
       "label": "MICHIGAN SUGAR COMPANY",
       "type": "client",
-      "x": 474.5465490358046,
-      "y": -277.0137645691659,
+      "x": 515.1463265660537,
+      "y": 164.8965994317351,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1707,8 +2558,8 @@
       "id": "client:TRI-STATE GENERATION TRANSMISSION",
       "label": "TRI-STATE GENERATION AND TRANSMISSION ASSOCIATION, INC.",
       "type": "client",
-      "x": 503.69122655598085,
-      "y": -149.0677933269262,
+      "x": 490.39521818257595,
+      "y": 184.85460668594337,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1723,8 +2574,8 @@
       "id": "client:S2G VENTURES",
       "label": "S2G VENTURES, LLC",
       "type": "client",
-      "x": 431.32614983189046,
-      "y": -270.8324711913507,
+      "x": 463.5726074851026,
+      "y": 219.95463051878116,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1739,8 +2590,8 @@
       "id": "client:UPSIDE FOODS",
       "label": "UPSIDE FOODS (FKA MEMPHIS MEATS, INC.)",
       "type": "client",
-      "x": 475.2194133277501,
-      "y": -188.75266024519055,
+      "x": 507.1838369753552,
+      "y": 125.55665493348411,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1755,8 +2606,8 @@
       "id": "lobbyist:JIM NEWSOME",
       "label": "JIM NEWSOME",
       "type": "lobbyist",
-      "x": -29.80006514040872,
-      "y": -702.4305632768705,
+      "x": 230.44225418356666,
+      "y": 531.5561375566045,
       "color": "#4f46e5",
       "radius": 14,
       "rank": 6,
@@ -1768,27 +2619,11 @@
       "chamber": null
     },
     {
-      "id": "legislator:Zachary Nunn (R-IA-H)",
-      "label": "Zachary Nunn (R-IA-H)",
-      "type": "legislator",
-      "x": -184.79841567782137,
-      "y": -554.1982853190232,
-      "color": "#d97706",
-      "radius": 6,
-      "rank": null,
-      "score": null,
-      "concentration": null,
-      "prior_role": null,
-      "party": "Republican",
-      "state": "IA",
-      "chamber": "House"
-    },
-    {
       "id": "lobbyist:MICHAEL TORREY",
       "label": "MICHAEL TORREY",
       "type": "lobbyist",
-      "x": 388.71961171625964,
-      "y": 144.7720226336839,
+      "x": 380.26707437923005,
+      "y": -188.89150408720155,
       "color": "#4f46e5",
       "radius": 14,
       "rank": 7,
@@ -1803,8 +2638,8 @@
       "id": "firm:TORREY ADVISORY GROUP (FORMERLY MICHAEL TORREY ASSOCIATES, LLC)",
       "label": "TORREY ADVISORY GROUP (FORMERLY MICHAEL TORREY ASSOCIATES, LLC)",
       "type": "firm",
-      "x": 545.2426353572579,
-      "y": 104.06122357515072,
+      "x": 484.6767209661593,
+      "y": -284.9964065020823,
       "color": "#0f172a",
       "radius": 10,
       "rank": null,
@@ -1819,24 +2654,8 @@
       "id": "client:CROP INSURANCE REINSURANCE",
       "label": "CROP INSURANCE AND REINSURANCE BUREAU",
       "type": "client",
-      "x": 539.2719623259412,
-      "y": 234.36558358553717,
-      "color": "#059669",
-      "radius": 8,
-      "rank": null,
-      "score": null,
-      "concentration": null,
-      "prior_role": null,
-      "party": null,
-      "state": null,
-      "chamber": null
-    },
-    {
-      "id": "client:ANIMAL HEALTH INSTITUTE",
-      "label": "ANIMAL HEALTH INSTITUTE",
-      "type": "client",
-      "x": 521.3038800014253,
-      "y": 190.3106648276424,
+      "x": 483.36325290234964,
+      "y": -257.24358993510486,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1851,8 +2670,24 @@
       "id": "client:EDGE DAIRY FARMER",
       "label": "EDGE DAIRY FARMER COOPERATIVE (FORMERLY EDGE)",
       "type": "client",
-      "x": 568.5993746901597,
-      "y": 180.78734405140722,
+      "x": 512.6479926023385,
+      "y": -200.81777818499603,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:ANIMAL HEALTH INSTITUTE",
+      "label": "ANIMAL HEALTH INSTITUTE",
+      "type": "client",
+      "x": 493.52603566946834,
+      "y": -224.320749516122,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1867,8 +2702,8 @@
       "id": "client:AMERICAN BEVERAGE",
       "label": "AMERICAN BEVERAGE ASSOCIATION",
       "type": "client",
-      "x": 496.1362765798981,
-      "y": 251.62368554163152,
+      "x": 456.46380310158855,
+      "y": -292.63013404326875,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1880,11 +2715,11 @@
       "chamber": null
     },
     {
-      "id": "client:GRUPO NAVIS",
-      "label": "GRUPO NAVIS, LLC",
+      "id": "client:AMERICAN SOC AGRONOMY",
+      "label": "AMERICAN SOC. OF AGRONOMY, CROP SCI. SOC. OF AMERICA & SOIL SCI. SOC. OF AMERICA",
       "type": "client",
-      "x": 546.9928506580906,
-      "y": 143.6755527056964,
+      "x": 513.2530529843209,
+      "y": -245.745242216905,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1899,8 +2734,8 @@
       "id": "lobbyist:KENNETH BARBIC",
       "label": "KENNETH BARBIC",
       "type": "lobbyist",
-      "x": -380.08763972084375,
-      "y": 15.641844869642926,
+      "x": -208.48620141856208,
+      "y": 77.63925002315607,
       "color": "#4f46e5",
       "radius": 14,
       "rank": 8,
@@ -1915,10 +2750,26 @@
       "id": "firm:INVARIANT LLC",
       "label": "INVARIANT LLC",
       "type": "firm",
-      "x": -556.7900574388635,
-      "y": 3.199252852369564,
+      "x": -354.8351436280668,
+      "y": 69.29425784081207,
       "color": "#0f172a",
       "radius": 10,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:COALITION CLIMATE SMART",
+      "label": "COALITION FOR CLIMATE SMART AGRICULTURE FKA SUSTAINABLE SUPPLY CHAIN COALITION",
+      "type": "client",
+      "x": -354.818281404132,
+      "y": 96.29625840991125,
+      "color": "#059669",
+      "radius": 8,
       "rank": null,
       "score": null,
       "concentration": null,
@@ -1931,24 +2782,8 @@
       "id": "client:FRESH PRODUCE",
       "label": "INTERNATIONAL FRESH PRODUCE ASSOCIATION",
       "type": "client",
-      "x": -545.1909517671133,
-      "y": 71.46188300310689,
-      "color": "#059669",
-      "radius": 8,
-      "rank": null,
-      "score": null,
-      "concentration": null,
-      "prior_role": null,
-      "party": null,
-      "state": null,
-      "chamber": null
-    },
-    {
-      "id": "client:CALIFORNIA DATE COMMISSION",
-      "label": "CALIFORNIA DATE COMMISSION",
-      "type": "client",
-      "x": -563.9919849327945,
-      "y": -34.98026096777813,
+      "x": -330.5514293031208,
+      "y": 124.25094281699356,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1963,8 +2798,8 @@
       "id": "client:PEPSICO",
       "label": "PEPSICO, INC.",
       "type": "client",
-      "x": -527.231685397333,
-      "y": -49.80537252195683,
+      "x": -354.87268325287806,
+      "y": 127.46013567584511,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1976,11 +2811,11 @@
       "chamber": null
     },
     {
-      "id": "client:COALITION CLIMATE SMART",
-      "label": "COALITION FOR CLIMATE SMART AGRICULTURE FKA SUSTAINABLE SUPPLY CHAIN COALITION",
+      "id": "client:CALIFORNIA DATE COMMISSION",
+      "label": "CALIFORNIA DATE COMMISSION",
       "type": "client",
-      "x": -559.2835708022935,
-      "y": 36.75818330915685,
+      "x": -323.12116782666885,
+      "y": 157.348350388189,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -1995,8 +2830,8 @@
       "id": "lobbyist:ROGER SHERMAN",
       "label": "ROGER SHERMAN",
       "type": "lobbyist",
-      "x": 416.91625040291405,
-      "y": 769.5163676372352,
+      "x": -393.29546849371684,
+      "y": -507.6870111181767,
       "color": "#4f46e5",
       "radius": 14,
       "rank": 9,
@@ -2011,8 +2846,8 @@
       "id": "firm:WANETA STRATEGIES, LLC",
       "label": "WANETA STRATEGIES, LLC",
       "type": "firm",
-      "x": 502.7023950910868,
-      "y": 892.6622849012706,
+      "x": -354.1316257587972,
+      "y": -593.8397137538359,
       "color": "#0f172a",
       "radius": 10,
       "rank": null,
@@ -2027,26 +2862,10 @@
       "id": "agency:FCC",
       "label": "FCC",
       "type": "agency",
-      "x": 302.0415959101626,
-      "y": 723.9625927525776,
+      "x": -466.9435609532276,
+      "y": -600.3783104024974,
       "color": "#dc2626",
       "radius": 16,
-      "rank": null,
-      "score": null,
-      "concentration": null,
-      "prior_role": null,
-      "party": null,
-      "state": null,
-      "chamber": null
-    },
-    {
-      "id": "client:CROWN CASTLE",
-      "label": "CROWN CASTLE",
-      "type": "client",
-      "x": 273.83336774034956,
-      "y": 621.6971149158314,
-      "color": "#059669",
-      "radius": 8,
       "rank": null,
       "score": null,
       "concentration": null,
@@ -2059,8 +2878,24 @@
       "id": "client:CTIA WIRELESS",
       "label": "CTIA - THE WIRELESS ASSOCIATION",
       "type": "client",
-      "x": 581.6636086189308,
-      "y": 696.9420759479789,
+      "x": -507.8185994460659,
+      "y": -422.3795125646173,
+      "color": "#059669",
+      "radius": 8,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": null,
+      "state": null,
+      "chamber": null
+    },
+    {
+      "id": "client:CROWN CASTLE",
+      "label": "CROWN CASTLE",
+      "type": "client",
+      "x": -257.0992018342651,
+      "y": -510.4950974048563,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -2075,8 +2910,8 @@
       "id": "client:LYNK",
       "label": "LYNK",
       "type": "client",
-      "x": 405.62036145463355,
-      "y": 928.3153820534321,
+      "x": -316.75148132913927,
+      "y": -386.4565844435189,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -2091,8 +2926,8 @@
       "id": "legislator:Erin Houchin (R-IN-H)",
       "label": "Erin Houchin (R-IN-H)",
       "type": "legislator",
-      "x": 695.5144520303143,
-      "y": 701.2930479311525,
+      "x": -597.4635563071671,
+      "y": -439.0037295341987,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -2107,8 +2942,8 @@
       "id": "legislator:Robert Menendez (D-NJ-H)",
       "label": "Robert Menendez (D-NJ-H)",
       "type": "legislator",
-      "x": 662.9684234087208,
-      "y": 600.4005020642913,
+      "x": -506.06222999347403,
+      "y": -286.1668694935093,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -2120,27 +2955,11 @@
       "chamber": "House"
     },
     {
-      "id": "legislator:Haley M. Stevens (D-MI-H)",
-      "label": "Haley M. Stevens (D-MI-H)",
-      "type": "legislator",
-      "x": 329.9625991943284,
-      "y": 1000.0,
-      "color": "#d97706",
-      "radius": 6,
-      "rank": null,
-      "score": null,
-      "concentration": null,
-      "prior_role": null,
-      "party": "Democrat",
-      "state": "MI",
-      "chamber": "House"
-    },
-    {
       "id": "lobbyist:AURENE MARTIN",
       "label": "AURENE MARTIN",
       "type": "lobbyist",
-      "x": 275.36713072079715,
-      "y": -515.4023313048402,
+      "x": -86.02218352856694,
+      "y": -233.02962287525082,
       "color": "#4f46e5",
       "radius": 14,
       "rank": 10,
@@ -2155,8 +2974,8 @@
       "id": "firm:SPIRIT ROCK CONSULTING",
       "label": "SPIRIT ROCK CONSULTING",
       "type": "firm",
-      "x": 316.72503589921797,
-      "y": -660.8992513620711,
+      "x": -88.40350420231655,
+      "y": -351.8882557323784,
       "color": "#0f172a",
       "radius": 10,
       "rank": null,
@@ -2171,8 +2990,8 @@
       "id": "client:VIDEO GAMING TECHNOLOGIES",
       "label": "VIDEO GAMING TECHNOLOGIES",
       "type": "client",
-      "x": 407.15052226028894,
-      "y": -608.3853752209993,
+      "x": -43.67871160747511,
+      "y": -352.2006440816481,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -2187,8 +3006,8 @@
       "id": "client:SAGINAW CHIPPEWA INDIAN",
       "label": "SAGINAW CHIPPEWA INDIAN TRIBE OF MICHIGAN",
       "type": "client",
-      "x": 391.6619075103431,
-      "y": -709.5117757565228,
+      "x": -29.44497916803348,
+      "y": -410.33738203010745,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -2203,8 +3022,8 @@
       "id": "client:PIT RIVER TRIBE",
       "label": "PIT RIVER TRIBE",
       "type": "client",
-      "x": 103.0466847648498,
-      "y": -644.836883845954,
+      "x": -150.74041601099506,
+      "y": -9.03093252603437,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -2216,11 +3035,11 @@
       "chamber": null
     },
     {
-      "id": "client:NATIVE AMERICAN FINANCE",
-      "label": "NATIVE AMERICAN FINANCE OFFICER'S ASSOCIATION",
+      "id": "client:COW CREEK BAND",
+      "label": "COW CREEK BAND OF UMPQUA TRIBE OF INDIANS",
       "type": "client",
-      "x": 359.2846337326,
-      "y": -573.3171237862833,
+      "x": -135.36386247832513,
+      "y": -103.06832899270609,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -2232,11 +3051,11 @@
       "chamber": null
     },
     {
-      "id": "client:NATIONAL INDIAN GAMING",
-      "label": "NATIONAL INDIAN GAMING ASSOCIATION",
+      "id": "client:MASHANTUCKET PEQUOT TRIBAL",
+      "label": "MASHANTUCKET PEQUOT TRIBAL NATION",
       "type": "client",
-      "x": 363.72257552185056,
-      "y": -641.1179864960276,
+      "x": -75.16673390798668,
+      "y": -378.9266815843399,
       "color": "#059669",
       "radius": 8,
       "rank": null,
@@ -2246,13 +3065,77 @@
       "party": null,
       "state": null,
       "chamber": null
+    },
+    {
+      "id": "legislator:Gwen Moore (D-WI-H)",
+      "label": "Gwen Moore (D-WI-H)",
+      "type": "legislator",
+      "x": -67.5410972606021,
+      "y": -511.61225142384006,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "WI",
+      "chamber": "House"
+    },
+    {
+      "id": "legislator:Christopher Murphy (D-CT-S)",
+      "label": "Christopher Murphy (D-CT-S)",
+      "type": "legislator",
+      "x": -98.70325539651917,
+      "y": -509.36074130426965,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "CT",
+      "chamber": "Senate"
+    },
+    {
+      "id": "legislator:Richard Blumenthal (D-CT-S)",
+      "label": "Richard Blumenthal (D-CT-S)",
+      "type": "legislator",
+      "x": -149.9571883347936,
+      "y": -479.70823764948943,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "CT",
+      "chamber": "Senate"
+    },
+    {
+      "id": "legislator:Joe Courtney (D-CT-H)",
+      "label": "Joe Courtney (D-CT-H)",
+      "type": "legislator",
+      "x": -125.73185242856053,
+      "y": -498.1755920782573,
+      "color": "#d97706",
+      "radius": 6,
+      "rank": null,
+      "score": null,
+      "concentration": null,
+      "prior_role": null,
+      "party": "Democrat",
+      "state": "CT",
+      "chamber": "House"
     },
     {
       "id": "legislator:Alex Padilla (D-CA-S)",
       "label": "Alex Padilla (D-CA-S)",
       "type": "legislator",
-      "x": -84.44615238118215,
-      "y": -712.3087257292558,
+      "x": -172.67932992837484,
+      "y": 114.0134809602347,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -2267,8 +3150,8 @@
       "id": "legislator:John R. Moolenaar (R-MI-H)",
       "label": "John R. Moolenaar (R-MI-H)",
       "type": "legislator",
-      "x": 474.2329322546115,
-      "y": -840.5968390800609,
+      "x": 14.712625403053757,
+      "y": -532.5707088685258,
       "color": "#d97706",
       "radius": 6,
       "rank": null,
@@ -2315,42 +3198,6 @@
     },
     {
       "source": "lobbyist:BENJAMIN STEINBERG",
-      "target": "client:AMSTED INDUSTRIES",
-      "type": "lobbies_for",
-      "types": [
-        "lobbies_for"
-      ],
-      "weight": 1.0,
-      "weights": {
-        "lobbies_for": 1
-      },
-      "color": "#4f46e5",
-      "width": 1.2,
-      "dash": null,
-      "latest_title": null,
-      "latest_url": null,
-      "latest_date": null
-    },
-    {
-      "source": "lobbyist:BENJAMIN STEINBERG",
-      "target": "client:TALON NICKEL",
-      "type": "lobbies_for",
-      "types": [
-        "lobbies_for"
-      ],
-      "weight": 1.0,
-      "weights": {
-        "lobbies_for": 1
-      },
-      "color": "#4f46e5",
-      "width": 1.2,
-      "dash": null,
-      "latest_title": null,
-      "latest_url": null,
-      "latest_date": null
-    },
-    {
-      "source": "lobbyist:BENJAMIN STEINBERG",
       "target": "client:BURNS MCDONNELL ENGINEERING",
       "type": "lobbies_for",
       "types": [
@@ -2388,6 +3235,42 @@
     {
       "source": "lobbyist:BENJAMIN STEINBERG",
       "target": "client:BATTERY MATERIALS TECHNOLOGY",
+      "type": "lobbies_for",
+      "types": [
+        "lobbies_for"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "lobbies_for": 1
+      },
+      "color": "#4f46e5",
+      "width": 1.2,
+      "dash": null,
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "lobbyist:BENJAMIN STEINBERG",
+      "target": "client:TALON NICKEL",
+      "type": "lobbies_for",
+      "types": [
+        "lobbies_for"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "lobbies_for": 1
+      },
+      "color": "#4f46e5",
+      "width": 1.2,
+      "dash": null,
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "lobbyist:BENJAMIN STEINBERG",
+      "target": "client:AMSTED INDUSTRIES",
       "type": "lobbies_for",
       "types": [
         "lobbies_for"
@@ -2548,24 +3431,6 @@
       "latest_date": null
     },
     {
-      "source": "client:TALON NICKEL",
-      "target": "legislator:Kevin Cramer (R-ND-S)",
-      "type": "mentions",
-      "types": [
-        "mentions"
-      ],
-      "weight": 1.0,
-      "weights": {
-        "mentions": 1
-      },
-      "color": "#d97706",
-      "width": 1.2,
-      "dash": "2 2",
-      "latest_title": "Sen. Cramer: DOE Awards Nearly $115 Million to Talon Metals’ Battery Mineral Processing Facility",
-      "latest_url": "https://www.cramer.senate.gov/news/press-releases/sen-cramer-doe-awards-nearly-115-million-to-talon-metals-battery-mineral-processing-facility",
-      "latest_date": "2023-11-02"
-    },
-    {
       "source": "client:WABTEC",
       "target": "legislator:Mike Kelly (R-PA-H)",
       "type": "mentions",
@@ -2582,6 +3447,42 @@
       "latest_title": "Rep. Kelly statement on historic Wabtec locomotive deal",
       "latest_url": "https://kelly.house.gov/media/press-releases/rep-kelly-statement-historic-wabtec-locomotive-deal",
       "latest_date": "2025-09-23"
+    },
+    {
+      "source": "client:WABTEC",
+      "target": "legislator:John Fetterman (D-PA-S)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 2.0,
+      "weights": {
+        "mentions": 2
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Fetterman Writes Op-Ed on UAW Strike, Calls on Big 3 to Reach Fair Deal with Workers",
+      "latest_url": "https://www.fetterman.senate.gov/fetterman-writes-op-ed-on-uaw-strike-calls-on-big-3-to-reach-fair-deal-with-workers/",
+      "latest_date": "2023-09-29"
+    },
+    {
+      "source": "client:WABTEC",
+      "target": "legislator:Summer L. Lee (D-PA-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "FACT SHEET: Rep. Summer Lee Announces Over $800 Million Federal Dollars Delivered to Western PA",
+      "latest_url": "https://summerlee.house.gov/newsroom/press-releases/fact-sheet-rep-summer-lee-announces-over-800-million-federal-dollars-delivered-to-western-pa",
+      "latest_date": "2023-10-04"
     },
     {
       "source": "client:WABTEC",
@@ -2602,7 +3503,421 @@
       "latest_date": "2023-09-29"
     },
     {
-      "source": "client:BATTERY MATERIALS TECHNOLOGY",
+      "source": "client:TALON NICKEL",
+      "target": "legislator:Julie Fedorchak (R-ND-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Fedorchak votes to speed up domestic mining and strengthen America’s mineral independence",
+      "latest_url": "https://fedorchak.house.gov/media/press-releases/fedorchak-votes-speed-domestic-mining-and-strengthen-americas-mineral",
+      "latest_date": "2026-02-04"
+    },
+    {
+      "source": "client:TALON NICKEL",
+      "target": "legislator:Pete Stauber (R-MN-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 2.0,
+      "weights": {
+        "mentions": 2
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Stauber Applauds Advancement of the SPEED Act (H.R. 4776) Through Committee",
+      "latest_url": "https://stauber.house.gov/media/press-releases/stauber-applauds-advancement-speed-act-hr-4776-through-committee",
+      "latest_date": "2025-11-20"
+    },
+    {
+      "source": "client:TALON NICKEL",
+      "target": "legislator:John Hoeven (R-ND-S)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Hoeven, Burgum Discuss Need for Oil, Gas, Coal & Critical Mineral Production to Support U.S. Energy Dominance",
+      "latest_url": "https://www.hoeven.senate.gov/news/news-releases/hoeven-burgum-discuss-need-for-oil-gas-coal-and-critical-mineral-production-to-support-us-energy-dominance",
+      "latest_date": "2025-06-13"
+    },
+    {
+      "source": "client:TALON NICKEL",
+      "target": "legislator:Kevin Cramer (R-ND-S)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Cramer, Talon Metals Celebrate Advanced Nickel, Copper Minerals Processing Facility in Beulah",
+      "latest_url": "https://www.cramer.senate.gov/news/press-releases/cramer-talon-metals-celebrate-advanced-nickel-copper-minerals-processing-facility-in-beulah",
+      "latest_date": "2025-05-28"
+    },
+    {
+      "source": "client:ANOVION",
+      "target": "legislator:Haley M. Stevens (D-MI-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "What They’re Saying: Michigan Congresswoman Haley Stevens Introduces the ‘Unearth America’s Future Act’",
+      "latest_url": "https://stevens.house.gov/media/press-releases/what-theyre-saying-michigan-congresswoman-haley-stevens-introduces-unearth",
+      "latest_date": "2025-07-10"
+    },
+    {
+      "source": "client:ANOVION",
+      "target": "legislator:Sanford D. Bishop, Jr. (D-GA-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "CONGRESSMAN BISHOP ANNOUNCES $40,000 AWARD TO ALBANY STATE UNIVERSITY TO HELP STUDENTS EXCEL IN STEM TO GROW GEORGIA’S ECONOMY",
+      "latest_url": "https://bishop.house.gov/media-center/press-releases/congressman-bishop-announces-40000-award-to-albany-state-university-to-help-students-excel-in-stem-to-grow-georgia-s-economy",
+      "latest_date": "2023-10-26"
+    },
+    {
+      "source": "client:ANOVION",
+      "target": "legislator:Charles E. Schumer (D-NY-S)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "FOLLOWING HIS PERSONAL INVITATION & LONGSTANDING ADVOCACY TO MAKE BINGHAMTON A NATIONAL BATTERY HUB, SCHUMER BRINGS SENIOR U.S. DEPARTMENT OF COMMERCE OFFICIAL TO THE SOUTHERN TIER TO SHOW BIDEN...",
+      "latest_url": "https://www.schumer.senate.gov/newsroom/press-releases/following-his-personal-invitation-and-longstanding-advocacy-to-make-binghamton-a-national-battery-hub-schumer-brings-senior-us-department-of-commerce-official-to-the-southern-tier-to-show-biden-administration-how-upstate-new-york-can-power-americas-clean-energy-future",
+      "latest_date": "2022-10-20"
+    },
+    {
+      "source": "client:FORGE BATTERY",
+      "target": "legislator:Deborah K. Ross (D-NC-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Congresswoman Ross Announces $100 Million in Federal Funding for Forge Battery Manufacturing from Bipartisan Infrastructure Law",
+      "latest_url": "https://ross.house.gov/2024/9/congresswoman-ross-announces-100-million-in-federal-funding-for-forge-battery-manufacturing-from-bipartisan-infrastructure-law",
+      "latest_date": "2024-09-20"
+    },
+    {
+      "source": "client:CABOT",
+      "target": "legislator:Gary C. Peters (D-MI-S)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Senators Peters and Stabenow Announce $355 Million in Funding for Michigan’s Battery Manufacturing Sector",
+      "latest_url": "https://www.peters.senate.gov/newsroom/press-releases/senators-peters-and-stabenow-announce-355-million-in-funding-for-michigans-battery-manufacturing-sector",
+      "latest_date": "2024-09-20"
+    },
+    {
+      "source": "client:CABOT",
+      "target": "legislator:Lori Trahan (D-MA-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Trahan, Warren, Moulton Announce $94.5 Million Federal Investment in Massachusetts-Based Hydrogen Facilities",
+      "latest_url": "https://trahan.house.gov/news/documentsingle.aspx?DocumentID=3149",
+      "latest_date": "2024-03-13"
+    },
+    {
+      "source": "client:CRITICAL MINERALS",
+      "target": "legislator:Joaquin Castro (D-TX-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Reps. Castro, Kim Advance Bill Out of Committee to Counter China’s Growing Influence",
+      "latest_url": "https://castro.house.gov/media-center/press-releases/reps-castro-kim-advance-bill-out-of-committee-to-counter-chinas-growing-influence",
+      "latest_date": "2026-03-27"
+    },
+    {
+      "source": "client:CRITICAL MINERALS",
+      "target": "legislator:Jared Huffman (D-CA-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Natural Resources Democrats Force Vote to Subpoena Donald Trump Jr. Over $670 Million Taxpayer-Funded Deal",
+      "latest_url": "https://huffman.house.gov/media-center/press-releases/natural-resources-democrats-force-vote-to-subpoena-donald-trump-jr-over-670-million-taxpayer-funded-deal",
+      "latest_date": "2026-03-25"
+    },
+    {
+      "source": "client:CRITICAL MINERALS",
+      "target": "legislator:Aumua Amata Coleman Radewagen (R-AS-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Amata Shares Concerns Over Chinese Vessels Surveying for Critical Minerals and Fishing",
+      "latest_url": "https://radewagen.house.gov/media-center/press-releases/amata-shares-concerns-over-chinese-vessels-surveying-critical-minerals",
+      "latest_date": "2026-03-25"
+    },
+    {
+      "source": "client:CRITICAL MINERALS",
+      "target": "legislator:Steve Daines (R-MT-S)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "ICYMI: Daines Op-Ed in the Bozeman Daily Chronicle: “Thanks to President Trump, We’re Protecting Montana’s Mines”",
+      "latest_url": "https://www.daines.senate.gov/2026/03/10/icymi-daines-op-ed-in-the-bozeman-daily-chronicle-thanks-to-president-trump-were-protecting-montanas-mines/",
+      "latest_date": "2026-03-10"
+    },
+    {
+      "source": "client:CRITICAL MINERALS",
+      "target": "legislator:Pete Ricketts (R-NE-S)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "VIDEO: Ricketts on Philippines: One of the Most Consequential Diplomatic Assignments in the Indo Pacific",
+      "latest_url": "https://www.ricketts.senate.gov/news/press-releases/video-ricketts-on-philippines-one-of-the-most-consequential-diplomatic-assignments-in-the-indo-pacific/",
+      "latest_date": "2026-03-05"
+    },
+    {
+      "source": "legislator:Jared Huffman (D-CA-H)",
+      "target": "client:BUREAU RECLAMATION",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Huffman Blasts $40 Million in Taxpayer Funds for Illegal Shasta Dam Raise",
+      "latest_url": "https://huffman.house.gov/media-center/press-releases/huffman-blasts-40-million-in-taxpayer-funds-for-illegal-shasta-dam-raise",
+      "latest_date": "2026-03-18"
+    },
+    {
+      "source": "legislator:Jared Huffman (D-CA-H)",
+      "target": "client:GLOBAL CLEAN ENERGY",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 4.0,
+      "weights": {
+        "mentions": 4
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Huffman Statement on Interior Memo Targeting Clean Energy on Federal Lands",
+      "latest_url": "https://huffman.house.gov/media-center/press-releases/huffman-statement-on-interior-memo-targeting-clean-energy-on-federal-lands",
+      "latest_date": "2025-07-17"
+    },
+    {
+      "source": "legislator:Jared Huffman (D-CA-H)",
+      "target": "client:COW CREEK BAND",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Tribes from Across the U.S. Announce Support for Congressman Huffman as House Natural Resources Committee Ranking Member",
+      "latest_url": "https://huffman.house.gov/media-center/press-releases/tribes-from-across-the-us-announce-support-for-congressman-huffman-as-house-natural-resources-committee-ranking-member",
+      "latest_date": "2024-12-10"
+    },
+    {
+      "source": "legislator:Kevin Cramer (R-ND-S)",
+      "target": "client:BUREAU RECLAMATION",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Bureau of Reclamation Announces $108 Million to Support North Dakota Water Supply",
+      "latest_url": "https://www.cramer.senate.gov/news/press-releases/bureau-of-reclamation-announces-108-million-to-support-north-dakota-water-supply",
+      "latest_date": "2026-03-17"
+    },
+    {
+      "source": "client:BURNS MCDONNELL",
+      "target": "legislator:Jerry Moran (R-KS-S)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 3.0,
+      "weights": {
+        "mentions": 3
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Sen. Moran Announces 2022 Service Academy Selection Board",
+      "latest_url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=32DB8C83-8564-43A9-B3BE-DB3F912E2AC5",
+      "latest_date": "2022-09-12"
+    },
+    {
+      "source": "legislator:Jerry Moran (R-KS-S)",
+      "target": "client:CARGILL",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 4.0,
+      "weights": {
+        "mentions": 4
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Sen. Moran Announces 2024 Service Academy Selection Board",
+      "latest_url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=48D9D303-F833-4D07-8987-BBBA32FF290E",
+      "latest_date": "2024-11-01"
+    },
+    {
+      "source": "legislator:Jerry Moran (R-KS-S)",
+      "target": "client:AMERICAN COTTON SHIPPERS",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 2.0,
+      "weights": {
+        "mentions": 2
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Sen. Moran, Rep. Nunn Caution Federal Regulators on Harmful Impacts of Proposed Banking Regulations",
+      "latest_url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=682C4164-C895-426F-A013-29F7845C2C24",
+      "latest_date": "2024-01-23"
+    },
+    {
+      "source": "legislator:Haley M. Stevens (D-MI-H)",
+      "target": "client:LYNK",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Congresswoman Haley Stevens (D-MI) Introduces the Union Auto Workers Job Protection Act to Ensure that Federal Contracts for Vehicles Deal Workers In",
+      "latest_url": "https://stevens.house.gov/media/press-releases/congresswoman-haley-stevens-d-mi-introduces-union-auto-workers-job-protection",
+      "latest_date": "2023-09-26"
+    },
+    {
+      "source": "client:BATTERY MATERIALS TECH",
       "target": "legislator:Paul Tonko (D-NY-H)",
       "type": "mentions",
       "types": [
@@ -2618,24 +3933,6 @@
       "latest_title": "Tonko, Graves Introduce Critical Material TRACE Act",
       "latest_url": "https://tonko.house.gov/news/documentsingle.aspx?DocumentID=4115",
       "latest_date": "2024-05-01"
-    },
-    {
-      "source": "legislator:Kevin Cramer (R-ND-S)",
-      "target": "client:COMMODITY MARKETS",
-      "type": "mentions",
-      "types": [
-        "mentions"
-      ],
-      "weight": 1.0,
-      "weights": {
-        "mentions": 1
-      },
-      "color": "#d97706",
-      "width": 1.2,
-      "dash": "2 2",
-      "latest_title": "Letters Call for Withdrawal of Basel III Endgame Proposal, Highlight Impact on Derivatives End Users",
-      "latest_url": "https://www.cramer.senate.gov/news/press-releases/letters-call-for-withdrawal-of-basel-iii-endgame-proposal-highlight-impact-on-derivatives-end-users",
-      "latest_date": "2024-01-23"
     },
     {
       "source": "lobbyist:MARK LIMBAUGH",
@@ -2743,7 +4040,7 @@
     },
     {
       "source": "lobbyist:MARK LIMBAUGH",
-      "target": "client:YAKIMA BASIN JOINT",
+      "target": "client:MARICOPA STANFIELD IRRIGATION",
       "type": "lobbies_for",
       "types": [
         "lobbies_for"
@@ -2755,6 +4052,310 @@
       "color": "#4f46e5",
       "width": 1.2,
       "dash": null,
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:SITES PROJECT AUTHORITY",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 43454921.99,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:GLENN-COLUSA IRRIGATION DISTRICT",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 25568099.86,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:FRIANT WATER AUTHORITY",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 20513435.990000002,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:RECLAMATION DISTRICT 108",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 13876350.0,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:TURLOCK IRRIGATION DISTRICT",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 12057752.5,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:FRESHWATER TRUST",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 9361047.950000001,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:NORTH UNIT IRRIGATION",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 8857471.97,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:WESTERN MUNICIPAL WATER",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 8487633.28,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:SUTTER MUTUAL WATER",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 4787610.0,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:EL DORADO COUNTY",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 3249800.0,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:CITY WOODLAND CA",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 3000000.0,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:MERCED IRRIGATION DISTRICT",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 2659156.23,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:KLAMATH WATER USERS",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 2133007.0,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:MARICOPA-STANFIELD IRR DRAINAGE",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 1159870.24,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:SOLANO IRRIGATION DISTRICT",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 771488.64,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:CITY FOLSOM CA",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 750000.0,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:YAKIMA BASIN",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 515000.0,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:SAN JUAN WATER",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 284866.37,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "agency:INTERIOR",
+      "target": "client:CENTRAL ARIZONA IRR",
+      "type": "funded_by",
+      "types": [
+        "funded_by"
+      ],
+      "weight": 200000.0,
+      "weights": {},
+      "color": "#059669",
+      "width": 2.0,
+      "dash": "4 4",
       "latest_title": null,
       "latest_url": null,
       "latest_date": null
@@ -2812,7 +4413,61 @@
       "latest_date": "2022-05-12"
     },
     {
-      "source": "client:IDAHO WATER RESOURCE",
+      "source": "client:SITES PROJECT AUTHORITY",
+      "target": "legislator:Vince Fong (R-CA-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 2.0,
+      "weights": {
+        "mentions": 2
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Statement from Rep. Vince Fong and Rep. David Valadao on Water Infrastructure Projects",
+      "latest_url": "https://fong.house.gov/media/press-releases/statement-rep-vince-fong-and-rep-david-valadao-water-infrastructure-projects",
+      "latest_date": "2025-01-10"
+    },
+    {
+      "source": "client:SITES PROJECT AUTHORITY",
+      "target": "legislator:Jim Costa (D-CA-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 2.0,
+      "weights": {
+        "mentions": 2
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Costa Secures $12.2 Million for Local Projects in the San Joaquin Valley",
+      "latest_url": "https://costa.house.gov/media/press-releases/costa-secures-122-million-local-projects-san-joaquin-valley",
+      "latest_date": "2024-03-06"
+    },
+    {
+      "source": "client:SITES PROJECT AUTHORITY",
+      "target": "legislator:Mike Thompson (D-CA-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "THOMPSON HELPS SECURE $67.5 MILLION FOR SITES RESERVOIR PROJECT EXPANDING LOCAL WATER STORAGE",
+      "latest_url": "https://mikethompson.house.gov/newsroom/press-releases/thompson-helps-secure-675-million-sites-reservoir-project-expanding-local",
+      "latest_date": "2024-05-31"
+    },
+    {
+      "source": "client:FRIANT WATER AUTHORITY",
       "target": "legislator:David G. Valadao (R-CA-H)",
       "type": "mentions",
       "types": [
@@ -2825,18 +4480,180 @@
       "color": "#d97706",
       "width": 1.2,
       "dash": "2 2",
-      "latest_title": "Congressman Valadao Introduces Key Water Infrastructure Legislation to Address California’s Water Crisis",
-      "latest_url": "https://valadao.house.gov/news/documentsingle.aspx?DocumentID=1685",
-      "latest_date": "2025-01-16"
+      "latest_title": "Congressman Valadao Celebrates Critical Investments in California Water Infrastructure",
+      "latest_url": "https://valadao.house.gov/news/documentsingle.aspx?DocumentID=3612",
+      "latest_date": "2026-03-17"
     },
     {
-      "source": "client:YAKIMA BASIN JOINT",
-      "target": "legislator:Kim Schrier (D-WA-H)",
+      "source": "client:FRIANT WATER AUTHORITY",
+      "target": "legislator:Jim Costa (D-CA-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 2.0,
+      "weights": {
+        "mentions": 2
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Costa, Newhouse, Curtis Push to Unlock Federal Funding for Western Water Infrastructure",
+      "latest_url": "https://costa.house.gov/media/press-releases/costa-newhouse-curtis-push-unlock-federal-funding-western-water-infrastructure",
+      "latest_date": "2025-04-28"
+    },
+    {
+      "source": "client:FRIANT WATER AUTHORITY",
+      "target": "legislator:Adam Gray (D-CA-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 2.0,
+      "weights": {
+        "mentions": 2
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "CONGRESSMAN GRAY INTRODUCES VALLEY WATER PROTECTION ACT",
+      "latest_url": "https://gray.house.gov/media/press-releases/congressman-gray-introduces-valley-water-protection-act",
+      "latest_date": "2025-06-11"
+    },
+    {
+      "source": "client:FRESHWATER TRUST",
+      "target": "legislator:Val T. Hoyle (D-OR-H)",
       "type": "mentions",
       "types": [
         "mentions"
       ],
       "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Merkley and Hoyle Introduce Columbia River Clean-Up Act to Reauthorize Columbia River Basin Restoration Program",
+      "latest_url": "https://hoyle.house.gov/media/press-releases/merkley-and-hoyle-introduce-columbia-river-clean-up-act-to-reauthorize-columbia-river-basin-restoration-program",
+      "latest_date": "2025-07-23"
+    },
+    {
+      "source": "client:FRESHWATER TRUST",
+      "target": "legislator:Ron Wyden (D-OR-S)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 2.0,
+      "weights": {
+        "mentions": 2
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Wyden, Colleagues Reintroduce Bill to Combat Intensifying Wildfires and Drought Across the American West",
+      "latest_url": "https://www.wyden.senate.gov/news/press-releases/wyden-colleagues-reintroduce-bill-to-combat-intensifying-wildfires-and-drought-across-the-american-west",
+      "latest_date": "2025-02-21"
+    },
+    {
+      "source": "client:FRESHWATER TRUST",
+      "target": "legislator:Michael F. Bennet (D-CO-S)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Bennet, Hickenlooper, Crow, Wyden, Gallego, Rosen Reintroduce Bill to Combat Intensifying Wildfires and Drought Across the American West",
+      "latest_url": "https://www.bennet.senate.gov/2025/02/20/bennet-hickenlooper-crow-wyden-gallego-rosen-reintroduce-bill-to-combat-intensifying-wildfires-and-drought-across-the-american-west/",
+      "latest_date": "2025-02-20"
+    },
+    {
+      "source": "client:FRESHWATER TRUST",
+      "target": "legislator:Juan Ciscomani (R-AZ-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Ciscomani Leads Bipartisan Push to Improve Drought and Flood Resiliency Efforts",
+      "latest_url": "https://ciscomani.house.gov/media/press-releases/ciscomani-leads-bipartisan-push-improve-drought-and-flood-resiliency-efforts",
+      "latest_date": "2023-11-30"
+    },
+    {
+      "source": "client:KLAMATH WATER USERS",
+      "target": "legislator:Ron Wyden (D-OR-S)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 4.0,
+      "weights": {
+        "mentions": 4
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Merkley, Wyden: Immediate Drought Relief Headed to the Klamath Basin, Pushing for Long-Term Recovery Solutions",
+      "latest_url": "https://www.wyden.senate.gov/news/press-releases/merkley-wyden-immediate-drought-relief-headed-to-the-klamath-basin-pushing-for-long-term-recovery-solutions",
+      "latest_date": "2024-04-17"
+    },
+    {
+      "source": "client:KLAMATH WATER USERS",
+      "target": "legislator:Cliff Bentz (R-OR-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "President Biden signs Congressman Bentz and Senator Wyden Bill Protecting Klamath Basin Water Users",
+      "latest_url": "https://bentz.house.gov/media/press-releases/president-biden-signs-congressman-bentz-and-senator-wyden-bill-protecting",
+      "latest_date": "2025-01-07"
+    },
+    {
+      "source": "client:YAKIMA BASIN",
+      "target": "legislator:Dan Newhouse (R-WA-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 2.0,
+      "weights": {
+        "mentions": 2
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Newhouse Announces Subcommittee Appointments on the Appropriations Committee",
+      "latest_url": "https://newhouse.house.gov/media-center/press-releases/newhouse-announces-subcommittee-appointments-appropriations-committee",
+      "latest_date": "2023-01-27"
+    },
+    {
+      "source": "client:YAKIMA BASIN",
+      "target": "legislator:Kim Schrier (D-WA-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 2.0,
       "weights": {
         "mentions": 2
       },
@@ -2848,13 +4665,157 @@
       "latest_date": "2022-06-16"
     },
     {
+      "source": "client:BUREAU RECLAMATION",
+      "target": "legislator:Roger Marshall (R-KS-S)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Senator Marshall Meets with Leaders Across Northwest Kansas",
+      "latest_url": "https://www.marshall.senate.gov/newsroom/press-releases/senator-marshall-meets-with-leaders-across-northwest-kansas/",
+      "latest_date": "2026-03-31"
+    },
+    {
+      "source": "client:BUREAU RECLAMATION",
+      "target": "legislator:Juan Ciscomani (R-AZ-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Ciscomani Leads Bipartisan Effort to Support Western Water Management and Combat Drought",
+      "latest_url": "https://ciscomani.house.gov/media/press-releases/ciscomani-leads-bipartisan-effort-support-western-water-management-and-combat",
+      "latest_date": "2026-03-19"
+    },
+    {
+      "source": "client:BUREAU RECLAMATION",
+      "target": "legislator:Adrian Smith (R-NE-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Smith Celebrates $100 Million Investment for Fort Laramie Tunnel Rehabilitation Project",
+      "latest_url": "https://adriansmith.house.gov/media/press-releases/smith-celebrates-100-million-investment-fort-laramie-tunnel-rehabilitation",
+      "latest_date": "2026-03-18"
+    },
+    {
+      "source": "legislator:Adrian Smith (R-NE-H)",
+      "target": "client:CARGILL",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 4.0,
+      "weights": {
+        "mentions": 4
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "PHOTOS: Smith and Pillen Host Rollins for Visit with Nebraska Producers, Announce USDA Farmers First Initiative",
+      "latest_url": "https://adriansmith.house.gov/media/press-releases/photos-smith-and-pillen-host-rollins-visit-nebraska-producers-announce-usda",
+      "latest_date": "2025-05-19"
+    },
+    {
+      "source": "legislator:Mike Thompson (D-CA-H)",
+      "target": "client:GLOBAL CLEAN ENERGY",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 4.0,
+      "weights": {
+        "mentions": 4
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "THOMPSON, NEAL, WAYS & MEANS DEMOCRATS INTRODUCE BILL TO RESTORE HISTORIC RENEWABLE ENERGY INVESTMENTS",
+      "latest_url": "https://mikethompson.house.gov/newsroom/press-releases/thompson-neal-ways-means-democrats-introduce-bill-restore-historic",
+      "latest_date": "2025-10-29"
+    },
+    {
+      "source": "legislator:Ron Wyden (D-OR-S)",
+      "target": "client:COW CREEK BAND",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 4.0,
+      "weights": {
+        "mentions": 4
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Wyden, Merkley Announce $27 Million to Support Pacific Salmon Recovery in Oregon",
+      "latest_url": "https://www.wyden.senate.gov/news/press-releases/wyden-merkley-announce-27-million-to-support-pacific-salmon-recovery-in-oregon",
+      "latest_date": "2024-02-22"
+    },
+    {
+      "source": "legislator:Michael F. Bennet (D-CO-S)",
+      "target": "client:TRI-STATE GENERATION",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 8.0,
+      "weights": {
+        "mentions": 8
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Bennet Celebrates Billions of Dollars from Inflation Reduction Act for Rural Clean Energy in Colorado",
+      "latest_url": "https://www.bennet.senate.gov/2024/10/28/bennet-celebrates-billions-of-dollars-from-inflation-reduction-act-for-rural-clean-energy-in-colorado/",
+      "latest_date": "2024-10-28"
+    },
+    {
+      "source": "legislator:Dan Newhouse (R-WA-H)",
+      "target": "client:CALIFORNIA PRUNE BOARD",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 4.0,
+      "weights": {
+        "mentions": 4
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Newhouse Strengthens Market Access for Farmers in Bipartisan Legislation",
+      "latest_url": "https://newhouse.house.gov/media-center/press-releases/newhouse-strengthens-market-access-farmers-bipartisan-legislation",
+      "latest_date": "2025-02-06"
+    },
+    {
       "source": "legislator:Josh Harder (D-CA-H)",
       "target": "client:CALIFORNIA RICE COMMISSION",
       "type": "mentions",
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -2864,6 +4825,24 @@
       "latest_title": "Harder Backed Bill to Fix American Ports & Combat China Signed into Law",
       "latest_url": "https://harder.house.gov/media/press-releases/harder-backed-bill-to-fix-american-ports-combat-china-signed-into-law",
       "latest_date": "2022-06-16"
+    },
+    {
+      "source": "client:CITY FOLSOM",
+      "target": "legislator:Ami Bera (D-CA-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 2.0,
+      "weights": {
+        "mentions": 2
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Rep. Bera Secures $735,000 for Three Sacramento-area Water Projects in House Appropriations Package",
+      "latest_url": "https://bera.house.gov/news/press-releases/rep-bera-secures-735000-for-three-sacramento-area-water-projects-in-house-appropriations-package",
+      "latest_date": "2023-02-10"
     },
     {
       "source": "lobbyist:ASHLEE JOHNSON",
@@ -2899,7 +4878,7 @@
     },
     {
       "source": "lobbyist:ASHLEE JOHNSON",
-      "target": "client:GROWTH ENERGY",
+      "target": "client:CARGILL",
       "type": "lobbies_for",
       "types": [
         "lobbies_for"
@@ -2917,7 +4896,7 @@
     },
     {
       "source": "lobbyist:ASHLEE JOHNSON",
-      "target": "client:CARGILL",
+      "target": "client:GROWTH ENERGY",
       "type": "lobbies_for",
       "types": [
         "lobbies_for"
@@ -3234,7 +5213,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3247,30 +5226,12 @@
     },
     {
       "source": "client:CARGILL",
-      "target": "legislator:Adrian Smith (R-NE-H)",
-      "type": "mentions",
-      "types": [
-        "mentions"
-      ],
-      "weight": 1.0,
-      "weights": {
-        "mentions": 4
-      },
-      "color": "#d97706",
-      "width": 1.2,
-      "dash": "2 2",
-      "latest_title": "PHOTOS: Smith and Pillen Host Rollins for Visit with Nebraska Producers, Announce USDA Farmers First Initiative",
-      "latest_url": "https://adriansmith.house.gov/media/press-releases/photos-smith-and-pillen-host-rollins-visit-nebraska-producers-announce-usda",
-      "latest_date": "2025-05-19"
-    },
-    {
-      "source": "client:CARGILL",
       "target": "legislator:Tammy Duckworth (D-IL-S)",
       "type": "mentions",
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3288,7 +5249,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3300,31 +5261,13 @@
       "latest_date": "2025-02-14"
     },
     {
-      "source": "client:CARGILL",
-      "target": "legislator:Jerry Moran (R-KS-S)",
-      "type": "mentions",
-      "types": [
-        "mentions"
-      ],
-      "weight": 1.0,
-      "weights": {
-        "mentions": 4
-      },
-      "color": "#d97706",
-      "width": 1.2,
-      "dash": "2 2",
-      "latest_title": "Sen. Moran Announces 2024 Service Academy Selection Board",
-      "latest_url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=48D9D303-F833-4D07-8987-BBBA32FF290E",
-      "latest_date": "2024-11-01"
-    },
-    {
       "source": "client:NATIONAL RURAL WATER",
       "target": "legislator:Jeff Merkley (D-OR-S)",
       "type": "mentions",
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3342,7 +5285,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3360,7 +5303,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3378,7 +5321,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3396,7 +5339,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3414,7 +5357,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 8.0,
       "weights": {
         "mentions": 8
       },
@@ -3426,31 +5369,13 @@
       "latest_date": "2025-10-20"
     },
     {
-      "source": "client:TRI-STATE GENERATION",
-      "target": "legislator:Michael F. Bennet (D-CO-S)",
-      "type": "mentions",
-      "types": [
-        "mentions"
-      ],
-      "weight": 1.0,
-      "weights": {
-        "mentions": 8
-      },
-      "color": "#d97706",
-      "width": 1.2,
-      "dash": "2 2",
-      "latest_title": "Bennet Celebrates Billions of Dollars from Inflation Reduction Act for Rural Clean Energy in Colorado",
-      "latest_url": "https://www.bennet.senate.gov/2024/10/28/bennet-celebrates-billions-of-dollars-from-inflation-reduction-act-for-rural-clean-energy-in-colorado/",
-      "latest_date": "2024-10-28"
-    },
-    {
       "source": "client:LAND O LAKES",
       "target": "legislator:John Boozman (R-AR-S)",
       "type": "mentions",
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3468,7 +5393,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3486,7 +5411,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3504,7 +5429,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3522,7 +5447,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3558,7 +5483,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3571,30 +5496,12 @@
     },
     {
       "source": "client:GLOBAL CLEAN ENERGY",
-      "target": "legislator:Mike Thompson (D-CA-H)",
-      "type": "mentions",
-      "types": [
-        "mentions"
-      ],
-      "weight": 1.0,
-      "weights": {
-        "mentions": 4
-      },
-      "color": "#d97706",
-      "width": 1.2,
-      "dash": "2 2",
-      "latest_title": "THOMPSON, NEAL, WAYS & MEANS DEMOCRATS INTRODUCE BILL TO RESTORE HISTORIC RENEWABLE ENERGY INVESTMENTS",
-      "latest_url": "https://mikethompson.house.gov/newsroom/press-releases/thompson-neal-ways-means-democrats-introduce-bill-restore-historic",
-      "latest_date": "2025-10-29"
-    },
-    {
-      "source": "client:GLOBAL CLEAN ENERGY",
       "target": "legislator:Daniel S. Goldman (D-NY-H)",
       "type": "mentions",
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3612,7 +5519,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3624,31 +5531,13 @@
       "latest_date": "2025-07-31"
     },
     {
-      "source": "client:GLOBAL CLEAN ENERGY",
-      "target": "legislator:Jared Huffman (D-CA-H)",
-      "type": "mentions",
-      "types": [
-        "mentions"
-      ],
-      "weight": 1.0,
-      "weights": {
-        "mentions": 4
-      },
-      "color": "#d97706",
-      "width": 1.2,
-      "dash": "2 2",
-      "latest_title": "Huffman Statement on Interior Memo Targeting Clean Energy on Federal Lands",
-      "latest_url": "https://huffman.house.gov/media-center/press-releases/huffman-statement-on-interior-memo-targeting-clean-energy-on-federal-lands",
-      "latest_date": "2025-07-17"
-    },
-    {
       "source": "client:LOUIS DREYFUS",
       "target": "legislator:Cindy Hyde-Smith (R-MS-S)",
       "type": "mentions",
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3666,7 +5555,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 8.0,
       "weights": {
         "mentions": 8
       },
@@ -3684,7 +5573,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 8.0,
       "weights": {
         "mentions": 8
       },
@@ -3702,7 +5591,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3720,7 +5609,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3732,31 +5621,13 @@
       "latest_date": "2024-09-11"
     },
     {
-      "source": "client:CALIFORNIA PRUNE BOARD",
-      "target": "legislator:Dan Newhouse (R-WA-H)",
-      "type": "mentions",
-      "types": [
-        "mentions"
-      ],
-      "weight": 1.0,
-      "weights": {
-        "mentions": 4
-      },
-      "color": "#d97706",
-      "width": 1.2,
-      "dash": "2 2",
-      "latest_title": "Newhouse Strengthens Market Access for Farmers in Bipartisan Legislation",
-      "latest_url": "https://newhouse.house.gov/media-center/press-releases/newhouse-strengthens-market-access-farmers-bipartisan-legislation",
-      "latest_date": "2025-02-06"
-    },
-    {
       "source": "client:ILLINOIS SOYBEAN BOARD",
       "target": "legislator:Richard J. Durbin (D-IL-S)",
       "type": "mentions",
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 16.0,
       "weights": {
         "mentions": 16
       },
@@ -3774,7 +5645,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 4.0,
       "weights": {
         "mentions": 4
       },
@@ -3786,8 +5657,8 @@
       "latest_date": "2025-10-29"
     },
     {
-      "source": "legislator:Jerry Moran (R-KS-S)",
-      "target": "client:AMERICAN COTTON SHIPPERS",
+      "source": "legislator:John B. Larson (D-CT-H)",
+      "target": "client:MASHANTUCKET PEQUOT TRIBAL",
       "type": "mentions",
       "types": [
         "mentions"
@@ -3799,27 +5670,9 @@
       "color": "#d97706",
       "width": 1.2,
       "dash": "2 2",
-      "latest_title": "Sen. Moran, Rep. Nunn Caution Federal Regulators on Harmful Impacts of Proposed Banking Regulations",
-      "latest_url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=682C4164-C895-426F-A013-29F7845C2C24",
-      "latest_date": "2024-01-23"
-    },
-    {
-      "source": "legislator:Jerry Moran (R-KS-S)",
-      "target": "client:COMMODITY MARKETS",
-      "type": "mentions",
-      "types": [
-        "mentions"
-      ],
-      "weight": 1.0,
-      "weights": {
-        "mentions": 1
-      },
-      "color": "#d97706",
-      "width": 1.2,
-      "dash": "2 2",
-      "latest_title": "Sen. Moran, Rep. Nunn Caution Federal Regulators on Harmful Impacts of Proposed Banking Regulations",
-      "latest_url": "https://www.moran.senate.gov/public/index.cfm/news-releases?ID=682C4164-C895-426F-A013-29F7845C2C24",
-      "latest_date": "2024-01-23"
+      "latest_title": "Larson, Courtney, DeLauro, Himes, Blumenthal, and Murphy Announce Nearly $17 Million for Traffic and Road Safety Improvements",
+      "latest_url": "https://larson.house.gov/media-center/press-releases/larson-courtney-delauro-himes-blumenthal-and-murphy-announce-nearly-17",
+      "latest_date": "2024-09-11"
     },
     {
       "source": "legislator:Tracey Mann (R-KS-H)",
@@ -3828,7 +5681,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 2.0,
       "weights": {
         "mentions": 2
       },
@@ -3873,24 +5726,6 @@
     },
     {
       "source": "lobbyist:SCOTT PARSONS",
-      "target": "client:DIGITAL CHAMBER COMMERCE",
-      "type": "lobbies_for",
-      "types": [
-        "lobbies_for"
-      ],
-      "weight": 1.0,
-      "weights": {
-        "lobbies_for": 1
-      },
-      "color": "#4f46e5",
-      "width": 1.2,
-      "dash": null,
-      "latest_title": null,
-      "latest_url": null,
-      "latest_date": null
-    },
-    {
-      "source": "lobbyist:SCOTT PARSONS",
       "target": "client:CITADEL INVESTMENT",
       "type": "lobbies_for",
       "types": [
@@ -3909,7 +5744,7 @@
     },
     {
       "source": "lobbyist:SCOTT PARSONS",
-      "target": "client:AMERICAN COTTON SHIPPERS",
+      "target": "client:DIGITAL CHAMBER COMMERCE",
       "type": "lobbies_for",
       "types": [
         "lobbies_for"
@@ -3928,6 +5763,24 @@
     {
       "source": "lobbyist:SCOTT PARSONS",
       "target": "client:FIA PTG",
+      "type": "lobbies_for",
+      "types": [
+        "lobbies_for"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "lobbies_for": 1
+      },
+      "color": "#4f46e5",
+      "width": 1.2,
+      "dash": null,
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
+    },
+    {
+      "source": "lobbyist:SCOTT PARSONS",
+      "target": "client:AMERICAN COTTON SHIPPERS",
       "type": "lobbies_for",
       "types": [
         "lobbies_for"
@@ -3994,24 +5847,6 @@
       "latest_date": null
     },
     {
-      "source": "client:DIGITAL CHAMBER COMMERCE",
-      "target": "lobbyist:JIM NEWSOME",
-      "type": "lobbies_for",
-      "types": [
-        "lobbies_for"
-      ],
-      "weight": 1.0,
-      "weights": {
-        "lobbies_for": 1
-      },
-      "color": "#4f46e5",
-      "width": 1.2,
-      "dash": null,
-      "latest_title": null,
-      "latest_url": null,
-      "latest_date": null
-    },
-    {
       "source": "client:CITADEL INVESTMENT",
       "target": "lobbyist:JIM NEWSOME",
       "type": "lobbies_for",
@@ -4030,43 +5865,7 @@
       "latest_date": null
     },
     {
-      "source": "client:AMERICAN COTTON SHIPPERS",
-      "target": "legislator:Jodey C. Arrington (R-TX-H)",
-      "type": "mentions",
-      "types": [
-        "mentions"
-      ],
-      "weight": 1.0,
-      "weights": {
-        "mentions": 4
-      },
-      "color": "#d97706",
-      "width": 1.2,
-      "dash": "2 2",
-      "latest_title": "Arrington Urges Trump to Boost WTX Cotton Exports",
-      "latest_url": "https://arrington.house.gov/news/documentsingle.aspx?DocumentID=2503",
-      "latest_date": "2024-12-13"
-    },
-    {
-      "source": "client:AMERICAN COTTON SHIPPERS",
-      "target": "legislator:Ronny Jackson (R-TX-H)",
-      "type": "mentions",
-      "types": [
-        "mentions"
-      ],
-      "weight": 1.0,
-      "weights": {
-        "mentions": 2
-      },
-      "color": "#d97706",
-      "width": 1.2,
-      "dash": "2 2",
-      "latest_title": "Rep. Jackson Introduces Bill to Fortify the TX-13 Cotton Industry",
-      "latest_url": "https://jackson.house.gov/news/documentsingle.aspx?DocumentID=2443",
-      "latest_date": "2025-09-30"
-    },
-    {
-      "source": "client:AMERICAN COTTON SHIPPERS",
+      "source": "client:DIGITAL CHAMBER COMMERCE",
       "target": "lobbyist:JIM NEWSOME",
       "type": "lobbies_for",
       "types": [
@@ -4102,7 +5901,43 @@
       "latest_date": null
     },
     {
-      "source": "client:COMMODITY MARKETS",
+      "source": "client:AMERICAN COTTON SHIPPERS",
+      "target": "legislator:Jodey C. Arrington (R-TX-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 4.0,
+      "weights": {
+        "mentions": 4
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Arrington Urges Trump to Boost WTX Cotton Exports",
+      "latest_url": "https://arrington.house.gov/news/documentsingle.aspx?DocumentID=2503",
+      "latest_date": "2024-12-13"
+    },
+    {
+      "source": "client:AMERICAN COTTON SHIPPERS",
+      "target": "legislator:Ronny Jackson (R-TX-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 2.0,
+      "weights": {
+        "mentions": 2
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Rep. Jackson Introduces Bill to Fortify the TX-13 Cotton Industry",
+      "latest_url": "https://jackson.house.gov/news/documentsingle.aspx?DocumentID=2443",
+      "latest_date": "2025-09-30"
+    },
+    {
+      "source": "client:AMERICAN COTTON SHIPPERS",
       "target": "lobbyist:JIM NEWSOME",
       "type": "lobbies_for",
       "types": [
@@ -4121,21 +5956,21 @@
     },
     {
       "source": "client:COMMODITY MARKETS",
-      "target": "legislator:Zachary Nunn (R-IA-H)",
-      "type": "mentions",
+      "target": "lobbyist:JIM NEWSOME",
+      "type": "lobbies_for",
       "types": [
-        "mentions"
+        "lobbies_for"
       ],
       "weight": 1.0,
       "weights": {
-        "mentions": 1
+        "lobbies_for": 1
       },
-      "color": "#d97706",
+      "color": "#4f46e5",
       "width": 1.2,
-      "dash": "2 2",
-      "latest_title": "Nunn, Bipartisan Members Caution Federal Regulators on Harmful Impacts of Proposed Banking Regulations",
-      "latest_url": "https://nunn.house.gov/2024/01/23/nunn-bipartisan-members-caution-federal-regulators-harmful-impacts-proposed/",
-      "latest_date": "2024-01-23"
+      "dash": null,
+      "latest_title": null,
+      "latest_url": null,
+      "latest_date": null
     },
     {
       "source": "lobbyist:KEVIN BAILEY",
@@ -4279,7 +6114,7 @@
     },
     {
       "source": "lobbyist:MICHAEL TORREY",
-      "target": "client:ANIMAL HEALTH INSTITUTE",
+      "target": "client:EDGE DAIRY FARMER",
       "type": "lobbies_for",
       "types": [
         "lobbies_for"
@@ -4297,7 +6132,7 @@
     },
     {
       "source": "lobbyist:MICHAEL TORREY",
-      "target": "client:EDGE DAIRY FARMER",
+      "target": "client:ANIMAL HEALTH INSTITUTE",
       "type": "lobbies_for",
       "types": [
         "lobbies_for"
@@ -4333,7 +6168,7 @@
     },
     {
       "source": "lobbyist:MICHAEL TORREY",
-      "target": "client:GRUPO NAVIS",
+      "target": "client:AMERICAN SOC AGRONOMY",
       "type": "lobbies_for",
       "types": [
         "lobbies_for"
@@ -4367,7 +6202,7 @@
     },
     {
       "source": "lobbyist:KENNETH BARBIC",
-      "target": "client:FRESH PRODUCE",
+      "target": "client:COALITION CLIMATE SMART",
       "type": "lobbies_for",
       "types": [
         "lobbies_for"
@@ -4385,7 +6220,7 @@
     },
     {
       "source": "lobbyist:KENNETH BARBIC",
-      "target": "client:CALIFORNIA DATE COMMISSION",
+      "target": "client:FRESH PRODUCE",
       "type": "lobbies_for",
       "types": [
         "lobbies_for"
@@ -4421,7 +6256,7 @@
     },
     {
       "source": "lobbyist:KENNETH BARBIC",
-      "target": "client:COALITION CLIMATE SMART",
+      "target": "client:CALIFORNIA DATE COMMISSION",
       "type": "lobbies_for",
       "types": [
         "lobbies_for"
@@ -4471,7 +6306,7 @@
     },
     {
       "source": "lobbyist:ROGER SHERMAN",
-      "target": "client:CROWN CASTLE",
+      "target": "client:CTIA WIRELESS",
       "type": "lobbies_for",
       "types": [
         "lobbies_for"
@@ -4489,7 +6324,7 @@
     },
     {
       "source": "lobbyist:ROGER SHERMAN",
-      "target": "client:CTIA WIRELESS",
+      "target": "client:CROWN CASTLE",
       "type": "lobbies_for",
       "types": [
         "lobbies_for"
@@ -4558,24 +6393,6 @@
       "latest_title": "Ahead of Holiday Season, Menendez and Houchin Introduce Bipartisan Legislation to Protect Americans from Scams",
       "latest_url": "https://menendez.house.gov/media/press-releases/ahead-of-holiday-season-menendez-and-houchin-introduce-bipartisan-legislation-to-protect-americans-from-scams",
       "latest_date": "2025-11-13"
-    },
-    {
-      "source": "client:LYNK",
-      "target": "legislator:Haley M. Stevens (D-MI-H)",
-      "type": "mentions",
-      "types": [
-        "mentions"
-      ],
-      "weight": 1.0,
-      "weights": {
-        "mentions": 1
-      },
-      "color": "#d97706",
-      "width": 1.2,
-      "dash": "2 2",
-      "latest_title": "Congresswoman Haley Stevens (D-MI) Introduces the Union Auto Workers Job Protection Act to Ensure that Federal Contracts for Vehicles Deal Workers In",
-      "latest_url": "https://stevens.house.gov/media/press-releases/congresswoman-haley-stevens-d-mi-introduces-union-auto-workers-job-protection",
-      "latest_date": "2023-09-26"
     },
     {
       "source": "lobbyist:AURENE MARTIN",
@@ -4649,7 +6466,7 @@
     },
     {
       "source": "lobbyist:AURENE MARTIN",
-      "target": "client:NATIVE AMERICAN FINANCE",
+      "target": "client:COW CREEK BAND",
       "type": "lobbies_for",
       "types": [
         "lobbies_for"
@@ -4667,7 +6484,7 @@
     },
     {
       "source": "lobbyist:AURENE MARTIN",
-      "target": "client:NATIONAL INDIAN GAMING",
+      "target": "client:MASHANTUCKET PEQUOT TRIBAL",
       "type": "lobbies_for",
       "types": [
         "lobbies_for"
@@ -4708,7 +6525,7 @@
       "types": [
         "mentions"
       ],
-      "weight": 1.0,
+      "weight": 2.0,
       "weights": {
         "mentions": 2
       },
@@ -4718,6 +6535,78 @@
       "latest_title": "Padilla, Schiff Announce Bipartisan Bills to Support Over 2,000 Acres of Tribal Land Management",
       "latest_url": "https://www.padilla.senate.gov/newsroom/press-releases/padilla-schiff-announce-bipartisan-bills-to-support-over-2000-acres-of-tribal-land-management/",
       "latest_date": "2025-09-29"
+    },
+    {
+      "source": "client:MASHANTUCKET PEQUOT TRIBAL",
+      "target": "legislator:Gwen Moore (D-WI-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Representatives Gwen Moore and David Schweikert Introduce Bipartisan Bill to Support Tribal Communities",
+      "latest_url": "https://gwenmoore.house.gov/news/documentsingle.aspx?DocumentID=5874",
+      "latest_date": "2026-02-26"
+    },
+    {
+      "source": "client:MASHANTUCKET PEQUOT TRIBAL",
+      "target": "legislator:Christopher Murphy (D-CT-S)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Murphy, Blumenthal, Larson, Courtney, DeLauro & Himes Announce Nearly $17 Million For Traffic & Road Safety Improvements",
+      "latest_url": "https://www.murphy.senate.gov/newsroom/press-releases/murphy-blumenthal-larson-courtney-delauro-and-himes-announce-nearly-17-million-for-traffic_road-safety-improvements",
+      "latest_date": "2024-09-11"
+    },
+    {
+      "source": "client:MASHANTUCKET PEQUOT TRIBAL",
+      "target": "legislator:Richard Blumenthal (D-CT-S)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "Blumenthal, Murphy, Larson, Courtney, DeLauro, & Himes Announce Nearly $17 Million for Traffic & Road Safety Improvements",
+      "latest_url": "https://www.blumenthal.senate.gov/newsroom/press/release/blumenthal-murphy-larson-courtney-delauro-and-himes-announce-nearly-17-million-for-traffic_road-safety-improvements",
+      "latest_date": "2024-09-11"
+    },
+    {
+      "source": "client:MASHANTUCKET PEQUOT TRIBAL",
+      "target": "legislator:Joe Courtney (D-CT-H)",
+      "type": "mentions",
+      "types": [
+        "mentions"
+      ],
+      "weight": 1.0,
+      "weights": {
+        "mentions": 1
+      },
+      "color": "#d97706",
+      "width": 1.2,
+      "dash": "2 2",
+      "latest_title": "COURTNEY, BLUMENTHAL, MURPHY, LARSON, DELAURO & HIMES ANNOUNCE NEARLY $17 MILLION FOR TRAFFIC & ROAD SAFETY IMPROVEMENTS",
+      "latest_url": "https://courtney.house.gov/media-center/press-releases/courtney-blumenthal-murphy-larson-delauro-himes-announce-nearly-17",
+      "latest_date": "2024-09-11"
     }
   ]
 }
