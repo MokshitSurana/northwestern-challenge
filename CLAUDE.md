@@ -173,6 +173,49 @@ uv run --with typst python -c "import typst; typst.compile('findings/_report.typ
 rm findings/_report.typ
 ```
 
+### Reproducing the full pipeline from scratch
+
+After cloning + `uv sync` + `npm ci` (in `web/`), the canonical sequence to
+regenerate every artifact is:
+
+```bash
+uv run scripts/03_agency_concentration.py                     # scan
+uv run scripts/04_award_tracer.py --case skill/federal-award-tracer/cases/steinberg_doe.json
+uv run scripts/04_award_tracer.py --case skill/federal-award-tracer/cases/limbaugh_interior.json
+uv run scripts/04_award_tracer.py --case skill/federal-award-tracer/cases/usda_cases.json
+uv run scripts/05_pressrel_search.py --enrich-findings        # IMPORTANT: enrich first
+uv run scripts/05_pressrel_search.py --case skill/press-release-cross-ref/cases/steinberg_clients.json
+uv run scripts/05_pressrel_search.py --case skill/press-release-cross-ref/cases/limbaugh_clients.json
+uv run scripts/05_pressrel_search.py --case skill/press-release-cross-ref/cases/usda_clients.json
+uv run scripts/06_coi_graph.py                                # composes the above
+uv run scripts/07_comment_tracker.py export                   # mirror comment log to web
+uv run scripts/08_archive_cite.py                             # archive URLs to Wayback + Archive.today
+```
+
+The **enrich-first, case-files-second** order matters: `--enrich-findings`
+overwrites the `press_releases` field on each finding row with bulk auto-
+populated matches; the case-file runs then re-overwrite the matched rows
+with richer per-alias data. Without that ordering, the case-file alias
+matches (e.g. `Cargill` matches more press releases than `CARGILL INC`)
+get clobbered, and coi-graph's triangle count drops from 11 to ~4.
+
+Re-run the test suite + AP-style lint as a final gate:
+
+```bash
+uv run python -m pytest                                       # 261 tests
+uv run ruff check scripts/
+uv run scripts/09_ap_style_lint.py findings/findings_report.md
+```
+
+PDF regeneration (requires `pandoc` on PATH; `typst` ships as a Python wheel
+so no system Typst install needed):
+
+```bash
+pandoc -s findings/findings_report.md -t typst -o findings/_report.typ
+uv run --with typst python -c "import typst; typst.compile('findings/_report.typ', output='findings/findings_report.pdf')"
+rm findings/_report.typ
+```
+
 ### Continuous integration
 
 `.github/workflows/ci.yml` runs on every push/PR to `master` across **Linux, macOS,
