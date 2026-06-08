@@ -140,19 +140,35 @@ runs green without `output/investigation.duckdb` (CI relies on this).
 ### Reporter UI (web/)
 
 ```bash
-cd web && npm ci && npm run dev   # http://localhost:3000  (also serves /trails, /pressrel, /graph, /comments)
+cd web && npm ci && npm run dev   # http://localhost:3000
 cd web && npm run build           # production build (also gated in CI)
 cd web && npm run lint            # next lint
 cd web && npm run typecheck       # tsc --noEmit
 ```
 
-The UI reads two static JSON files from `web/public/`: `findings.json` (written by
-`scan`) and `trails.json` (written by `trace`). Both pages have a ↻ Refresh button
-that re-fetches the JSON without a page reload, so the flow is: run `/fair-guard scan`
-or `/fair-guard trace`, switch to the browser tab, click refresh. The trace script
-also embeds each trail into the matching scan-finding row (keyed on the case file's
-`match: [{lobbyist_name, agency_short}]` block, case-insensitive), so a Money-trail
-panel appears inline on the matching candidate's card on `/`.
+**Routes** (all server-rendered or SSG; 52 prerendered pages):
+
+| Route | Purpose |
+|-------|---------|
+| `/` | Landing page — hero, headline stats, six tiles, today's top-3 finding preview, reporter-vs-judge paths |
+| `/findings` | Ranked candidate list (was `/` pre-2026-06-08); filter chips, refresh, bulk + per-card exports |
+| `/findings/[id]` | Per-finding permalink (SSG, one page per candidate); four-gate dashboard, full money trail, press releases, comment status, provenance |
+| `/search` | Name-first inverse lookup across all four data sources; `?q=&type=` URL sync |
+| `/trails` | Money-trail index |
+| `/pressrel` | Press-release report index |
+| `/graph` | Interactive D3 force-directed CoI graph |
+| `/comments` | Request-for-comment status table |
+| `/methods` | Methodology page — pipeline diagram, four-gates explainer, skill-by-skill walkthrough, sources, caveats, reproduce command |
+| `/glossary` | Plain-English definitions (LDA, §207, ALI, discretionary, etc.); stable `#anchor` permalinks referenced from `/methods` and `/findings/[id]` |
+
+**Data flow.** The UI reads five static JSON files from `web/public/`: `findings.json`
+(scan), `trails.json` (trace), `press_releases.json` (pressrel), `coi_graph.json` (coi),
+and `comment_log.json` (comment). Most list pages have a ↻ Refresh button that re-fetches
+the JSON without a page reload, so the flow is: run `/fair-guard <skill>`, switch tab,
+click refresh. The trace script also embeds each trail into the matching scan-finding
+row (keyed on the case file's `match: [{lobbyist_name, agency_short}]` block,
+case-insensitive), so a Money-trail panel appears inline on the matching candidate's
+card on `/findings` and the corresponding `/findings/[id]` page.
 
 ### Linting
 
@@ -272,11 +288,18 @@ scripts/08_archive_cite.py        → output/archive_registry.json (per-URL Wayb
 scripts/09_ap_style_lint.py       → stdout (one finding per line: PATH:LINE:COL message)
     │
     ▼
-web/src/app/page.tsx             (reporter UI — findings + inline Money trail / Press-release panels)
-web/src/app/trails/page.tsx      (reporter UI — money-trail index, refresh button)
-web/src/app/pressrel/page.tsx    (reporter UI — press-release report index, refresh button)
-web/src/app/graph/page.tsx       (reporter UI — interactive D3 force-directed CoI graph)
-web/src/app/comments/page.tsx    (reporter UI — request-for-comment status table, derived from event timelines)
+web/src/app/page.tsx                  (reporter UI — landing page, hero + top-3 + tiles)
+web/src/app/findings/page.tsx         (reporter UI — ranked candidate list, was `/` pre-2026-06-08)
+web/src/app/findings/[id]/page.tsx    (reporter UI — per-finding permalink, four-gate view, SSG one page per candidate)
+web/src/app/findings/[id]/DetailButtons.tsx  (client-only copy/download buttons for the detail page)
+web/src/app/search/page.tsx           (reporter UI — name-first inverse lookup)
+web/src/app/search/SearchClient.tsx   (search filter, URL sync, type chips, highlight-on-match)
+web/src/app/methods/page.tsx          (reporter UI — methodology, pipeline diagram, four-gates, skill walkthrough)
+web/src/app/glossary/page.tsx         (reporter UI — plain-English term reference with anchor permalinks)
+web/src/app/trails/page.tsx           (reporter UI — money-trail index, refresh button)
+web/src/app/pressrel/page.tsx         (reporter UI — press-release report index, refresh button)
+web/src/app/graph/page.tsx            (reporter UI — interactive D3 force-directed CoI graph)
+web/src/app/comments/page.tsx         (reporter UI — request-for-comment status table, derived from event timelines)
 ```
 
 ### DuckDB tables
