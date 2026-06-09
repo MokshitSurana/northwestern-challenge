@@ -12,11 +12,14 @@ surfaces **11 structural triangles, 20 hubs, and 5 bridges** across 174
 nodes and 198 edges. Four †-flagged departure dates pinned via web
 research (Newsome 2004-07-23, Sherman 2016-02, Johnson ≤ 2017-01, Bailey
 ≤ 2017-01 / 2023-04 FGS Global). The findings PDF builds via pandoc + typst
-(180 KB output). Reporter UI ships at five routes (`/`, `/trails`,
-`/pressrel`, `/graph`, `/comments`) with kebab menus, per-card exports, and
-a print-to-PDF stylesheet that hides chrome and inlines URLs after each
-link. All ten interaction traces are captured in `traces/`. **The
-submission is end-to-end reproducible from a clean clone.**
+(180 KB output). Reporter UI ships at 10 routes (`/` landing, `/findings`
+ranked list, `/findings/[id]` four-gate permalink SSG'd per candidate,
+`/search` name-first inverse lookup, `/trails`, `/pressrel`, `/graph`,
+`/comments`, `/methods` methodology with visual pipeline diagram,
+`/glossary` plain-English term reference) with kebab menus, per-card
+exports, and a print-to-PDF stylesheet that hides chrome and inlines URLs
+after each link. All ten interaction traces are captured in `traces/`.
+**The submission is end-to-end reproducible from a clean clone.**
 
 This file is a working brief for the rest of the submission window. Two parts:
 
