@@ -218,7 +218,7 @@ The agent-mediated and direct-script paths produce **identical artifacts** — t
 │   ├── trace_skill_resolve.md
 │   └── trace_skill_scan.md
 │
-└── web/                                   # ── Reporter verification UI (Next.js — 11 routes)
+└── web/                                   # ── Reporter verification UI (Next.js — 10 routes)
     ├── Dockerfile
     ├── package.json
     ├── next.config.js
@@ -567,9 +567,10 @@ conflict-of-interest framing: `notes/08_external_verification_top_candidates.md`
 
 Output: `notes/06_structural_pattern_findings.md` (auto-generated)
 Reporter UI: `web/` — run `cd web && npm install && npm run dev` → http://localhost:3000.
-The UI ships 11 routes: `/` (landing), `/findings` (ranked list), `/findings/[id]`
-(four-gate permalink per candidate, SSG), `/search` (name-first inverse lookup),
-`/trails`, `/pressrel`, `/graph`, `/comments`, `/methods`, `/glossary`.
+The UI ships 10 routes: `/` (landing), `/findings` (ranked list), `/findings/[id]`
+(four-gate permalink per candidate, SSG — 40 prerendered pages, one per
+candidate), `/search` (name-first inverse lookup), `/trails`, `/pressrel`,
+`/graph`, `/comments`, `/methods`, `/glossary`.
 
 ---
 
