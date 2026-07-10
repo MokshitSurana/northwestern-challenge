@@ -38,7 +38,7 @@ export default function RootLayout({
         <footer className="border-t border-slate-200 bg-white px-6 py-6 text-center text-sm text-slate-500">
           FairGuard · Northwestern GAIN Agentic AI Investigative Journalism Challenge · July 2026 ·{" "}
           <a
-            href="https://github.com/fairguard/northwestern-challenge"
+            href="https://github.com/MokshitSurana/northwestern-challenge"
             className="font-medium text-indigo-600 underline decoration-dotted hover:text-indigo-800"
           >
             Source
