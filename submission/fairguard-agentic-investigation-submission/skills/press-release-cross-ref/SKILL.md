@@ -13,11 +13,10 @@ description: >
   lobbying client, and especially when investigating whether a member who praised
   an entity sits on the committee whose former staff now lobby for that entity.
 license: MIT
+compatibility: Requires Python 3.11+, uv, and duckdb. Run the lda-corpus-indexer skill first (reads output/investigation.duckdb).
 metadata:
-  version: "1.0.0"
   author: FairGuard (Mokshit Surana, Archit Rathod)
-  tools: [bash, python, file-read, file-write]
-  requires_python: ">=3.11"
+  version: "1.0.0"
 ---
 
 # press-release-cross-ref

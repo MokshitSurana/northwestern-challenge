@@ -8,12 +8,10 @@ description: >
   queryable form fast, without spending days wrangling 400K XML files and
   inconsistent JSON schemas.
 license: MIT
+compatibility: Requires Python 3.11+ and uv (uses polars, duckdb, lxml, orjson, tqdm).
 metadata:
-  version: "1.0.0"
   author: FairGuard (Mokshit Surana, Archit Rathod)
-  tools: [bash, python, file-read, file-write]
-  requires_python: ">=3.11"
-  requires_uv: true
+  version: "1.0.0"
 ---
 
 # lda-corpus-indexer

@@ -11,11 +11,10 @@ description: >
   publication, before submitting the findings PDF for review, and any time
   you've added a new cited URL to the corpus.
 license: MIT
+compatibility: Requires Python 3.11+ and uv; needs network access (Wayback Machine and Archive.today).
 metadata:
-  version: "1.0.0"
   author: FairGuard (Mokshit Surana, Archit Rathod)
-  tools: [bash, python, file-read, file-write]
-  requires_python: ">=3.11"
+  version: "1.0.0"
 ---
 
 # archive-on-cite

@@ -10,12 +10,10 @@ description: >
   entity_map table in investigation.duckdb. Use this skill when joining
   records across years, sources, or chambers.
 license: MIT
+compatibility: Requires Python 3.11+, uv, and rapidfuzz. Run the lda-corpus-indexer skill first (reads output/investigation.duckdb).
 metadata:
-  version: "1.0.0"
   author: FairGuard (Mokshit Surana, Archit Rathod)
-  tools: [bash, python, file-read, file-write]
-  requires_python: ">=3.11"
-  depends_on: [lda-corpus-indexer]
+  version: "1.0.0"
 ---
 
 # entity-resolver

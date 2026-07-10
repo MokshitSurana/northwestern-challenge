@@ -7,11 +7,10 @@ description: >
   a recommended next action ("ready to scan", "run index", "download pre-built").
   Run this first on a fresh clone or new machine.
 license: MIT
+compatibility: Runs on Linux, macOS, and Windows. Requires Python 3.11+ and uv; also checks for Node.js and npm.
 metadata:
-  version: "1.0.0"
   author: FairGuard (Mokshit Surana, Archit Rathod)
-  tools: [bash, python]
-  compatibility: Linux, macOS, Windows (one Python script, no shell-specific logic).
+  version: "1.0.0"
 ---
 
 # doctor

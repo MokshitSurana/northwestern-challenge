@@ -12,11 +12,10 @@ description: >
   any time someone asks how much an agency awarded a company, mentions USAspending,
   federal grants/contracts, or wants to put a dollar figure on a conflict of interest.
 license: MIT
+compatibility: Requires Python 3.11+ and uv; needs network access (USAspending.gov API).
 metadata:
-  version: "1.1.0"
   author: FairGuard (Mokshit Surana, Archit Rathod)
-  tools: [bash, python, file-read, file-write]
-  requires_python: ">=3.11"
+  version: "1.1.0"
 ---
 
 # federal-award-tracer

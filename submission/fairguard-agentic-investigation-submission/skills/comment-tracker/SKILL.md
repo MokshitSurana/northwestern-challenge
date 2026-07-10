@@ -13,11 +13,10 @@ description: >
   a substantive reply or legal threat, or check the status of where the
   team's comment requests stand.
 license: MIT
+compatibility: Requires Python 3.11+ and uv. No network access needed.
 metadata:
-  version: "1.0.0"
   author: FairGuard (Mokshit Surana, Archit Rathod)
-  tools: [bash, python, file-read, file-write]
-  requires_python: ">=3.11"
+  version: "1.0.0"
 ---
 
 # comment-tracker

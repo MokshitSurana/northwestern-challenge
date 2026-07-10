@@ -15,11 +15,10 @@ description: >
   whenever you want to see cross-source connections rather than read three
   separate reports.
 license: MIT
+compatibility: Requires Python 3.11+, uv, and networkx. Reads web/public/*.json; no database or network access needed.
 metadata:
-  version: "1.0.0"
   author: FairGuard (Mokshit Surana, Archit Rathod)
-  tools: [bash, python, file-read, file-write]
-  requires_python: ">=3.11"
+  version: "1.0.0"
 ---
 
 # coi-graph
