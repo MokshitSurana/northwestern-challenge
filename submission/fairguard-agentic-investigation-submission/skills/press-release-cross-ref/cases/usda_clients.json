@@ -1,0 +1,37 @@
+{
+  "case_id": "usda_clients",
+  "label": "USDA revolving-door clients — Congressional press-release cross-ref",
+  "_notes": [
+    "Companion to skill/federal-award-tracer/cases/usda_cases.json.",
+    "Aliases use the shortest distinctive form a press release would likely use.",
+    "Cargill, Land O'Lakes, and Tri-State Generation are the high-volume hits.",
+    "Smart-quote tolerance in the pressrel script handles 'O'Lakes' / 'O'Lakes'."
+  ],
+  "clients": [
+    {"name": "Cargill",                        "aliases": ["Cargill"]},
+    {"name": "National Rural Water Assn",      "aliases": ["National Rural Water"]},
+    {"name": "Tri-State Generation",           "aliases": ["Tri-State Generation"]},
+    {"name": "Land O'Lakes",                   "aliases": ["Land O'Lakes"]},
+    {"name": "McCain Foods",                   "aliases": ["McCain Foods"]},
+    {"name": "Global Clean Energy",            "aliases": ["Global Clean Energy"]},
+    {"name": "Louis Dreyfus",                  "aliases": ["Louis Dreyfus"]},
+    {"name": "Ardent Mills",                   "aliases": ["Ardent Mills"]},
+    {"name": "California Prune Board",         "aliases": ["California Prune"]},
+    {"name": "Illinois Soybean Board",         "aliases": ["Illinois Soybean"]},
+    {"name": "California Rice Commission",     "aliases": ["California Rice"]}
+  ],
+  "filters": {
+    "since": "2022-01-01",
+    "until": "2026-04-01",
+    "party": null,
+    "state": null,
+    "chamber": null,
+    "domain_contains": null
+  },
+  "match": [
+    {"lobbyist_name": "Ashlee Johnson", "agency_short": "usda"},
+    {"lobbyist_name": "Kevin Bailey", "agency_short": "usda"},
+    {"lobbyist_name": "Michael Torrey", "agency_short": "usda"},
+    {"lobbyist_name": "Kenneth Barbic", "agency_short": "usda"}
+  ]
+}

@@ -85,17 +85,17 @@ uv run scripts/03_agency_concentration.py
 
 - **139 candidates** across **22 agencies** pass thresholds
   (concentration ≥ 20%, total filings ≥ 10)
-- Top cases by Bridenstine-score (✅ = prior role externally confirmed, see Finding 2 verification subsection):
-  1. **Benjamin Steinberg** → DOE — 90.2% (213/236), firm: Venn Strategies ✅
-  2. **Mark Limbaugh** → Interior — 72.6% (527/726), firm: The Ferguson Group ✅
+- Top cases by Bridenstine-score (✓ = prior role externally confirmed, see Finding 2 verification subsection):
+  1. **Benjamin Steinberg** → DOE — 90.2% (213/236), firm: Venn Strategies ✓
+  2. **Mark Limbaugh** → Interior — 72.6% (527/726), firm: The Ferguson Group ✓
   3. **Ashlee Johnson** → USDA — 82.7% (230/278), firm: The Russell Group
-  4. **Scott Parsons** → CFTC — 89.8% (149/166), firm: Delta Strategy Group ✅
+  4. **Scott Parsons** → CFTC — 89.8% (149/166), firm: Delta Strategy Group ✓
   5. **Kevin Bailey** → USDA — 87.3% (144/165), firm: FGS Global
-  6. **Jim Newsome** → CFTC — 96.0% (95/99), firm: Delta Strategy Group ✅
-  7. **Michael Torrey** → USDA — 79.0% (180/228), firm: Torrey Advisory Group ✅
-  8. **Kenneth Barbic** → USDA — 78.8% (108/137), firm: Invariant LLC ✅
-  9. **Roger Sherman** → FCC — 100.0% (45/45), firm: Waneta Strategies ✅
-  10. **Aurene Martin** → Interior — 68.2% (180/264), firm: Spirit Rock Consulting ✅
+  6. **Jim Newsome** → CFTC — 96.0% (95/99), firm: Delta Strategy Group ✓
+  7. **Michael Torrey** → USDA — 79.0% (180/228), firm: Torrey Advisory Group ✓
+  8. **Kenneth Barbic** → USDA — 78.8% (108/137), firm: Invariant LLC ✓
+  9. **Roger Sherman** → FCC — 100.0% (45/45), firm: Waneta Strategies ✓
+  10. **Aurene Martin** → Interior — 68.2% (180/264), firm: Spirit Rock Consulting ✓
 
 ### Methodology
 
@@ -268,10 +268,10 @@ be flagged here for the evaluation panel.
 
 | Skill (short) | Status | Key script | Tests | What it does |
 |---------------|--------|------------|-------|--------------|
-| `doctor` | ✅ Shipped | `scripts/doctor.py` | manual cross-platform | Setup validator + guided onboarding |
-| `index` (lda-corpus-indexer) | ✅ Shipped | `scripts/01_build_index.py` | `scripts/verify_build.py` (34 invariants) | ETL: raw → Parquet → DuckDB |
-| `resolve` (entity-resolver) | ✅ Shipped | `scripts/02_entity_resolver.py` | `tests/test_entity_resolver.py` (33; F1 = 0.963) | Normalize org/person names |
-| `scan` (revolving-door-detector) | ✅ Shipped | `scripts/03_agency_concentration.py` | `tests/test_agency_registry.py` (111) | Bridenstine-pattern detector |
+| `doctor` | ✓ Shipped | `scripts/doctor.py` | manual cross-platform | Setup validator + guided onboarding |
+| `index` (lda-corpus-indexer) | ✓ Shipped | `scripts/01_build_index.py` | `scripts/verify_build.py` (34 invariants) | ETL: raw → Parquet → DuckDB |
+| `resolve` (entity-resolver) | ✓ Shipped | `scripts/02_entity_resolver.py` | `tests/test_entity_resolver.py` (33; F1 = 0.963) | Normalize org/person names |
+| `scan` (revolving-door-detector) | ✓ Shipped | `scripts/03_agency_concentration.py` | `tests/test_agency_registry.py` (111) | Bridenstine-pattern detector |
 
 ---
 

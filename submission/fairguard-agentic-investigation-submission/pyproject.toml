@@ -1,0 +1,40 @@
+[project]
+name = "northwestern-journalism-challenge"
+version = "0.1.0"
+description = "Investigative journalism pipeline — lobbying + press release cross-reference"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "duckdb>=1.0",
+    "polars>=1.0",
+    "pyarrow>=15.0",
+    "lxml>=5.0",
+    "rapidfuzz>=3.0",
+    "orjson>=3.9",
+    "tqdm>=4.0",
+    "python-dateutil>=2.9",
+    "numpy>=2.4.5",
+    "networkx>=3.0",
+]
+
+[project.optional-dependencies]
+dev = ["ipython", "ruff", "pytest"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+# Test and diagnostic scripts intentionally manipulate sys.path before
+# importing local modules — E402 (module-level imports not at top) is the
+# correct behaviour here.
+"tests/*.py" = ["E402"]
+"skills/lda-corpus-indexer/scripts/01c_rebuild_house_all.py" = ["E402"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

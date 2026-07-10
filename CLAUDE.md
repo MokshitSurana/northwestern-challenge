@@ -181,10 +181,13 @@ uv run ruff check scripts/ --fix
 
 The report builds with Pandoc + Typst (Typst ships as a self-contained Python wheel,
 so this works cross-platform with no GTK/LaTeX). The `findings/*.pdf` and `_report.typ`
-are gitignored — the `.md` is the tracked source.
+are gitignored — the `.md` is the tracked source. `findings/table-style.typ` (tracked)
+is injected via `--include-in-header`; it adds bordered/shaded tables and makes long
+inline-code paths wrap inside cells instead of overflowing (pandoc's default is
+borderless and overflows wide tables).
 
 ```bash
-pandoc -s findings/findings_report.md -t typst -o findings/_report.typ
+pandoc -s findings/findings_report.md -t typst --include-in-header=findings/table-style.typ -o findings/_report.typ
 uv run --with typst python -c "import typst; typst.compile('findings/_report.typ', output='findings/findings_report.pdf')"
 rm findings/_report.typ
 ```
@@ -227,7 +230,7 @@ PDF regeneration (requires `pandoc` on PATH; `typst` ships as a Python wheel
 so no system Typst install needed):
 
 ```bash
-pandoc -s findings/findings_report.md -t typst -o findings/_report.typ
+pandoc -s findings/findings_report.md -t typst --include-in-header=findings/table-style.typ -o findings/_report.typ
 uv run --with typst python -c "import typst; typst.compile('findings/_report.typ', output='findings/findings_report.pdf')"
 rm findings/_report.typ
 ```
